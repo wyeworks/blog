@@ -1,0 +1,10 @@
+---
+layout: default
+title: WyeWorks Blog
+subtitle: The Team's Voice
+---
+
+{% for post in site.posts limit:15 %}
+  {% assign post = post %}
+  {% include post.html %}
+{% endfor %}

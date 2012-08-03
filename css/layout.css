@@ -1,0 +1,60 @@
+/**
+ * Controls the main layout (width, height, margin, padding)
+ *
+ * #container
+ *   #header
+ *   #page
+ *     #content
+ *     #sidebar
+ *   #footer
+ */
+body {
+  text-align: center;
+  margin: 0; 
+  /*padding: 0.6em 1em 1em 1em;*/ 
+  padding:0px;
+}
+
+#container {
+  width: 920px;
+  text-align: left; 
+  margin: 0 auto; 
+  padding: 5px; 
+background:transparent url(../images/shadow.png) repeat left top;
+/*border:5px solid RGBa( 0,0,0,0.5);
+ -moz-opacity:.90;
+ filter:alpha(opacity=90); 
+opacity:.90;*/
+
+}
+
+#header {
+  height: 106px; 
+  margin: 0 -0.5px 0px 0; padding: 0;
+}
+
+#page {
+background-color:white;
+padding:20px 15px;
+}
+
+#content {
+  float: left;
+  width: 662px;
+  padding: 0 0 0 5px; 
+}
+
+#sidebar {
+  float: right;
+  text-align: left;
+  width: 200px;
+  padding-left: 15px; 
+  border-left: 1px dotted #ddd; 
+}
+
+#footer {
+  height: 40px; 
+  margin: 10px 0 0; padding: 10px 0 0;
+  clear:both; 
+}
+

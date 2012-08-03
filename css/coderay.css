@@ -1,0 +1,35 @@
+.CodeRay {
+  background-color: #232323;
+  border: 1px solid black;
+  font-family: 'Courier New', 'Terminal', monospace;
+  color: #E6E0DB;
+  padding: 3px 5px;
+  overflow: auto;
+  font-size: 12px;
+  margin: 12px 0;
+}
+.CodeRay pre {
+  margin: 0px;
+  padding: 0px;
+}
+
+.CodeRay .an { color:#E7BE69 }                      /* html attribute */
+.CodeRay .c  { color:#ff7a26; font-style: italic; } /* comment */
+.CodeRay .ch { color:#509E4F }                      /* escaped character */
+.CodeRay .cl { color:#98e76b }                      /* class */
+.CodeRay .co { color:#98e76b }                      /* constant */
+.CodeRay .fl { color:#A4C260 }                      /* float */
+.CodeRay .fu { color:#87cefa  }                      /* function */
+.CodeRay .gv { color:#D0CFFE }                      /* global variable */
+.CodeRay .i  { color:#A4C260 }                      /* integer */
+.CodeRay .il { background:#151515 }                 /* inline code */
+.CodeRay .iv { color:#efc766 }                      /* instance variable */
+.CodeRay .pp { color:#E7BE69 }                      /* doctype */
+.CodeRay .r  { color:#00fac1 }                      /* keyword */
+.CodeRay .rx { color:#A4C260 }                      /* regex */
+.CodeRay .s  { color:#ffa07a }                      /* string */
+.CodeRay .s  .k   { color:#ffa07a }
+.CodeRay .s  .dl  { color:#ffa07a }
+.CodeRay .sy { color:#7fffd4 }                      /* symbol */
+.CodeRay .ta { color:#E7BE69 }                      /* html tag */
+.CodeRay .pc { color:#FFC56D }                      /* boolean */

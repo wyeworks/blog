@@ -1,0 +1,27 @@
+---
+layout: post
+title: Modifying Recurring Billing Transactions
+categories: []
+tags:
+- active
+- merchant
+- payment
+- recurring
+author: sebastian.martinez
+published: true
+date: 2009-11-16 14:57:00.000000000 -02:00
+---
+Ok, it's been some time we don't post something in the blog, past weeks have been crazy at the office but now everything is back to normal, hopefully.
+
+In this post I just want to tell that we added an extra ability to the recurring billing for BeanStream Gateway: **Modify an existing transaction.**
+
+It's pretty easy, you just need to do something like this:
+
+<pre><code>  response = gateway.update_recurring(new_amount ,  new_options) </code></pre>
+
+Remember, same for canceling, as BeanStream uses another API for managing these kind of transactions, we need to use the account_id for identifying the same, so you must include it on the options.
+Then all same options can be passed.
+
+Check it out here: [http://github.com/wyeworks/active_merchant](http://github.com/wyeworks/active_merchant.)
+
+That's all, don't forget to comment!

@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>{{ page.title }} - {{ page.subtitle }}</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="verify-v1" content="FjDxCNXUj2zynBs25T/noTCY6yROhwVkyE9iSViwPrs=" >
+    <!-- Use this RSS link if you are using FeedBurner (recommended) -->
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/wyeworks" />
+    <link href="/css/application.css" media="screen" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/javascripts/prototype.js"></script>
+    <script type="text/javascript" src="/javascripts/code_highlighter.js"></script>
+    <script type="text/javascript" src="/javascripts/ruby.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="inner">
+        <h1><span><a href="/">{{ site.title }}</a></span></h1>
+        <h2><span><a href="http://www.wyeworks.com">{{ site.subtitle }}</a></span></h2>
+      </div>
+    </div>
+
+    <div id="available"><a href="http://www.wyeworks.com" title="Available for hire!" alt="Available for hire!" ></a></div>
+
+    <div id="container">
+      <div id="page">
+        <div id="content">
+          {{ content }}
+        </div>
+
+        <div id="sidebar">
+
+          <!-- Delete the comment blocks if you'd like to display links for the monthly archive -->
+          {% if site.years.size > 0 %}
+          <div class="sidebar-node">
+              <h3>Archives</h3>
+              <ul>
+                  {% for year in site.years %}
+                    {% for month in year %}
+                    <li><a href="/{{ month.first.date | date: '%Y/%-m' }}">{{ month.first.date | date: "%B" }} {{ year.first.first.date | date: "%Y" }} ({{ month.size  }})</a></li>
+                    {% endfor %}
+                  {% endfor %}
+                </ul>
+            </div>
+          {% endif %}
+
+          {% if site.categories.size > 0 %}
+          <div class="sidebar-node">
+            <h3>Categories</h3>
+            <ul>
+              {% for category in site.categories %}
+                <li><a href="/categories/{{ category.first }}">{{ category.first }} ({{ category.last.size }})</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+
+          {% if site.tags.size > 0 %}
+          <div class="sidebar-node">
+            <h3>Tags</h3>
+            <ul>
+              {% for tag in site.tags %}
+                <li><a href="/tags/{{ tag.first }}">{{ tag.first }} ({{ tag.last.size }})</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+
+          <div class="sidebar-node">
+            <p><a href="http://blog.wyeworks.com/feed/atom.xml" class="powered"><img src="/images/feed-icon.png" /></a></p>
+          </div>
+
+          <!-- AddThis Button BEGIN -->
+          <script type="text/javascript">var addthis_pub="wyeworks";</script><a href="http://www.addthis.com/feed.php?pub=wyeworks&h1=http%3A%2F%2Fblog.wyeworks.com%2Fatom%2Ffeed.xml&t1=" onclick="return addthis_open(this, 'feed', 'http://blog.wyeworks.com/atom/feed.xml')" alt="Subscribe using any feed reader!" target="_blank"><img src="http://s7.addthis.com/static/btn/lg-feed-en.gif" width="125" height="16" alt="Subscribe" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/200/addthis_widget.js"></script>
+          <!-- AddThis Button END -->
+
+          <div class="sidebar-node">
+            <p><a href="http://twitter.com/wyeworks" class="powered"><img src="/images/twitter-wyeworks.jpg" /></a></p>
+          </div>
+
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <hr />
+      <p><a href="/">{{ site.title }}</a></p>
+      <ul>
+        <li>powered by <a href="http://www.wyeworks.com">WyeWorks</a></li>
+      </ul>
+    </div>
+    {% include disqus.html %}
+    {% include analytics.html %}
+  </body>
+</html>

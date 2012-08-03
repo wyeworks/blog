@@ -1,0 +1,23 @@
+exclude:
+  - Gemfile
+  - Gemfile.lock
+permalink: "/:year/:i_month/:i_day/:title/"
+markdown: rdiscount
+
+server_port: 4000
+baseurl:    /
+url: http://localhost:4000
+
+source:      .
+destination: ./_site
+plugins:     ./_plugins
+
+comments: true
+
+analytics:
+  provider: google
+  google:
+      tracking_id: 'UA-7141880-1'
+
+disqus:
+  shortname: "wyeworksblog"

@@ -1,0 +1,16 @@
+<ul class="meta">
+  {% if post.categories.size > 0 %}
+    <li>
+      Categories: {{ post.categories | category_links }}
+    </li>
+  {% endif %}
+  <li>
+    {% if post.tags.size > 0 %}
+      <li>
+        Tags: {{ post.tags | tag_links }}
+      </li>
+    {% endif %}
+    Meta:
+    <a href="{{ post.url }}#disqus_thread" title="{{ post.title }}"></a>, <a href="{{ post.url }}" title="{{ post.title }}">permalink</a>
+  </li>
+</ul>

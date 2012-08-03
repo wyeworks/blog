@@ -1,0 +1,10 @@
+---
+layout: default
+title: WyeWorks Blog
+subtitle: The Team's Voice
+---
+
+{% for post in site.tags[page.tag] %}
+  {% assign post = post %}
+  {% include post.html %}
+{% endfor %}
