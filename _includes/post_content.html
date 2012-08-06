@@ -1,3 +1,7 @@
 <div class="entry-content">
-  {{ post.content }}
+  {% if single %}
+    {{ content }}
+  {% else %}
+    {{ post.content }}
+  {% endif %}
 </div>
