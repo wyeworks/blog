@@ -25,7 +25,7 @@ EOS
         'layout' => 'default',
         'title' => "WyeWorks Blog",
         'subtitle' => "The Team's Voice",
-        'posts' => posts
+        'posts' => posts.reverse
       }
     end
 
