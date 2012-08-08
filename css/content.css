@@ -3,14 +3,6 @@ body {
 }
 
 /*--------------------------------------------------------------
- Available label
- --------------------------------------------------------------*/
-
-#available{position:absolute;left:50%;margin-left:330px;top:110px;background:transparent url(../images/available.png) no-repeat left top;width:165px; height:115px;}
-#available a{width:165px;height:115px;display:block;}
-
-
-/*--------------------------------------------------------------
  Header
  --------------------------------------------------------------*/
 
