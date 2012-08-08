@@ -12,7 +12,7 @@ tags:
 - ruby
 author: jose.costa
 published: true
-date: 2011-03-25 20:02:00.000000000 -03:00
+date: 2011-03-25 00:01:00.000000000
 ---
 We're opening the box of RailsConf 2010 memories! Yep ... we suck at journalism, so it turns out we have this almost one year old interview with Caike Souza we never shared before. So sorry Caike! 
 

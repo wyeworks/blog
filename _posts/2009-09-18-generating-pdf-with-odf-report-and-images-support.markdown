@@ -8,7 +8,7 @@ tags:
 - ruby
 author: jose.costa
 published: true
-date: 2009-09-18 16:22:00.000000000 -03:00
+date: 2009-09-18 00:01:00.000000000
 ---
 Well i guess many of you might have checked the last edition of the [Rails Magazine](http://railsmagazine.com/issues/4.) If not, you may should. 
 

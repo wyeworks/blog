@@ -12,7 +12,7 @@ tags:
 - ruby
 author: santiago.pastorino
 published: true
-date: 2009-07-13 21:54:00.000000000 -03:00
+date: 2009-07-13 00:01:00.000000000
 ---
 While developing an application with Sebastián that allow users to upload videos with some file name restrictions, meaning that it must contain only A-Z and 0-9 digits, underscores (_) as a valid component as well, and also the name must be preceded by it's own #id, we came up with the need of applying this custom filter to each uploaded video.
 After doing some research on paperclip source code and internet tutorials, we suggest the following solution:

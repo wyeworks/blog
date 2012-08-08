@@ -11,7 +11,7 @@ tags:
 - twitter
 author: santiago.pastorino
 published: true
-date: 2010-02-01 13:11:00.000000000 -02:00
+date: 2010-02-01 00:01:00.000000000
 ---
 For past few days we had been working on the new version of the WyeWorks site, so stay tunned.
 This new version will have a twitter section, where the last 5 tweets of our team will be displayed.

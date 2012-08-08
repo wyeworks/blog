@@ -11,7 +11,7 @@ tags:
 - wyeworks
 author: martin.alcala
 published: true
-date: 2009-07-06 14:38:00.000000000 -03:00
+date: 2009-07-06 00:01:00.000000000
 ---
 That's a good question, in fact, can we quantify or measure how much "innovation" quantity exists in our product or services?. Well, there are as much answers as successful products ;-) but in general terms we can group Innovation in three categories:
 

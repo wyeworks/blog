@@ -13,7 +13,7 @@ tags:
 - ruby
 author: jose.costa
 published: true
-date: 2010-07-01 16:17:00.000000000 -03:00
+date: 2010-07-01 00:01:00.000000000
 ---
 In the last day of the RailsConf 2010 Santiago and I got the pleasure to hang out a few hours with Fabio Akita, a very successful guy in the Ruby and Rails community, but yet so humble and open as many of the great people we met in these past days.
 

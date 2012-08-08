@@ -7,7 +7,7 @@ tags:
 - rails
 author: sebastian.martinez
 published: true
-date: 2009-03-30 14:50:00.000000000 -03:00
+date: 2009-03-30 00:01:00.000000000
 ---
 We're attending [Locos X Rails (Locos X Rails)](http://www.locosxrails.com) conference !!!! 
 

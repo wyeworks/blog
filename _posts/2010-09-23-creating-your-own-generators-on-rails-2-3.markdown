@@ -8,7 +8,7 @@ tags:
 - rails
 author: sebastian.martinez
 published: true
-date: 2010-09-23 15:41:00.000000000 -03:00
+date: 2010-09-23 00:01:00.000000000
 ---
 Time has come for me to write a Rails generator, and as you're guessing right now, my first step was taking a look at the [Guides](http://guides.rubyonrails.org/generators.html.)
 They give you a pretty good idea on what you can do (despite of being for Rails 3.0), but as my friend Santiago always say, there's no better documentation than the source code itself. So, my second step was to dive into the [code](http://github.com/rails/rails/tree/2-3-stable/railties/lib/rails_generator/.) You should definitely read the code, great stuff there.

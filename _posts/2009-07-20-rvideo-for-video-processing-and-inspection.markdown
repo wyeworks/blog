@@ -9,7 +9,7 @@ tags:
 - rvideo
 author: jose.costa
 published: true
-date: 2009-07-20 14:20:00.000000000 -03:00
+date: 2009-07-20 00:01:00.000000000
 ---
 At WyeWorks headquarters, every once in a while, we come across some project that needs a media edition/transcoding solution to build into. This was the case of our latest project in which we built a pretty simple interface with [Brightcove(Brightcove - The Leading Online Video Platform.)](http://www.brightcove.com/), a powerful video platform on which we may write something about it in our forthcoming posts, but it's not the point right now.
 

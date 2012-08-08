@@ -7,7 +7,7 @@ tags:
 - mephisto
 author: jose.costa
 published: true
-date: 2009-01-23 15:28:00.000000000 -02:00
+date: 2009-01-23 00:01:00.000000000
 ---
 **Goal:** I just want to see the gravatars not only for comments but in the article's title also.
 

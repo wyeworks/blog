@@ -7,7 +7,7 @@ tags:
 - ruby
 author: sebastian.martinez
 published: true
-date: 2009-01-23 11:40:00.000000000 -02:00
+date: 2009-01-23 00:01:00.000000000
 ---
 Inspired by Hal Fulton's article [Thirty-seven Reasons I Love Ruby(Thirty-seven Reasons I Love Ruby)](http://rubyhacker.com/ruby37.html), i'd like to share my top twenty reasons I love Ruby.
 

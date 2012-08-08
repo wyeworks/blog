@@ -8,7 +8,7 @@ tags:
 - ruby
 author: sebastian.martinez
 published: true
-date: 2009-02-20 21:01:00.000000000 -02:00
+date: 2009-02-20 00:01:00.000000000
 ---
 And Ruby just doesn't stop surprising us!!
 In the past we have to deal with XML files and parse them, incredibly easy task using Hpricot library. Now the turn was for [OPML(OPML)](http://en.wikipedia.org/wiki/OPML) (Outline Processor Markup Language) files. In case you are not familiar with this type of files, its most common use is to exchange lists of web feeds between web feed aggregators.

@@ -10,7 +10,7 @@ tags:
 - ruby
 author: sebastian.martinez
 published: true
-date: 2009-06-04 15:11:00.000000000 -03:00
+date: 2009-06-04 00:01:00.000000000
 ---
 Delegation is a feature Rails introduced in it's 2.2 version, and in my opinion are quite useful and somehow something we don't see too much around.
 The concept of delegation is to take some methods and send them off to another object to be processed.

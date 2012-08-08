@@ -11,7 +11,7 @@ tags:
 - whenever
 author: sebastian.martinez
 published: true
-date: 2009-08-10 14:55:00.000000000 -03:00
+date: 2009-08-10 00:01:00.000000000
 ---
 Scheduling tasks is something we all need to know to do, for it's quite common in applications. Fetching feeds, indexing some data, processing files at a periodical time, that happens a lot.
 You are probably quite familiar then with the linux cron, if you had to deal with scheduling stuff in the past, but there is something you may not. Let me introduce you the [*Whenever*(Whenever)](http://github.com/javan/whenever/tree/master) gem. 

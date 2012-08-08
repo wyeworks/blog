@@ -9,7 +9,7 @@ tags:
 - ruby
 author: jose.costa
 published: true
-date: 2009-08-05 15:02:00.000000000 -03:00
+date: 2009-08-05 00:01:00.000000000
 ---
 I know there are several discussions on the usage of method_missing in Ruby.
 In this post i'll present a pretty simple, yet useful solution that uses method_missing to interact with the [Brightcove Media Read API(Getting Started with the Media API)](http://support.brightcove.com/en/docs/getting-started-media-api) (you don't need to be familiar with this service, i'll explain a little bit in the next few lines). 

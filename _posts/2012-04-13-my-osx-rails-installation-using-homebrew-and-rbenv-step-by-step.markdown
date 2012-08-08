@@ -11,7 +11,7 @@ tags:
 - ruby
 author: sebastian.martinez
 published: true
-date: 2012-04-13 18:41:00.000000000 -03:00
+date: 2012-04-13 00:01:00.000000000
 ---
 In this opportunity I'll explain (as the title suggests) how to go from a brand new mac os x to running Rails tests.
 

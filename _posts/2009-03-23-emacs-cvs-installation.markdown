@@ -9,7 +9,7 @@ tags:
 - ide
 author: santiago.pastorino
 published: true
-date: 2009-03-23 17:00:00.000000000 -03:00
+date: 2009-03-23 00:01:00.000000000
 ---
 This is the first of a set of posts talking about Emacs. In this case we are going to install Emacs from the CVS repositories on Unix based systems. Emacs has alternative mirrors repositories in Bazaar, Git, Mercurial and Arch.
 You can check out the procedure and other information on [EmacsFromCVS](http://www.emacswiki.org/emacs/EmacsFromCVS)

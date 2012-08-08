@@ -9,7 +9,7 @@ tags:
 - recurring
 author: sebastian.martinez
 published: true
-date: 2009-11-16 14:57:00.000000000 -02:00
+date: 2009-11-16 00:01:00.000000000
 ---
 Ok, it's been some time we don't post something in the blog, past weeks have been crazy at the office but now everything is back to normal, hopefully.
 

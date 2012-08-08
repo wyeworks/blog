@@ -9,7 +9,7 @@ tags:
 - sinatra
 author: sebastian.martinez
 published: true
-date: 2010-02-10 11:43:00.000000000 -02:00
+date: 2010-02-10 00:01:00.000000000
 ---
 I was working lately on a Sinatra project, and got fascinated on how fast you can get things up and running.
 Everything was beautiful, until I tried to upload a file using paperclip.

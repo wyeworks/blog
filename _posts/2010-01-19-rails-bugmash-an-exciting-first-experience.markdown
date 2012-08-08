@@ -8,7 +8,7 @@ tags:
 - rails
 author: santiago.pastorino
 published: true
-date: 2010-01-19 20:10:00.000000000 -02:00
+date: 2010-01-19 00:01:00.000000000
 ---
 As many of you must know, last weekend a [Railsbridge Bugmash](http://bugmash.com) was celebrated, and I had the honor to be part of it for the first time.
 For those who are not aware about what this is, it's a virtual event that takes place on irc.freenode.net at #railsbridge channel.

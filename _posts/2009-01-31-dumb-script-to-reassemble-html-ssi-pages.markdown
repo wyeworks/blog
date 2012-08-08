@@ -7,7 +7,7 @@ tags:
 - ssi
 author: jose.costa
 published: true
-date: 2009-01-31 00:33:00.000000000 -02:00
+date: 2009-01-31 00:01:00.000000000
 ---
 While working on our [website(WyeWorks website)](http://www.wyeworks.com), we wanted to serve some dynamic content but it just didn't justify having some "big" dynamic technology behind to achieve this. Also as programmers, we like our code (even our static website content) to be nicely separated so we can keep things in order, better maintenance, blah blah blah. Seriously, we really like those things :)
 

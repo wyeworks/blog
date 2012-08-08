@@ -7,7 +7,7 @@ tags:
 - management
 author: sebastian.martinez
 published: true
-date: 2011-04-11 07:01:00.000000000 -03:00
+date: 2011-04-11 00:01:00.000000000
 ---
 There is an old joke that illustrates how the relationship between clients and developers is that I'd like to share with you:
 

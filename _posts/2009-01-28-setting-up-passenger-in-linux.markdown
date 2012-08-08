@@ -10,7 +10,7 @@ tags:
 - ubuntu
 author: sebastian.martinez
 published: true
-date: 2009-01-28 13:27:00.000000000 -02:00
+date: 2009-01-28 00:01:00.000000000
 ---
 Clearly one of the problems with Rails as a major platform right now is it’s hosting situation. Currently a good solution is to proxy HTTP requests from Apache or Nginx to a cluster of mongrels, which is tricky to set up and somewhat tedious. I wanted to easily have our rails applications deployed (in our development environment), and have them running without having to manually start each server. Messing around I found [Passenger(Passenger)](http://www.modrails.com/), a module for Apache that hosts Rails applications. Note this was tested in Ubuntu, but it's very similar for other Linux distributions.
 

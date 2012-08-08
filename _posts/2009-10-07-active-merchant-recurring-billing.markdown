@@ -11,7 +11,7 @@ tags:
 - recurring
 author: sebastian.martinez
 published: true
-date: 2009-10-07 11:28:00.000000000 -02:00
+date: 2009-10-07 00:01:00.000000000
 ---
 Working on a payment system we had to sort some difficulties when making recurring payments using active merchant. Why? Because we needed to use BeanStream gateway and active merchant does not support recurring billing for this gateway yet.
 So I just added the functionality to it.

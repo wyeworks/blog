@@ -9,7 +9,7 @@ tags:
 - prototype
 author: jose.costa
 published: true
-date: 2009-02-11 02:21:00.000000000 -02:00
+date: 2009-02-11 00:01:00.000000000
 ---
 It's been a while since us all have been working in fully AJAX enabled sites (as is the case of [Indieoma(Indieoma)](http://indieoma.com), one of our projects). Time comes when you'd like to know a little bit about who is accessing the site, when, which page, why .. and a few more questions Google Analytics can answer for you (not particularly the last one) in a very simple manner most of you already know about. 
 

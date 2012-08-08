@@ -12,7 +12,7 @@ tags:
 - sortable
 author: sebastian.martinez
 published: true
-date: 2009-07-27 16:41:00.000000000 -03:00
+date: 2009-07-27 00:01:00.000000000
 ---
 Time has come for us to make a sortable list, and let's face it, drag&drop are the prettiest ones. So, let me explain how to proceed.
 

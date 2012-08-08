@@ -9,7 +9,7 @@ tags:
 - ruby
 author: santiago.pastorino
 published: true
-date: 2011-12-27 15:25:00.000000000 -02:00
+date: 2011-12-27 00:01:00.000000000
 ---
 *TL;DR*: don't run *bundle exec* before *rails* command, rails already checks the presence of *Bundler* through the *Gemfile* and sets up everything according to it without the overhead of *bundle exec_. _rails* command is the only exception to the rule. Additionally I've added a [patch](https://github.com/carlhuda/bundler/commit/2c838255ccadadeab5298b7c2bbc39035e59f248) to *Bundler* that avoids calling Bundler.setup which adds unnecessary overhead.
 

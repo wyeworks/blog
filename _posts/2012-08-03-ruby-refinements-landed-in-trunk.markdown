@@ -9,7 +9,7 @@ tags:
 - trunk
 author: santiago.pastorino
 published: true
-date: 2012-08-03 20:07:00.000000000 -03:00
+date: 2012-08-03 00:01:00.000000000
 ---
 Refinements arrived to Ruby trunk [here](https://bugs.ruby-lang.org/issues/4085.) The purpose of Refinements is to make monkey patching safer, extending core classes but limiting its effects to a particular area of code.
 

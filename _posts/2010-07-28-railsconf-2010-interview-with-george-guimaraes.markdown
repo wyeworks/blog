@@ -13,7 +13,7 @@ tags:
 - ruby
 author: jose.costa
 published: true
-date: 2010-07-28 17:35:00.000000000 -03:00
+date: 2010-07-28 00:01:00.000000000
 ---
 Among the great people we met at the RailsConf was George Guimarães ([@georgeguimaraes](http://twitter.com/georgeguimaraes)), by no surprise he was a very cool and funny dude, and he was open to talk and hang around with us.
 
