@@ -6,7 +6,7 @@ set :branch, 'master'
 set :user, 'wye'
 set :deploy_to, "/var/www/#{application}.wyeworks.com"
 set :scm, :git
-set :keep_releases, 1
+set :keep_releases, 3
 set :deploy_via, :remote_cache
 set :default_environment, {
   'PATH' => "/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH"
