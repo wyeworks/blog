@@ -4,7 +4,7 @@ set :application, "blog"
 set :repository,  "git@github.com:wyeworks/#{application}.git"
 set :branch, 'master'
 set :user, 'wye'
-set :deploy_to, "/var/www/app/#{application}"
+set :deploy_to, "/var/www/#{application}.wyeworks.com"
 set :scm, :git
 set :keep_releases, 1
 set :deploy_via, :remote_cache
