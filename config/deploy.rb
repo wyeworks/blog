@@ -9,7 +9,6 @@ set :scm, :git
 set :keep_releases, 1
 set :deploy_via, :remote_cache
 set :default_environment, {
-  'RBENV_ROOT' => '/usr/local/rbenv',
   'PATH' => "/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH"
 }
 
