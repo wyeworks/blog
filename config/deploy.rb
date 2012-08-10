@@ -10,3 +10,5 @@ set :repository,  "git@github.com:wyeworks/#{application}.git"
 set :scm, :git
 set :deploy_via, :remote_cache
 ssh_options[:forward_agent] = true
+
+set :normalize_asset_timestamps, false
