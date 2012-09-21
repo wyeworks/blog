@@ -26,3 +26,6 @@ I could be missing some stuff or could even be things that won't make it to
 Rails 4, but that's the picture as of today. If you find something that I'm
 missing or that I should change please let me know. I will keep this
 MindNode updated so keep checking it.
+
+**UPDATE #1**: [Support for specifying transaction isolation
+level](https://github.com/rails/rails/commit/392eeecc11a291e406db927a18b75f41b2658253)
