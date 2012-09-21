@@ -12,17 +12,17 @@ published: true
 date: 2012-09-20 21:00:00.000000000
 ---
 
-I'm preparing a presentation for RubyConf Argentina where I'm going to
-talk about Rails 4 new features and changes. I use to think first in a
-high level and MindNode is a great tool for that. The first thing I did
-was checking what were we adding, removing, deprecating in Rails 4 (I
-don't have very good memory :P), and then come up with this MindNode I'm
-sharing with you …
+I'll be talking at [RubyConf Argentina](http://rubyconfargentina.org/en),
+and the first thing I usually do when preparing talks is to think in a
+high level and then start going down form there. I find MindNode a great
+tool for that. So I started checking what was being added, removed and
+deprecated in Rails 4 (my memory isn't good enough to have all that in the
+top of my head :P). The result is this MindNode I'm sharing with you …
 
 [![Rails 4 MindNode](/images/posts/Rails4-mini.png "Rails 4
 MindNode")](/images/posts/Rails4.png)
 
-I could be missing some stuff or could even be things that won't make to
-Rails 4. But that's the picture as of today. If you find something that I'm
+I could be missing some stuff or could even be things that won't make it to
+Rails 4, but that's the picture as of today. If you find something that I'm
 missing or that I should change please let me know. I will keep this
 MindNode updated so keep checking it.
