@@ -19,8 +19,8 @@ tool for that. So I started checking what was being added, removed and
 deprecated in Rails 4 (my memory isn't good enough to have all that in the
 top of my head :P). The result is this MindNode I'm sharing with you …
 
-[![Rails 4 MindNode](/images/posts/Rails4-mini-3.png "Rails 4
-MindNode")](/images/posts/Rails4-3.png)
+[![Rails 4 MindNode](/images/posts/Rails4-mini-4.png "Rails 4
+MindNode")](/images/posts/Rails4-4.png)
 
 I could be missing some stuff or could even be things that won't make it to
 Rails 4, but that's the picture as of today. If you find something that I'm
