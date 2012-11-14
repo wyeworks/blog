@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Rails 4 compilation links
+title: Rails 4 links compilation
 categories:
 - ruby, rails
 tags:
