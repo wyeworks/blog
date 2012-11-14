@@ -100,6 +100,9 @@ MindNode")](/images/posts/Rails4-4.png)
 	- [Pull Request](https://github.com/rails/rails/pull/7356)
 - Asset Pipelining
 	- [Moving forward with the Rails asset pipeline](http://yetimedia.tumblr.com/post/33320732456/moving-forward-with-the-rails-asset-pipeline)
+	- sprockets-rails
+		- [Gem](https://github.com/rails/sprockets-rails)
+		- [Extraction](https://github.com/rails/rails/pull/5409)
 - Replace memcache-client with dalli
 	- [Pull Request](https://github.com/rails/rails/pull/6903)
 - Routing Concerns
