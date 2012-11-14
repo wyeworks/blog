@@ -54,7 +54,6 @@ MindNode")](/images/posts/Rails4-4.png)
 ## Active Support
 
 - Queue API
-	- [Rails 4.0 Sneak Peek: Queueing](http://reefpoints.dockyard.com/ruby/2012/06/25/rails-4-sneak-peek-queueing.html)
 	- [Commit](https://github.com/rails/rails/commit/adff4a706a5d7ad18ef05303461e1a0d848bd662)
 - Notifiers start & finish
 	- [Commits](https://github.com/rails/rails/compare/60736fe...c7847f1)
@@ -62,7 +61,6 @@ MindNode")](/images/posts/Rails4-4.png)
 ## Action Mailer
 
 - Asynchronous Mailer
-	- [Rails 4.0 Sneak Peek: Asynchronous ActionMailer](http://reefpoints.dockyard.com/ruby/2012/06/26/rails-4-sneak-peek-async-actionmailer.html)
 	- [Pull Request](https://github.com/rails/rails/pull/6839)
 
 ## Active Model
