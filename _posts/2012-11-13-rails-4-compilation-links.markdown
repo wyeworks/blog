@@ -24,6 +24,7 @@ MindNode")](/images/posts/Rails4-4.png)
 
 - [Ruby on Rails Guides: Rails 4.0 Release Notes](http://edgeguides.rubyonrails.org/4_0_release_notes.html)
 - [Rails 4 in 30'](http://blog.wyeworks.com/2012/10/29/rails-4-in-30-minutes/)
+- [Why should I care about Rails 4](http://vimeo.com/51898266)
 - [Rails 4 and the Future of Web](http://confreaks.com/videos/1228-aloharuby2012-keynote-rails-4-and-the-future-of-web)
 - [BostonRB: what to expect in Rails 4.0](http://bostonrb.org/presentations/what-to-expect-in-rails-40)
 
