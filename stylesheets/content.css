@@ -95,6 +95,11 @@ body {
   list-style-type: square;
 }
 
+#content ul ul,
+#content ol ol {
+  margin: 0.2em;
+}
+
 #content li {
   /*line-height: 15px;*/
   margin: 0 0 0 1em; padding: 0;
