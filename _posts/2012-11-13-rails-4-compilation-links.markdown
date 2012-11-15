@@ -82,6 +82,7 @@ MindNode")](/images/posts/Rails4-4.png)
 	- [Gem](https://github.com/rails/strong_parameters)
 	- [Parameters Security Tour](http://iconoclastlabs.com/cms/blog/posts/upgrading-to-rails-4-parameters-security-tour)
 	- [Ruby on Rails Weblog: Strong parameters](http://weblog.rubyonrails.org/2012/3/21/strong-parameters/)
+	- [Rails 4 Quick Look: Strong Parameters](http://rubysource.com/rails-4-quick-look-strong-parameters/)
 	- [Pull Request](https://github.com/rails/rails/pull/7251)
 	- [Railscast](http://railscasts.com/episodes/371-strong-parameters)
 - Turbolinks
