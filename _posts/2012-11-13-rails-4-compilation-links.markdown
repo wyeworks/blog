@@ -15,7 +15,9 @@ I'm leaving here a curated compilation of interesting links where you will find 
 
 I'm also giving a shout out asking for improvements to this compilation. If you find something is missing or you have suggestions to make let me know by commenting in this post.
 
-The Rails Guides are not always enough. When you don't find something in the guides or docs, you probably search for information on the internet or a blog post about the specific subject. But wouldn't it be better if you had all the related information together? This could also be a great starting point for a new Rails guide. So, I encourage everyone to help compiling more material about each new section of Rails 4 and then, by looking at all this compilation, start guides about specific topics.
+The Rails Guides are not always enough. When you don't find something in the guides or docs, you probably search for information on the internet or a blog post about the specific subject. But wouldn't it be better if you had all the related information together? This could also be a great starting point for a new Rails guide. 
+
+So, I encourage everyone to help compiling more material about each new section of Rails 4 and then, by looking at all this compilation, start guides about specific topics.
 
 [![Rails 4 MindNode](/images/posts/Rails4-mini-4.png "Rails 4
 MindNode")](/images/posts/Rails4-4.png)
@@ -26,6 +28,7 @@ MindNode")](/images/posts/Rails4-4.png)
 - [Rails 4 in 30'](http://blog.wyeworks.com/2012/10/29/rails-4-in-30-minutes/)
 - [Why should I care about Rails 4](http://vimeo.com/51898266)
 - [Rails 4 and the Future of Web](http://confreaks.com/videos/1228-aloharuby2012-keynote-rails-4-and-the-future-of-web)
+- [Rails 4 Whirlwind Tour](http://vimeo.com/51181496)
 - [BostonRB: what to expect in Rails 4.0](http://bostonrb.org/presentations/what-to-expect-in-rails-40)
 
 ## Upgrade
