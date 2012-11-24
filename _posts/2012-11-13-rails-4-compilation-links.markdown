@@ -53,6 +53,8 @@ MindNode")](/images/posts/Rails4-4.png)
 		- [Gem](https://github.com/rails/actionpack-action_caching)
 	- Page Caching
 		- [Gem](https://github.com/rails/actionpack-page_caching)
+	- New default test locations
+		- [Pull Request](https://github.com/rails/rails/pull/7878)
 
 ## Active Support
 
