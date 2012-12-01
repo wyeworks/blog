@@ -30,6 +30,7 @@ MindNode")](/images/posts/Rails4-4.png)
 - [Rails 4 and the Future of Web](http://confreaks.com/videos/1228-aloharuby2012-keynote-rails-4-and-the-future-of-web)
 - [Rails 4 Whirlwind Tour](http://vimeo.com/51181496)
 - [BostonRB: what to expect in Rails 4.0](http://bostonrb.org/presentations/what-to-expect-in-rails-40)
+- [Rails 4 Countdown to 2013](http://blog.remarkablelabs.com/2012/11/rails-4-countdown-to-2013)
 
 ## Upgrade
 
