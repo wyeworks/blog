@@ -54,6 +54,8 @@ MindNode")](/images/posts/Rails4-4.png)
 		- [Gem](https://github.com/rails/actionpack-action_caching)
 	- Page Caching
 		- [Gem](https://github.com/rails/actionpack-page_caching)
+	- Page and Action Caching
+		- [Page and Action Caching Gem Extraction](http://blog.remarkablelabs.com/2012/12/page-caching-action-caching-gem-extraction-rails-4-countdown-to-2013)
 	- New default test locations
 		- [Pull Request](https://github.com/rails/rails/pull/7878)
 	- Observers
