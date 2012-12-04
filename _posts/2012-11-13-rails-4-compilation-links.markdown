@@ -55,7 +55,7 @@ MindNode")](/images/posts/Rails4-4.png)
 	- Page Caching
 		- [Gem](https://github.com/rails/actionpack-page_caching)
 	- Page and Action Caching
-		- [Page and Action Caching Gem Extraction](http://blog.remarkablelabs.com/2012/12/page-caching-action-caching-gem-extraction-rails-4-countdown-to-2013)
+		- [Rails 4 Countdown to 2013 - Page and Action Caching Gem Extraction](http://blog.remarkablelabs.com/2012/12/page-caching-action-caching-gem-extraction-rails-4-countdown-to-2013)
 	- New default test locations
 		- [Pull Request](https://github.com/rails/rails/pull/7878)
 	- Observers
@@ -93,6 +93,7 @@ MindNode")](/images/posts/Rails4-4.png)
 	- [Rails 4 Quick Look: Strong Parameters](http://rubysource.com/rails-4-quick-look-strong-parameters/)
 	- [Pull Request](https://github.com/rails/rails/pull/7251)
 	- [Railscast](http://railscasts.com/episodes/371-strong-parameters)
+	- [Rails 4 Countdown to 2013 - Strong Parameters](http://blog.remarkablelabs.com/2012/12/strong-parameters-rails-4-countdown-to-2013)
 - Turbolinks
 	- [Gem](https://github.com/rails/turbolinks)
 	- [Introducing Turbolinks for Rails 4.0 geekmonkey](http://geekmonkey.org/articles/28-introducing-turbolinks-for-rails-4-0)
@@ -108,6 +109,7 @@ MindNode")](/images/posts/Rails4-4.png)
 - Declarative ETags
 	- [Gem](https://github.com/rails/etagger)
 	- [Commit](https://github.com/rails/rails/commit/ed5c938fa36995f06d4917d9543ba78ed506bb8d)
+	- [Rails 4 Countdown to 2013 - Generate Controller-Wide ETags](http://blog.remarkablelabs.com/2012/12/generate-controller-wide-etags-rails-4-countdown-to-2013)
 - Decouple Action Pack and Action View
 	- [Pull Request](https://github.com/rails/rails/pull/7356)
 - Asset Pipelining
