@@ -155,7 +155,7 @@ MindNode")](/images/posts/Rails4-4.png)
 - Support for partial inserts
 	- [Commit](https://github.com/rails/rails/commit/144e8691cbfb8bba77f18cfe68d5e7fd48887f5e)
 - Relation.where with no args can be chained with not, like, and not_like
- - [Pull Request](https://github.com/rails/rails/pull/8332)
+	- [Pull Request](https://github.com/rails/rails/pull/8332)
 
 ## Railties
 
