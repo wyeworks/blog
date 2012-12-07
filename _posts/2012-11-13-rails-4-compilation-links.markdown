@@ -61,6 +61,7 @@ MindNode")](/images/posts/Rails4-4.png)
 	- Observers
 		- [Gem](https://github.com/rails/rails-observers)
 		- [Commit](https://github.com/rails/rails/commit/ccecab3ba950a288b61a516bf9b6962e384aae0b)
+		- [Rails 4 Countdown to 2013 - Observers Gem Extraction](http://blog.remarkablelabs.com/2012/12/observers-gem-extraction-rails-4-countdown-to-2013)
 
 ## Active Support
 
@@ -153,6 +154,8 @@ MindNode")](/images/posts/Rails4-4.png)
 	- [Commit](https://github.com/rails/rails/commit/0e1cafcbc4d67854faf35e489571bc30f5e2ac14)
 - Support for partial inserts
 	- [Commit](https://github.com/rails/rails/commit/144e8691cbfb8bba77f18cfe68d5e7fd48887f5e)
+- Relation.where with no args can be chained with not, like, and not_like
+ - [Pull Request](https://github.com/rails/rails/pull/8332)
 
 ## Railties
 
