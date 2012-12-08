@@ -67,6 +67,7 @@ MindNode")](/images/posts/Rails4-4.png)
 
 - Queue API
 	- [Commit](https://github.com/rails/rails/commit/adff4a706a5d7ad18ef05303461e1a0d848bd662)
+	- [Rails 4 Countdown to 2013 - Rails.queue](http://blog.remarkablelabs.com/2012/12/rails-queue-rails-4-countdown-to-2013)
 - Notifiers start & finish
 	- [Commits](https://github.com/rails/rails/compare/60736fe...c7847f1)
 
