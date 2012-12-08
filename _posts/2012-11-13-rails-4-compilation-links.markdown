@@ -161,6 +161,8 @@ MindNode")](/images/posts/Rails4-4.png)
 - Relation.where with no args can be chained with not
 	- [Pull Request](https://github.com/rails/rails/pull/8332)
 	- [Revert of like and not_like](https://github.com/rails/rails/commit/8d02afeaee8993bd0fde69687fdd9bf30921e805)
+- Add metadata to schema_migrations table
+	- [Pull Request](https://github.com/rails/rails/pull/8399)
 
 ## Railties
 
