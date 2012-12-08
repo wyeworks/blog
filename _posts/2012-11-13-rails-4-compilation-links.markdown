@@ -130,6 +130,7 @@ MindNode")](/images/posts/Rails4-4.png)
 	- [Rails 4 Countdown to 2013 - HTTP PATCH Verb](http://blog.remarkablelabs.com/2012/12/http-patch-verb-rails-4-countdown-to-2013)
 - Rename all action callbacks from *_filter to *_action
 	- [Commit](https://github.com/rails/rails/commit/9d62e04838f01f5589fa50b0baa480d60c815e2c)
+	- [Rails 4 Countdown to 2013 - Renaming *_filter to *_action](http://blog.remarkablelabs.com/2012/12/renaming-_filter-to-_action-rails-4-countdown-to-2013)
 - Helpers
 	- [HTML5 tag helpers - Pull Request](https://github.com/rails/rails/pull/6359)
 	- [Rails 4 Countdown to 2013 - Collection Form Helpers](http://blog.remarkablelabs.com/2012/12/collection-form-helpers-rails-4-countdown-to-2013)
