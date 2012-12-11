@@ -70,11 +70,14 @@ MindNode")](/images/posts/Rails4-4.png)
 	- [Rails 4 Countdown to 2013 - Rails.queue](http://blog.remarkablelabs.com/2012/12/rails-queue-rails-4-countdown-to-2013)
 - Notifiers start & finish
 	- [Commits](https://github.com/rails/rails/compare/60736fe...c7847f1)
+- Dalli replaces memcache-client
+	- [Rails 4 Countdown to 2013 - Dalli replaces memcache-client](http://blog.remarkablelabs.com/2012/12/dalli-replaces-memcache-client-rails-4-countdown-to-2013)
 
 ## Action Mailer
 
 - Asynchronous Mailer
 	- [Pull Request](https://github.com/rails/rails/pull/6839)
+	- [Rails 4 Countdown to 2013 - Asynchronous Action Mailer](http://blog.remarkablelabs.com/2012/12/asynchronous-action-mailer-rails-4-countdown-to-2013)
 
 ## Active Model
 
@@ -161,6 +164,7 @@ MindNode")](/images/posts/Rails4-4.png)
 - Relation.where with no args can be chained with not
 	- [Pull Request](https://github.com/rails/rails/pull/8332)
 	- [Revert of like and not_like](https://github.com/rails/rails/commit/8d02afeaee8993bd0fde69687fdd9bf30921e805)
+	- [Rails 4 Countdown to 2013 - Not Equal support for Active Record queries](http://blog.remarkablelabs.com/2012/12/not-equal-support-for-active-record-queries-rails-4-countdown-to-2013)
 - Add metadata to schema_migrations table
 	- [Pull Request](https://github.com/rails/rails/pull/8399)
 
