@@ -84,6 +84,7 @@ MindNode")](/images/posts/Rails4-4.png)
 - ActiveModel::Model
 	- [Plataforma: barebone models to use with actionpack in rails 4.0](http://blog.plataformatec.com.br/2012/03/barebone-models-to-use-with-actionpack-in-rails-4-0/)
 	- [Commit](https://github.com/rails/rails/commit/3b822e91d1a6c4eab0064989bbd07aae3a6d0d08)
+	- [Rails 4 Countdown to 2013 - ActiveModel::Model](http://blog.remarkablelabs.com/2012/12/activemodel-model-rails-4-countdown-to-2013)
 
 ## Action Pack
 
@@ -137,6 +138,9 @@ MindNode")](/images/posts/Rails4-4.png)
 - Helpers
 	- [HTML5 tag helpers - Pull Request](https://github.com/rails/rails/pull/6359)
 	- [Rails 4 Countdown to 2013 - Collection Form Helpers](http://blog.remarkablelabs.com/2012/12/collection-form-helpers-rails-4-countdown-to-2013)
+- Render default index page
+	- [Pull Request](https://github.com/rails/rails/pull/8468)
+	- [Rails 4 Countdown to 2013 - Dynamic index.html](http://blog.remarkablelabs.com/2012/12/dynamic-index-html-rails-4-countdown-to-2013)
 
 ## Active Record
 
