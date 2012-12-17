@@ -47,6 +47,8 @@ MindNode")](/images/posts/Rails4-4.png)
 		- [Gem](https://github.com/rails/protected_attributes)
 	- ActiveRecord::SessionStore
 		- [Gem](https://github.com/rails/activerecord-session_store)
+		- [Commit](https://github.com/rails/rails/commit/0ffe19056c8e8b2f9ae9d487b896cad2ce9387ad)
+		- [Rails 4 Countdown to 2013 - ActiveRecord::SessionStore Gem Extraction](http://blog.remarkablelabs.com/2012/12/activerecord-sessionstore-gem-extraction-rails-4-countdown-to-2013)
 	- ActiveResource
 		- [Gem](https://github.com/rails/activeresource)
 		- [ActiveResource is dead, long live ActiveResource](http://yetimedia.tumblr.com/post/35233051627/activeresource-is-dead-long-live-activeresource)
@@ -138,9 +140,13 @@ MindNode")](/images/posts/Rails4-4.png)
 - Helpers
 	- [HTML5 tag helpers - Pull Request](https://github.com/rails/rails/pull/6359)
 	- [Rails 4 Countdown to 2013 - Collection Form Helpers](http://blog.remarkablelabs.com/2012/12/collection-form-helpers-rails-4-countdown-to-2013)
+	- [Rails 4 Countdown to 2013 - New HTML5 Form Input Helpers](http://blog.remarkablelabs.com/2012/12/new-html5-form-input-helpers-rails-4-countdown-to-2013)
 - Render default index page
 	- [Pull Request](https://github.com/rails/rails/pull/8468)
 	- [Rails 4 Countdown to 2013 - Dynamic index.html](http://blog.remarkablelabs.com/2012/12/dynamic-index-html-rails-4-countdown-to-2013)
+- Register your flash types
+	- [Rails 4 Countdown to 2013 - Register your own flash types](http://blog.remarkablelabs.com/2012/12/register-your-own-flash-types-rails-4-countdown-to-2013)
+	- [Commit](https://github.com/rails/rails/commit/238a4253bf229377b686bfcecc63dda2b59cff8f)
 
 ## Active Record
 
