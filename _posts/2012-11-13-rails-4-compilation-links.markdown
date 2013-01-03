@@ -36,10 +36,12 @@ MindNode")](/images/posts/Rails4-4.png)
 
 - Ruby 1.9.3
 	- [Commit](https://github.com/rails/rails/commit/4fa615a8661eb13d4bd8a7de4d839e9883ef26ec)
+	- [Rails 4 Countdown to 2013 - Rails 4 requires at least Ruby 1.9.3](http://blog.remarkablelabs.com/2012/12/rails-4-requires-at-least-ruby-1-9-3-rails-4-countdown-to-2013)
 - New deprecation policy
 	- [Weblog Post mentions deprecation policy](http://weblog.rubyonrails.org/2012/8/9/ann-rails-3-2-8-has-been-released/)
 - vendor/plugins has gone
 	- [Commit](https://github.com/rails/rails/commit/dad7fdc5734a3813246f238ac5760b2076932216)
+	- [Rails 4 Countdown to 2013 - Rails::Plugin reaches end of life](http://blog.remarkablelabs.com/2012/12/rails-plugin-reaches-end-of-life-rails-4-countdown-to-2013)
 - Moved to a plugin
 	- Hash-based & Dynamic finder methods
 		- [Gem](https://github.com/rails/activerecord-deprecated_finders)
@@ -52,6 +54,7 @@ MindNode")](/images/posts/Rails4-4.png)
 	- ActiveResource
 		- [Gem](https://github.com/rails/activeresource)
 		- [ActiveResource is dead, long live ActiveResource](http://yetimedia.tumblr.com/post/35233051627/activeresource-is-dead-long-live-activeresource)
+		- [Rails 4 Countdown to 2013 - ActiveResource Gem Extraction](http://blog.remarkablelabs.com/2012/12/activeresource-gem-extraction-rails-4-countdown-to-2013)
 	- Action Caching
 		- [Gem](https://github.com/rails/actionpack-action_caching)
 	- Page Caching
@@ -87,6 +90,8 @@ MindNode")](/images/posts/Rails4-4.png)
 	- [Plataforma: barebone models to use with actionpack in rails 4.0](http://blog.plataformatec.com.br/2012/03/barebone-models-to-use-with-actionpack-in-rails-4-0/)
 	- [Commit](https://github.com/rails/rails/commit/3b822e91d1a6c4eab0064989bbd07aae3a6d0d08)
 	- [Rails 4 Countdown to 2013 - ActiveModel::Model](http://blog.remarkablelabs.com/2012/12/activemodel-model-rails-4-countdown-to-2013)
+- ActiveModel Validator
+	- [Rails 4 Countdown to 2013 - ActiveModel Absence Validator](http://blog.remarkablelabs.com/2012/12/activemodel-absence-validator-rails-4-countdown-to-2013)
 
 ## Action Pack
 
@@ -94,6 +99,7 @@ MindNode")](/images/posts/Rails4-4.png)
 	- [Aaron Patterson's blog post: Is it Live](http://tenderlovemaking.com/2012/07/30/is-it-live.html)
 	- [Why Rails 4 Live Streaming is a big deal](http://blog.phusion.nl/2012/08/03/why-rails-4-live-streaming-is-a-big-deal/)
 	- [Commit](https://github.com/rails/rails/commit/af0a9f9eefaee3a8120cfd8d05cbc431af376da3)
+	- [Rails 4 Countdown to 2013 - Live Streaming](http://blog.remarkablelabs.com/2012/12/live-streaming-rails-4-countdown-to-2013)
 - Strong parameters
 	- [Gem](https://github.com/rails/strong_parameters)
 	- [Parameters Security Tour](http://iconoclastlabs.com/cms/blog/posts/upgrading-to-rails-4-parameters-security-tour)
@@ -107,9 +113,11 @@ MindNode")](/images/posts/Rails4-4.png)
 	- [Introducing Turbolinks for Rails 4.0 geekmonkey](http://geekmonkey.org/articles/28-introducing-turbolinks-for-rails-4-0)
 	- [Turbolinks benchmarks from Steve Klabnik](http://blog.steveklabnik.com/posts/2012-09-27-seriously--numbers--use-them-)
 	- [Railscast](http://railscasts.com/episodes/390-turbolinks)
+	- [Rails 4 Countdown to 2013 - Turbolinks](http://blog.remarkablelabs.com/2012/12/turbolinks-rails-4-countdown-to-2013)
 - Russian Doll Caching
 	- [How key-based cache expiration works](http://37signals.com/svn/posts/3113-how-key-based-cache-expiration-works)
 	- [Evening on Backbone.js/ Q&A with dhh](http://www.youtube.com/watch?v=FkLVl3gpJP4#t=33m30s)
+	- [Rails 4 Countdown to 2013 - Russian Doll Caching & Cache Digests](http://blog.remarkablelabs.com/2012/12/russian-doll-caching-cache-digests-rails-4-countdown-to-2013)
 - Cache Digests
 	- [Gem](https://github.com/rails/cache_digests)
 	- [Commit](https://github.com/rails/rails/commit/502d5e24e28b3634910495d0fb71cb20b1426aee)
@@ -125,11 +133,13 @@ MindNode")](/images/posts/Rails4-4.png)
 	- sprockets-rails
 		- [Gem](https://github.com/rails/sprockets-rails)
 		- [Extraction](https://github.com/rails/rails/pull/5409)
+		- [Rails 4 Countdown to 2013 - Sprockets Rails](http://blog.remarkablelabs.com/2012/12/sprockets-rails-rails-4-countdown-to-2013)
 - Replace memcache-client with dalli
 	- [Pull Request](https://github.com/rails/rails/pull/6903)
 - Routing Concerns
 	- [Gem](https://github.com/rails/routing_concerns)
 	- [Commit](https://github.com/rails/rails/commit/0dd24728a088fcb4ae616bb5d62734aca5276b1b)
+	- [Rails 4 Countdown to 2013 - Routing Concerns](http://blog.remarkablelabs.com/2012/12/routing-concerns-rails-4-countdown-to-2013)
 - PATCH verb
 	- [Weblog post](http://weblog.rubyonrails.org/2012/2/25/edge-rails-patch-is-the-new-primary-http-method-for-updates/)
 	- [Rails issue: use PATCH verb instead of PUT](https://github.com/rails/rails/issues/348)
@@ -150,8 +160,12 @@ MindNode")](/images/posts/Rails4-4.png)
 
 ## Active Record
 
+- What's new
+	- [Rails 4 Countdown to 2013 - What's new in Active Record](http://blog.remarkablelabs.com/2012/12/what-s-new-in-active-record-rails-4-countdown-to-2013)
 - MySQL strict mode by default
 	- [Pull Request](https://github.com/rails/rails/pull/6069)
+- PostgreSQL support
+	- [Rails 4 Countdown to 2013 - A love affair with PostgreSQL](http://blog.remarkablelabs.com/2012/12/a-love-affair-with-postgresql-rails-4-countdown-to-2013)
 - Support for array datatype in PostgreSQL
 	- [Rails 4.0 sneak peek: PostgreSQL array support](http://reefpoints.dockyard.com/ruby/2012/09/18/rails-4-sneak-peek-postgresql-array-support.html)
 	- [Pull Request](https://github.com/rails/rails/pull/7547)
@@ -161,6 +175,7 @@ MindNode")](/images/posts/Rails4-4.png)
 	- [Commit](https://github.com/rails/rails/commit/392eeecc11a291e406db927a18b75f41b2658253)
 - Schema cache dump
 	- [Pull Request](https://github.com/rails/rails/pull/5162)
+	- [Rails 4 Countdown to 2013 - Schema Cache Dump](http://blog.remarkablelabs.com/2012/12/schema-cache-dump-rails-4-countdown-to-2013)
 - ActiveRecord::Relation bang methods
 	- [Commit](https://github.com/rails/rails/commit/8c2c60511beaad05a218e73c4918ab89fb1804f0)
 - ActiveRecord::Base.all returns a Relation
@@ -185,6 +200,7 @@ MindNode")](/images/posts/Rails4-4.png)
 	- [Discusion of Tony Arcieri's Pull Request](https://github.com/rails/rails/pull/6685)
 	- [Improve eager load on Rails: Pull Request](http://github.com/rails/rails/pull/7225)
 	- [Railscast](http://railscasts.com/episodes/365-thread-safety)
+	- [Rails 4 Countdown to 2013 - Rails 4 is thread safe by default](http://blog.remarkablelabs.com/2012/12/rails-4-is-thread-safe-by-default-rails-4-countdown-to-2013)
 
 ## Security
 
