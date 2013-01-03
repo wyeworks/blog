@@ -144,9 +144,9 @@ MindNode")](/images/posts/Rails4-4.png)
 	- [Weblog post](http://weblog.rubyonrails.org/2012/2/25/edge-rails-patch-is-the-new-primary-http-method-for-updates/)
 	- [Rails issue: use PATCH verb instead of PUT](https://github.com/rails/rails/issues/348)
 	- [Rails 4 Countdown to 2013 - HTTP PATCH Verb](http://blog.remarkablelabs.com/2012/12/http-patch-verb-rails-4-countdown-to-2013)
-- Rename all action callbacks from *_filter to *_action
+- Rename all action callbacks from \*\_filter to \*\_action
 	- [Commit](https://github.com/rails/rails/commit/9d62e04838f01f5589fa50b0baa480d60c815e2c)
-	- [Rails 4 Countdown to 2013 - Renaming *_filter to *_action](http://blog.remarkablelabs.com/2012/12/renaming-_filter-to-_action-rails-4-countdown-to-2013)
+	- [Rails 4 Countdown to 2013 - Renaming \*\_filter to \*\_action](http://blog.remarkablelabs.com/2012/12/renaming-_filter-to-_action-rails-4-countdown-to-2013)
 - Helpers
 	- [HTML5 tag helpers - Pull Request](https://github.com/rails/rails/pull/6359)
 	- [Rails 4 Countdown to 2013 - Collection Form Helpers](http://blog.remarkablelabs.com/2012/12/collection-form-helpers-rails-4-countdown-to-2013)
@@ -180,7 +180,7 @@ MindNode")](/images/posts/Rails4-4.png)
 	- [Commit](https://github.com/rails/rails/commit/8c2c60511beaad05a218e73c4918ab89fb1804f0)
 - ActiveRecord::Base.all returns a Relation
 	- [Commit](https://github.com/rails/rails/commit/6a81ccd69d96f36f4322ef927191ab5a35e68d68)
-- Relation#find_or_create_by and friends
+- Relation#find\_or\_create\_by and friends
 	- [Commit](https://github.com/rails/rails/commit/eb72e62c3042c0df989d951b1d12291395ebdb8e)
 - CollectionProxy#scope
 	- [Commit](https://github.com/rails/rails/commit/0e1cafcbc4d67854faf35e489571bc30f5e2ac14)
@@ -190,7 +190,7 @@ MindNode")](/images/posts/Rails4-4.png)
 	- [Pull Request](https://github.com/rails/rails/pull/8332)
 	- [Revert of like and not_like](https://github.com/rails/rails/commit/8d02afeaee8993bd0fde69687fdd9bf30921e805)
 	- [Rails 4 Countdown to 2013 - Not Equal support for Active Record queries](http://blog.remarkablelabs.com/2012/12/not-equal-support-for-active-record-queries-rails-4-countdown-to-2013)
-- Add metadata to schema_migrations table
+- Add metadata to schema\_migrations table
 	- [Pull Request](https://github.com/rails/rails/pull/8399)
 
 ## Railties
