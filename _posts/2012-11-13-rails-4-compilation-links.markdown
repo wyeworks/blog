@@ -212,6 +212,9 @@ MindNode")](/images/posts/Rails4-4.png)
 	- [bundle binstubs \<gem\>](https://github.com/carlhuda/bundler/compare/rails_binstubs)
 - Add --no-html to scaffold generator
 	- [Commit](https://github.com/rails/rails/commit/cb025f850c45f26355892961d5cf05145d247a4d)
+- Rails commands
+	- [Commands](https://github.com/rails/commands)
+	- [Spring](https://github.com/jonleighton/spring)
 
 ## Security
 
