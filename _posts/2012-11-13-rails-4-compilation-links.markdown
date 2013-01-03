@@ -70,7 +70,7 @@ MindNode")](/images/posts/Rails4-4.png)
 
 ## Active Support
 
-- Queue API
+- Queue API (NOTE: This was reverted and will be included in Rails 4.1)
 	- [Commit](https://github.com/rails/rails/commit/adff4a706a5d7ad18ef05303461e1a0d848bd662)
 	- [Rails 4 Countdown to 2013 - Rails.queue](http://blog.remarkablelabs.com/2012/12/rails-queue-rails-4-countdown-to-2013)
 - Notifiers start & finish
@@ -80,7 +80,7 @@ MindNode")](/images/posts/Rails4-4.png)
 
 ## Action Mailer
 
-- Asynchronous Mailer
+- Asynchronous Mailer (NOTE: This was reverted and will be included in Rails 4.1)
 	- [Pull Request](https://github.com/rails/rails/pull/6839)
 	- [Rails 4 Countdown to 2013 - Asynchronous Action Mailer](http://blog.remarkablelabs.com/2012/12/asynchronous-action-mailer-rails-4-countdown-to-2013)
 
