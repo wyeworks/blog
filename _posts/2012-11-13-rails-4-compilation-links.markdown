@@ -157,6 +157,8 @@ MindNode")](/images/posts/Rails4-4.png)
 - Register your flash types
 	- [Rails 4 Countdown to 2013 - Register your own flash types](http://blog.remarkablelabs.com/2012/12/register-your-own-flash-types-rails-4-countdown-to-2013)
 	- [Commit](https://github.com/rails/rails/commit/238a4253bf229377b686bfcecc63dda2b59cff8f)
+- New exceptions pages for development
+	- [Pull Request](https://github.com/rails/rails/pull/8668)
 
 ## Active Record
 
@@ -188,10 +190,12 @@ MindNode")](/images/posts/Rails4-4.png)
 	- [Commit](https://github.com/rails/rails/commit/144e8691cbfb8bba77f18cfe68d5e7fd48887f5e)
 - Relation.where with no args can be chained with not
 	- [Pull Request](https://github.com/rails/rails/pull/8332)
-	- [Revert of like and not_like](https://github.com/rails/rails/commit/8d02afeaee8993bd0fde69687fdd9bf30921e805)
+	- [Revert of like and not\_like](https://github.com/rails/rails/commit/8d02afeaee8993bd0fde69687fdd9bf30921e805)
 	- [Rails 4 Countdown to 2013 - Not Equal support for Active Record queries](http://blog.remarkablelabs.com/2012/12/not-equal-support-for-active-record-queries-rails-4-countdown-to-2013)
 - Add metadata to schema\_migrations table
 	- [Pull Request](https://github.com/rails/rails/pull/8399)
+- Rename update\_attributes method to update, keep update\_attributes as an alias
+	- [Commit](https://github.com/rails/rails/commit/1f3a1fedf951dbc4b72d178e2a649c4afd2f1566)
 
 ## Railties
 
@@ -201,6 +205,13 @@ MindNode")](/images/posts/Rails4-4.png)
 	- [Improve eager load on Rails: Pull Request](http://github.com/rails/rails/pull/7225)
 	- [Railscast](http://railscasts.com/episodes/365-thread-safety)
 	- [Rails 4 Countdown to 2013 - Rails 4 is thread safe by default](http://blog.remarkablelabs.com/2012/12/rails-4-is-thread-safe-by-default-rails-4-countdown-to-2013)
+- Binstubs
+	- [Install binstubs by default](https://github.com/rails/rails/commit/f34c27a452418d8aa17f92bb0fd7ae97b5f7e252)
+	- [Revert "Install binstubs by default"](https://github.com/rails/rails/commit/1e9d6e7b567c778baa884e7e569e67cdf5040119)
+	- [Revert "Ignore /bin on new apps" -- given the move to default binstubs, we want you to check those in!](https://github.com/rails/rails/commit/61b91c4c55bcbd5a2ec85d6e1c67755150653dff)
+	- [bundle binstubs \<gem\>](https://github.com/carlhuda/bundler/compare/rails_binstubs)
+- Add --no-html to scaffold generator
+	- [Commit](https://github.com/rails/rails/commit/cb025f850c45f26355892961d5cf05145d247a4d)
 
 ## Security
 
