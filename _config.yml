@@ -1,6 +1,7 @@
 exclude:
   - Gemfile
   - Gemfile.lock
+  - README.md
 permalink: "/:year/:i_month/:i_day/:title/"
 markdown: rdiscount
 
