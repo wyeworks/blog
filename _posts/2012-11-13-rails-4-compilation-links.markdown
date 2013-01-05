@@ -210,6 +210,7 @@ MindNode")](/images/posts/Rails4-4.png)
 	- [Revert "Install binstubs by default"](https://github.com/rails/rails/commit/1e9d6e7b567c778baa884e7e569e67cdf5040119)
 	- [Revert "Ignore /bin on new apps" -- given the move to default binstubs, we want you to check those in!](https://github.com/rails/rails/commit/61b91c4c55bcbd5a2ec85d6e1c67755150653dff)
 	- [bundle binstubs \<gem\>](https://github.com/carlhuda/bundler/compare/17561867...885ed215)
+        - [Understanding binstubs](https://github.com/sstephenson/rbenv/wiki/Understanding-binstubs)
 - Add --no-html to scaffold generator
 	- [Commit](https://github.com/rails/rails/commit/cb025f850c45f26355892961d5cf05145d247a4d)
 - Rails commands
