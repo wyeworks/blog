@@ -2,9 +2,6 @@ set :branch, 'master'
 set :user, 'wye'
 set :deploy_to, "/var/www/blog.wyeworks.com"
 set :keep_releases, 3
-set :default_environment, {
-  'PATH' => "/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH"
-}
 
 server "wyeworks.com", :app, :web, :db, :primary => true
 
