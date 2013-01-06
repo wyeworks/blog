@@ -18,6 +18,6 @@ namespace :deploy do
 
   desc 'Run jekyll to re-generate site'
   task :update_jekyll do
-    run "cd #{current_path} && rm -rf _site/* && bundle exec jekyll"
+    run "cd #{current_path} && rm -rf _site/* && #{bundle_cmd} exec jekyll"
   end
 end
