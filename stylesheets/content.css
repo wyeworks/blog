@@ -126,9 +126,7 @@ body {
 }
 
 #content div.right{float: right;height: 45px;}
-#content .hentry .recommend{font-family: georgia,sans-serif;font-style: italic;}
-#content .hentry .recommend p{}
-#content .hentry a.twitter{float: left;height: 40px;width: 80px;display: block;margin: 0 auto;margin-left: 20px;}
+#content .hentry a.twitter{float: left;height: 40px;width: 80px;display: block;margin: 0 auto;}
 #content .hentry a.rails{float: left;/*margin-right:-3px;*/display: block;background: transparent url(http://workingwithrails.com/images/tools/compact-small-button.jpg) no-repeat left top;width: 117px;margin-right: 10px;height: 42px;}
 #content .hentry a:link,#content .recomend a:visited{color: #80080a;}
 #content .hentry a:hover{color: #3a0506;}
