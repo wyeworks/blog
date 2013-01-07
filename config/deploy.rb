@@ -3,8 +3,8 @@ require "bundler/capistrano"
 
 default_run_options[:shell] = '/bin/bash'
 set :ruby_version, "1.9.3"
-set :chruby_script, "/usr/local/share/chruby/chruby.sh"
-set :set_ruby_cmd, ". #{chruby_script} && chruby #{ruby_version}"
+set :chruby_config, "/etc/profile.d/chruby.sh"
+set :set_ruby_cmd, "source #{chruby_config} && chruby #{ruby_version}"
 set(:bundle_cmd) {
   "#{set_ruby_cmd} && exec bundle"
 }
