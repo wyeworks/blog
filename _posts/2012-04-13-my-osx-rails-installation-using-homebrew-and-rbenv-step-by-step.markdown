@@ -38,7 +38,7 @@ to achieve that.
 
 <b>Step 3</b>, So now you're ready to install Homebrew, by doing:
 
-<pre><code>$ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
+<pre><code>$ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/go)"
 </code></pre>
 
 Now this is how to install some common libraries
