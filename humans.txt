@@ -1,0 +1,21 @@
+/* humanstxt.org*/
+
+/* TEAM */
+  Developer: Santiago Pastorino
+  Twitter: @spastorino
+  Github: spastorino
+
+  Developer: Sebastian Martinez
+  Twitter: @smartinez87
+  Github: smartinez87
+
+  Developer: Jose Costa
+  Twitter: @joseicosta
+  Github: joseicosta
+
+/* SITE */
+  Language: English
+  Doctype: XHTML 1.0
+  Components: jekyll, RedCloth, rdiscount, ruby
+  IDE: vim
+  Github: https://github.com/wyeworks/blog
