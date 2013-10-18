@@ -16,7 +16,7 @@ I started to work on `ActiveModel::Serializers` because I'm interested in the Ra
 
 I began contributing to the project on a trip to San Francisco. There, I had the opportunity to work a bit with Yehuda Katz and Tom Dale at Tilde, but when I returned back to my job at WyeWorks, day-to-day responsibilities did not allow me to continue the project at the same velocity and manner I would have liked. This, in part, explains the above mentioned delay.
 
-You can check out the code following [this link](https://github.com/rails-api/active_model_serializers/tree/rewrite)
+You can check out the code following [this link](https://github.com/rails-api/active_model_serializers/compare/919bb3840107...c65d387705ec)
 
 ## Improvements
 
