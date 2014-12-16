@@ -20,9 +20,25 @@
   }
 }
 
+@mixin circle($radius) {
+  width: $radius;
+  height: $radius;
+  border-radius: 777em;
+}
+
 @function text-color($color, $dark: dark, $light: light){
   $text-color: ( (red($color)*299) + (green($color)*587) + (blue($color)*114) ) / 1000;
   $text-color: if($text-color >= 150, $dark, $light);
   @return $text-color;
 }
 
+.clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}

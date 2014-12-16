@@ -1,14 +1,14 @@
-$max-width: 1200px !default;
+$max-width: 54.5em !default;
 
 // Padding used for layout margins
 $pad-min: 18px !default;
 $pad-narrow: 25px !default;
-$pad-medium: 35px !default;
+$pad-medium: 1.2em !default;
 $pad-wide: 55px !default;
 
 // Sidebar widths used in media queries
-$sidebar-width-medium: 240px !default;
-$sidebar-pad-medium: 15px !default;
+$sidebar-width-medium: 13.8em !default;
+$sidebar-pad-medium: 1.2em !default;
 $sidebar-pad-wide: 20px !default;
 $sidebar-width-wide: 300px !default;
 
@@ -45,7 +45,6 @@ $header-padding-bottom: 1.5em !default;
 
 body {
   -webkit-text-size-adjust: none;
-  max-width: $max-width;
   position: relative;
   margin: 0 auto;
   > header, > nav, > footer, #content > article, #content > div > article, #content > div > section {
@@ -89,9 +88,21 @@ body {
   }
 }
 
+.vessel {
+  position: relative;
+  max-width: $max-width;
+  padding: .1em 1.25em;
+  margin: 0 auto;
+  overflow: hidden;
+  @extend .clearfix;
+}
+
 #content {
   overflow: hidden;
-  > div, > article { width: 100%; }
+  > div, > article {
+    float: right;
+    width: calc(100% - 16.4em);
+  }
 }
 
 aside.sidebar {
@@ -139,14 +150,13 @@ body.sidebar-footer {
   }
   #content {
     overflow: visible;
-    margin-right: $sidebar-width-medium;
     position: relative;
     .no-sidebar & { margin-right: 0; border-right: 0; }
     .collapse-sidebar & { margin-right: 20px; }
     > div, > article {
       padding-top: $pad-medium/2;
       padding-bottom: $pad-medium/2;
-      float: left;
+      float: right;
     }
   }
   aside.sidebar {
@@ -155,7 +165,6 @@ body.sidebar-footer {
     background: none;
     clear: none;
     float: left;
-    margin: 0 -100% 0 0;
     section {
       width: auto; margin-left: 0;
       &.odd, &.even { float: none; width: auto; margin-left: 0; }
@@ -168,7 +177,6 @@ body.sidebar-footer {
 
 @media only screen and (min-width: 992px) {
   body > header { font-size: $header-font-size * 1.3; }
-  #content { margin-right: $sidebar-width-wide; }
   #content {
     > div, > article {
       padding-top: $pad-wide/2;

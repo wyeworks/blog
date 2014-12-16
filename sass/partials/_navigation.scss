@@ -74,7 +74,7 @@ body > nav {
       float: right;
       text-align: left;
       padding-left: .8em;
-      width: $sidebar-width-medium - $pad-medium*2 - $sidebar-pad-medium + 20px;
+      width: $sidebar-width-medium - $pad-medium*2 - $sidebar-pad-medium + 1em;
       .search {
         width: 93%;
         font-size: .95em;
@@ -82,7 +82,7 @@ body > nav {
       }
     }
     ul[data-subscription$=email] + form {
-      width: $sidebar-width-medium - $pad-medium*2 - $sidebar-pad-medium - 58px;
+      width: $sidebar-width-medium - $pad-medium*2 - $sidebar-pad-medium - 2em;
       .search { width: 91%; }
     }
     fieldset.mobile-nav { display: none; }
@@ -121,7 +121,7 @@ body > nav {
   body > nav {
     @media only screen and (min-width: 550px) {
       ul[data-subscription$=email] + form {
-        width: $sidebar-width-medium - $pad-medium*2 - $sidebar-pad-medium - 32px;
+        width: $sidebar-width-medium - $pad-medium*2 - $sidebar-pad-medium - 1em;
       }
     }
     @media only screen and (min-width: 992px) {
