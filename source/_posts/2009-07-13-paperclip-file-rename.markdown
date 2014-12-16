@@ -13,6 +13,8 @@ published: true
 While developing an application with Sebastián that allow users to upload videos with some file name restrictions, meaning that it must contain only A-Z and 0-9 digits, underscores (_) as a valid component as well, and also the name must be preceded by it's own #id, we came up with the need of applying this custom filter to each uploaded video.
 After doing some research on paperclip source code and internet tutorials, we suggest the following solution:
 
+<!--more-->
+
 <pre><code>class Video < ActiveRecord::Base
   has_attached_file :video,
     :path => ":rails_root/public/system/:attachment/:id/:style/:normalized_video_file_name",

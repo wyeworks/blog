@@ -12,6 +12,8 @@ published: true
 ---
 There is an old joke that illustrates how the relationship between clients and developers is that I'd like to share with you:
 
+<!--more-->
+
 <pre><code>A man is flying in a hot air balloon when realizes he is lost. He reduces height and spots a man down below. He lowers the balloon further and shouts: 
 - "Excuse me, can you tell me where I am?"
 The man below says: 

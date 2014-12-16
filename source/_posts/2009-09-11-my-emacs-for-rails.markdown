@@ -13,6 +13,8 @@ published: true
 I'd like to share with the community my emacs init file and a set of plugins to give a nicer experience on Ruby on Rails development, which you can checkout from [here](http://github.com/spastorino/my_emacs_for_rails/tree/master).
 I have been using this environment under emacs 23, and it has not been tested on other emacs versions, so all feedback is welcome, if something goes wrong please feel free to contact me.
 
+<!--more-->
+
 ## What's in the package?
 
 The package provides my customized Emacs init file and some plugins I found very useful to enhance Ruby on Rails development experience.

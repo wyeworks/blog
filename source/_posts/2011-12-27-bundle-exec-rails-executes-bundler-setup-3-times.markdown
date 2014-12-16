@@ -12,6 +12,8 @@ published: true
 ---
 *TL;DR*: don't run *bundle exec* before *rails* command, rails already checks the presence of *Bundler* through the *Gemfile* and sets up everything according to it without the overhead of *bundle exec_. _rails* command is the only exception to the rule. Additionally I've added a [patch](https://github.com/carlhuda/bundler/commit/2c838255ccadadeab5298b7c2bbc39035e59f248) to *Bundler* that avoids calling Bundler.setup which adds unnecessary overhead.
 
+<!--more-->
+
 I was researching on a huge *Bundler 1.1* performance regression, [@masterkain](http://twitter.com/masterkain) was hitting when running *bundle exec rails runner ''* (you shouldn't run bundle exec before the *rails* command, but keep reading for now). I started to profile it using *ruby-prof* and one of the things I realized was that *Bundler.setup* (which is a considerable slow method because it calls [Bundler::Runtime#setup](https://github.com/carlhuda/bundler/blob/2a38a24a295b6e978f0c982d454a3a9f11399abc/lib/bundler/runtime.rb#L7-42)) was ran 3 times. My first reaction was WTF?? 3 times??. I will write about my other findings in another blog post.
 
 After analyzing the code, I found out that the first call to *Bundle.setup* is in [Bundler::CLI#exec](https://github.com/carlhuda/bundler/blob/2a38a24a295b6e978f0c982d454a3a9f11399abc/lib/bundler/cli.rb#L398) right before shelling out to run _rails runner ''_.

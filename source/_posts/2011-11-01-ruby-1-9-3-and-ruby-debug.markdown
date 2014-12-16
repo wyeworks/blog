@@ -12,6 +12,8 @@ published: true
 ---
 As you probably know Ruby (MRI so brixen doesn't get mad at me :P) [1.9.3 was released](http://www.ruby-lang.org/en/news/2011/10/31/ruby-1-9-3-p0-is-released/.) I've been using 1.9.3 for a while now and as part of my RubyConf Uruguay talk I wanted to show ruby-debug. So my first attempt was:
 
+<!--more-->
+
 <pre><code>$ gem install ruby-debug19
 Fetching: linecache19-0.5.12.gem (100%)
 Building native extensions.  This could take a while...

@@ -13,6 +13,8 @@ published: true
 **[rails-api](https://github.com/spastorino/rails-api)** is a plugin developed by Yehuda Katz, José Valim, Carlos Antonio da Silva and me (Santiago Pastorino) which modifies Rails applications trimming down usually unneeded Rails functionalities for API applications.
 Do you remember we added support for this on core and [it was reverted](https://github.com/rails/rails/commit/6db930cb5bbff9ad824590b5844e04768de240b1)?. This plugin enables that again.
 
+<!--more-->
+
 ### What is an API app?
 
 Traditionally, when people said that they used Rails as an "API", they meant providing a programmatically accessible API alongside their web application. For example, GitHub provides [an API](http://developer.github.com/) that you can use from your own API clients.

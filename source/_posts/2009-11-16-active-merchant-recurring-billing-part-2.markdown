@@ -14,6 +14,8 @@ Ok, it's been some time we don't post something in the blog, past weeks have bee
 
 In this post I just want to tell that we added an extra ability to the recurring billing for BeanStream Gateway: **Modify an existing transaction.**
 
+<!--more-->
+
 It's pretty easy, you just need to do something like this:
 
 <pre><code>  response = gateway.update_recurring(new_amount ,  new_options) </code></pre>

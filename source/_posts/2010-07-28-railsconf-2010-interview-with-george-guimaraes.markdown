@@ -14,6 +14,8 @@ Among the great people we met at the RailsConf was George Guimarães ([@georgegu
 
 George is co-founder of [Plataforma Tec](http://plataformatec.com.br/), that many of us got to know well through their amazing set of gems/plugins and the stunning work José Vailm has been doing as a Rails Core team member. Kind of what I hope it's happening with the great work Santiago Pastorino is doing with his contributions and how it's reinforcing WyeWorks reputation.
 
+<!--more-->
+
 But still there are a lot of guys behind the scenes that support this great Open Source effort that's being carried in these companies, probably not so much by direct intervention but with more hard and 'real' work as we like to say to joke around and bother the OSS guys. The kind of work that pay the bills :P
 
 Not that George doesn't do OSS, actually he's currently involved in the development of [Restfulie](http://github.com/caelum/restfulie) that got many people pretty excited at the RailsConf this year, and much more stuff.

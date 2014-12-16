@@ -12,6 +12,8 @@ published: true
 ---
 At WyeWorks headquarters, every once in a while, we come across some project that needs a media edition/transcoding solution to build into. This was the case of our latest project in which we built a pretty simple interface with [Brightcove(Brightcove - The Leading Online Video Platform.)](http://www.brightcove.com/), a powerful video platform on which we may write something about it in our forthcoming posts, but it's not the point right now.
 
+<!--more-->
+
 Turns out to be that Brightcove recommends that files should be encoded using either H.264 or VP6. As usual, we ask ffmpeg for salvation when we need to transcode media files and this was not the exception. But we didn't want to transcode just every file nor make the choice based on the file's extension. We wanted a way to check the current file encoding.
 
 Searches made at that time lead us to think that the usual way to get a media file encoding is by running:

@@ -13,6 +13,8 @@ published: true
 For past few days we had been working on the new version of the WyeWorks site, so stay tunned.
 This new version will have a twitter section, where the last 5 tweets of our team will be displayed.
 
+<!--more-->
+
 So first thing I had to do was installing the twitter gem:
 <pre><code>gem install twitter</code></pre>
 

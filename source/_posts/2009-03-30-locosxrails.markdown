@@ -14,6 +14,8 @@ We're attending [Locos X Rails (Locos X Rails)](http://www.locosxrails.com) conf
 
 It will be held on April 3rd and 4th at Universidad de Palermo in Buenos Aires, Argentina.
 
+<!--more-->
+
 Who are the speakers going to be? Obie Fernandez, Yehuda Katz, David Heinemeier Hansson (via teleconference), Luis Lavena, Fabio Akita, and many more!
 Does anyone sounds familiar?
 

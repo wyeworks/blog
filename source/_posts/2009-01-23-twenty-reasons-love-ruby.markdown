@@ -13,6 +13,9 @@ published: true
 Inspired by Hal Fulton's article [Thirty-seven Reasons I Love Ruby(Thirty-seven Reasons I Love Ruby)](http://rubyhacker.com/ruby37.html), i'd like to share my top twenty reasons I love Ruby.
 
 1. **{color:#993300}It's object-oriented.** What does that mean? Well, for every ten programmers, there are twelve opinions as to what OOP is. I will leave it your judgment. But for the record, Ruby does offer encapsulation of data and methods within objects and allows inheritance from one class to another; and it allows polymorphism of objects. Unlike some languages (like C++ for instance) Ruby was designed from the beginning to be object-oriented.
+
+<!--more-->
+
 1. **{color:#993300}It's a pure OOP language.** Am I being redundant? I don't think so. By this I mean that everything, including primitive data types such as strings and integers, is represented as an object. There is no need for wrapper classes such as Java has. And in addition, even constants are treated as objects, so that a method may be invoked with, for example, a numeric constant as a receiver.
 1. **{color:#993300}It's a dynamic language.** For people only familiar with more static languages such as C++ and Java, this is a significant conceptual leap. It means that methods and variables may be added and redefined at runtime. It obviates the need for such features as C's conditional compilation (*#ifdef*), and makes possible a sophisticated reflection API. This in turn allows programs to become more "self-aware" -- enabling runtime type information, detection of missing methods, hooks for detecting added methods, and so on. 
 1. **{color:#993300}It's an interpreted language.** This is a complex issue, and deserves several comments. It can be argued that performance issues make this a negative rather than a positive. To this concern, I reply saying that a rapid development cycle is a great benefit, and it is encouraged by the interpreted nature of Ruby. 

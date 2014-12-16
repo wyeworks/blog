@@ -12,6 +12,8 @@ published: true
 ---
 Refinements arrived to Ruby trunk [here](https://bugs.ruby-lang.org/issues/4085.) The purpose of Refinements is to make monkey patching safer, extending core classes but limiting its effects to a particular area of code.
 
+<!--more-->
+
 Shugo Maeda wrote ...
 
 <pre><code>"Refinements are similar to Classboxes.  However, Refinements doesn't

@@ -16,6 +16,8 @@ Everything was beautiful, until I tried to upload a file using paperclip.
 Although Paperclip was originally built for rails [Ken Robertson](http://invalidlogic.com/dm-paperclip/) ported it to Datamapper.
 Let me explain in few steps how you can upload with Paperclip, using Datamapper.
 
+<!--more-->
+
 Start declaring your model like this:
 <pre><code>class Resource
   include DataMapper::Resource

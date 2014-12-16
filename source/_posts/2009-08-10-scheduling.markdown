@@ -14,6 +14,8 @@ Scheduling tasks is something we all need to know to do, for it's quite common i
 You are probably quite familiar then with the linux cron, if you had to deal with scheduling stuff in the past, but there is something you may not. Let me introduce you the [*Whenever*(Whenever)](http://github.com/javan/whenever/tree/master) gem. 
 What is it? A simple gem to schedule tasks writing them in nice ruby syntax...just let the gem work it's magic and deal with the cron.
 
+<!--more-->
+
 In order to install it, you have to add first the github source, only if you never done it :
 <pre><code>$ gem sources -a http://gems.github.com
 $ sudo gem install javan-whenever

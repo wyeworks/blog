@@ -13,6 +13,8 @@ published: true
 Working on a payment system we had to sort some difficulties when making recurring payments using active merchant. Why? Because we needed to use BeanStream gateway and active merchant does not support recurring billing for this gateway yet.
 So I just added the functionality to it.
 
+<!--more-->
+
 You can check out my fork of Active Merchant that supports recurring billing for this merchant on [http://github.com/wyeworks/active_merchant](http://github.com/wyeworks/active_merchant.)
 
 Here I leave you an example on how to use it:

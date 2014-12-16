@@ -13,6 +13,8 @@ published: true
 Delegation is a feature Rails introduced in it's 2.2 version, and in my opinion are quite useful and somehow something we don't see too much around.
 The concept of delegation is to take some methods and send them off to another object to be processed.
 
+<!--more-->
+
 Let me explain this with a brief example:
 
 Suppose you have a User class for anyone registered on your site, and a Customer class for those who have actually placed orders:

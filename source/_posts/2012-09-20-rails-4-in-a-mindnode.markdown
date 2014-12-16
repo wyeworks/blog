@@ -18,6 +18,8 @@ tool for that. So I started checking what was being added, removed and
 deprecated in Rails 4 (my memory isn't good enough to have all that in the
 top of my head :P). The result is this MindNode I'm sharing with you …
 
+<!--more-->
+
 [![Rails 4 MindNode](/images/posts/Rails4-mini-4.png "Rails 4
 MindNode")](/images/posts/Rails4-4.png)
 

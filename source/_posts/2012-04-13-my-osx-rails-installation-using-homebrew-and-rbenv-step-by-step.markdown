@@ -12,6 +12,8 @@ published: true
 ---
 In this opportunity I'll explain (as the title suggests) how to go from a brand new mac os x to running Rails tests.
 
+<!--more-->
+
 <b>Step 0</b>, is to make sure that <code>locale</code> returns <pre><code>LANG="en_US.UTF-8"
 LC_COLLATE="en_US.UTF-8"
 LC_CTYPE="en_US.UTF-8"

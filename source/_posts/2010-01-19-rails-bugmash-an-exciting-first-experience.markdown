@@ -14,6 +14,8 @@ As many of you must know, last weekend a [Railsbridge Bugmash](http://bugmash.co
 For those who are not aware about what this is, it's a virtual event that takes place on irc.freenode.net at #railsbridge channel.
 The general idea of these events is to work on the Rails Core, taking a look at the [Rails Issue Tracker](https://rails.lighthouseapp.com/projects/8994-ruby-on-rails/overview.) However, given that Rails 3 is about to see the light, this opportunity was intended to deeply test it looking for:
 
+<!--more-->
+
   * Fix a known issue
   * Report a bug
   * Make sure your favorite gem or plugin still works. If not, fork it and make it so.

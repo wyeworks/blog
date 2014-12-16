@@ -19,6 +19,8 @@ So, here is how i did it ... may be far from perfect but it seems to pull it off
 There is already a method <code>gravatar</code> that receives a hash with the comment properties and does the trick.
 So, placing the following line in the right spot of the appropriate liquid file (for me that's the _article.liquid file) should be enough:
 
+<!--more-->
+
 <pre><code>{{ comment | gravatar:50,'avatar'' }}</code></pre>
 
 ### Articles are a little more tricky

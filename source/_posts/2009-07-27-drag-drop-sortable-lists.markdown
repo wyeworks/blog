@@ -14,6 +14,8 @@ Time has come for us to make a sortable list, and let's face it, drag&drop are t
 
 Suppose you have a playlist with many videos, and want to establish an order on which they will be played. First thing you will need is to add a 'position' attribute to your Video model. To do that, we'll generate a migration first:
 
+<!--more-->
+
 <pre><code>script/generate migration add_position_to_videos position:integer
 </code></pre>
 

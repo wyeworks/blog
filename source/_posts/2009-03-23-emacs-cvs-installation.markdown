@@ -13,6 +13,8 @@ published: true
 This is the first of a set of posts talking about Emacs. In this case we are going to install Emacs from the CVS repositories on Unix based systems. Emacs has alternative mirrors repositories in Bazaar, Git, Mercurial and Arch.
 You can check out the procedure and other information on [EmacsFromCVS](http://www.emacswiki.org/emacs/EmacsFromCVS)
 
+<!--more-->
+
 ## Why emacs from CVS?
 
 Because the current CVS version provides new exciting features like:

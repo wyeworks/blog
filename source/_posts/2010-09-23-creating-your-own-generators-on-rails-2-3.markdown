@@ -13,6 +13,8 @@ published: true
 Time has come for me to write a Rails generator, and as you're guessing right now, my first step was taking a look at the [Guides](http://guides.rubyonrails.org/generators.html.)
 They give you a pretty good idea on what you can do (despite of being for Rails 3.0), but as my friend Santiago always say, there's no better documentation than the source code itself. So, my second step was to dive into the [code](http://github.com/rails/rails/tree/2-3-stable/railties/lib/rails_generator/.) You should definitely read the code, great stuff there.
 
+<!--more-->
+
 After some time reading, I decided it was time for me to start playing around with that, so here it comes:
 
 First thing you should know, is that all Rails generators are derived from a class called “Rails::Generator::Base.” But, if we derive our generator class from NamedBase instead of Base, then we’ll get the ability to take a name parameter from the script/generate command line. With that in mind, you can start writing the generator *skeleton*:
