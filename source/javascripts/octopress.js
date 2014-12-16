@@ -13,13 +13,6 @@ function getNav() {
 }
 
 function addSidebarToggler() {
-  if(!$('body').hasClass('sidebar-footer')) {
-    $('#content').append('<span class="toggle-sidebar"></span>');
-    $('.toggle-sidebar').bind('click', function(e) {
-      e.preventDefault();
-      $('body').toggleClass('collapse-sidebar');
-    });
-  }
   var sections = $('aside.sidebar > section');
   if (sections.length > 1) {
     sections.each(function(index, section){
