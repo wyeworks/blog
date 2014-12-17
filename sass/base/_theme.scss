@@ -1,6 +1,15 @@
 $noise-bg: image-url('noise.png') top left !default;
 $img-border: inline-image('dotted-border.png') !default;
 
+// Wyeworks color palette
+$quality-color: #6d6d6d;
+$fun-color: #fed318;
+$proactive-color: #ea3225;
+$friendly-color: #13b2b4;
+$amusing-color: #f4b21f;
+$clear-color: #fff;
+$darkness-color: #000;
+
 // Main Link Colors
 $link-color: lighten(#165b94, 3) !default;
 $link-color-hover: adjust-color($link-color, $lightness: 10, $saturation: 25) !default;
@@ -8,7 +17,7 @@ $link-color-visited: adjust-color($link-color, $hue: 80, $lightness: -4) !defaul
 $link-color-active: adjust-color($link-color-hover, $lightness: -15) !default;
 
 // Main Section Colors
-$main-bg: #f8f8f8 !default;
+$main-bg: $clear-color !default;
 $page-bg: #252525 !default;
 $article-border: #eeeeee !default;
 
@@ -17,7 +26,7 @@ $header-border: lighten($header-bg, 15) !default;
 $title-color: #f2f2f2 !default;
 $subtitle-color: #aaa !default;
 
-$text-color: #222 !default;
+$text-color: $quality-color !default;
 $text-color-light: #aaa !default;
 $type-border: #ddd !default;
 
@@ -35,7 +44,7 @@ $nav-border-left: darken($nav-bg, 11) !default;
 $nav-border-right: lighten($nav-bg, 7) !default;
 
 /* Sidebar colors */
-$sidebar-bg: #f2f2f2 !default;
+$sidebar-bg: $clear-color !default;
 $sidebar-link-color: $text-color !default;
 $sidebar-link-color-hover: $link-color-hover !default;
 $sidebar-link-color-active: $link-color-active !default;
@@ -77,9 +86,5 @@ body {
   > div {
     background: $sidebar-bg $noise-bg;
     border-bottom: 1px solid $page-border-bottom;
-    > div {
-      background: $main-bg $noise-bg;
-      border-right: 1px solid $sidebar-border;
-    }
   }
 }
