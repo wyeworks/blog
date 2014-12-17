@@ -19,7 +19,7 @@ body > header h1 {
   @extend .heading;
   font-family: $header-title-font-family;
   font-weight: normal;
-  line-height: 1.2em;
+  line-height: 1.2;
   margin-bottom: 0.6667em;
 }
 body > header h2 {
@@ -27,18 +27,18 @@ body > header h2 {
 }
 
 body {
-  line-height: 1.5em;
+  line-height: 1.4;
   color: $text-color;
   @extend .sans;
 }
 h1 {
   font-size: 2.2em;
-  line-height: 1.2em;
+  line-height: 1.2;
 }
 
 @media only screen and (min-width: 992px) {
   body { font-size: 1.15em; }
-  h1 { font-size: 2.6em; line-height: 1.2em; }
+  h1 { font-size: 2.6em; line-height: 1.2; }
 }
 
 #{headings()}{
@@ -80,7 +80,7 @@ strong { font-weight: bold; }
 
 em { font-style: italic; }
 
-sup, sub { font-size: 0.75em; position: relative;  display: inline-block; padding: 0 .2em; line-height: .8em;}
+sup, sub { font-size: 0.75em; position: relative;  display: inline-block; padding: 0 .2em; line-height: .8;}
 sup { top: -.5em; }
 sub { bottom: -.5em; }
 
@@ -112,7 +112,7 @@ article blockquote {
   font-style: italic;
   position: relative;
   font-size: 1.2em;
-  line-height: 1.5em;
+  line-height: 1.5;
   padding-left: 1em;
   border-left: 4px solid rgba($text-color-light, .5);
   cite {
@@ -144,7 +144,7 @@ article blockquote {
   position: relative;
   top: 7px;
   font-size: 1.4em;
-  line-height: 1.45em;
+  line-height: 1.45;
 }
 
 .pullquote-left:before {
