@@ -1,6 +1,54 @@
+.clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.conceptual-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .side-by-side {
   @extend .clearfix;
 }
 .side-by-side > * {
   float: left;
+}
+
+.center-several {
+  text-align: center;
+}
+.center-several > * {
+  display: inline-block;
+  margin: 0 .3em;
+  padding: 0;
+}
+
+.icon-twitter,
+.icon-mail,
+.icon-web {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  background-image: url('/images/icons/social.png');
+  background-repeat: no-repeat;
+  background-size: 81px 27px;
+  border-radius: 777em;
+  text-indent: -777em;
+}
+.icon-twitter {
+  background-position: 0 0;
+}
+.icon-mail {
+  background-position: -27px 0;
+}
+.icon-web {
+  background-position: -54px 0;
 }

@@ -32,18 +32,3 @@
   @return $text-color;
 }
 
-.clearfix {
-  &:before,
-  &:after {
-    content: '';
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
-}
-.conceptual-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}

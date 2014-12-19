@@ -18,25 +18,12 @@ aside.sidebar {
     }
     h1 {
       padding-bottom: .2em;
-      margin: 2em;
+      margin: 2em 0;
       font-size: 1em;
       letter-spacing: .22em;
+      text-indent: .22em;
       text-transform: uppercase;
       text-align: center;
-    }
-  }
-  ul {
-    margin-bottom: 0.5em;
-    margin-left: 0;
-  }
-  li {
-    list-style: none;
-    padding: .5em 0;
-    margin: 0;
-    border-bottom: 1px solid $sidebar-border;
-    @extend .side-shadow-border;
-    p:last-child {
-      margin-bottom: 0;
     }
   }
   a {
@@ -46,6 +33,16 @@ aside.sidebar {
   &:hover a {
     color: $sidebar-link-color;
     &:hover { color: $sidebar-link-color-hover; }
+  }
+  .post {
+    list-style-type: none;
+    margin: 1em 0;
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 .aside-alt-link {
