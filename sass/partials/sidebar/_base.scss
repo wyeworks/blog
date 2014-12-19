@@ -10,21 +10,20 @@ aside.sidebar {
     @extend .sans;
     font-size: .8em;
     line-height: 1.4em;
-    margin-bottom: 1.5em;
-    h1 {
-      margin: 1.5em 0 0;
-      padding-bottom: .2em;
-      border-bottom: 1px solid $sidebar-border;
-      @extend .side-shadow-border;
-      + p {
-        padding-top: .4em;
-      }
+    margin-bottom: 3em;
+    border-bottom: 1px solid lighten($quality-color, 45);
+    padding-bottom: 1em;
+    &:last-child {
+      border: none;
     }
-  }
-  img {
-    @extend .flex-content;
-    @extend .basic-alignment;
-    @include shadow-box($border: #fff .3em solid);
+    h1 {
+      padding-bottom: .2em;
+      margin: 2em;
+      font-size: 1em;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      text-align: center;
+    }
   }
   ul {
     margin-bottom: 0.5em;

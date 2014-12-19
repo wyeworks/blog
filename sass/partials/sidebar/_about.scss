@@ -1,0 +1,9 @@
+.social {
+}
+.social ul {
+  @extend .conceptual-list;
+}
+.social .side-by-side li {
+  border: none;
+}
+

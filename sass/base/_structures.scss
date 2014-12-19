@@ -1,0 +1,6 @@
+.side-by-side {
+  @extend .clearfix;
+}
+.side-by-side > * {
+  float: left;
+}
