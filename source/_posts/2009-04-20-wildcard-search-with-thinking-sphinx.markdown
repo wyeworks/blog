@@ -8,6 +8,7 @@ author:
   twitter_handle: joseicosta
   github_handle:  joseicosta
   image:  /images/team/jose.jpg
+  description: Description of self
 published: true
 ---
 Right after starting with [Thinking Sphinx(Thinking Sphinx plugin)](http://ts.freelancing-gods.com/), it was quite hard to find a concise guide on how to enable wildcard search.

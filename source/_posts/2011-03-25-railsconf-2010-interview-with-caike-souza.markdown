@@ -8,6 +8,7 @@ author:
   twitter_handle: joseicosta
   github_handle:  joseicosta
   image:  /images/team/jose.jpg
+  description: Description of self
 published: true
 ---
 We're opening the box of RailsConf 2010 memories! Yep ... we suck at journalism, so it turns out we have this almost one year old interview with Caike Souza we never shared before. So sorry Caike! 

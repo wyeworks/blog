@@ -8,6 +8,7 @@ author:
   twitter_handle: smartinez87
   github_handle:  smartinez87
   image:  /images/team/sebastian.jpg
+  description: Description of self
 published: true
 ---
 Ok, it's been some time we don't post something in the blog, past weeks have been crazy at the office but now everything is back to normal, hopefully.

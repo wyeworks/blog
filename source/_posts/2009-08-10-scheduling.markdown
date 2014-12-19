@@ -8,6 +8,7 @@ author:
   twitter_handle: smartinez87
   github_handle:  smartinez87
   image:  /images/team/sebastian.jpg
+  description: Description of self
 published: true
 ---
 Scheduling tasks is something we all need to know to do, for it's quite common in applications. Fetching feeds, indexing some data, processing files at a periodical time, that happens a lot.

@@ -8,6 +8,7 @@ author:
   twitter_handle: joseicosta
   github_handle:  joseicosta
   image:  /images/team/jose.jpg
+  description: Description of self
 published: true
 ---
 Well i guess many of you might have checked the last edition of the [Rails Magazine](http://railsmagazine.com/issues/4.) If not, you may should. 

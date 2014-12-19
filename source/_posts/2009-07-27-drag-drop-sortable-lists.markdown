@@ -8,6 +8,7 @@ author:
   twitter_handle: smartinez87
   github_handle:  smartinez87
   image:  /images/team/sebastian.jpg
+  description: Description of self
 published: true
 ---
 Time has come for us to make a sortable list, and let's face it, drag&drop are the prettiest ones. So, let me explain how to proceed.

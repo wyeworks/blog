@@ -8,6 +8,7 @@ author:
   twitter_handle: spastorino
   github_handle:  spastorino
   image:  /images/team/santiago.jpg
+  description: Description of self
 published: true
 ---
 I gave a presentation in [RubyConf Argentina](http://rubyconfargentina.org/en) about what's new in Rails 4 (if you saw it please [rate it](http://speakerrate.com/talks/17941-rails-4-en-30)). I've already posted the [Rails 4 MindNode](http://blog.wyeworks.com/2012/9/20/rails-4-in-a-mindnode/) which I used to start to think about what I was going to present. The talk was in Spanish but I'm leaving here the English version of the slides.

@@ -8,6 +8,7 @@ author:
   twitter_handle: spastorino
   github_handle:  spastorino
   image:  /images/team/santiago.jpg
+  description: Description of self
 published: true
 ---
 As many of you must know, last weekend a [Railsbridge Bugmash](http://bugmash.com) was celebrated, and I had the honor to be part of it for the first time.

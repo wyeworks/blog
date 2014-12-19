@@ -8,6 +8,7 @@ author:
   twitter_handle: smartinez87
   github_handle:  smartinez87
   image:  /images/team/sebastian.jpg
+  description: Description of self
 published: true
 ---
 And Ruby just doesn't stop surprising us!!

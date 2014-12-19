@@ -8,6 +8,7 @@ author:
   twitter_handle: smartinez87
   github_handle:  smartinez87
   image:  /images/team/sebastian.jpg
+  description: Description of self
 published: true
 ---
 We're attending [Locos X Rails (Locos X Rails)](http://www.locosxrails.com) conference !!!! 

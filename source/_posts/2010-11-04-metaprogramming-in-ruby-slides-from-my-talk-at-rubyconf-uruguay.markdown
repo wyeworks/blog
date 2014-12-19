@@ -8,6 +8,7 @@ author:
   twitter_handle: spastorino
   github_handle:  spastorino
   image:  /images/team/santiago.jpg
+  description: Description of self
 published: true
 date: 2010-11-04 00:01:00.000000000
 ---

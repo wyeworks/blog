@@ -8,6 +8,7 @@ author:
   twitter_handle: joseicosta
   github_handle:  joseicosta
   image:  /images/team/jose.jpg
+  description: Description of self
 published: true
 ---
 I know there are several discussions on the usage of method_missing in Ruby.

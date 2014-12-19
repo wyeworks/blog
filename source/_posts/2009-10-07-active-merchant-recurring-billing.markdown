@@ -8,6 +8,7 @@ author:
   twitter_handle: smartinez87
   github_handle:  smartinez87
   image:  /images/team/sebastian.jpg
+  description: Description of self
 published: true
 ---
 Working on a payment system we had to sort some difficulties when making recurring payments using active merchant. Why? Because we needed to use BeanStream gateway and active merchant does not support recurring billing for this gateway yet.

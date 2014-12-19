@@ -8,6 +8,7 @@ author:
   twitter_handle: joseicosta
   github_handle:  joseicosta
   image:  /images/team/jose.jpg
+  description: Description of self
 published: true
 ---
 **Goal:** I just want to see the gravatars not only for comments but in the article's title also.

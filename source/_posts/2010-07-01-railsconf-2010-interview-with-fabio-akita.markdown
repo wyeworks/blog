@@ -8,6 +8,7 @@ author:
   twitter_handle: joseicosta
   github_handle:  joseicosta
   image:  /images/team/jose.jpg
+  description: Description of self
 published: true
 ---
 In the last day of the RailsConf 2010 Santiago and I got the pleasure to hang out a few hours with Fabio Akita, a very successful guy in the Ruby and Rails community, but yet so humble and open as many of the great people we met in these past days.

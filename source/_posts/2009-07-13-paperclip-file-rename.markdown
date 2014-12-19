@@ -8,6 +8,7 @@ author:
   twitter_handle: spastorino
   github_handle:  spastorino
   image:  /images/team/santiago.jpg
+  description: Description of self
 published: true
 ---
 While developing an application with Sebastián that allow users to upload videos with some file name restrictions, meaning that it must contain only A-Z and 0-9 digits, underscores (_) as a valid component as well, and also the name must be preceded by it's own #id, we came up with the need of applying this custom filter to each uploaded video.
