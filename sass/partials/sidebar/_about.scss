@@ -1,10 +1,11 @@
-.social {
+.aside-about {
 }
-.social ul {
-  @extend .conceptual-list;
-  margin: -1.1em 0 2em;
+.aside-about img {
+  max-width: 8.375rem;
+  display: block;
+  border-radius: 777em;
+  margin: 0 auto 1em;
 }
-.social .side-by-side li {
-  border: none;
+.aside-about p {
+  text-align: center;
 }
-

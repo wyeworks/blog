@@ -1,0 +1,13 @@
+{% if post.author %}
+  {% assign author = post.author %}
+{% elsif page.author %}
+  {% assign author = page.author %}
+{% else %}
+  {% assign author = site.author %}
+{% endif %}
+
+<section class='aside-about'>
+  <img src='{{ author.image }}' alt='{{ author.name }}'>
+  <h1>{{ author.name }}</h1>
+  <p>{{ author.description }}</p>
+</section>
