@@ -14,9 +14,9 @@ published: true
 
 I'm leaving here a curated compilation of interesting links where you will find information that is not very well known. There are pull requests, issues, commits, examples, posts, videos and more about Rails 4.
 
-I'm also giving a shout out asking for improvements to this compilation. If you find something is missing or you have suggestions to make let me know by commenting in this post.
-
 <!--more-->
+
+I'm also giving a shout out asking for improvements to this compilation. If you find something is missing or you have suggestions to make let me know by commenting in this post.
 
 The Rails Guides are not always enough. When you don't find something in the guides or docs, you probably search for information on the internet or a blog post about the specific subject. But wouldn't it be better if you had all the related information together? This could also be a great starting point for a new Rails guide. 
 
