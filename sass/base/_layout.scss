@@ -107,7 +107,7 @@ body {
 
 aside.sidebar {
   float: none;
-  padding: 0 $pad-min 1px;
+  padding: 2.1em 0 0 0;
   background-color: lighten($sidebar-bg, 2);
   border-top: 1px solid $sidebar-border;
   @extend .group;
@@ -125,18 +125,12 @@ aside.sidebar {
 .toggle-sidebar { &, .no-sidebar & { display: none; }}
 
 body.sidebar-footer {
-  @media only screen and (min-width: 750px) {
-    aside.sidebar{ @include collapse-sidebar; }
-  }
   #content { margin-right: 0px; }
   .toggle-sidebar { display: none; }
 }
 
 @media only screen and (min-width: 550px) {
   body > header { font-size: $header-font-size; }
-}
-@media only screen and (min-width: 750px) {
-  aside.sidebar { @include collapse-sidebar; }
 }
 #main, #content, .sidebar {
   @extend .group;
@@ -161,16 +155,12 @@ body.sidebar-footer {
   }
   aside.sidebar {
     width: $sidebar-width-medium - $sidebar-pad-medium*2;
-    padding: 0 $sidebar-pad-medium $sidebar-pad-medium;
     background: none;
     clear: none;
     float: left;
     section {
       width: auto; margin-left: 0;
       &.odd, &.even { float: none; width: auto; margin-left: 0; }
-    }
-    .collapse-sidebar & {
-      @include collapse-sidebar;
     }
   }
 }
@@ -185,10 +175,6 @@ body.sidebar-footer {
   }
   aside.sidebar {
     width: $sidebar-width-wide - $sidebar-pad-wide*2;
-    padding: 1.2em $sidebar-pad-wide $sidebar-pad-wide;
-    .collapse-sidebar & {
-      padding: { left: $pad-wide; right: $pad-wide; }
-    }
   }
 }
 
