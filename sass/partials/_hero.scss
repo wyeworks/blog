@@ -1,22 +1,22 @@
 .hero {
   min-height: 1em;
   text-align: center;
-  padding: 12.25em 1em;
+  padding: 11.1em 1em 13.5em;
   background-position: 50% 50%;
   background-size: cover;
 }
 .hero p {
   max-width: 25em;
+  font-size: 1.625em;
+  line-height: 1.1;
   margin: 0 auto;
-  font-size: 1.6em;
-  line-height: 1.25;
 }
 .hero strong {
 }
 
 .bg-default {
   background-image: url('/images/heros/default.jpg');
-  background-position: 50% 46%;
+  background-position: 50% 49%;
 }
 .bg-post {
 }
