@@ -1,24 +1,47 @@
-body > footer {
-  @extend .sans;
-  font-size: .8em;
-  color: $footer-color;
-  text-shadow: lighten($footer-bg, 5) 0 1px;
-  background-color: $footer-bg;
-  position: relative;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  z-index: 1;
-  a {
-    color: $clear-color;
-    &:visited {
-      color: $clear-color;
-    }
-    &:hover {
-      color: $clear-color;
-    }
+[role='contentinfo'] {
+  background-color: darken($quality-color, 12);
+  padding: 3.2em 7% 4em 27%;
+  @extend .clearfix;
+}
+[role='contentinfo'] a {
+  display: inline-block;
+  color: lighten($quality-color, 30);
+  font-weight: normal;
+  font-size: .9em;
+  padding: .75em .4em;
+  text-decoration: none;
+  &:hover {
+    color: lighten($quality-color, 40);
   }
+}
+[role='contentinfo'] .brand {
+  margin: 0 0 1.75em;
+}
+[role='contentinfo'] .side-by-side {
+}
+[role='contentinfo'] .side-by-side li {
+}
+[role='contentinfo'] ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
-  p:last-child {
-    margin-bottom: 0;
+@media (min-width: 720px){
+  [role='contentinfo'] {
+    padding: 0;
+  }
+  [role='contentinfo'] .brand {
+    float: left;
+    margin: .9em;
+  }
+  [role='contentinfo'] .side-by-side {
+    float: right;
+  }
+  [role='contentinfo'] .side-by-side li {
+    float: left;
+  }
+  [role='contentinfo'] a {
+    padding: .9em 1.2em;
   }
 }

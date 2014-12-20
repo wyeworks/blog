@@ -31,17 +31,20 @@
   padding: 0;
 }
 
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  text-indent: -777em;
+  overflow: hidden;
+}
 .icon-twitter,
 .icon-mail,
 .icon-web {
-  display: inline-block;
   width: 27px;
   height: 27px;
   background-image: url('/images/icons/social.png');
-  background-repeat: no-repeat;
   background-size: 81px 27px;
   border-radius: 777em;
-  text-indent: -777em;
 }
 .icon-twitter {
   background-position: 0 0;
@@ -51,4 +54,21 @@
 }
 .icon-web {
   background-position: -54px 0;
+}
+
+.icon-grey-mail,
+.icon-grey-twitter {
+  width: 17px;
+  height: 17px;
+  background-image: url('/images/icons/icons-grey.png');
+  background-size: 17px auto;
+  text-decoration: none;
+  margin: 0 .75em 0 0;
+  vertical-align: -.24em;
+}
+.icon-grey-mail {
+  background-position: 0 0;
+}
+.icon-grey-twitter {
+  background-position: 50% -17px;
 }
