@@ -114,6 +114,12 @@ article {
 .blog-index article {
   border-bottom: 1px solid lighten($quality-color, 45);
 }
+article.hentry header p.meta {
+  position: relative;
+  bottom: auto;
+  margin: .9em 0 .2em;
+}
+
 #content .blog-index {
   padding: {
     top: .7em;
