@@ -39,11 +39,12 @@
 }
 .icon-twitter,
 .icon-mail,
-.icon-web {
+.icon-web,
+.icon-github {
   width: 27px;
   height: 27px;
   background-image: url('/images/icons/social.png');
-  background-size: 81px 27px;
+  background-size: 108px 27px;
   border-radius: 777em;
 }
 .icon-twitter {
@@ -54,6 +55,9 @@
 }
 .icon-web {
   background-position: -54px 0;
+}
+.icon-github {
+  background-position: -80px 0;
 }
 
 .icon-grey-mail,
