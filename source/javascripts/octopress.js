@@ -98,6 +98,14 @@ function renderDeliciousLinks(items) {
   $('#delicious').html(output);
 }
 
+function setHeroImage(){
+  var heroData = $('#hero-href');
+  if(heroData.length){
+    var heroHref = heroData.attr('data-href');
+    $('.hero').addClass('hero-post').css({'background-image': 'url("' + heroHref + '")'})
+  }
+}
+
 $('document').ready(function() {
   testFeatures();
   wrapFlashVideos();
@@ -105,6 +113,7 @@ $('document').ready(function() {
   addCodeLineNumbers();
   getNav();
   addSidebarToggler();
+  setHeroImage();
 });
 
 // iOS scaling bug fix

@@ -1,3 +1,7 @@
+{% unless index %}
+<div id='hero-href' class='hidden' data-href='{{ page.hero_image }}'></div>
+{% endunless %}
+
 {% unless page.no_header %}
   <header>
     {% if index %}
@@ -17,6 +21,7 @@
     {% endunless %}
   </header>
 {% endunless %}
+
 {% if index %}
   <div class="entry-content">{{ content | excerpt }}</div>
 {% else %}
