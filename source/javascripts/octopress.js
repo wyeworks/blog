@@ -102,7 +102,13 @@ function setHeroImage(){
   var heroData = $('#hero-href');
   if(heroData.length){
     var heroHref = heroData.attr('data-href');
-    $('.hero').addClass('hero-post').css({'background-image': 'url("' + heroHref + '")'})
+    var hero = $('.hero');
+    if(heroHref.length){
+      hero.addClass('hero-post').css({'background-image': 'url("' + heroHref + '")'})
+    }
+    else {
+      hero.remove();
+    }
   }
 }
 

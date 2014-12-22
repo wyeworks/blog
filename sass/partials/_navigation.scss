@@ -3,7 +3,7 @@ body > nav {
   background-color: $clear-color;
   padding-left: .15em;
   padding-right: 1em;
-  box-shadow: 0 .625em 1.875em rgba(0, 0, 0, .32);
+  box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
 
   form {
     @include background-clip(padding-box);
