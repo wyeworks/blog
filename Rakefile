@@ -112,11 +112,20 @@ task :new_post, :title do |t, args|
     post.puts "---"
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
+    post.puts "category: "
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M:%S %z')}"
     post.puts "comments: true"
-    post.puts "categories: "
+    post.puts "hero_image: /images/heros/post-high.jpg"
+    post.puts "author:"
+    post.puts "  name: "
+    post.puts "  email: "
+    post.puts "  twitter_handle: "
+    post.puts "  github_handle: "
+    post.puts "  image: /images/team/santiago.jpg"
+    post.puts "  description: "
     post.puts "---"
   end
+  puts "Remember to fill category, hero_image and author data :)"
 end
 
 # usage rake new_page[my-new-page] or rake new_page[my-new-page.html] or rake new_page (defaults to "new-page.markdown")
