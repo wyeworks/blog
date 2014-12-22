@@ -58,10 +58,15 @@ article {
     }
   }
   h2 {
-    padding-top: 0.8em;
-    background: $img-border top left repeat-x;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: 1.19em;
   }
   .entry-content & h2:first-child, header + h2 { padding-top: 0; }
+  .entry-content ul,
+  .entry-content ol {
+    margin-left: .9em;
+  }
   h2:first-child, header + h2 { background: none; }
   .feature {
     padding-top: .5em;
