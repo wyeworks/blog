@@ -9,7 +9,7 @@ author:
   twitter_handle: joseicosta
   github_handle:  joseicosta
   image:  /images/team/jose.jpg
-  description: Description of self
+  description: Cofounder & CEO at WyeWorks. Fitness aficionado. Home Barista wannabe.
 published: true
 ---
 Well i guess many of you might have checked the last edition of the [Rails Magazine](http://railsmagazine.com/issues/4.) If not, you may should. 

@@ -9,7 +9,7 @@ author:
   twitter_handle: smartinez87
   github_handle:  smartinez87
   image:  /images/team/sebastian.jpg
-  description: Description of self
+  description: VP of Engineering at WyeWorks. Ruby on Rails hacker. ExceptionNotification maintainer. Coffee & bacon lover.
 published: true
 ---
 We're attending [Locos X Rails (Locos X Rails)](http://www.locosxrails.com) conference !!!! 

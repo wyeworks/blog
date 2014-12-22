@@ -9,7 +9,7 @@ author:
   twitter_handle: smartinez87
   github_handle:  smartinez87
   image:  /images/team/sebastian.jpg
-  description: Description of self
+  description: VP of Engineering at WyeWorks. Ruby on Rails hacker. ExceptionNotification maintainer. Coffee & bacon lover.
 published: true
 ---
 In this opportunity I'll explain (as the title suggests) how to go from a brand new mac os x to running Rails tests.

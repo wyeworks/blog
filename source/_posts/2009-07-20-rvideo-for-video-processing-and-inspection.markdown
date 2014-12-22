@@ -9,7 +9,7 @@ author:
   twitter_handle: joseicosta
   github_handle:  joseicosta
   image:  /images/team/jose.jpg
-  description: Description of self
+  description: Cofounder & CEO at WyeWorks. Fitness aficionado. Home Barista wannabe.
 published: true
 ---
 At WyeWorks headquarters, every once in a while, we come across some project that needs a media edition/transcoding solution to build into. This was the case of our latest project in which we built a pretty simple interface with [Brightcove(Brightcove - The Leading Online Video Platform.)](http://www.brightcove.com/), a powerful video platform on which we may write something about it in our forthcoming posts, but it's not the point right now.

@@ -9,7 +9,7 @@ author:
   twitter_handle: spastorino
   github_handle:  spastorino
   image:  /images/team/santiago.jpg
-  description: Description of self
+  description: WyeWorks Co-Founder, Ruby on Rails Core Team Member
 published: true
 ---
 This is the first of a set of posts talking about Emacs. In this case we are going to install Emacs from the CVS repositories on Unix based systems. Emacs has alternative mirrors repositories in Bazaar, Git, Mercurial and Arch.

@@ -9,7 +9,7 @@ author:
   twitter_handle: joseicosta
   github_handle:  joseicosta
   image:  /images/team/jose.jpg
-  description: Description of self
+  description: Cofounder & CEO at WyeWorks. Fitness aficionado. Home Barista wannabe.
 published: true
 ---
 Among the great people we met at the RailsConf was George Guimarães ([@georgeguimaraes](http://twitter.com/georgeguimaraes)), by no surprise he was a very cool and funny dude, and he was open to talk and hang around with us.

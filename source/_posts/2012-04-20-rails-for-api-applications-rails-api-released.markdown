@@ -9,7 +9,7 @@ author:
   twitter_handle: spastorino
   github_handle:  spastorino
   image:  /images/team/santiago.jpg
-  description: Description of self
+  description: WyeWorks Co-Founder, Ruby on Rails Core Team Member
 published: true
 ---
 **[rails-api](https://github.com/spastorino/rails-api)** is a plugin developed by Yehuda Katz, José Valim, Carlos Antonio da Silva and me (Santiago Pastorino) which modifies Rails applications trimming down usually unneeded Rails functionalities for API applications.

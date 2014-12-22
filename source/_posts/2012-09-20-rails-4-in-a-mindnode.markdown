@@ -9,7 +9,7 @@ author:
   twitter_handle: spastorino
   github_handle:  spastorino
   image: /images/team/santiago.jpg
-  description: Description of self
+  description: WyeWorks Co-Founder, Ruby on Rails Core Team Member
 published: true
 ---
 

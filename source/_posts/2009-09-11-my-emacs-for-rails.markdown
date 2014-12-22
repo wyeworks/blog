@@ -9,7 +9,7 @@ author:
   twitter_handle: spastorino
   github_handle:  spastorino
   image:  /images/team/santiago.jpg
-  description: Description of self
+  description: WyeWorks Co-Founder, Ruby on Rails Core Team Member
 published: true
 ---
 I'd like to share with the community my emacs init file and a set of plugins to give a nicer experience on Ruby on Rails development, which you can checkout from [here](http://github.com/spastorino/my_emacs_for_rails/tree/master).

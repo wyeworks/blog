@@ -9,7 +9,7 @@ author:
   twitter_handle: smartinez87
   github_handle:  smartinez87
   image:  /images/team/sebastian.jpg
-  description: Description of self
+  description: VP of Engineering at WyeWorks. Ruby on Rails hacker. ExceptionNotification maintainer. Coffee & bacon lover.
 published: true
 ---
 Time has come for us to make a sortable list, and let's face it, drag&drop are the prettiest ones. So, let me explain how to proceed.

@@ -9,7 +9,7 @@ author:
   twitter_handle: smartinez87
   github_handle:  smartinez87
   image:  /images/team/sebastian.jpg
-  description: Description of self
+  description: VP of Engineering at WyeWorks. Ruby on Rails hacker. ExceptionNotification maintainer. Coffee & bacon lover.
 published: true
 ---
 There is an old joke that illustrates how the relationship between clients and developers is that I'd like to share with you:

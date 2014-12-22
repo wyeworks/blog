@@ -9,7 +9,7 @@ author:
   twitter_handle: joseicosta
   github_handle:  joseicosta
   image:  /images/team/jose.jpg
-  description: Description of self
+  description: Cofounder & CEO at WyeWorks. Fitness aficionado. Home Barista wannabe.
 published: true
 ---
 I know there are several discussions on the usage of method_missing in Ruby.

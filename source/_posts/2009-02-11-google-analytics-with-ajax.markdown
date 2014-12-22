@@ -9,7 +9,7 @@ author:
   twitter_handle: joseicosta
   github_handle:  joseicosta
   image:  /images/team/jose.jpg
-  description: Description of self
+  description: Cofounder & CEO at WyeWorks. Fitness aficionado. Home Barista wannabe.
 published: true
 ---
 It's been a while since us all have been working in fully AJAX enabled sites (as is the case of [Indieoma(Indieoma)](http://indieoma.com), one of our projects). Time comes when you'd like to know a little bit about who is accessing the site, when, which page, why .. and a few more questions Google Analytics can answer for you (not particularly the last one) in a very simple manner most of you already know about. 

@@ -9,7 +9,7 @@ author:
   twitter_handle: smartinez87
   github_handle:  smartinez87
   image:  /images/team/sebastian.jpg
-  description: Description of self
+  description: VP of Engineering at WyeWorks. Ruby on Rails hacker. ExceptionNotification maintainer. Coffee & bacon lover.
 published: true
 ---
 Time has come for me to write a Rails generator, and as you're guessing right now, my first step was taking a look at the [Guides](http://guides.rubyonrails.org/generators.html.)
