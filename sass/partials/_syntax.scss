@@ -102,14 +102,14 @@ p, li {
     @extend .mono;
     display: inline-block;
     white-space: no-wrap;
-    background: #fff;
-    font-size: .8em;
-    line-height: 1.5em;
-    color: #555;
-    border: 1px solid #ddd;
-    @include border-radius(.4em);
-    padding: 0 .3em;
-    margin: -1px 0;
+    background-color: lighten($quality-color, 50);
+    font-weight: 100;
+    font-size: .9em;
+    line-height: 1.3em;
+    color: $quality-color;
+    @include border-radius(.2em);
+    padding: 0 .5em;
+    margin: -.1em .2em;
   }
   pre code { font-size: 1em !important; background: none; border: none; }
 }
