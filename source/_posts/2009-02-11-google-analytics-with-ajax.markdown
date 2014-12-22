@@ -2,6 +2,7 @@
 layout: post
 title: Google Analytics with AJAX
 category: Ajax
+hero_image: /images/heros/post-high.jpg
 author:
   name: José Costa
   email: jose@wyeworks.com

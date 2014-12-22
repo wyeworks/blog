@@ -2,6 +2,7 @@
 layout: post
 title: Rails for API applications (rails-api) released
 category: Ruby
+hero_image: /images/heros/post-high.jpg
 author:
   name: Santiago Pastorino
   email: santiago@wyeworks.com

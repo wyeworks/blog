@@ -2,6 +2,7 @@
 layout: post
 title: Generating PDF with odf-report and images support
 category: Ruby
+hero_image: /images/heros/post-high.jpg
 author:
   name: José Costa
   email: jose@wyeworks.com

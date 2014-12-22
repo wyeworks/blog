@@ -2,6 +2,7 @@
 layout: post
 title: Ruby 1.9.3 and ruby-debug
 category: Ruby
+hero_image: /images/heros/post-high.jpg
 author:
   name: Santiago Pastorino
   email: santiago@wyeworks.com

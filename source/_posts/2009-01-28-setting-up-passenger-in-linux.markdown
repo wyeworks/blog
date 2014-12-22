@@ -2,6 +2,7 @@
 layout: post
 title: Setting up Passenger in Linux
 category: Passenger
+hero_image: /images/heros/post-high.jpg
 author:
   name: Sebastián Martínez
   email: sebastian@wyeworks.com

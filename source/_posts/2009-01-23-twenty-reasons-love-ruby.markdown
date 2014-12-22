@@ -2,6 +2,7 @@
 layout: post
 title: Twenty Reasons I Love Ruby
 category: Ruby
+hero_image: /images/heros/post-high.jpg
 author:
   name: Sebastián Martínez
   email: sebastian@wyeworks.com

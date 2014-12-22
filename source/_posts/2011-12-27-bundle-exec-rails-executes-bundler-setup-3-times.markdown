@@ -2,6 +2,7 @@
 layout: post
 title: bundle exec rails … executes Bundler.setup 3 times
 category: Ruby
+hero_image: /images/heros/post-high.jpg
 author:
   name: Santiago Pastorino
   email: santiago@wyeworks.com

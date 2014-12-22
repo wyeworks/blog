@@ -2,6 +2,7 @@
 layout: post
 title: Ruby Refinements landed in trunk
 category: Ruby
+hero_image: /images/heros/post-high.jpg
 author:
   name: Santiago Pastorino
   email: santiago@wyeworks.com

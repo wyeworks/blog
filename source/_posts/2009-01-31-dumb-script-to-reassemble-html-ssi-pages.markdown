@@ -2,6 +2,7 @@
 layout: post
 title: Dumb script to reassemble HTML + SSI pages
 category: SSI
+hero_image: /images/heros/post-high.jpg
 author:
   name: José Costa
   email: jose@wyeworks.com

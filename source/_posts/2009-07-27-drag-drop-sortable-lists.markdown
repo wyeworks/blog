@@ -2,6 +2,7 @@
 layout: post
 title: Drag & Drop Sortable Lists
 category: Ruby
+hero_image: /images/heros/post-high.jpg
 author:
   name: Sebastián Martínez
   email: sebastian@wyeworks.com

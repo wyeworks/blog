@@ -2,6 +2,7 @@
 layout: post
 title: Wildcard search with Thinking Sphinx
 category: Ruby
+hero_image: /images/heros/post-high.jpg
 author:
   name: José Costa
   email: jose@wyeworks.com

@@ -2,6 +2,7 @@
 layout: post
 title: Rails delegate method
 category: Rails
+hero_image: /images/heros/post-high.jpg
 author:
   name: Sebastián Martínez
   email: sebastian@wyeworks.com

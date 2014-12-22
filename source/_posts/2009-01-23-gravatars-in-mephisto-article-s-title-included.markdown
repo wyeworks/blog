@@ -2,6 +2,7 @@
 layout: post
 title: Gravatars in Mephisto (article's title included)
 category: Gravatars
+hero_image: /images/heros/post-high.jpg
 author:
   name: José Costa
   email: jose@wyeworks.com

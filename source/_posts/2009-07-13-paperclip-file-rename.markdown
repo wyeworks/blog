@@ -2,6 +2,7 @@
 layout: post
 title: Paperclip file rename
 category: Ruby
+hero_image: /images/heros/post-high.jpg
 author:
   name: Santiago Pastorino
   email: santiago@wyeworks.com

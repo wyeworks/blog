@@ -2,6 +2,7 @@
 layout: post
 title: Rails 4 in a MindNode
 category: Rails
+hero_image: /images/heros/post-high.jpg
 author:
   name: Santiago Pastorino
   email: santiago@wyeworks.com

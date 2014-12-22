@@ -2,6 +2,7 @@
 layout: post
 title: Making Paperclip work with Sinatra & Datamapper
 category: Ruby
+hero_image: /images/heros/post-high.jpg
 author:
   name: Sebastián Martínez
   email: sebastian@wyeworks.com

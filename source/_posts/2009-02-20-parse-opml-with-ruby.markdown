@@ -2,6 +2,7 @@
 layout: post
 title: Parsing an OPML with Ruby
 category: Ruby
+hero_image: /images/heros/post-high.jpg
 author:
   name: Sebastián Martínez
   email: sebastian@wyeworks.com

@@ -2,6 +2,7 @@
 layout: post
 title: Method missing to simplify queries to an external service
 category: Ruby
+hero_image: /images/heros/post-high.jpg
 author:
   name: José Costa
   email: jose@wyeworks.com

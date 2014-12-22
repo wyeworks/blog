@@ -2,6 +2,7 @@
 layout: post
 title: Scheduling in Ruby
 category: Ruby
+hero_image: /images/heros/post-high.jpg
 author:
   name: Sebastián Martínez
   email: sebastian@wyeworks.com
