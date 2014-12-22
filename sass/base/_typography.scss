@@ -122,21 +122,40 @@ small { font-size: .8em; }
 big { font-size: 1.2em; }
 
 article blockquote {
-  $bq-margin: 1.2em;
   font-style: italic;
   position: relative;
-  font-size: 1.2em;
+  font-size: 1em;
   line-height: 1.5;
-  padding-left: 1em;
-  border-left: 4px solid rgba($text-color-light, .5);
+  padding-left: 2.25em;
+  color: lighten($quality-color, 20);
+
+  &:before {
+    content: '\201c';
+    position: absolute;
+    left: 1.25rem;
+    top: -.75rem;
+    font-size: 2.25rem;
+    font-family: Georgia, sans-serif;
+    font-style: normal;
+    color: $proactive-color;
+  }
+  p {
+    margin: .25em 0;
+  }
   cite {
     font-style: italic;
-    a { color: $text-color-light !important; word-wrap: break-word; }
-    &:before { content: '\2014'; padding:{right: .3em; left: .3em;} color: $text-color-light; }
-  }
-  @media only screen and (min-width: 992px) {
-    padding-left: 1.5em;
-    border-left-width: 4px;
+    a {
+      color: $text-color-light !important;
+      word-wrap: break-word;
+    }
+    &:before {
+      content: '\2014';
+      padding: {
+        right: .3em;
+        left: .3em;
+      }
+      color: $text-color-light;
+    }
   }
 }
 
