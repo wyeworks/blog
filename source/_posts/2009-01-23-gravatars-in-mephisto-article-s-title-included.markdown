@@ -24,13 +24,13 @@ So, placing the following line in the right spot of the appropriate liquid file 
 
 <!--more-->
 
-<pre><code>{{ comment | gravatar:50,'avatar'' }}</code></pre>
+{% codeblock %}{{ comment | gravatar:50,'avatar'' }}{% endcodeblock %}
 
 ### Articles are a little more tricky
 
 Since there is no support in for gravatars for article's author i've coded a simple initializer to add a new method for this purpose and keep the original code as clean as possible. This initializer adds the method <code>gravatar_for_article</code> to the UrlFilters module.
 
-<pre><code>module UrlFilters
+{% codeblock %}module UrlFilters
  
    def gravatar_for_article(article, size=80, default=nil)
      article = Article.find article["id"]
@@ -39,11 +39,11 @@ Since there is no support in for gravatars for article's author i've coded a sim
    end
    
  end
-</code></pre>
+{% endcodeblock %}
 
 The code above creates a new hash from some of the article's properties to mock the comment structure and passes it to the original <code>gravatar</code> method.
 Now, place the following line inside the article's header and voilá.
 
-<pre><code>{{ article | gravatar_for_article :60,'avatar' }}</code></pre>
+{% codeblock %}{{ article | gravatar_for_article :60,'avatar' }}{% endcodeblock %}
 
 Style it and you're done.

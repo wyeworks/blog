@@ -17,7 +17,7 @@ There is an old joke that illustrates how the relationship between clients and d
 
 <!--more-->
 
-<pre><code>A man is flying in a hot air balloon when realizes he is lost. He reduces height and spots a man down below. He lowers the balloon further and shouts: 
+{% codeblock %}A man is flying in a hot air balloon when realizes he is lost. He reduces height and spots a man down below. He lowers the balloon further and shouts: 
 - "Excuse me, can you tell me where I am?"
 The man below says: 
 - "Yes you're in a hot air balloon, hovering 30 feet above this field."
@@ -27,7 +27,7 @@ The man below says:
 The man below says, 
 - "You must work in business as a manager."
 - "I do," replies the balloonist, "but how did you know?"
-- "Well," says the man, "you don't know where you are or where you are going, but you expect me to be able to help. You're in the same position you were before we met but now it's my fault." </code></pre>
+- "Well," says the man, "you don't know where you are or where you are going, but you expect me to be able to help. You're in the same position you were before we met but now it's my fault." {% endcodeblock %}
 
 Developing successful client relationships are critical to any business. Preserving these relationships is crucial for making the time spent on projects more enjoyable and satisfying, as well as for referrals and future business. 
 

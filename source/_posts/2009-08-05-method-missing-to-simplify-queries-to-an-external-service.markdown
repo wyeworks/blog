@@ -20,14 +20,14 @@ In this post i'll present a pretty simple, yet useful solution that uses method_
 
 [Brightcove Media Read API(Getting Started with the Media API)](http://support.brightcove.com/en/docs/getting-started-media-api) accepts calls of the form:
 
-<pre><code>http://api.brightcove.com/services/library?command=find_all_videos
+{% codeblock %}http://api.brightcove.com/services/library?command=find_all_videos
 &token=0Z2dtxTdJAxtbZ-d0U7Bhio2V1Rhr5Iafl5FFtDPY8E.
 
 http://api.brightcove.com/services/library?command=find_related_videos
 &video_id=123123&token=0Z2dtxTdJAxtbZ-d0U7Bhio2V1Rhr5Iafl5FFtDPY8E.
 
 http://api.brightcove.com/services/library?command=find_videos_by_text
-&text=sometextsample&pageSize=100&token=0Z2dtxTdJAxtbZ-d0U7Bhio2V1Rhr5Iafl5FFtDPY8E.</code></pre>
+&text=sometextsample&pageSize=100&token=0Z2dtxTdJAxtbZ-d0U7Bhio2V1Rhr5Iafl5FFtDPY8E.{% endcodeblock %}
 
 A token must be passed on each call, and you could also add more parameters like you would do in a regular GET request.
 What comes back is a JSON string that can be easily picked up.
@@ -36,16 +36,16 @@ The key thing here is to notice that there are several commands you could execut
 
 The idea was that a call like:
 
-<pre><code>http://api.brightcove.com/services/library?command=find_videos_by_user_id
-&user_id=34876423&token=0Z2dtxTdJAxtbZ-d0U7Bhio2V1Rhr5Iafl5FFtDPY8E.</code></pre>
+{% codeblock %}http://api.brightcove.com/services/library?command=find_videos_by_user_id
+&user_id=34876423&token=0Z2dtxTdJAxtbZ-d0U7Bhio2V1Rhr5Iafl5FFtDPY8E.{% endcodeblock %}
 
 became just:
 
-<pre><code>Brightcove::ReadProxy.find_videos_by_user_id :user_id => 34876423</code></pre>
+{% codeblock %}Brightcove::ReadProxy.find_videos_by_user_id :user_id => 34876423{% endcodeblock %}
 
 We then implemented what we called the Brightcove::ReadProxy in a few lines like shown below:
 
-<pre><code>module Brightcove
+{% codeblock %}module Brightcove
   module ReadProxy
 
     TOKEN = '0Z2dtxTdJAxtbZ-d0U7Bhio2V1Rhr5Iafl5FFtDPY8E.'
@@ -69,7 +69,7 @@ We then implemented what we called the Brightcove::ReadProxy in a few lines like
       return content
     end
  
- end</code></pre>
+ end{% endcodeblock %}
 
 Basically all the magic relies in the method_missing that would convert any call to the Brightcove::ReadProxy module in the format accepted by the [API](http://docs.brightcove.com/en/media/#Video_Read), without having to define every [API](http://docs.brightcove.com/en/media/#Video_Read) method and maintaining the Rails like finders syntax.
 We also used the httpclient gem to simplify the GET request calls and the json gem to parse the result of the call.

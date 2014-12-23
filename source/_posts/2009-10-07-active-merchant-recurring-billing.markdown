@@ -22,7 +22,7 @@ You can check out my fork of Active Merchant that supports recurring billing for
 
 Here I leave you an example on how to use it:
 
-<pre><code>
+{% codeblock %}
 require 'rubygems'
 require 'active_merchant'
 
@@ -74,16 +74,16 @@ require 'active_merchant'
     end
   end
 
-</code></pre>
+{% endcodeblock %}
 
 And that's it, you have now created a recurring billing payment.
 
 Now, what if you want to cancel the same?
 Heres is how to do that:
 
-<pre><code>
+{% codeblock %}
  gateway.cancel_recurring({ :account_id => account_id })
-</code></pre>
+{% endcodeblock %}
 
 Pretty easy...the account_id is the number the gateway responses with when making a recurrent payment, and the passcode is the way of authenticating  in order to make this kind of transactions, and you can find it at the beanstream administrative console.
 

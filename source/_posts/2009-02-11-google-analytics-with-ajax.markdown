@@ -22,13 +22,13 @@ How do I track AJAX applications?)":http://www.google.com/support/analytics/bin/
 
 At the heart of [Indieoma(Indieoma)](http://indieoma.com) we use [Prototype(Prototype)](http://www.prototypejs.org.) So Google's tip may become more something like the code below:
 
-<pre><code>Ajax.Responders.register({
+{% codeblock %}Ajax.Responders.register({
  onComplete: function(request) {
   // Assuming the ga.js code was loaded first
   pageTracker._trackPageview(request.url) 
 }
  });
-</code></pre>
+{% endcodeblock %}
 
 Using the [Ajax.Responders(Prototype Ajax.Responders)](http://www.prototypejs.org/api/ajax/responders), we register a function that will fire the tracker after each AJAX request has been completed. 
 

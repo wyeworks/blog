@@ -41,16 +41,16 @@ If you're going to compile it with the default options, you need the following l
 But you can go without some libraries, check <code>./configure --help</code>, search for (<code>--without-LIB</code> options).
 On GNU/Linux systems, these libraries should be available as packages. Check for the mentioned libraries plus dev, in debian the packages are called somethings like libgif-dev, libtiff-dev, and so on.
 
-<pre><code>$ cvs -z3 -d:pserver:anonymous@cvs.savannah.gnu.org:/sources/emacs co emacs
+{% codeblock %}$ cvs -z3 -d:pserver:anonymous@cvs.savannah.gnu.org:/sources/emacs co emacs
 santiago@debian:~$ ./configure --prefix=/home/santiago/bin/emacs
 santiago@debian:~$ make
 santiago@debian:~$ make install
-</code></pre>
+{% endcodeblock %}
 
 If you want to upgrade remember to do:
-<pre><code>$ cvs update
+{% codeblock %}$ cvs update
 santiago@debian:~$ make
 santiago@debian:~$ make install
-</code></pre>
+{% endcodeblock %}
 
 I'm going to post more Emacs related posts talking about how to set up an Emacs enhanced for Ruby on Rails development.

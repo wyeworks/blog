@@ -22,13 +22,13 @@ After some time reading, I decided it was time for me to start playing around wi
 
 First thing you should know, is that all Rails generators are derived from a class called “Rails::Generator::Base.” But, if we derive our generator class from NamedBase instead of Base, then we’ll get the ability to take a name parameter from the script/generate command line. With that in mind, you can start writing the generator *skeleton*:
 
-<pre><code>class WidgetGenerator < Rails::Generator::NamedBase
+{% codeblock %}class WidgetGenerator < Rails::Generator::NamedBase
   def manifest
     record do |m|
       # Do something
     end
   end
-end</code></pre>
+end{% endcodeblock %}
 
 In order to make the generator work on your Rails 2.3 application, you should place this file under **'lib/generators/widget/widget_generator.rb'**
 
@@ -37,7 +37,7 @@ In my case, I wanted to behave very similar to the scaffold, so I wanted a contr
 
 In most cases, you will want your generator to receive several arguments. Best way is to have an initialize method to take care of that, just like this:
 
-<pre><code>
+{% codeblock %}
 class WidgetGenerator < Rails::Generator::NamedBase
   attr_reader   :controller_class_name,
                 :class_name
@@ -61,11 +61,11 @@ def initialize(runtime_args, runtime_options = {})
       # Do something
     end
   end
-end</code></pre>
+end{% endcodeblock %}
 
 Until now, we're just initializing the generator, but it's not doing anything yet. Let's add some action on our manifest method:
 
-<pre><code>def manifest
+{% codeblock %}def manifest
     record do |m|
       m.template('controller.rb', "app/controllers/#{name.pluralize}_controller.rb")
       m.template('model.rb', "app/models/#{name}.rb")
@@ -79,20 +79,20 @@ Until now, we're just initializing the generator, but it's not doing anything ye
         )
       end
     end
-  end</code></pre>
+  end{% endcodeblock %}
 
 Cool, now we are generating a controller from our template, a model, a migration, among others...Nice!
 
 You can also add a protected banner method, to display the usage of the generator right on the console:
 
-<pre><code>protected
+{% codeblock %}protected
     def banner
       "Usage: #{$0} widget WidgetName [field:type, field:type]"
-    end</code></pre>
+    end{% endcodeblock %}
 
 And that's all !! You can now generate all the widgets you want.
 The command to run this would be:
 
-<pre><code>$ ./script/generate widget MyWidget title:string viewing:integer</code></pre>
+{% codeblock %}$ ./script/generate widget MyWidget title:string viewing:integer{% endcodeblock %}
 
 Have fun generating!! 

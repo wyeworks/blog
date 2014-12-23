@@ -21,7 +21,7 @@ In the past we have to deal with XML files and parse them, incredibly easy task 
 We found this function to parse the OPML document recursively preserving its structure in the [desktop weblog(desktop weblog)](http://dekstop.de/weblog/), that does the job of extracting the feeds, and modified it a bit. Now it returns a hash containing the title of the articles as keys, and its links as values.
 
 Here's the function:
-<pre><code>def self.parse_opml(opml_node, parent_names=[])
+{% codeblock %}def self.parse_opml(opml_node, parent_names=[])
     feeds = {}
     opml_node.elements.each('outline') do |el|
       if (el.elements.size != 0)
@@ -32,13 +32,13 @@ Here's the function:
       end
     end
     return feeds
-  end</code></pre>
+  end{% endcodeblock %}
 
 All you have to do is call it this way:
-<pre><code>require 'rexml/Document'
+{% codeblock %}require 'rexml/Document'
 
 opml = REXML::Document.new(File.read('my_feeds.opml'))
-feeds = parse_opml(opml.elements['opml/body'])</code></pre>
+feeds = parse_opml(opml.elements['opml/body']){% endcodeblock %}
 
 
 Pretty easy, huh? Try it out and leave your comments...

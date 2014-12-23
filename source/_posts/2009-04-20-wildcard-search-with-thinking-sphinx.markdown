@@ -96,15 +96,15 @@ and it will apply to all of your indexes.
 
 Re-index your data and restart the sphinx deamon (remember i'm using Thinking Sphinx, so i have a set of nice and short rake tasks to achieve this).
 
-<pre><code>rake ts:stop
+{% codeblock %}rake ts:stop
 rake ts:in
-rake ts:start</code></pre>
+rake ts:start{% endcodeblock %}
 
 Now you should be able to fire searches like this:
-<pre><code>Article.search "Sphinx"
+{% codeblock %}Article.search "Sphinx"
 Article.search "Think*"
 Article.search "*inx*"
-</code></pre>
+{% endcodeblock %}
 
 And many more cool stuff that's beyond the scope of this post :)
 Enjoy!

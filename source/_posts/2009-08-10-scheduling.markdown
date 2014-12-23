@@ -20,18 +20,18 @@ What is it? A simple gem to schedule tasks writing them in nice ruby syntax...ju
 <!--more-->
 
 In order to install it, you have to add first the github source, only if you never done it :
-<pre><code>$ gem sources -a http://gems.github.com
+{% codeblock %}$ gem sources -a http://gems.github.com
 $ sudo gem install javan-whenever
-</code></pre>
+{% endcodeblock %}
 
 To get started, just place yourself in the app path and type
-<pre><code>$ wheneverize . </code></pre>
+{% codeblock %}$ wheneverize . {% endcodeblock %}
 This will create an initial config/schedule.rb for you.
 
 There you can nicely write tasks to run.
 
 Some examples are: 
-<pre><code>every 3.hours do
+{% codeblock %}every 3.hours do
     runner "MyModel.some_process"
     rake "my:rake:task"
     command "/usr/bin/my_great_command"
@@ -48,10 +48,10 @@ Some examples are:
   every :sunday, :at => '12pm' do # Use any day of the week or :weekend, :weekday
     runner "Task.do_something_great"
   end
-</code></pre>
+{% endcodeblock %}
 
 Another nice thing to do is integrate it with Capistrano.
-<pre><code>
+{% codeblock %}
  after "deploy:symlink", "deploy:update_crontab"
 
   namespace :deploy do
@@ -60,14 +60,14 @@ Another nice thing to do is integrate it with Capistrano.
       run "cd #{release_path} && whenever --update-crontab #{application}"
     end
   end
-</code></pre>
+{% endcodeblock %}
 
 The official documentation provides this way to integrate it, but we found some little details, and the solution is here for you.
 
 If you integrate it by the regular way, when making multiple deploys, it will configure several tasks to run in your cron file. Why? Because the path of the current application changed, and the gem uses the path (by adding a comment line) when updating the cron.
 What should we do then? Simple,  change the **run** line with this:
-<pre><code>run "cd #{current_path}; whenever -i #{current_path}/config/schedule.rb"
-</code></pre>
+{% codeblock %}run "cd #{current_path}; whenever -i #{current_path}/config/schedule.rb"
+{% endcodeblock %}
 
 What have we done? We used the -i option, which makes an update, but passing the comment we want, and make it not to change in every deploy.
 

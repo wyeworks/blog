@@ -17,7 +17,7 @@ As you probably know Ruby (MRI so brixen doesn't get mad at me :P) [1.9.3 was re
 
 <!--more-->
 
-<pre><code>$ gem install ruby-debug19
+{% codeblock %}$ gem install ruby-debug19
 Fetching: linecache19-0.5.12.gem (100%)
 Building native extensions.  This could take a while...
 Fetching: ruby-debug-base19-0.11.25.gem (100%)
@@ -26,11 +26,11 @@ Fetching: ruby-debug19-0.11.6.gem (100%)
 Successfully installed linecache19-0.5.12
 Successfully installed ruby-debug-base19-0.11.25
 Successfully installed ruby-debug19-0.11.6
-3 gems installed</code></pre>
+3 gems installed{% endcodeblock %}
 
 Then require 'ruby-debug' and booom!!
 
-<pre><code>$ irb
+{% codeblock %}$ irb
 irb(main):001:0> require 'ruby-debug'
 LoadError: dlopen(/Users/santiago/.rbenv/versions/1.9.3/lib/ruby/gems/1.9.1/gems/ruby-debug-base19-0.11.25/lib/ruby_debug.bundle, 9): Symbol not found: _ruby_current_thread
   Referenced from: /Users/santiago/.rbenv/versions/1.9.3/lib/ruby/gems/1.9.1/gems/ruby-debug-base19-0.11.25/lib/ruby_debug.bundle
@@ -46,13 +46,13 @@ LoadError: dlopen(/Users/santiago/.rbenv/versions/1.9.3/lib/ruby/gems/1.9.1/gems
 	from /Users/santiago/.rbenv/versions/1.9.3/lib/ruby/1.9.1/rubygems/custom_require.rb:59:in `rescue in require'
 	from /Users/santiago/.rbenv/versions/1.9.3/lib/ruby/1.9.1/rubygems/custom_require.rb:35:in `require'
 	from (irb):1
-	from /Users/santiago/.rbenv/versions/1.9.3/bin/irb:12:in `<main>'</code></pre>
+	from /Users/santiago/.rbenv/versions/1.9.3/bin/irb:12:in `<main>'{% endcodeblock %}
 
 So after some research on the internet I found out that the author of ruby-debug had a fix for it which he considered unstable and didn't push it to rubygems.org yet. Since I prefer an unstable ruby-debug than a non working one :P, I gave it a try ...
 
 First download linecache19-0.5.13.gem and ruby-debug-base19-0.11.26.gem from [http://rubyforge.org/frs/?group_id=8883](http://rubyforge.org/frs/?group_id=8883), then …
 
-<pre><code>$ gem install linecache19-0.5.13.gem 
+{% codeblock %}$ gem install linecache19-0.5.13.gem 
 Building native extensions.  This could take a while...
 Successfully installed linecache19-0.5.13
 1 gem installed
@@ -62,7 +62,7 @@ Successfully installed ruby-debug-base19-0.11.26
 1 gem installed
 $ irb
 irb(main):001:0> require 'ruby-debug'
-=> true</code></pre>
+=> true{% endcodeblock %}
 
 and voilá.
 

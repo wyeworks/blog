@@ -21,7 +21,7 @@ In this post I just want to tell that we added an extra ability to the recurring
 
 It's pretty easy, you just need to do something like this:
 
-<pre><code>  response = gateway.update_recurring(new_amount ,  new_options) </code></pre>
+{% codeblock %}  response = gateway.update_recurring(new_amount ,  new_options) {% endcodeblock %}
 
 Remember, same for canceling, as BeanStream uses another API for managing these kind of transactions, we need to use the account_id for identifying the same, so you must include it on the options.
 Then all same options can be passed.

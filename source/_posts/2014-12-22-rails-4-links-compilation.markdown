@@ -41,7 +41,7 @@ You can check out the code following [this link](https://github.com/rails-api/ac
 Lorem ipsum dolorem sin amet, lorem ipsum dolorem sit amet, lorem impsum dolorem sit amet.
 {% endblockquote %}
 
-<pre><code>├── fixtures
+{% codeblock %}├── fixtures
 │   ├── active_record.rb
 │   └── poro.rb
 ├── integration
@@ -67,7 +67,7 @@ Lorem ipsum dolorem sin amet, lorem ipsum dolorem sit amet, lorem impsum dolorem
             ├── root_test.rb
             ├── scope_test.rb
             └── settings_test.rb
-</code></pre>
+{% endcodeblock %}
 
 ```
 $ git clone git@github.com:imathis/octopress.git # fork octopress

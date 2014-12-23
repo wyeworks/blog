@@ -51,13 +51,13 @@ The package provides my customized Emacs init file and some plugins I found very
 Before you can use some plugins you have to install a few packages:
 
 To use rcodetools you need to install the rcodetools, gem with
-<pre><code>sudo gem install rcodetools</code></pre>
+{% codeblock %}sudo gem install rcodetools{% endcodeblock %}
 To use autotest you need the ZenTest gem, install it with
-<pre><code>sudo gem install ZenTest</code></pre>
+{% codeblock %}sudo gem install ZenTest{% endcodeblock %}
 On further post I'm going to explain how to set it up under the gnome environment using all the beauty that gnome-notifier has.
 
 Checkout the package
-<pre><code>git clone github.com/spastorino/my_emacs_for_rails</code></pre>
+{% codeblock %}git clone github.com/spastorino/my_emacs_for_rails{% endcodeblock %}
  and copy all the files under my_emacs_for_rails directory to ~/.emacs.d directory if it doesn't exist you have to create it.
 
 ## Screenshot

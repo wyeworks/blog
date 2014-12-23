@@ -19,7 +19,7 @@ Refinements arrived to Ruby trunk [here](https://bugs.ruby-lang.org/issues/4085.
 
 Shugo Maeda wrote ...
 
-<pre><code>"Refinements are similar to Classboxes.  However, Refinements doesn't
+{% codeblock %}"Refinements are similar to Classboxes.  However, Refinements doesn't
 support local rebinding as mentioned later.  In this sense,
 Refinements might be more similar to selector namespaces, but I'm not
 sure because I have never seen any implementation of selector
@@ -27,7 +27,7 @@ namespaces.
 
 In Refinements, a Ruby module is used as a namespace (or classbox) for
 class extensions.  Such class extensions are called refinements.  For
-example, the following module refines Fixnum."</code></pre>
+example, the following module refines Fixnum."{% endcodeblock %}
 
 You can read the long story here [https://bugs.ruby-lang.org/issues/4085](https://bugs.ruby-lang.org/issues/4085)
 
@@ -35,7 +35,7 @@ So let's see how Refinements work in practice
 
 Basically instead of doing …
 
-<pre><code>class Object
+{% codeblock %}class Object
   def blank?
     respond_to?(:empty?) ? empty? : !self
   end
@@ -45,11 +45,11 @@ puts "".blank?
 puts "hi".blank?
 puts nil.blank?
 puts [].blank?
-puts [1].blank?</code></pre>
+puts [1].blank?{% endcodeblock %}
 
 and polluting all the objects, you can do ...
 
-<pre><code>module Blank
+{% codeblock %}module Blank
   refine Object do
     def blank?
       respond_to?(:empty?) ? empty? : !self
@@ -65,17 +65,17 @@ class A
   puts nil.blank?  # => true
   puts [].blank?   # => true
   puts [1].blank?  # => false
-end</code></pre>
+end{% endcodeblock %}
 
 and monkey patch in a controlled way. You can also check that you won't be polluting all the objects in your system by checking …
 
-<pre><code>class B
+{% codeblock %}class B
   puts "".blank?
   puts "hi".blank?
   puts nil.blank?
   puts [].blank?
   puts [1].blank?
-end</code></pre>
+end{% endcodeblock %}
 
 This will raise an undefined method `blank?' for [](String) (NoMethodError).
 

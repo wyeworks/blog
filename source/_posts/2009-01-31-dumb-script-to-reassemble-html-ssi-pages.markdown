@@ -21,7 +21,7 @@ So that's when we came across the [Apache Server Side Includes (Apache SSI)](htt
  
 **One drawback:** checking the content and styles as a whole is now a little bit difficult if you don't have your Apache SSI capable on handy to reassemble all back together. So this tiny dumb script library (plus some bunch of code not shown here) did that for us.
 
-<pre><code>require 'fileutils'
+{% codeblock %}require 'fileutils'
 
 module SSI
 
@@ -51,10 +51,10 @@ module SSI
     file.close
   end
     
-end</code></pre>
+end{% endcodeblock %}
 
 It behaves pretty much like any standard copy command, adding the replacement of the included files for their real content. Note there is no error checking whatsoever.
 
-<pre><code>SSI.generate(source_file, dest_file_or_directory)</code></pre>
+{% codeblock %}SSI.generate(source_file, dest_file_or_directory){% endcodeblock %}
 
 Hopefully it will save a minute or two to someone somewhere.

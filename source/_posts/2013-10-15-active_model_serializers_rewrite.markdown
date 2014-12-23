@@ -56,7 +56,7 @@ Those were used to register associations to be serialized together with their re
 
 There are test files organized by functionality:
 
-<pre><code>├── fixtures
+{% codeblock %}├── fixtures
 │   ├── active_record.rb
 │   └── poro.rb
 ├── integration
@@ -82,7 +82,7 @@ There are test files organized by functionality:
             ├── root_test.rb
             ├── scope_test.rb
             └── settings_test.rb
-</code></pre>
+{% endcodeblock %}
 
 **A lot less code for equivalent functionality.**
 
@@ -94,7 +94,7 @@ But please try this out in your apps. I've ran Sam Saffron's Discourse benchmark
 
 Current master branch:
 
-<pre><code>Starting benchmark...
+{% codeblock %}Starting benchmark...
 Running apache bench warmup
 Benchmarking /
 Running apache bench warmup
@@ -120,11 +120,11 @@ operatingsystem: Darwin
 kernelversion: 12.5.0
 memorysize: 8.00 GB
 virtual: physical
-</code></pre>
+{% endcodeblock %}
 
 Rewrite branch:
 
-<pre><code>Starting benchmark...
+{% codeblock %}Starting benchmark...
 Running apache bench warmup
 Benchmarking /
 Running apache bench warmup
@@ -150,7 +150,7 @@ operatingsystem: Darwin
 kernelversion: 12.5.0
 memorysize: 8.00 GB
 virtual: physical
-</code></pre>
+{% endcodeblock %}
 
 Why is it faster? Because AMS now does less work in order to produce the same results. Plus, much of the work that used to happen per each request are now carried out at load time.
 
