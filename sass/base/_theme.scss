@@ -12,9 +12,17 @@ $darkness-color: #000;
 
 // Main Link Colors
 $link-color: $friendly-color !default;
-$link-color-hover: adjust-color($link-color, $lightness: 10, $saturation: 25) !default;
-$link-color-visited: adjust-color($link-color, $hue: 80, $lightness: -4) !default;
-$link-color-active: adjust-color($link-color-hover, $lightness: -15) !default;
+$link-color-hover: darken($link-color, 20) !default;
+$link-color-visited: $link-color !default;
+$link-color-active: $link-color-hover !default;
+
+// h1 titles link colors
+$h1-link-color: $quality-color !default;
+$h1-link-color-hover: darken($h1-link-color, 20) !default;
+$h1-link-color-visited: $h1-link-color !default;
+$h1-link-color-active: $h1-link-color-hover !default;
+
+
 
 // Main Section Colors
 $main-bg: $clear-color !default;
@@ -72,4 +80,9 @@ aside.sidebar a {
 }
 a {
   @include transition(color .3s);
+}
+
+h1 a {
+  text-decoration: none;
+  @include link-colors($h1-link-color, $hover: $h1-link-color-hover, $focus: $h1-link-color-hover, $visited: $h1-link-color-visited, $active: $h1-link-color-active);
 }
