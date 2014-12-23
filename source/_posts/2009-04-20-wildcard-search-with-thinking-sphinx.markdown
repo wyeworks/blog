@@ -68,8 +68,7 @@ Also, there's no automatic way to rank perfect word matches higher in a prefix i
 
 So, here it's how you can set a wildcard search on a particular index for any of your models. In this case i'm setting an infix search.
 
-<pre>
-<code class="ruby">class Article < ActiveRecord::Base
+{% codeblock lang:ruby %}class Article < ActiveRecord::Base
   ....
   ....
 
@@ -81,16 +80,13 @@ So, here it's how you can set a wildcard search on a particular index for any of
 
   ....
   ....
-end</code>
-</pre>
+end{% endcodeblock %}
 
 You can also set these properties in your sphinx.yml settings file under config/ folder for any environment you want. It might look like this:
 
-<pre>
-<code>production:
+{% codeblock lang:ruby %}production:
   enable_star: 1
-  min_infix_len: 3</code>
-</pre>
+  min_infix_len: 3{% endcodeblock %}
 
 and it will apply to all of your indexes.
 

@@ -22,29 +22,25 @@ Let me explain this with a brief example:
 
 Suppose you have a User class for anyone registered on your site, and a Customer class for those who have actually placed orders:
 
-<pre>
-<code class="ruby">class User < ActiveRecord::Base  
+{% codeblock lang:ruby %}class User < ActiveRecord::Base  
    belongs_to :customer  
 end  
   
 class Customer < ActiveRecord::Base  
    has_one :user  
-end</code>
-</pre>
+end{% endcodeblock %}
 
 As for now, if you are in a Customer instance, you can get their User information doing *@customer.user.name*, or *@customer.user.email*.
 Delegation allows you to simplify this:
 
-<pre>
-<code class="ruby">class User < ActiveRecord::Base  
+{% codeblock lang:ruby %}class User < ActiveRecord::Base  
    belongs_to :customer  
 end  
    
 class Customer < ActiveRecord::Base  
    has_one :user  
    delegate :name, :name=, :email, :email=, :to => :user  
-end</code>
-</pre>
+end{% endcodeblock %}
 
 Now you can refer to **@customer.name** and **@customer.email** to retrieve and set values for those attributes directly. Pretty nice, huh?
 
