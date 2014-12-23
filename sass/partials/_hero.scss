@@ -21,11 +21,7 @@
 }
 
 .hero {
-  @media only screen and (min-width: 480px) {
-  }
   @media only screen and (min-width: 768px) {
     background-image: url('/images/heros/default-high.jpg');
-  }
-  @media only screen and (min-width: 992px) {
   }
 }
