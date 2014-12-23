@@ -6,6 +6,7 @@ single: true
 <div>
 <article class="hentry" role="article">
   {% include article.html %}
+  {% comment %}
   <footer>
     <p class="meta">
       {% include post/author.html %}
@@ -24,6 +25,7 @@ single: true
       {% endif %}
     </p>
   </footer>
+  {% endcomment %}
 </article>
 {% if site.disqus_short_name and page.comments == true %}
   <section>

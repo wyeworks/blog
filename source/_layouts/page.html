@@ -11,6 +11,7 @@ layout: default
   </header>
   {% endif %}
   {{ content }}
+  {% comment %}
   {% unless page.footer == false %}
     <footer>
       {% if page.date or page.author %}<p class="meta">
@@ -23,6 +24,7 @@ layout: default
       {% endunless %}
     </footer>
   {% endunless %}
+  {% endcomment %}
 </article>
 {% if site.disqus_short_name and page.comments == true %}
   <section>
