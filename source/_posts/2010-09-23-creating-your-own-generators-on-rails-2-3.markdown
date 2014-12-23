@@ -3,6 +3,7 @@ layout: post
 title: Creating your own generators on Rails 2.3
 category: Ruby
 hero_image: /images/heros/post-high.jpg
+comments: true
 author:
   name: Sebastián Martínez
   email: sebastian@wyeworks.com

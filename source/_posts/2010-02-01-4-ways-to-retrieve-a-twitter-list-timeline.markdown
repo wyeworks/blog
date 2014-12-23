@@ -3,6 +3,7 @@ layout: post
 title: 4 Ways to Retrieve a Twitter List Timeline
 category: Ruby
 hero_image: /images/heros/post-high.jpg
+comments: true
 author:
   name: Santiago Pastorino
   email: santiago@wyeworks.com

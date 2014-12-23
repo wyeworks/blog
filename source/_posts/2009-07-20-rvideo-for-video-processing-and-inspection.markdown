@@ -3,6 +3,7 @@ layout: post
 title: RVideo for video processing and inspection
 category: Ruby
 hero_image: /images/heros/post-high.jpg
+comments: true
 author:
   name: José Costa
   email: jose@wyeworks.com

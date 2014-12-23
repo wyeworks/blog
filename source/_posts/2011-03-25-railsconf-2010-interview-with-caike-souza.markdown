@@ -3,6 +3,7 @@ layout: post
 title: ! 'RailsConf 2010: Interview with Caike Souza'
 category: Rails
 hero_image: /images/heros/post-high.jpg
+comments: true
 author:
   name: José Costa
   email: jose@wyeworks.com

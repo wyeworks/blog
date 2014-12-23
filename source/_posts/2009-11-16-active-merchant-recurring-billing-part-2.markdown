@@ -3,6 +3,7 @@ layout: post
 title: Modifying Recurring Billing Transactions
 category: Merchant
 hero_image: /images/heros/post-high.jpg
+comments: true
 author:
   name: Sebastián Martínez
   email: sebastian@wyeworks.com

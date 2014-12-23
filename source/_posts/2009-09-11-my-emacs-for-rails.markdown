@@ -3,6 +3,7 @@ layout: post
 title: My Emacs for Rails
 category: Emacs
 hero_image: /images/heros/post-high.jpg
+comments: true
 author:
   name: Santiago Pastorino
   email: santiago@wyeworks.com
