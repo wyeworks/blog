@@ -24,7 +24,7 @@ So, placing the following line in the right spot of the appropriate liquid file 
 
 <!--more-->
 
-{% codeblock %}{{ comment | gravatar:50,'avatar'' }}{% endcodeblock %}
+{% codeblock %}{% raw %}{{ comment | gravatar:50,'avatar'' }}{% endraw %}{% endcodeblock %}
 
 ### Articles are a little more tricky
 
@@ -44,6 +44,6 @@ Since there is no support in for gravatars for article's author i've coded a sim
 The code above creates a new hash from some of the article's properties to mock the comment structure and passes it to the original <code>gravatar</code> method.
 Now, place the following line inside the article's header and voilá.
 
-{% codeblock %}{{ article | gravatar_for_article :60,'avatar' }}{% endcodeblock %}
+{% codeblock %}{% raw %}{{ article | gravatar_for_article :60,'avatar' }}{% endraw %}{% endcodeblock %}
 
 Style it and you're done.
