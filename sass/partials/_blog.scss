@@ -116,6 +116,9 @@ article {
   }
 
 }
+.entry-date .time {
+  display: none;
+}
 .blog-index article {
   border-bottom: 1px solid lighten($quality-color, 45);
 }
