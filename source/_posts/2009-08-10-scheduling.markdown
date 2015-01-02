@@ -31,7 +31,7 @@ This will create an initial config/schedule.rb for you.
 There you can nicely write tasks to run.
 
 Some examples are: 
-{% codeblock %}every 3.hours do
+{% codeblock lang:ruby %}every 3.hours do
     runner "MyModel.some_process"
     rake "my:rake:task"
     command "/usr/bin/my_great_command"
@@ -51,7 +51,7 @@ Some examples are:
 {% endcodeblock %}
 
 Another nice thing to do is integrate it with Capistrano.
-{% codeblock %}
+{% codeblock lang:ruby %}
  after "deploy:symlink", "deploy:update_crontab"
 
   namespace :deploy do
@@ -66,7 +66,7 @@ The official documentation provides this way to integrate it, but we found some 
 
 If you integrate it by the regular way, when making multiple deploys, it will configure several tasks to run in your cron file. Why? Because the path of the current application changed, and the gem uses the path (by adding a comment line) when updating the cron.
 What should we do then? Simple,  change the **run** line with this:
-{% codeblock %}run "cd #{current_path}; whenever -i #{current_path}/config/schedule.rb"
+{% codeblock lang:ruby %}run "cd #{current_path}; whenever -i #{current_path}/config/schedule.rb"
 {% endcodeblock %}
 
 What have we done? We used the -i option, which makes an update, but passing the comment we want, and make it not to change in every deploy.

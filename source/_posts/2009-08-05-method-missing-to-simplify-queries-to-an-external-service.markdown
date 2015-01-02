@@ -45,7 +45,7 @@ became just:
 
 We then implemented what we called the Brightcove::ReadProxy in a few lines like shown below:
 
-{% codeblock %}module Brightcove
+{% codeblock lang:ruby %}module Brightcove
   module ReadProxy
 
     TOKEN = '0Z2dtxTdJAxtbZ-d0U7Bhio2V1Rhr5Iafl5FFtDPY8E.'

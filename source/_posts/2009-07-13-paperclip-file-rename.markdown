@@ -18,7 +18,7 @@ After doing some research on paperclip source code and internet tutorials, we su
 
 <!--more-->
 
-{% codeblock %}class Video < ActiveRecord::Base
+{% codeblock lang:ruby %}class Video < ActiveRecord::Base
   has_attached_file :video,
     :path => ":rails_root/public/system/:attachment/:id/:style/:normalized_video_file_name",
     :url => "/system/:attachment/:id/:style/:normalized_video_file_name"
@@ -34,7 +34,7 @@ end{% endcodeblock %}
 
 What are we doing here? Easy, in **has_attached_file** we edit the way paperclip returns the **path** and **url** by default, the most relevant components when saving and loading the file in order to display it.
 Paperclip default values are:
-{% codeblock %}path default => ":rails_root/public/system/:attachment/:id/:style/:filename"
+{% codeblock lang:ruby %}path default => ":rails_root/public/system/:attachment/:id/:style/:filename"
 url default => "/system/:attachment/:id/:style/:filename"{% endcodeblock %}
 
 Values preceded by  ':' are the standard interpolations paperclip has. For further information on this visit [http://wiki.github.com/thoughtbot/paperclip/interpolations(Interpolations)](http://wiki.github.com/thoughtbot/paperclip/interpolations.)

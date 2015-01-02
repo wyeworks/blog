@@ -22,7 +22,7 @@ You can check out my fork of Active Merchant that supports recurring billing for
 
 Here I leave you an example on how to use it:
 
-{% codeblock %}
+{% codeblock lang:ruby %}
 require 'rubygems'
 require 'active_merchant'
 
@@ -81,7 +81,7 @@ And that's it, you have now created a recurring billing payment.
 Now, what if you want to cancel the same?
 Heres is how to do that:
 
-{% codeblock %}
+{% codeblock lang:ruby %}
  gateway.cancel_recurring({ :account_id => account_id })
 {% endcodeblock %}
 

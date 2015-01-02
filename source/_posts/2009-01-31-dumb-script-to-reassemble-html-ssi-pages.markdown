@@ -21,7 +21,7 @@ So that's when we came across the [Apache Server Side Includes (Apache SSI)](htt
  
 **One drawback:** checking the content and styles as a whole is now a little bit difficult if you don't have your Apache SSI capable on handy to reassemble all back together. So this tiny dumb script library (plus some bunch of code not shown here) did that for us.
 
-{% codeblock %}require 'fileutils'
+{% codeblock lang:ruby %}require 'fileutils'
 
 module SSI
 

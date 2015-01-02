@@ -22,7 +22,7 @@ After some time reading, I decided it was time for me to start playing around wi
 
 First thing you should know, is that all Rails generators are derived from a class called “Rails::Generator::Base.” But, if we derive our generator class from NamedBase instead of Base, then we’ll get the ability to take a name parameter from the script/generate command line. With that in mind, you can start writing the generator *skeleton*:
 
-{% codeblock %}class WidgetGenerator < Rails::Generator::NamedBase
+{% codeblock lang:ruby %}class WidgetGenerator < Rails::Generator::NamedBase
   def manifest
     record do |m|
       # Do something
@@ -37,7 +37,7 @@ In my case, I wanted to behave very similar to the scaffold, so I wanted a contr
 
 In most cases, you will want your generator to receive several arguments. Best way is to have an initialize method to take care of that, just like this:
 
-{% codeblock %}
+{% codeblock lang:ruby %}
 class WidgetGenerator < Rails::Generator::NamedBase
   attr_reader   :controller_class_name,
                 :class_name
@@ -65,7 +65,7 @@ end{% endcodeblock %}
 
 Until now, we're just initializing the generator, but it's not doing anything yet. Let's add some action on our manifest method:
 
-{% codeblock %}def manifest
+{% codeblock lang:ruby %}def manifest
     record do |m|
       m.template('controller.rb', "app/controllers/#{name.pluralize}_controller.rb")
       m.template('model.rb', "app/models/#{name}.rb")
@@ -85,7 +85,7 @@ Cool, now we are generating a controller from our template, a model, a migration
 
 You can also add a protected banner method, to display the usage of the generator right on the console:
 
-{% codeblock %}protected
+{% codeblock lang:ruby %}protected
     def banner
       "Usage: #{$0} widget WidgetName [field:type, field:type]"
     end{% endcodeblock %}

@@ -35,7 +35,7 @@ So let's see how Refinements work in practice
 
 Basically instead of doing …
 
-{% codeblock %}class Object
+{% codeblock lang:ruby %}class Object
   def blank?
     respond_to?(:empty?) ? empty? : !self
   end
@@ -49,7 +49,7 @@ puts [1].blank?{% endcodeblock %}
 
 and polluting all the objects, you can do ...
 
-{% codeblock %}module Blank
+{% codeblock lang:ruby %}module Blank
   refine Object do
     def blank?
       respond_to?(:empty?) ? empty? : !self
@@ -69,7 +69,7 @@ end{% endcodeblock %}
 
 and monkey patch in a controlled way. You can also check that you won't be polluting all the objects in your system by checking …
 
-{% codeblock %}class B
+{% codeblock lang:ruby %}class B
   puts "".blank?
   puts "hi".blank?
   puts nil.blank?
