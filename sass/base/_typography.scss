@@ -32,7 +32,7 @@ body {
   @extend .sans;
 }
 h1 {
-  font-size: 2em;
+  font-size: 1.35em;
   line-height: 1.1;
   letter-spacing: 0.037em;
   text-transform: uppercase;
@@ -67,7 +67,7 @@ h6, section h5, section section h4, section section section h3 {
 p, article blockquote, ul, ol { margin-bottom: 1.5em; }
 
 article p {
-  font-size: 1.2em;
+  font-size: 1em;
   line-height: 1.2;
   letter-spacing: .03em;
 }
@@ -188,3 +188,11 @@ article blockquote {
   word-wrap: break-word;
 }
 
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+  article p {
+    font-size: 1.2em;
+  }
+}
