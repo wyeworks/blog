@@ -1,11 +1,12 @@
 .hero {
   min-height: 3.7em;
   text-align: center;
-  padding: 11.1em 1em 13.5em;
+  padding: 5em 0;
   background-position: 50% 50%;
   background-size: cover;
 }
 .hero p {
+  display: none;
   max-width: 25em;
   font-size: 1.625em;
   line-height: 1.1;
@@ -20,8 +21,12 @@
   display: none;
 }
 
-.hero {
-  @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
+  .hero {
     background-image: url('/images/heros/default-high.jpg');
+    padding: 11.1em 1em 13.5em;
+  }
+  .hero p {
+    display: block;
   }
 }

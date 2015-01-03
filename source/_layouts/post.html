@@ -3,6 +3,15 @@ layout: default
 single: true
 ---
 
+{% unless page.sidebar == false %}
+<aside class="sidebar">
+  {% if site.post_asides.size %}
+    {% include_array post_asides %}
+  {% else %}
+    {% include_array default_asides %}
+  {% endif %}
+</aside>
+{% endunless %}
 <div>
 <article class="hentry" role="article">
   {% include article.html %}
@@ -34,12 +43,3 @@ single: true
   </section>
 {% endif %}
 </div>
-{% unless page.sidebar == false %}
-<aside class="sidebar">
-  {% if site.post_asides.size %}
-    {% include_array post_asides %}
-  {% else %}
-    {% include_array default_asides %}
-  {% endif %}
-</aside>
-{% endunless %}

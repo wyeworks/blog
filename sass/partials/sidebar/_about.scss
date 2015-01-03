@@ -1,8 +1,8 @@
 .aside-about {
 }
 .aside-about img {
+  display: none;
   max-width: 8.375rem;
-  display: block;
   border-radius: 777em;
   margin: 0 auto 1em;
 }
@@ -12,4 +12,9 @@
   line-height: 1.3;
   letter-spacing: 0.03em;
   text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .aside-about img {
+    display: block;
+  }
 }
