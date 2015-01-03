@@ -16,6 +16,7 @@ aside.sidebar {
     line-height: 1.4em;
     margin-bottom: 1em;
     padding-bottom: .6em;
+    clear: both;
 
     &:last-child {
       border-bottom: 1px solid lighten($quality-color, 45);

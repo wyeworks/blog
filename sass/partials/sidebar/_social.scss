@@ -7,3 +7,13 @@
 .social .side-by-side li {
   border: none;
 }
+.social-author .center-several {
+  text-align: left;
+  padding: 0 0 0 5.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .social-author .center-several {
+    text-align: center;
+    padding: 0;
+  }
+}

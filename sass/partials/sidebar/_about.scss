@@ -1,3 +1,6 @@
+$author-image-width: 4.8rem;
+$author-content-padding: 1rem;
+
 .aside-about {
 }
 .aside-about img {
@@ -6,6 +9,22 @@
   border-radius: 777em;
   margin: 0 auto 1em;
 }
+.about-author img {
+  display: block;
+  float: left;
+  max-width: $author-image-width;
+}
+.about-author div {
+  float: left;
+  width: calc(100% - #{$author-image-width + $author-content-padding});
+  padding: 0 0 0 $author-content-padding;
+  text-align: left;
+}
+aside.sidebar section.about-author h1 {
+  display: block;
+  text-align: left;
+  margin: .25em 0 .5em;
+}
 .aside-about p {
   padding: 0 .8em;
   font-size: 1.1em;
@@ -13,8 +32,29 @@
   letter-spacing: 0.03em;
   text-align: center;
 }
+.about-author p {
+  padding: 0;
+  text-align: left;
+}
 @media only screen and (min-width: 768px) {
   .aside-about img {
     display: block;
+  }
+  .about-author img {
+    float: none;
+    max-width: 8.375rem;
+  }
+  .about-author div {
+    float: none;
+    width: auto;
+    padding: 0;
+    text-align: center;
+  }
+  aside.sidebar section.about-author h1 {
+    text-align: center;
+    margin: 1.5em 0 1.8em;
+  }
+  .about-author p {
+    text-align: center;
   }
 }
