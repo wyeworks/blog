@@ -9,7 +9,7 @@ author:
   email: sebastian@wyeworks.com
   twitter_handle: smartinez87
   github_handle:  smartinez87
-  image:  /images/team/sebastian.jpg
+  image:  /images/team/sebastian-martinez.jpg
   description: VP of Engineering at WyeWorks. Ruby on Rails hacker. ExceptionNotification maintainer. Coffee & bacon lover.
 published: true
 ---

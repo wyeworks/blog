@@ -9,7 +9,7 @@ author:
   email: jose@wyeworks.com
   twitter_handle: joseicosta
   github_handle:  joseicosta
-  image:  /images/team/jose.jpg
+  image:  /images/team/jose-ignacio-costa.jpg
   description: Cofounder & CEO at WyeWorks. Fitness aficionado. Home Barista wannabe.
 published: true
 ---

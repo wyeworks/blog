@@ -10,7 +10,7 @@ author:
   email: jose@wyeworks.com
   twitter_handle: jose
   github_handle: jose
-  image: /images/team/jose.jpg
+  image: /images/team/jose-ignacio-costa.jpg
   description: Founder, Software Engineer, Ruby "of" Rails contributor
 published: true
 ---

@@ -5,7 +5,10 @@ p file_names
 
 file_names.each do |file_name|
   text = File.read(file_name)
-  new_contents = text.gsub(/<pre><code>/, "{% codeblock %}").gsub(/<\/code><\/pre>/, "{% endcodeblock %}")
+  new_contents = text
+    .gsub(/images\/team\/jose.jpg/, "images/team/jose-ignacio-costa.jpg")
+    .gsub(/images\/team\/santiago.jpg/, "images/team/santiago-pastorino.jpg")
+    .gsub(/images\/team\/sebastian.jpg/, "images/team/sebastian-martinez.jpg")
 
   # To merely print the contents of the file, use:
   # puts new_contents

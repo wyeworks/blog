@@ -9,7 +9,7 @@ author:
   email: santiago@wyeworks.com
   twitter_handle: spastorino
   github_handle:  spastorino
-  image:  /images/team/santiago.jpg
+  image:  /images/team/santiago-pastorino.jpg
   description: WyeWorks Co-Founder, Ruby on Rails Core Team Member
 published: true
 ---
