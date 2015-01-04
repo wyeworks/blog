@@ -1,6 +1,7 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
+require "./authors"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
@@ -93,20 +94,44 @@ task :preview do
   [jekyllPid, compassPid, rackupPid].each { |pid| Process.wait(pid) }
 end
 
-# usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (defaults to "new-post")
+# usage rake new_post['my new post'] or rake new_post['my new post','author_name'] (from authors.rb)
 desc "Begin a new post in #{source_dir}/#{posts_dir}"
-task :new_post, :title do |t, args|
+task :new_post, [:title, :author] do |t, args|
   if args.title
     title = args.title
   else
     title = get_stdin("Enter a title for your post: ")
   end
+
+  if args.author
+    if @authors.has_key?(args.author.to_sym)
+      author = @authors[args.author.to_sym]
+    else
+      puts "rake aborted!"
+      puts "\nThat author is not in the list of authors. Current possible authors are:\n"
+      puts @authors.keys
+      puts "\nYou can now:"
+      puts "- Choose one of these authors\n"
+      puts "    Example:\n"
+      puts "    rake new_post['title of the post','diego_acosta']\n\n"
+      puts "- Edit authors.rb to add a new author\n\n"
+      puts "- Omit the parameter and edit the post yaml front matter manually\n\n"
+      abort
+    end
+  else
+    author = @authors[:undefined_author]
+  end
+
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
+
   mkdir_p "#{source_dir}/#{posts_dir}"
+
   filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
+
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
+
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
     post.puts "---"
@@ -117,15 +142,15 @@ task :new_post, :title do |t, args|
     post.puts "comments: true"
     post.puts "hero_image: /images/heros/post-high.jpg"
     post.puts "author:"
-    post.puts "  name: "
-    post.puts "  email: "
-    post.puts "  twitter_handle: "
-    post.puts "  github_handle: "
-    post.puts "  image: /images/team/santiago.jpg"
-    post.puts "  description: "
+    post.puts "  name: #{author[:name]}"
+    post.puts "  email: #{author[:email]}"
+    post.puts "  twitter_handle: #{author[:twitter_handle]}"
+    post.puts "  github_handle: #{author[:github_handle]}"
+    post.puts "  image: /images/team/#{author[:image]}"
+    post.puts "  description: #{author[:description]}"
     post.puts "---"
   end
-  puts "Remember to fill category, hero_image and author data :)"
+  puts "\nRemember to fill category and hero_image data :)\n\n"
 end
 
 # usage rake new_page[my-new-page] or rake new_page[my-new-page.html] or rake new_page (defaults to "new-page.markdown")
