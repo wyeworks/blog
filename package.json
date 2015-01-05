@@ -5,12 +5,7 @@
   "main": "gulpfile.js",
   "dependencies": {
     "gulp": "^3.8.10",
-    "gulp-html-minifier": "^0.1.6"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "DrummerHead",
-  "license": "ISC"
+    "gulp-html-minifier": "^0.1.6",
+    "gulp-uglify": "^1.0.2"
+  }
 }

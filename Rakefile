@@ -59,7 +59,7 @@ task :generate do
   puts "## Generating Site with Jekyll"
   system "compass compile --css-dir #{source_dir}/stylesheets"
   system "jekyll build"
-  system "gulp minify"
+  system "gulp"
 end
 
 desc "Watch the site and regenerate when it changes"
