@@ -9,6 +9,8 @@ These are the no nonsense instructions to get you right into blogging, assuming 
 
 ## Installing
 
+(NOTE: this instructions assume this repo is master. Right now you'll also need to `git checkout reimplementation` after `cd blog/`. Delete this line when this repo is merged to master)
+
 ```
 git clone https://github.com/wyeworks/blog.git
 cd blog/
