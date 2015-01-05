@@ -149,6 +149,11 @@ task :new_post, [:title, :author] do |t, args|
     post.puts "  image: /images/team/#{author[:image]}"
     post.puts "  description: #{author[:description]}"
     post.puts "---"
+    post.puts "\nInitial content and excerpt that will be shown in the posts listing"
+    post.puts "\n<!--more-->"
+    post.puts "\nRest of the post content"
+    post.puts "\n{% codeblock lang:ruby %}\nputs 'some ruby code'\n{% endcodeblock %}"
+    post.puts "\n{% codeblock lang:css %}\n#some-css {\n  color: red;\n}\n{% endcodeblock %}"
   end
   puts "\nRemember to fill category and hero_image data :)\n\n"
 end
