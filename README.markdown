@@ -1,48 +1,119 @@
-## TL;DR
+# Intro
+
+This is the repo for wyework's blog. It's based on [Octopress](http://octopress.org/docs/) and modified considerably.
+
+
+# Blogging
+
+These are the no nonsense instructions to get you right into blogging, assuming you're a part of wyeworks's team (if you're not, you can [contact us](http://www.wyeworks.com/), we're always looking)
+
+## Installing
 
 ```
+git clone https://github.com/wyeworks/blog.git
+cd blog/
 bundle install
+rake generate
 rake preview
 ```
 
-## What is Octopress?
-
-Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
-
-1. **Octopress sports a clean responsive theme** written in semantic HTML5, focused on readability and friendliness toward mobile devices.
-2. **Code blogging is easy and beautiful.** Embed code (with [Solarized](http://ethanschoonover.com/solarized) styling) in your posts from gists, jsFiddle or from your filesystem.
-3. **Third party integration is simple** with built-in support for Pinboard, Delicious, GitHub Repositories, Disqus Comments and Google Analytics.
-4. **It's easy to use.** A collection of rake tasks simplifies development and makes deploying a cinch.
-5. **Ships with great plug-ins** some original and others from the Jekyll community &mdash; tested and improved.
-
-**Note**: Octopress requires a minimum Ruby version of `1.9.3-p0`.
-
-## Documentation
-
-Check out [Octopress.org](http://octopress.org/docs) for guides and documentation.
-It should all apply to our current stable version (found in the `master`
-branch). If this is not the case, [please submit a
-fix to our docs repo](https://github.com/octopress/docs).
-
-## Contributing
-
-[![Build Status](https://travis-ci.org/imathis/octopress.png?branch=master)](https://travis-ci.org/imathis/octopress)
-
-We love to see people contributing to Octopress, whether it's a bug report, feature suggestion or a pull request. At the moment, we try to keep the core slick and lean, focusing on basic blogging needs, so some of your suggestions might not find their way into Octopress. For those ideas, we started a [list of 3rd party plug-ins](https://github.com/imathis/octopress/wiki/3rd-party-plugins), where you can link your own Octopress plug-in repositories. For the future, we're thinking about ways to easier add them into our main releases.
+Now you can preview the blog at `http://localhost:4000/`
 
 
-## License
-(The MIT License)
+## Create a new post
 
-Copyright © 2009-2013 Brandon Mathis
+To generate a new post:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the ‘Software’), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+```
+rake new_post['title of your post','diego_acosta']
+```
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+The second parameter is the author of the blog post. Values for this are loaded from authors.rb, the current authors you can choose from are:
 
-THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+diego_acosta
+juan_manuel_azambuja
+jorge_bejar
+jose_ignacio_costa
+marcelo_dominguez
+santiago_ferreira
+sebastian_gonzalez
+sebastian_martinez
+gabriel_montero
+adrian_mugnolo
+santiago_pastorino
+gonzalo_undefined
+```
+
+You can omit this parameter for blank author data or you can edit authors.rb to add/modify author data.
 
 
-#### If you want to be awesome.
-- Proudly display the 'Powered by Octopress' credit in the footer.
-- Add your site to the Wiki so we can watch the community grow.
+## Writing the content
+
+if in the last step you had typed `rake new_post['title of your post','diego_acosta']` then you are going to find out there's a new file at `source/_posts/2015-01-04-title-of-your-post.markdown` (whose date will change according to your own time situation)
+
+If we open this file, we'll find this:
+
+```
+---
+layout: post
+title: "title of your post"
+category: 
+date: 2015-01-04 21:51:00 -0200
+comments: true
+hero_image: /images/heros/post-high.jpg
+author:
+  name: Diego Acosta
+  email: acostami@gmail.com
+  twitter_handle: acostami
+  github_handle: acostami
+  image: /images/team/diego-acosta.jpg
+  description: 
+---
+
+Initial content and excerpt that will be shown in the posts listing
+
+<!--more-->
+
+Rest of the post content
+
+{% codeblock lang:ruby %}
+puts 'some ruby code'
+{% endcodeblock %}
+
+{% codeblock lang:css %}
+#some-css {
+  color: red;
+}
+{% endcodeblock %}
+```
+
+In between `---` you'll find the the [Front Matter](http://jekyllrb.com/docs/frontmatter/) block that has all the post metadata.
+
+Now add the category for the post (Examples: Ruby, Rails, Javascript, Ember, Management, Vim, etc.)
+
+If you want to preserve the post as draft (avoid generation when publishing), add `published: false`
+
+Each post can be accompanied by a Hero Banner (1280x784 recommended) whose url is specified in the `hero_image` property and whose file you'll have to add to `source/images/heros/`. You can omit this attribute if you don't wish to include a Hero Banner.
+
+After the metadata you'll find some placeholder content that shows us the usage for the `<!--more-->` comment to specify a post excerpt. This excerpt will appear in the landing, and the excerpt and everything after it will appear in the post page.
+
+Now we can get right into writing our content in plain old [Markdown](http://daringfireball.net/projects/markdown/)!
+
+If you wish to include code snippets (and who wouldn't) you can use `{% codeblock %}` [liquid tags](http://docs.shopify.com/themes/liquid-documentation/basics#tags), with an optional lang parameter. [Here is a list of available languages](http://pygments.org/docs/lexers/). For more ways to include code, [check the Octopress docs on the subject](http://octopress.org/docs/blogging/code/).
+
+Make sure to preview your blog post by typing `rake preview` and checking `http://localhost:4000/`
+
+
+## Deploying
+
+
+To generate the static site, type:
+
+```
+rake generate
+```
+
+And to upload:
+
+TODO: Update readme to add upload steps
