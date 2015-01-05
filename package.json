@@ -1,0 +1,16 @@
+{
+  "name": "wyeworks-blog",
+  "version": "2.2.0",
+  "description": "The team's voice",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.8.10",
+    "gulp-html-minifier": "^0.1.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DrummerHead",
+  "license": "ISC"
+}

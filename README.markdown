@@ -13,6 +13,7 @@ These are the no nonsense instructions to get you right into blogging, assuming 
 git clone https://github.com/wyeworks/blog.git
 cd blog/
 bundle install
+npm install
 rake generate
 rake preview
 ```
