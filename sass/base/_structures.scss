@@ -49,7 +49,7 @@
 .icon-github {
   width: 27px;
   height: 27px;
-  background-image: url('/images/icons/social.png');
+  background-image: url('#{$base-url}/images/icons/social.png');
   background-size: 108px 27px;
   border-radius: 777em;
 }
@@ -70,7 +70,7 @@
 .icon-grey-twitter {
   width: 17px;
   height: 17px;
-  background-image: url('/images/icons/icons-grey.png');
+  background-image: url('#{$base-url}/images/icons/icons-grey.png');
   background-size: 17px auto;
   text-decoration: none;
   margin: 0 .75em 0 0;

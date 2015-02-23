@@ -35,7 +35,7 @@ article {
         .categories,
         [data-disqus-identifier],
         time {
-          background-image: url('/images/icons/meta.png');
+          background-image: url('#{$base-url}/images/icons/meta.png');
           padding: 0 0 0 1.85em;
           margin: 0 1rem 0 0;
           background-size: 24px 72px;

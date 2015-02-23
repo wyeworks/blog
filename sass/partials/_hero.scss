@@ -14,13 +14,13 @@
 }
 
 .bg-default {
-  background-image: url('/images/heros/default.jpg');
+  background-image: url('#{$base-url}/images/heros/default.jpg');
   background-position: 50% 49%;
 }
 
 @media only screen and (min-width: 768px) {
   .hero {
-    background-image: url('/images/heros/default-high.jpg');
+    background-image: url('#{$base-url}/images/heros/default-high.jpg');
     padding: 11.1em 1em 13.5em;
   }
   .hero p {
