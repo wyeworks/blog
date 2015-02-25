@@ -2,7 +2,7 @@
 layout: post
 title: My OS X Rails installation using Homebrew and rbenv, step by step
 category: Ruby
-hero_image: /images/heros/post-high.jpg
+hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
   name: Sebastián Martínez

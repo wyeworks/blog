@@ -2,7 +2,7 @@
 layout: post
 title: Metaprogramming in Ruby slides from my talk at RubyConf Uruguay
 category: Ruby
-hero_image: /images/heros/post-high.jpg
+hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
   name: Santiago Pastorino

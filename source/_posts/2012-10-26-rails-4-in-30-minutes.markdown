@@ -2,7 +2,7 @@
 layout: post
 title: Rails 4 in 30'
 category: Rails
-hero_image: /images/heros/post-high.jpg
+hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
   name: Santiago Pastorino

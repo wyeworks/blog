@@ -2,7 +2,7 @@
 layout: post
 title: Setting up Passenger in Linux
 category: Passenger
-hero_image: /images/heros/post-high.jpg
+hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
   name: Sebastián Martínez
