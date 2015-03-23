@@ -60,12 +60,45 @@ function setHeroImage(){
   }
 }
 
+// Mobile dropdown object and action binding
+var mobileDropdown = {
+  body: $('.main-navigation').clone(true).attr('id', 'mobile-dropdown'),
+  trigger: $('<span id="mobile-dropdown-trigger">'),
+  bannerNav: $('nav[role="navigation"]'),
+  isOpen: false,
+  toggle: function() {
+    if (this.isOpen) {
+      this.body.removeClass('dropdown-show');
+      this.isOpen = false;
+      return true;
+    } else {
+      this.body.addClass('dropdown-show');
+      this.isOpen = true;
+      return false;
+    }
+  },
+  init: function() {
+    var _this = this;
+    this.body.on('click', function() {
+      _this.toggle();
+    });
+    this.trigger.on('click', function() {
+      _this.toggle();
+    });
+    this.bannerNav.append(this.body);
+    this.bannerNav.append(this.trigger);
+  }
+};
+
+
 $('document').ready(function() {
   wrapFlashVideos();
   addCodeLineNumbers();
   addSidebarToggler();
   setHeroImage();
+  mobileDropdown.init();
 });
+
 
 // iOS scaling bug fix
 // Rewritten version

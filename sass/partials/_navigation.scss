@@ -24,6 +24,7 @@ body > nav {
     a {
       letter-spacing: .062em;
       padding: .9rem .57rem;
+      display: none;
     }
   }
   ul li {
@@ -47,6 +48,63 @@ body > nav {
   width: 148px;
   margin: .075em 0;
   img {
+    display: block;
+  }
+}
+
+
+#mobile-dropdown {
+  max-height: 0;
+  position: absolute;
+  left: 0;
+  top: $header-height;
+  width: 100%;
+  text-align: center;
+  background-color: $clear-color;
+  transition: max-height 300ms ease-in-out;
+  overflow: hidden;
+  z-index: 50;
+}
+#mobile-dropdown.dropdown-show {
+  max-height: 14rem;
+}
+#mobile-dropdown li {
+  display: block;
+  float: none;
+  border-bottom: 1px solid lighten($quality-color, 45);
+  &:first-child {
+    border-top: 1px solid lighten($quality-color, 45);
+  }
+}
+#mobile-dropdown li a {
+  display: block;
+  float: none;
+  padding: .6em;
+}
+
+#mobile-dropdown-trigger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 7.7em;
+  background-image: image-url('icons/hamburger.png');
+  background-position: 80% 13px;
+  background-repeat: no-repeat;
+  background-size: 27px 78px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  &:hover {
+    background-position: 80% -39px;
+  }
+}
+
+@media (min-width: 620px){
+  #mobile-dropdown,
+  #mobile-dropdown-trigger {
+    display: none;
+  }
+  body > nav ul a {
     display: block;
   }
 }
