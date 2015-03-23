@@ -2,20 +2,9 @@ body > nav {
   position: relative;
   background-color: $clear-color;
   padding-left: .15em;
-  padding-right: 1em;
+  padding-right: 0;
   box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
 
-  ul {
-    float: right;
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: bold;
-    list-style-type: none;
-  }
-  ul li {
-    margin: 0;
-    float: left;
-  }
   a {
     float: left;
     padding: .65em .54em;
@@ -25,10 +14,26 @@ body > nav {
       color: $quality-color;
     }
   }
+  ul {
+    float: right;
+    margin: 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    list-style-type: none;
+    a {
+      letter-spacing: .062em;
+      padding: .9rem .57rem;
+    }
+  }
+  ul li {
+    margin: 0;
+    float: left;
+  }
   li + li {
     display: none;
     a {
-      padding-left: .8em;
+      padding-left: .57rem;
     }
   }
   @media only screen and (min-width: 440px) {
