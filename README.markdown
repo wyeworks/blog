@@ -7,9 +7,8 @@ This is the repo for wyework's blog. It's based on [Octopress](http://octopress.
 
 These are the no nonsense instructions to get you right into blogging, assuming you're a part of wyeworks's team (if you're not, you can [contact us](http://www.wyeworks.com/), we're always looking)
 
-## Installing
 
-(NOTE: this instructions assume this repo is master. Right now you'll also need to `git checkout reimplementation` after `cd blog/`. Delete this line when this repo is merged to master)
+## Installing
 
 ```
 git clone https://github.com/wyeworks/blog.git
