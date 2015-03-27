@@ -6,10 +6,10 @@
   {% assign author = site.author %}
 {% endif %}
 
-<section class='aside-about about-author'>
-  <img src='{{ author.image }}' alt='{{ author.name }}'>
+<section class='aside-about about-author vcard author'>
+  <img src='{{ author.image }}' alt='{{ author.name }}' class="photo">
   <div>
-    <h1>{{ author.name }}</h1>
-    <p>{{ author.description }}</p>
+    <h1 class="fn">{{ author.name }}</h1>
+    <p class="title">{{ author.description }}</p>
   </div>
 </section>
