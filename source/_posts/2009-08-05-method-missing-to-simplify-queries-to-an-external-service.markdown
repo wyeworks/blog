@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Method missing to simplify queries to an external service
-category: Ruby
 hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:

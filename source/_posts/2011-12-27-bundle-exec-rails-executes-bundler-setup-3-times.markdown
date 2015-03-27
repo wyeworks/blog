@@ -1,7 +1,6 @@
 ---
 layout: post
 title: bundle exec rails … executes Bundler.setup 3 times
-category: Ruby
 hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:

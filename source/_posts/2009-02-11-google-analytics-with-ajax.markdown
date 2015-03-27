@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Google Analytics with AJAX
-category: Ajax
 hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:

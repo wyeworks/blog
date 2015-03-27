@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Install Emacs 23 from CVS
-category: Emacs
 hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:

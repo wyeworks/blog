@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Parsing an OPML with Ruby
-category: Ruby
 hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:

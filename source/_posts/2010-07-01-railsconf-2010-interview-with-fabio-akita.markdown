@@ -1,7 +1,6 @@
 ---
 layout: post
 title: ! 'RailsConf 2010: Interview with Fabio Akita'
-category: Rails
 hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:

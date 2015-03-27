@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Rails delegate method
-category: Rails
 hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
