@@ -9,7 +9,7 @@
   },
   diego_acosta: {
     name: 'Diego Acosta',
-    email: 'acostami@gmail.com',
+    email: 'diego@wyeworks.com',
     twitter_handle: 'acostami',
     github_handle: 'acostami',
     image: 'diego-acosta.jpg',
@@ -17,7 +17,7 @@
   },
   juan_manuel_azambuja: {
     name: 'Juan Manuel Azambuja',
-    email: 'jmazambuja@gmail.com',
+    email: 'juan@wyeworks.com',
     twitter_handle: 'juanazam',
     github_handle: 'juanazam',
     image: 'juan-manuel-azambuja.jpg',
@@ -41,7 +41,7 @@
   },
   marcelo_dominguez: {
     name: 'Marcelo Dominguez',
-    email: 'me@marpo60.com',
+    email: 'marcelo@wyeworks.com',
     twitter_handle: 'marpo60',
     github_handle: 'marpo60',
     image: 'marcelo-dominguez.jpg',
@@ -49,7 +49,7 @@
   },
   santiago_ferreira: {
     name: 'Santiago Ferreira',
-    email: 'san650@gmail.com',
+    email: 'santiago.ferreira@wyeworks.com',
     twitter_handle: 'san650',
     github_handle: 'san650',
     image: 'santiago-ferreira.jpg',
@@ -57,7 +57,7 @@
   },
   sebastian_gonzalez: {
     name: 'Sebastian Gonzalez',
-    email: '',
+    email: 'sebagon@wyeworks.com',
     twitter_handle: 'sebagon',
     github_handle: 'sebagon',
     image: 'sebastian-gonzalez.jpg',
@@ -81,7 +81,7 @@
   },
   adrian_mugnolo: {
     name: 'Adrian Mugnolo',
-    email: 'adrian@mugnolo.com',
+    email: 'adrian@wyeworks.com',
     twitter_handle: 'xymbol',
     github_handle: 'xymbol',
     image: 'adrian-mugnolo.jpg',
@@ -97,7 +97,7 @@
   },
   gonzalo_undefined: {
     name: 'Gonzalo',
-    email: '',
+    email: 'gonzalo@wyeworks.com',
     twitter_handle: 'grzuy',
     github_handle: 'grzuy',
     image: 'gonzalo-undefined.jpg',
