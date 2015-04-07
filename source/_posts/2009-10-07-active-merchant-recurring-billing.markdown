@@ -17,7 +17,7 @@ So I just added the functionality to it.
 
 <!--more-->
 
-You can check out my fork of Active Merchant that supports recurring billing for this merchant on [http://github.com/wyeworks/active_merchant](http://github.com/wyeworks/active_merchant.)
+You can check out my fork of Active Merchant that supports recurring billing for this merchant on [http://github.com/wyeworks/active_merchant](http://github.com/wyeworks/active_merchant).
 
 Here I leave you an example on how to use it:
 

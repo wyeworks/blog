@@ -15,7 +15,7 @@ published: true
 I was working lately on a Sinatra project, and got fascinated on how fast you can get things up and running.
 Everything was beautiful, until I tried to upload a file using paperclip.
 
-Although Paperclip was originally built for rails [Ken Robertson](http://invalidlogic.com/dm-paperclip/) ported it to Datamapper.
+Although Paperclip was originally built for rails Ken Robertson ported it to Datamapper.
 Let me explain in few steps how you can upload with Paperclip, using Datamapper.
 
 <!--more-->
@@ -56,5 +56,5 @@ end
 {% endcodeblock %}
 
 And that's it, now you can upload files using Paperclip right on your Sinatra app with Datamapper.
-You can check out the code of this example at: [sinatra_paperclip.rb](http://gist.github.com/291877)
+You can check out the code of this example at: [sinatra_paperclip.rb](https://gist.github.com/smartinez87/291877)
 

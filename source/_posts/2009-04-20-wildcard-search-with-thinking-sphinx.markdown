@@ -12,8 +12,8 @@ author:
   description: Cofounder & CEO at WyeWorks. Fitness aficionado. Home Barista wannabe.
 published: true
 ---
-Right after starting with [Thinking Sphinx(Thinking Sphinx plugin)](http://ts.freelancing-gods.com/), it was quite hard to find a concise guide on how to enable wildcard search.
-For those out there who might not know, [Sphinx(Sphinx  free open-source SQL full-text search engine)](http://www.sphinxsearch.com/) searches default to matching whole words, not partial ones, so you won’t get any results of you search, for example, for one letter or part of a name. So, how to get around this?? .. well .. [Sphinx(Sphinx  free open-source SQL full-text search engine)](http://www.sphinxsearch.com/) provides wildcard search and below is how you can enable this with [Thinking Sphinx(Thinking Sphinx plugin)](http://ts.freelancing-gods.com/)
+Right after starting with [Thinking Sphinx(Thinking Sphinx plugin)](https://pat.github.io/thinking-sphinx/), it was quite hard to find a concise guide on how to enable wildcard search.
+For those out there who might not know, [Sphinx(Sphinx  free open-source SQL full-text search engine)](http://www.sphinxsearch.com/) searches default to matching whole words, not partial ones, so you won’t get any results of you search, for example, for one letter or part of a name. So, how to get around this?? .. well .. [Sphinx(Sphinx  free open-source SQL full-text search engine)](http://www.sphinxsearch.com/) provides wildcard search and below is how you can enable this with [Thinking Sphinx(Thinking Sphinx plugin)](https://pat.github.io/thinking-sphinx/)
 
 <!--more-->
 

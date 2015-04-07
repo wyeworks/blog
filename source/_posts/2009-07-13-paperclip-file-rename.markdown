@@ -36,7 +36,7 @@ Paperclip default values are:
 {% codeblock lang:ruby %}path default => ":rails_root/public/system/:attachment/:id/:style/:filename"
 url default => "/system/:attachment/:id/:style/:filename"{% endcodeblock %}
 
-Values preceded by  ':' are the standard interpolations paperclip has. For further information on this visit [http://wiki.github.com/thoughtbot/paperclip/interpolations(Interpolations)](http://wiki.github.com/thoughtbot/paperclip/interpolations.)
+Values preceded by  ':' are the standard interpolations paperclip has. For further information on this visit [http://wiki.github.com/thoughtbot/paperclip/interpolations(Interpolations)](http://wiki.github.com/thoughtbot/paperclip/interpolations).
 
 What we did was change **:filename** with **:normalized_video_file_name** in both path and url, being the second a custom interpolation and then added the 'normalized_video_file_name' method to video.rb.
 

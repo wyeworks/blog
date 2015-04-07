@@ -12,7 +12,7 @@ author:
   description: Cofounder & CEO at WyeWorks. Fitness aficionado. Home Barista wannabe.
 published: true
 ---
-While working on our [website(WyeWorks website)](http://www.wyeworks.com), we wanted to serve some dynamic content but it just didn't justify having some "big" dynamic technology behind to achieve this. Also as programmers, we like our code (even our static website content) to be nicely separated so we can keep things in order, better maintenance, blah blah blah. Seriously, we really like those things :)
+While working on our [website(WyeWorks website)](http://wyeworks.com), we wanted to serve some dynamic content but it just didn't justify having some "big" dynamic technology behind to achieve this. Also as programmers, we like our code (even our static website content) to be nicely separated so we can keep things in order, better maintenance, blah blah blah. Seriously, we really like those things :)
 
 <!--more-->
 

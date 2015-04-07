@@ -21,7 +21,7 @@ I'm also giving a shout out asking for improvements to this compilation. If you 
 
 The Rails Guides are not always enough. When you don't find something in the guides or docs, you probably search for information on the internet or a blog post about the specific subject. But wouldn't it be better if you had all the related information together? This could also be a great starting point for a new Rails guide. 
 
-So, I encourage everyone to help compiling more material about each new section of Rails 4 and then, by looking at all this compilation, start guides about specific topics. You can do that by directly pushing to [docrails](http://github.com/lifo/docrails), which has public access for everyone to push documentation changes only.
+So, I encourage everyone to help compiling more material about each new section of Rails 4 and then, by looking at all this compilation, start guides about specific topics. You can do that by directly pushing to [docrails](http://github.com/rails/docrails), which has public access for everyone to push documentation changes only.
 
 [![Rails 4 MindNode](/images/posts/Rails4-mini-4.png "Rails 4
 MindNode")](/images/posts/Rails4-4.png)
@@ -145,7 +145,7 @@ MindNode")](/images/posts/Rails4-4.png)
 	- [Commit](https://github.com/rails/rails/commit/0dd24728a088fcb4ae616bb5d62734aca5276b1b)
 	- [Rails 4 Countdown to 2013 - Routing Concerns](http://blog.remarkablelabs.com/2012/12/routing-concerns-rails-4-countdown-to-2013)
 - PATCH verb
-	- [Weblog post](http://weblog.rubyonrails.org/2012/2/25/edge-rails-patch-is-the-new-primary-http-method-for-updates/)
+	- [Weblog post](http://weblog.rubyonrails.org/2012/2/26/edge-rails-patch-is-the-new-primary-http-method-for-updates/)
 	- [Rails issue: use PATCH verb instead of PUT](https://github.com/rails/rails/issues/348)
 	- [Rails 4 Countdown to 2013 - HTTP PATCH Verb](http://blog.remarkablelabs.com/2012/12/http-patch-verb-rails-4-countdown-to-2013)
 - Rename all action callbacks from \*\_filter to \*\_action

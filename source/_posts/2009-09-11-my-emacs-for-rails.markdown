@@ -12,7 +12,7 @@ author:
   description: WyeWorks Co-Founder, Ruby on Rails Core Team Member
 published: true
 ---
-I'd like to share with the community my emacs init file and a set of plugins to give a nicer experience on Ruby on Rails development, which you can checkout from [here](http://github.com/spastorino/my_emacs_for_rails/tree/master).
+I'd like to share with the community my emacs init file and a set of plugins to give a nicer experience on Ruby on Rails development, which you can checkout from [here](http://github.com/spastorino/my_emacs_for_rails).
 I have been using this environment under emacs 23, and it has not been tested on other emacs versions, so all feedback is welcome, if something goes wrong please feel free to contact me.
 
 <!--more-->
@@ -42,8 +42,8 @@ The package provides my customized Emacs init file and some plugins I found very
 * ruby-mode
 * toggle
 * yaml-mode
-* [yasnippet](http://code.google.com/p/yasnippet/)
-* [yasnippets-rails](http://github.com/eschulte/yasnippets-rails/tree/master)
+* [yasnippet](http://emacswiki.org/emacs/Yasnippet)
+* [yasnippets-rails](http://github.com/eschulte/yasnippets-rails/)
 
 ## Installation
 
@@ -62,5 +62,3 @@ Checkout the package
 ## Screenshot
 
 You can see here some screenshots to get a taste of the look and feel that this one has.
-
-!http://blog.wyeworks.com/assets/2009/9/11/emacs-screenshot.png!:http://blog.wyeworks.com/assets/2009/9/11/emacs-screenshot-full.png

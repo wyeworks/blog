@@ -61,7 +61,7 @@ base.list_timeline('wyeworks', 'team', :page => 1, :per_page => 5).each do |twee
 end{% endcodeblock %}
 
 The other and preferred way for authentication is OAuth, since we don't have to send the user and password through the network.
-In order to make OAuth work with twitter, we have to create an application at [http://twitter.com/apps](http://twitter.com/apps)
+In order to make OAuth work with twitter, we have to create an application at [https://apps.twitter.com/](https://apps.twitter.com/)
 Once we've created the app, twitter provides us with a Consumer Key and a Consumer Secret, needed to authenticate using OAuth
 
 {% codeblock lang:ruby %}#!/usr/bin/env ruby
@@ -86,7 +86,7 @@ rescue OAuth::Unauthorized
 end{% endcodeblock %}
 
 Either of these ways works just fine, but no one completely satisfied me, since we are working with a **public** list, so as far as I can see authentication is out the question, even more when anyone can see it directly from the web without authenticating.
-For this reason, I started looking at the [Twitter API](http://apiwiki.twitter.com) searching for a non-authentication way to do it: [Here's](http://apiwiki.twitter.com/Twitter-REST-API-Method:-GET-list-statuses) what I found.
+For this reason, I started looking at the Twitter API searching for a non-authentication way to do it: Here's what I found ...
 You can test that making a request to [http://api.twitter.com/1/wyeworks/lists/team/statuses.json?page=1&per_page=5](http://api.twitter.com/1/wyeworks/lists/team/statuses.json?page=1&per_page=5), obtaining the list as a json, or xml in case you change the .json to .xml
 
 So I've came up with this monkey-patch:
@@ -109,8 +109,8 @@ Being able to get the list without authenticating by:
    puts tweet.text
 end{% endcodeblock %}
 
-I've already contacted the gem's authors, proposing this patch: [http://github.com/spastorino/twitter/commit/aed3a298b613a508bb9caf93afc7f12c50626ad7](http://github.com/spastorino/twitter/commit/aed3a298b613a508bb9caf93afc7f12c50626ad7.) Wynn Netherland already told me it's pretty probable that it will be approved.
+I've already contacted the gem's authors, proposing this patch: [http://github.com/spastorino/twitter/commit/aed3a298b613a508bb9caf93afc7f12c50626ad7](http://github.com/spastorino/twitter/commit/aed3a298b613a508bb9caf93afc7f12c50626ad7). Wynn Netherland already told me it's pretty probable that it will be approved.
 
-Until then, you can make use of this functionality from my fork [http://twitter.com/spastorino/twitter](http://twitter.com/spastorino/twitter)
+Until then, you can make use of this functionality from my fork [http://github.com/spastorino/twitter](http://github.com/spastorino/twitter)
 
-**UPDATE #1:** My fork was merged into [http://github.com/jnunemaker/twitter](http://github.com/jnunemaker/twitter) master branch and twitter 0.8.3 was published through [Gemcutter](http://gemcutter.org/gems/twitter)
+**UPDATE #1:** My fork was merged into [http://github.com/jnunemaker/twitter](http://github.com/jnunemaker/twitter) master branch and twitter 0.8.3 was published through [Rubygems](http://rubygems.org/gems/twitter)

@@ -13,7 +13,7 @@ author:
 published: true
 ---
 
-I'll be talking at [RubyConf Argentina](http://rubyconfargentina.org/en),
+I'll be talking at [RubyConf Argentina](http://rubyconfargentina.org),
 and the first thing I usually do when preparing talks is to think in a
 high level and then start going down form there. I find MindNode a great
 tool for that. So I started checking what was being added, removed and

@@ -12,7 +12,7 @@ author:
   description: Cofounder & CEO at WyeWorks. Fitness aficionado. Home Barista wannabe.
 published: true
 ---
-At WyeWorks headquarters, every once in a while, we come across some project that needs a media edition/transcoding solution to build into. This was the case of our latest project in which we built a pretty simple interface with [Brightcove(Brightcove - The Leading Online Video Platform.)](http://www.brightcove.com/), a powerful video platform on which we may write something about it in our forthcoming posts, but it's not the point right now.
+At WyeWorks headquarters, every once in a while, we come across some project that needs a media edition/transcoding solution to build into. This was the case of our latest project in which we built a pretty simple interface with [Brightcove(Brightcove - The Leading Online Video Platform)](http://www.brightcove.com/), a powerful video platform on which we may write something about it in our forthcoming posts, but it's not the point right now.
 
 <!--more-->
 
@@ -28,7 +28,7 @@ which i must say that it's pretty ugly for me since that command it's supposed t
 In fact, that command returns an error (but still prints the information we need):
 
 {% codeblock %}
-  jose:~$ ffmpeg -i barsandtone.flv 
+  jose:~$ ffmpeg -i barsandtone.flv
   FFmpeg version 0.5-svn17737+3:0.svn20090303-1ubuntu6, Copyright (c) 2000-2009 Fabrice Bellard, et al.
     configuration: --enable-gpl --enable-postproc --enable-swscale --enable-x11grab --extra-version=svn17737+3:0.svn20090303-1ubuntu6 --prefix=/usr --enable-avfilter --enable-avfilter-lavf --enable-libgsm --enable-libschroedinger --enable-libspeex --enable-libtheora --enable-libvorbis --enable-pthreads --disable-stripping --disable-vhook --enable-libdc1394 --disable-armv5te --disable-armv6 --disable-armv6t2 --disable-armvfp --disable-neon --disable-altivec --disable-vis --enable-shared --disable-static
     libavutil     49.15. 0 / 49.15. 0

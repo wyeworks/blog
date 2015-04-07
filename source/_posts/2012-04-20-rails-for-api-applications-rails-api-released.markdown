@@ -12,14 +12,14 @@ author:
   description: WyeWorks Co-Founder, Ruby on Rails Core Team Member
 published: true
 ---
-**[rails-api](https://github.com/spastorino/rails-api)** is a plugin developed by Yehuda Katz, José Valim, Carlos Antonio da Silva and me (Santiago Pastorino) which modifies Rails applications trimming down usually unneeded Rails functionalities for API applications.
+**[rails-api](https://github.com/rails-api/rails-api)** is a plugin developed by Yehuda Katz, José Valim, Carlos Antonio da Silva and me (Santiago Pastorino) which modifies Rails applications trimming down usually unneeded Rails functionalities for API applications.
 Do you remember we added support for this on core and [it was reverted](https://github.com/rails/rails/commit/6db930cb5bbff9ad824590b5844e04768de240b1)?. This plugin enables that again.
 
 <!--more-->
 
 ### What is an API app?
 
-Traditionally, when people said that they used Rails as an "API", they meant providing a programmatically accessible API alongside their web application. For example, GitHub provides [an API](http://developer.github.com/) that you can use from your own API clients.
+Traditionally, when people said that they used Rails as an "API", they meant providing a programmatically accessible API alongside their web application. For example, GitHub provides [an API](https://developer.github.com/) that you can use from your own API clients.
 
 ### Why using this instead of Rails?
 
@@ -129,8 +129,8 @@ The best place to add a module is in your *ApplicationController*. You can also 
 
 ### How can I help?
 
-Go to the project url [https://github.com/spastorino/rails-api](https://github.com/spastorino/rails-api) and report issues, test it in real apps and provide bug fixes. We have been measuring the plugin against some applications and we will post more about the results later. Meanwhile, if you can test it and share the improvements you found in your apps, would be awesome. To be able to add this functionality to core we need the plugin to show significant performance improvements for real API applications, so it's important to let us know about your results.
+Go to the project url [https://github.com/rails-api/rails-api](https://github.com/rails-api/rails-api) and report issues, test it in real apps and provide bug fixes. We have been measuring the plugin against some applications and we will post more about the results later. Meanwhile, if you can test it and share the improvements you found in your apps, would be awesome. To be able to add this functionality to core we need the plugin to show significant performance improvements for real API applications, so it's important to let us know about your results.
 
 <3 <3 <3 Find me at RailsConf. Tenderlove and I are giving out hugs for free!
 
-**Update #1**: Wycats who after working with us (South American rubyists) is known as wygatos (figure our why :P), is adhering to the campaign of giving hugs for free.
+**Update #1**: Wycats, after working with us is known as wygatos (go figure why :P), is also adhering to the campaign of giving hugs for free.

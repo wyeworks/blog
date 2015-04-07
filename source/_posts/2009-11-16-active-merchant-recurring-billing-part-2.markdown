@@ -25,6 +25,6 @@ It's pretty easy, you just need to do something like this:
 Remember, same for canceling, as BeanStream uses another API for managing these kind of transactions, we need to use the account_id for identifying the same, so you must include it on the options.
 Then all same options can be passed.
 
-Check it out here: [http://github.com/wyeworks/active_merchant](http://github.com/wyeworks/active_merchant.)
+Check it out here: [http://github.com/wyeworks/active_merchant](http://github.com/wyeworks/active_merchant).
 
 That's all, don't forget to comment!

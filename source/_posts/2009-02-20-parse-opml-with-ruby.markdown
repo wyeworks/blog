@@ -17,7 +17,7 @@ In the past we have to deal with XML files and parse them, incredibly easy task 
 
 <!--more-->
 
-We found this function to parse the OPML document recursively preserving its structure in the [desktop weblog(desktop weblog)](http://dekstop.de/weblog/), that does the job of extracting the feeds, and modified it a bit. Now it returns a hash containing the title of the articles as keys, and its links as values.
+We found this function to parse the OPML document recursively preserving its structure in the desktop weblog, that does the job of extracting the feeds, and modified it a bit. Now it returns a hash containing the title of the articles as keys, and its links as values.
 
 Here's the function:
 {% codeblock lang:ruby %}def self.parse_opml(opml_node, parent_names=[])

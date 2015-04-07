@@ -12,8 +12,8 @@ author:
   description: VP of Engineering at WyeWorks. Ruby on Rails hacker. ExceptionNotification maintainer. Coffee & bacon lover.
 published: true
 ---
-Time has come for me to write a Rails generator, and as you're guessing right now, my first step was taking a look at the [Guides](http://guides.rubyonrails.org/generators.html.)
-They give you a pretty good idea on what you can do (despite of being for Rails 3.0), but as my friend Santiago always say, there's no better documentation than the source code itself. So, my second step was to dive into the [code](http://github.com/rails/rails/tree/2-3-stable/railties/lib/rails_generator/.) You should definitely read the code, great stuff there.
+Time has come for me to write a Rails generator, and as you're guessing right now, my first step was taking a look at the [Guides](http://guides.rubyonrails.org/generators.html).
+They give you a pretty good idea on what you can do (despite of being for Rails 3.0), but as my friend Santiago always say, there's no better documentation than the source code itself. So, my second step was to dive into the [code](http://github.com/rails/rails/tree/2-3-stable/railties/lib/rails_generator/). You should definitely read the code, great stuff there.
 
 <!--more-->
 

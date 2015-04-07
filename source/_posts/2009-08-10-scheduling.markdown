@@ -13,7 +13,7 @@ author:
 published: true
 ---
 Scheduling tasks is something we all need to know to do, for it's quite common in applications. Fetching feeds, indexing some data, processing files at a periodical time, that happens a lot.
-You are probably quite familiar then with the linux cron, if you had to deal with scheduling stuff in the past, but there is something you may not. Let me introduce you the [*Whenever*(Whenever)](http://github.com/javan/whenever/tree/master) gem. 
+You are probably quite familiar then with the linux cron, if you had to deal with scheduling stuff in the past, but there is something you may not. Let me introduce you the [*Whenever*(Whenever)](http://github.com/javan/whenever) gem. 
 What is it? A simple gem to schedule tasks writing them in nice ruby syntax...just let the gem work it's magic and deal with the cron.
 
 <!--more-->

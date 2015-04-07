@@ -12,7 +12,7 @@ author:
   description: VP of Engineering at WyeWorks. Ruby on Rails hacker. ExceptionNotification maintainer. Coffee & bacon lover.
 published: true
 ---
-We're attending [Locos X Rails (Locos X Rails)](http://www.locosxrails.com) conference !!!! 
+We're attending Locos X Rails (Locos X Rails) conference !!!
 
 It will be held on April 3rd and 4th at Universidad de Palermo in Buenos Aires, Argentina.
 

@@ -112,6 +112,6 @@ And that's it!, we have <b>Ruby, MySQL, PostgreSQL, Memcached</b>, and everythin
 {% codeblock %}$ rake{% endcodeblock %}
 at the top of the rails directory.
 
-Everything should work just fine, or at least you should get the same results as the [Rails CI.](http://travis-ci.org/#!/rails/rails)
+Everything should work just fine, or at least you should get the same results as the [Rails CI](http://travis-ci.org/#!/rails/rails).
 
 <b>Congratulations! </b>

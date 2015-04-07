@@ -12,7 +12,7 @@ author:
   description: WyeWorks Co-Founder, Ruby on Rails Core Team Member
 published: true
 ---
-Refinements arrived to Ruby trunk [here](https://bugs.ruby-lang.org/issues/4085.) The purpose of Refinements is to make monkey patching safer, extending core classes but limiting its effects to a particular area of code.
+Refinements arrived to Ruby trunk [here](https://bugs.ruby-lang.org/issues/4085). The purpose of Refinements is to make monkey patching safer, extending core classes but limiting its effects to a particular area of code.
 
 <!--more-->
 
@@ -76,7 +76,7 @@ and monkey patch in a controlled way. You can also check that you won't be pollu
   puts [1].blank?
 end{% endcodeblock %}
 
-This will raise an undefined method `blank?' for [](String) (NoMethodError).
+This will raise an undefined method `blank?' for String (NoMethodError).
 
 Refinements has been committed to ruby by Shugo Maeda, but it may be reverted for Ruby 2.0. The Ruby Core is asking for feedback, so, what are the use cases you see Refinements is good for you?
 
