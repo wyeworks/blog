@@ -130,6 +130,9 @@ article.hentry header p.meta {
 article.hentry ul ul {
   margin-bottom: .75em;
 }
+article.hentry span.author {
+  display: none;
+}
 
 #content .blog-index {
   padding: {
