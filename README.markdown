@@ -19,7 +19,7 @@ rake generate
 rake preview
 ```
 
-Now you can preview the blog at `http://localhost:4000/`
+Now you can preview the blog at `http://localhost:4000/blog`
 
 
 ## Create a new post
@@ -104,7 +104,7 @@ Now we can get right into writing our content in plain old [Markdown](http://dar
 
 If you wish to include code snippets (and who wouldn't) you can use `{% codeblock %}` [liquid tags](http://docs.shopify.com/themes/liquid-documentation/basics#tags), with an optional lang parameter. [Here is a list of available languages](http://pygments.org/docs/lexers/). For more ways to include code, [check the Octopress docs on the subject](http://octopress.org/docs/blogging/code/).
 
-Make sure to preview your blog post by typing `rake preview` and checking `http://localhost:4000/`
+Make sure to preview your blog post by typing `rake preview` and checking `http://localhost:4000/blog`
 
 
 ## Deploying
