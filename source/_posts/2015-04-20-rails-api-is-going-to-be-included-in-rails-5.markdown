@@ -13,7 +13,7 @@ author:
 published: true
 ---
 
-A decision was made to incorporate Rails API into Rails core :party: :party: :party:. During the last week I’ve been working on this and, today we [opened a pull request](https://github.com/rails/rails/pull/19832) to discuss the results.
+A decision was made to incorporate Rails API into Rails core &#x1f389; &#x1f389; &#x1f389;. During the last week I’ve been working on this and, today we [opened a pull request](https://github.com/rails/rails/pull/19832) to discuss the results.
 
 ## What is Rails API?
 
