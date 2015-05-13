@@ -11,10 +11,11 @@ These are the no nonsense instructions to get you right into blogging, assuming 
 ## Installing
 
 ```
-git clone https://github.com/wyeworks/blog.git
+git clone git@github.com:wyeworks/blog.git
 cd blog/
 bundle install
 npm install
+npm install -g gulp
 rake generate
 rake preview
 ```
