@@ -3,7 +3,7 @@ layout: post
 title: "How we got 98/100 on Google PageSpeed"
 category: front-end
 date: 2015-05-19 09:38:36 -0300
-published: true
+published: false
 comments: true
 hero_image: /blog/images/heros/post-high.jpg
 author:
@@ -30,19 +30,19 @@ The most apparent low-hanging fruit was the fact that our slider images were "re
 
 Another aspect of the delivered HTML and CSS was redundancy and contrived structures with unhelpful and unsemantic class names. At this point we pondered on what was the best choice: Reuse and Refactor or Rebuild. We ended up deciding on rebuilding when we saw that we'd actually spend more time refactoring.
 
-Now we had the opportunity to build a system of modular front-end components that would play nicely with each other.
+Now we had the opportunity to build a system of modular Front–End components that would play nicely with each other.
 
 
 ## Implementation
 
-Some decision were taken at rebuild time. First: how would the application be bootstraped? We had the good ol' grab an HTML and CSS file (which is still an option with low a low entry barrier), we had initial templates like [h5bp](https://html5boilerplate.com/) or perhaps we could have fired up a [Sinatra](http://www.sinatrarb.com/) or [Middleman](https://middlemanapp.com/) app.
+Some decisions were taken at rebuild time. First: how would the application be bootstraped? We had the good ol' write an HTML and CSS file in a folder (which is still an option with a low entry barrier), we had initial templates like [h5bp](https://html5boilerplate.com/) or perhaps we could have fired up a [Sinatra](http://www.sinatrarb.com/) or [Middleman](https://middlemanapp.com/) app.
 
-We decided to use [Yeoman](http://yeoman.io/) with the [webapp generator](https://github.com/yeoman/generator-webapp). This gave us a nice scaffolding with Grunt, Bower, Livereload & SASS.
+We decided instead to use [Yeoman](http://yeoman.io/) with the [webapp generator](https://github.com/yeoman/generator-webapp). This gave us a nice scaffolding with Grunt, Bower, Livereload & SASS.
 
 
 ### Initial structure
 
-Following the same principles of "Convention over configuration", we start each project with an initial CSS folder structure that aids on our understanding of the front-end structure; this structure being:
+Following the principle of "Convention over configuration", we start each project with an initial CSS folder structure that aids on our understanding of the Front–End structure; this structure being:
 
 {% codeblock %}
 └── styles
@@ -67,7 +67,7 @@ Over the process of building the app, each file gets the code pertinent to its p
 Files like `_section-specific` could be themselves folders, and folders like `persistent` could be single files, this is left to the criterion of the implementer after analyzing the project's needs.
 
 
-### Modular front-end
+### Modular Front–End
 
 While an initial file structure is an important aid to having a proper mental model of the project, it's not a silver bullet to solve all our problems. While building the HTML care must be taken to decouple the structures we use in such a way that they are reusable across the board.
 
@@ -140,27 +140,31 @@ And this CSS:
 }
 {% endcodeblock %}
 
-Even thou in this case `.project` will always have `.brand-description` and `.testimonial` as children, the CSS is written in such a way that these are independent modules, being perfectly capable of existing inside other contexts without the need to participate in a specific hierarchy. Now, the content of these modules _will_ depend on their parents; the key is to recognize the minimum necessary code to represent a concept. For instance, if the `img` representing the client logo had a special treatment independent of its context, this could be represented by yet another class that could be reused in other parts of the project (but this is not the case).
+Even though in this case `.project` will always have `.brand-description` and `.testimonial` as children, the CSS is written in such a way that these are independent modules, being perfectly capable of existing inside other contexts without the need to participate in a specific hierarchy.
+
+However, the content inside of `.brand-description` and `.testimonial` _will_ depend on existing inside their respective parents. So how do we draw the line between decoupling and inheritance? The key is to recognize the __minimum necessary code to represent a concept__. 
+
+In this case the treatment of the content of these modules is tightly coupled with the concept they are trying to represent. But if the `img` representing the client logo had a special treatment independent of its context, this could be represented by yet another class that could be reused in other parts of the project (but this is not the case).
 
 
 ### Responsive
 
-Now, you will notice that we have a separate, specific file named `_responsive.scss`. Some authors prefer to have the responsive `@media` statements inside of its own module file. While this is definitely better for code organization, it's not as good for the final rendered CSS; the `@media` statements will repeat as many times as modules you have. Additionally, having a single file for `@media` statements is more in line with the process itself of the responsiveness last step.
+Now, you will notice that we have a separate, specific file named `_responsive.scss`. Some authors prefer to have the responsive `@media` statements inside of its own module file. While this is definitely better for code organization, it's not as good for the final rendered CSS; the `@media` statements will repeat as many times as modules you have. Additionally, having a single file for `@media` statements is more in line with the process itself of the responsiveness last step of creating the `@media` statements.
 
-Remember that writing a responsive front-end starts way before writing `@media` statements. RWD is basically the amalgamation of a fluid layout with conditional statements depending on viewport size (and/or several [less used conditionals](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries)).
+Remember that writing a responsive Front–End starts way before writing `@media` statements. RWD is basically the amalgamation of a fluid layout with conditional statements depending on viewport size (and/or several [less used conditionals](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries)).
 
 All being said, this structuration is open to discussion and not written in stone.
 
 
 ### Critical CSS
 
-On the yore times of speed improvement, Yahoo recommended injecting all application CSS on the header; which even though we nowadays have build tools like Grunt or Gulp to automatize this, we know it's a practice that unnecessarily increases requests size and denies the benefits of caching CSS files that have statements used through the app.
+On the times of yore of speed improvement, Yahoo recommended injecting all application CSS on the header; which even though we nowadays have build tools like Grunt or Gulp to automatize this, we know it's a practice that unnecessarily increases requests size and denies the benefits of caching CSS files that have statements used through the app.
 
 On the other hand, we can have our all our CSS on a single file, which gets cached but can impact the initial load of the site due to the painting of the layour having to wait for the whole CSS to be loaded (which has statements beyond what the user will probably see on initial load).
 
-This takes us back to the dreaded concept of "[Above the fold](http://en.wikipedia.org/wiki/Above_the_fold)", which has been disproved to impact user's engagement since scrolling is a natural action for even inexperienced users to perform. Even thou what the user initially sees is not necessarily the most important, we now need to treat this area differently due to a technical necessity: Painting the visible layout as fast as possible and deferring the loading of the remaining CSS.
+This takes us back to the dreaded concept of "[Above the fold](http://en.wikipedia.org/wiki/Above_the_fold)", which has been disproved to impact user's engagement, since scrolling is a natural action for even inexperienced users to perform nowadays. Even though what the user initially sees is not necessarily the most important, we now need to treat this area differently due to a technical necessity: __Painting the initially visible layout as fast as possible__ and deferring the loading of the remaining CSS.
 
-The middle road of putting all of our CSS on the `head` vs having it on a separate file is having the CSS that affects "Above the fold" or "Critical content" on the `head` and the rest of our CSS on a separate file. [This is a good talk that explains these concepts and further](https://www.youtube.com/watch?v=PkOBnYxqj3k).
+The middle road of putting all of our CSS on the `head` vs having it on a separate file is having the CSS that affects "Above the fold" or "Critical content" on the `head` and the rest of our CSS on a separate file. [This is a good talk that explains these concepts and beyond](https://www.youtube.com/watch?v=PkOBnYxqj3k).
 
 There are [several projects](https://github.com/addyosmani/critical-path-css-tools) for performing this (more or less) automatically. In our specific case, we had the benefit of knowing what is the above the fold content (The slider adapts to the viewport height), and our CSS was already modular enough that we could separate them easily into two files: `main.scss` and `critical.scss`.
 
@@ -227,6 +231,6 @@ Then we call critical.scss from our document header, but inject the content of t
 
 [We run PageSpeed](https://developers.google.com/speed/pagespeed/insights/?url=wyeworks.com&tab=mobile) and voilà! We get a great score of 98 on speed and 100 on user experience!.
 
-## What we learned
+## Final thoughts
 
-la sicodelia, quiero ver como va quedando esto.
+Front–End can not be treated as a secondary concern in a modern web development flow. Through the use of compact modules, clean code, optimized images and care for Critical CSS we could improve the speed and user experience of our site dramatically. Thanks to [DrummerHead](https://twitter.com/DrummerHead) for helping us with the Front–End. Until the next time!
