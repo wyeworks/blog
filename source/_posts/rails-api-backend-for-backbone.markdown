@@ -176,8 +176,6 @@ class TodosController < ApplicationController
   # DELETE /todos/1
   def destroy
     @todo.destroy
-
-    head :no_content
   end
 
   private
