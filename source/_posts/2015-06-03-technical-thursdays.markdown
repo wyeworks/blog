@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Technical Thursdays
+title: Technical Thursdays or: how we do continuous learning
 hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
@@ -24,6 +24,4 @@ Recently, a developer with no more than 10 days at the company (who was also new
 
 Here are a few pics of WyeWorkers at our [*Technical Thursdays*](https://www.facebook.com/media/set/?set=a.10152830735998451.1073741830.44674243450&type=1)
 
-So, what are you doing as a developer in order to maintain up to date and continue learning? Please share!
-
-
+So technical Thursdays is part of what we do in order to improve and stay up to date. What are you doing as a developer in order to maintain up to date and continue learning? Please share!
