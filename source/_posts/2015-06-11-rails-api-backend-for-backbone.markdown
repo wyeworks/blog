@@ -37,9 +37,9 @@ However, this feature was just incorporated into the master branch at the time o
 
 <pre>git clone git://github.com/rails/rails.git</pre>
 
-Now we must run the `rails new` command in the following manner, in order to make sure that our generated project will point to our local copy of the Rails source code:
+Now we must run the `rails new` command in the folder where the repo was cloned. In order to have our generated project pointing to our local copy of the Rails source code, we need to run this command in the following manner:
 
-<pre>bundle exec railties/exe/rails new <parent-folder-path>/my_api_app --api --edge</pre>
+<pre>bundle exec railties/exe/rails new &lt;parent-folder-path&gt;/my_api_app --api --edge</pre>
 
 It's a good idea to specify a path for the generated project, so we avoid creating the Rails API application inside the Rails source code folder. That explains the `<parent-folder-path>` placeholder in the example below.
 
@@ -81,7 +81,7 @@ group :development, :test do
 end
 ```
 
-We can notice that stuff related with asset pipeline and template rendering is not longer present (`jquery-rails` and `turbolinks` among others). In addition, the `active_model_serializers` is included by default because it will be responsible for serializing the JSON responses returned by our API application.
+We can notice that stuff related with asset management and template rendering is not longer present (`jquery-rails` and `turbolinks` among others). In addition, the `active_model_serializers` is included by default because it will be responsible for serializing the JSON responses returned by our API application.
 
 Let's now check out the config/application.rb file:
 
