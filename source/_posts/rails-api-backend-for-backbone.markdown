@@ -35,7 +35,7 @@ Let's get started! First, we need to make sure that we have the most recent vers
 git clone git://github.com/rails/rails.git
 ```
 
-Creating a new only-API application is accomplished by adding the `--api` option when generating the project with the `rails new` command. Once Rails 5 is released, you will be able to create the Rails application by running, for example, `rails new my_api_app --api`.
+Creating an API only application is accomplished by running `rails new <application-name> --api`.
 
 Since we want to generate the application from Rails' source code, the `rails new` command should be a little different, in order to make sure that our generated project will point to our local copy of the Rails source code:
 
@@ -44,6 +44,8 @@ bundle exec railties/exe/rails new <parent-folder-path>/my_api_app --api --edge
 ```
 
 It's a good idea to specify a specific path for the generated project, so we avoid to create the Rails API application into the Rails source code folder. That explains the `<parent-folder-path>` placeholder in the example below.
+
+Anyway, remember that once the Rails 5 is released you will be able to generate your only-API project only adding the `--api` option to the regular `rails new` command.
 
 Now, we can explore what is generated in the new project's folder. You will notice that almost everything looks exactly the same than a regular Rails application, and that's certainly true. However, let's highlight what is different.
 
@@ -78,7 +80,7 @@ group :development, :test do
 end
 ```
 
-We can see that stuff related with asset pipeline and template rendering is not longer present (TODO: list the gems). In addition, the  `active_model_serializers` is included by default because it will be responsible for serializing the JSON responses returned by our API application.
+We can notice that stuff related with asset pipeline and template rendering is not longer present (`jquery-rails` and `turbolinks` among others). In addition, the `active_model_serializers` is included by default because it will be responsible for serializing the JSON responses returned by our API application.
 
 Let's now check out the config/application.rb file:
 
