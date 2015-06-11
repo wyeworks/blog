@@ -304,7 +304,7 @@ Give it a try by browsing to [localhost:9000](http://localhost:9000). You will n
 
 ## Conclusion
 
-The aim of this article was to show how easy is implementing a API only backend for a simple Backend application using the new Rails API feature. Rails API just landed into Rails source code, however you can count with this feature because the next Rails major release is around the corner.
+The aim of this article was to show how easy is to implement an API only backend for a simple Backend application using the new Rails API feature. Rails API just landed into Rails source code, however you can count with this feature because the next Rails major release is around the corner.
 
 Some stuff can still be improved. For instance, the file containing the `TodoSerializer` class should be generated as part of the scaffold command when the `active_model_serializers` gem is included in the project. We have fixed this specific problem and [it is already merged on master](https://github.com/rails-api/active_model_serializers/commit/4752e6723a6e0e8c4038ed4f36b87a954ad21097) and ready for the next release of `active_model_serializers`.
 
