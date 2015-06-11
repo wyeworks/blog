@@ -17,7 +17,7 @@ A few weeks ago, [an announcement was made](http://wyeworks.com/blog/2015/4/20/r
 
 Finally, after some further discussion, bug fixes and last-minute changes, the [corresponding pull request](https://github.com/rails/rails/pull/19832) was merged. Therefore, the feature will be available once Rails 5 is released.
 
-Rails API goal is to facilitate the implementation of only API Rails projects, where only a subset of Rails features are available. For example, template generation and asset pipeline are not included in a Rails API application.
+Rails API goal is to facilitate the implementation of API only Rails projects, where only a subset of Rails features are available. For example, template generation and asset pipeline are not included in a Rails API application.
 
 For more detailed information about the Rails API project, you can take a look at [this Santiago Pastorino's article](http://wyeworks.com/blog/2012/4/20/rails-for-api-applications-rails-api-released/) about the project.
 
@@ -27,7 +27,7 @@ Rails 5 is not released yet, but we can give a try by using the latest code in r
 
 Since we want to focus on the backend implementation and its integration with the client side application, we decided to borrow the [Backbone TODO application from the TodoMVC project](https://github.com/tastejs/todomvc/tree/gh-pages/examples/backbone).
 
-### Generating the Rails only API application
+### Generating the Rails API only application
 
 Let's get started! First, we need to make sure that we have the most recent version of the Rails source code (remember that, at the time of writing, this feature was just incorporated into the master branch!). The easiest way to have a copy of this code is by cloning the Rails Github project in our computer:
 
@@ -45,7 +45,7 @@ bundle exec railties/exe/rails new <parent-folder-path>/my_api_app --api --edge
 
 It's a good idea to specify a specific path for the generated project, so we avoid to create the Rails API application into the Rails source code folder. That explains the `<parent-folder-path>` placeholder in the example below.
 
-Anyway, remember that once the Rails 5 is released you will be able to generate your only-API project only adding the `--api` option to the regular `rails new` command.
+Anyway, remember that once the Rails 5 is released you will be able to generate your API only project simply by adding the `--api` option to the regular `rails new` command.
 
 Now, we can explore what is generated in the new project's folder. You will notice that almost everything looks exactly the same than a regular Rails application, and that's certainly true. However, let's highlight what is different.
 
@@ -108,7 +108,7 @@ module TodoRailsApiBackend
 end
 ```
 
-The `api_only` config option makes posible to have our Rails application working excluding those middlewares and controller modules that are not needed in an only API application.
+The `api_only` config option makes posible to have our Rails application working excluding those middlewares and controller modules that are not needed in an API only application.
 
 Last but not least, our main ApplicationController is defined slightly different:
 
@@ -119,7 +119,7 @@ end
 
 Please note that `ApplicationController` inherits from `ActionController::API`. Remember that Rails standard applications have their controllers inheriting from `ActionController::Base` instead.
 
-In case you're interested on turning an existent Rails app into an only API application, the differences mentioned below are the list of changes that you need to do manually in order to achieve that.
+In case you're interested on turning an existent Rails app into an API only application, the differences mentioned below are the list of changes that you need to do manually in order to achieve that.
 
 ### Scaffolding the Todo resource
 
@@ -133,7 +133,7 @@ bin/rails g scaffold todo title completed:boolean order:integer
 
 Again, we need to make sure all rails commands run the latest Rails source code in our computer, so we must run the executables from the bin folder (otherwise, the scaffold would use the rails code from an installed rails gem in the system).
 
-This command is the same explained in the Rails' guides and books about the framework. Rails API does not require any change or additional options in all subsequent commands. The `rails-api` option added to the `config/application.rb` is enough to alter how scaffolding and other things works in our only-API project.
+This command is the same explained in the Rails' guides and books about the framework. Rails API does not require any change or additional options in all subsequent commands. The `rails-api` option added to the `config/application.rb` is enough to alter how scaffolding and other things works in our API only project.
 
 The generated TodoController looks like this:
 
@@ -221,7 +221,7 @@ Do not forget to run `bin/rake db:migrate`, so the database is ready when the ti
 
 ### Defining how TODO items should be serialized
 
-Our only-API application will respond incoming requests in JSON format, and here is where Active Model Serializer plays an important role. It requires to define the TodoSerializer class and provide the list of attributes from Todo model to include in the responses.
+Our API only application will respond incoming requests in JSON format, and here is where Active Model Serializer plays an important role. It requires to define the TodoSerializer class and provide the list of attributes from Todo model to include in the responses.
 
 Active Model Serializer offers a command to generate this serializer:
 
@@ -322,7 +322,7 @@ Give it a try by browsing to [localhost:9000](http://localhost:9000). You will n
 
 ## Conclusion
 
-The aim of this article was to show how easy is implementing a only-API backend for a simple Backend application using the new Rails API feature. Rails API just landed into Rails source code, however you can count with this feature because the next Rails major release is around the corner.
+The aim of this article was to show how easy is implementing a API only backend for a simple Backend application using the new Rails API feature. Rails API just landed into Rails source code, however you can count with this feature because the next Rails major release is around the corner.
 
 Some stuff can still be improved. For instance, I consider that the TodoSerializer should be generated as part of the scaffold command, when the `active_model_serializer` gem is included in the project. This is currently being discussed with the maintainers of the gem, and I hope this is implemented soon.
 
