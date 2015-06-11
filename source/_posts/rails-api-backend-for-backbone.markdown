@@ -324,11 +324,11 @@ Give it a try by browsing to [localhost:9000](http://localhost:9000). You will n
 
 The aim of this article was to show how easy is implementing a API only backend for a simple Backend application using the new Rails API feature. Rails API just landed into Rails source code, however you can count with this feature because the next Rails major release is around the corner.
 
-Some stuff can still be improved. For instance, I consider that the TodoSerializer should be generated as part of the scaffold command, when the `active_model_serializer` gem is included in the project. This is currently being discussed with the maintainers of the gem, and I hope this is implemented soon.
+Some stuff can still be improved. For instance, the TodoSerializer should be generated as part of the scaffold command when the `active_model_serializer` gem is included in the project. We have worked on fixing this specific problem and [it is already merged on master](https://github.com/rails-api/active_model_serializers/commit/4752e6723a6e0e8c4038ed4f36b87a954ad21097).
 
-We also have other options in terms of serialization. Rails API was also prepared to play well with JBuilder. This library is an alternative within the Rails ecosystem that allows to define JSON responses using templates instead of defining a serializer class as Active Model Serializer does.
+We also have other options in terms of serialization. In fact, we have prepared Rails API to play well with JBuilder. This library is an alternative within the Rails ecosystem that allows to define JSON responses using templates instead of defining a serializer class as Active Model Serializer does.
 
-Although Rails API is just being included in Rails and improvements can certainly be done, I hope you feel more confortable and productive implementing your APIs with this new functionality to be shipped in the next Rails version.
+Although Rails API is just being incorporated into Rails and further improvements can certainly be done, I hope you feel more confortable and productive implementing your APIs with this new functionality to be shipped in the next Rails version.
 
 Enjoy exploring Rails API!
 
