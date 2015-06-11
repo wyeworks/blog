@@ -29,23 +29,21 @@ Since we want to focus on the backend implementation and its integration with th
 
 ### Generating the Rails API only application
 
-Let's get started! First, we need to make sure that we have the most recent version of the Rails source code (remember that, at the time of writing, this feature was just incorporated into the master branch!). The easiest way to have a copy of this code is by cloning the Rails Github project in our computer:
+Once Rails 5 is released, creating an API only application will be accomplished by running `rails new <application-name> --api`.
+
+However, this feature was just incorporated into the master branch at the time of writing, so we need to generate the application directly from the most recent version of the Rails source code. The easiest way to have a copy of this code is by cloning the Rails Github project in our computer:
 
 ```
 git clone git://github.com/rails/rails.git
 ```
 
-Creating an API only application is accomplished by running `rails new <application-name> --api`.
-
-Since we want to generate the application from Rails' source code, the `rails new` command should be a little different, in order to make sure that our generated project will point to our local copy of the Rails source code:
+Now we must run the `rails new` command in the following manner, in order to make sure that our generated project will point to our local copy of the Rails source code:
 
 ```
 bundle exec railties/exe/rails new <parent-folder-path>/my_api_app --api --edge
 ```
 
-It's a good idea to specify a specific path for the generated project, so we avoid to create the Rails API application into the Rails source code folder. That explains the `<parent-folder-path>` placeholder in the example below.
-
-Anyway, remember that once the Rails 5 is released you will be able to generate your API only project simply by adding the `--api` option to the regular `rails new` command.
+It's a good idea to specify a specific path for the generated project, so we avoid creating the Rails API application inside the Rails source code folder. That explains the `<parent-folder-path>` placeholder in the example below.
 
 Now, we can explore what is generated in the new project's folder. You will notice that almost everything looks exactly the same than a regular Rails application, and that's certainly true. However, let's highlight what is different.
 
