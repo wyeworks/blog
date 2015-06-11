@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Rails API is now part of Rails 5
+title: How to build a Rails 5 API only and Backbone application
 hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
@@ -13,7 +13,7 @@ author:
 published: true
 ---
 
-A few weeks ago, [an announcement was made](http://wyeworks.com/blog/2015/4/20/rails-api-is-going-to-be-included-in-rails-5/) referring to the imminent inclusion of Rails API into Rails core. Until now, Rails API has been a separated project and people have been using it through the [`rails-api` gem](https://github.com/rails-api/rails-api).
+A few weeks ago, [an announcement was made](http://wyeworks.com/blog/2015/4/20/rails-api-is-going-to-be-included-in-rails-5/) referring to the imminent inclusion of Rails API into Rails core. Until now, Rails API has been a separated project and people have been using it through the `rails-api` [gem](https://github.com/rails-api/rails-api).
 
 Santiago Pastorino and I have been working on bringing Rails API into Rails for a while. After some further discussion, bug fixes and last-minute changes, the [corresponding pull request](https://github.com/rails/rails/pull/19832) was finally merged. We're happy to confirm that all Rails API capabilities will be available once Rails 5 is released!
 
@@ -31,7 +31,7 @@ Since we want to focus on the backend implementation and its integration with th
 
 Once Rails 5 is released, creating an API only application will be accomplished by running:
 
-<pre>rails new <application-name> --api</pre>
+<pre>rails new &lt;application-name&gt; --api</pre>
 
 However, this feature was just incorporated into the master branch at the time of writing, so we need to generate the application directly from the most recent version of the Rails source code. The easiest way to have a copy of this code is by cloning the Rails Github project in our computer:
 
