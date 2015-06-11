@@ -29,19 +29,17 @@ Since we want to focus on the backend implementation and its integration with th
 
 ### Generating the Rails API only application
 
-Once Rails 5 is released, creating an API only application will be accomplished by running `rails new <application-name> --api`.
+Once Rails 5 is released, creating an API only application will be accomplished by running:
+
+<pre>rails new <application-name> --api</pre>
 
 However, this feature was just incorporated into the master branch at the time of writing, so we need to generate the application directly from the most recent version of the Rails source code. The easiest way to have a copy of this code is by cloning the Rails Github project in our computer:
 
-```
-git clone git://github.com/rails/rails.git
-```
+<pre>git clone git://github.com/rails/rails.git</pre>
 
 Now we must run the `rails new` command in the following manner, in order to make sure that our generated project will point to our local copy of the Rails source code:
 
-```
-bundle exec railties/exe/rails new <parent-folder-path>/my_api_app --api --edge
-```
+<pre>bundle exec railties/exe/rails new <parent-folder-path>/my_api_app --api --edge</pre>
 
 It's a good idea to specify a path for the generated project, so we avoid creating the Rails API application inside the Rails source code folder. That explains the `<parent-folder-path>` placeholder in the example below.
 
@@ -125,9 +123,7 @@ The main purpose of our API application is to serve as a backend storage for our
 
 Let's use the scaffold command:
 
-```
-bin/rails g scaffold todo title completed:boolean order:integer
-```
+<pre>bin/rails g scaffold todo title completed:boolean order:integer</pre>
 
 Again, we need to make sure all rails commands run the latest Rails source code in our computer, so we must run the executables from the bin folder (otherwise, the scaffold would use the rails code from an installed rails gem in the system).
 
@@ -205,7 +201,7 @@ resources :todos
 
 This is exactly the same result after running the scaffold command in a regular Rails application. However, this line defines only the routes that are necessary in our API. In other words, `new` and `edit` routes are excluded now. We can confirm that by running `bin/rake routes`:
 
-```
+<pre>
 Prefix Verb   URI Pattern          Controller#Action
  todos GET    /todos(.:format)     todos#index
        POST   /todos(.:format)     todos#create
@@ -213,7 +209,7 @@ Prefix Verb   URI Pattern          Controller#Action
        PATCH  /todos/:id(.:format) todos#update
        PUT    /todos/:id(.:format) todos#update
        DELETE /todos/:id(.:format) todos#destroy
-```
+</pre>
 
 Do not forget to run `bin/rake db:migrate`, so the database is ready when the time comes to test our application.
 
@@ -223,9 +219,7 @@ Our API only application will respond incoming requests in JSON format, and here
 
 Active Model Serializers offers a command to generate this serializer:
 
-```
-bin/rails g serializer todo title completed order
-```
+<pre>bin/rails g serializer todo title completed order</pre>
 
 The result is the file `app/serializers/todo_serializer.rb`:
 
@@ -239,27 +233,19 @@ At this point, we have implemented with almost zero effort a working backend app
 
 Let's create a new Todo
 
-```
-curl -H "Content-Type:application/json; charset=utf-8" -d '{"title":"something to do","order":1,"completed":false}' http://localhost:3000/todos
-```
+<pre>curl -H "Content-Type:application/json; charset=utf-8" -d '{"title":"something to do","order":1,"completed":false}' http://localhost:3000/todos</pre>
 
 and it should return:
 
-```
-{"id":1,"title":"something to do","completed":false,"order":1}
-```
+<pre>{"id":1,"title":"something to do","completed":false,"order":1}</pre>
 
 Now, we can try to get the list of TODOs:
 
-```
-curl http://localhost:3000/todos
-```
+<pre>curl http://localhost:3000/todos</pre>
 
 and the result should be:
 
-```
-[{"id":1,"title":"something to do","completed":false,"order":1}]
-```
+<pre>[{"id":1,"title":"something todo","completed":false,"order":1}]</pre>
 
 ### Putting both components to work together
 
@@ -312,9 +298,7 @@ Once we have configured the cross origin policy in our backend, we are ready to 
 
 We can simply run a test server using Ruby to test locally the frontend. Run the following command in the Backbone application's folder:
 
-```
-ruby -run -e httpd . -p 9000
-```
+<pre>ruby -run -e httpd . -p 9000</pre>
 
 Give it a try by browsing to [localhost:9000](http://localhost:9000). You will notice that TODO items are being stored by our Rails API backend now instead of the browser local storage. Therefore, both components are connected and communicated with each other.
 
