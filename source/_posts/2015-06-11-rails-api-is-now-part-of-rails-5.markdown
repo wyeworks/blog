@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Rails API is now merged in master
+title: Rails API is now part of Rails 5
 hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
