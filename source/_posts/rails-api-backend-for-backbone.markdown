@@ -17,7 +17,7 @@ A few weeks ago, [an announcement was made](http://wyeworks.com/blog/2015/4/20/r
 
 Finally, after some further discussion, bug fixes and last-minute changes, the [corresponding pull request](https://github.com/rails/rails/pull/19832) was merged. Therefore, the feature will be available once Rails 5 is released.
 
-Rails API goal is to facilitate the implementation of API-only Rails projects, where only a subset of Rails features are available. For example, template generation and asset pipeline are not included in a Rails API application.
+Rails API goal is to facilitate the implementation of only API Rails projects, where only a subset of Rails features are available. For example, template generation and asset pipeline are not included in a Rails API application.
 
 For more detailed information about the Rails API project, you can take a look at [this Santiago Pastorino's article](http://wyeworks.com/blog/2012/4/20/rails-for-api-applications-rails-api-released/) about the project.
 
@@ -27,7 +27,7 @@ Rails 5 is not released yet, but we can give a try by using the latest code in r
 
 Since we want to focus on the backend implementation and its integration with the client side application, we decided to borrow the [Backbone TODO application from the TodoMVC project](https://github.com/tastejs/todomvc/tree/gh-pages/examples/backbone).
 
-### Generating the Rails API-only application
+### Generating the Rails only API application
 
 Let's get started! First, we need to make sure that we have the most recent version of the Rails source code (remember that, at the time of writing, this feature was just incorporated into the master branch!). The easiest way to have a copy of this code is by cloning the Rails Github project in our computer:
 
@@ -108,7 +108,7 @@ module TodoRailsApiBackend
 end
 ```
 
-The `api_only` config option makes posible to have our Rails application working excluding those middlewares and controller modules that are not needed in a API-only application.
+The `api_only` config option makes posible to have our Rails application working excluding those middlewares and controller modules that are not needed in an only API application.
 
 Last but not least, our main ApplicationController is defined slightly different:
 
@@ -119,7 +119,7 @@ end
 
 Please note that `ApplicationController` inherits from `ActionController::API`. Remember that Rails standard applications have their controllers inheriting from `ActionController::Base` instead.
 
-In case you're interested on turning an existent Rails app into a API-only application, the differences mentioned below are the list of changes that you need to do manually in order to achieve that. 
+In case you're interested on turning an existent Rails app into an only API application, the differences mentioned below are the list of changes that you need to do manually in order to achieve that.
 
 ### Scaffolding the Todo resource
 
