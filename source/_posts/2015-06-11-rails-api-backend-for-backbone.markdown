@@ -15,7 +15,7 @@ published: true
 
 A few weeks ago, [an announcement was made](http://wyeworks.com/blog/2015/4/20/rails-api-is-going-to-be-included-in-rails-5/) referring to the imminent inclusion of Rails API into Rails core. Until now, Rails API has been a separated project and people have been using it through the [`rails-api` gem](https://github.com/rails-api/rails-api).
 
-Finally, after some further discussion, bug fixes and last-minute changes, the [corresponding pull request](https://github.com/rails/rails/pull/19832) was merged. Therefore, the feature will be available once Rails 5 is released.
+Santiago Pastorino and I have been working on bringing Rails API into Rails for a while. After some further discussion, bug fixes and last-minute changes, the [corresponding pull request](https://github.com/rails/rails/pull/19832) was finally merged. We're happy to confirm that all Rails API capabilities will be available once Rails 5 is released!
 
 Rails API goal is to facilitate the implementation of API only Rails projects, where only a subset of Rails features are available. A Rails API application counts with lightweight controllers, a reduced middleware stack and customized generators. All these features were conceived looking for a better experience at the moment of building an API only application.
 
