@@ -13,10 +13,10 @@ author:
 published: true
 ---
 
-A conclusion I came up with after years of watching software projects come and go, is that one of the biggest differences between teams who achieve consistent success and those who suffer through inconsistency is their commitment to continuous learning.
+A conclusion I came to after years of watching software projects come and go, is that one of the biggest differences between teams who achieve consistent success and those who suffer through inconsistency is their commitment to continuous learning.
 Successful athletes continuously practice the fundamentals while learning more advanced strategies. Same should happen with developers.
 
-Here at [WyeWorks](http://wyeworks.com) we strongly believe that curiosity and passion for learning is key to be a good developer. If you have people on your team who are curious and collaborative like we do, continuous learning comes naturally and performance will be high.
+Here at [WyeWorks](http://wyeworks.com) we strongly believe that curiosity and passion for learning are key to being a good developer. If you have people on your team who are curious and collaborative like we do, continuous learning comes naturally and performance will be high.
 
 Either it is to share a tip, research a new technology, play around with that library that was on top of the head for weeks, or even watch someone's keynote, people gather the entire morning at what we call `Technical Thursdays` with the same goal in mind: **share and acquire knowledge**.
 
