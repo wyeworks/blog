@@ -292,7 +292,7 @@ Let's do some changes in this file, so we can test both components, assuming tha
  end
 ```
 
-You can read more about the `rake-cors` gem and how to configure the policies [here](https://github.com/cyu/rack-cors).
+You can read more about the `rack-cors` gem and how to configure the policies [here](https://github.com/cyu/rack-cors).
 
 Once we have configured the cross origin policy in our backend, we are ready to test our client side application. We should turn on the backend server (`bin/rails s`) but also run a separated web server for the Backbone application.
 
