@@ -23,7 +23,7 @@ In addition, we will comment about some issues that were fixed in Rails and Acti
 
 ## Building the Backend
 
-### Step 1: generate the Rails API only application
+### Generate the Rails API only application
 
 First of all, we need to generate a new Rails API only application from scratch. Rails 5 is not released yet, so we have to clone the Github repository and generate our application directly from the source code.
 
@@ -36,4 +36,61 @@ In case you want a detailed explanation about the list of directories and files 
 However, if we compare with what was described in our previous issue, we can see a subtle difference in the generated Gemfile: [the `active-model-serializer` gem version changed from  0.10.0.rc1 a 0.10.0.rc2](https://github.com/rails/rails/commit/16db36b56685517c76385f9e0f877a9015bde2ca).
 
 The new Active Model Serializer release candidate includes a [new adapter that works properly with the Ember's RESTAdapter](https://github.com/rails-api/active_model_serializers/pull/958). This addition simplified a lot the integration of our Rails API only backend and the Ember client-side application.
+
+### Scaffolding the Todo resource
+
+The Todo items in the Ember application have two attributes: a string `title` and a boolean `isCompleted`. The following step to build our backend application is precisely to add a resource representing these Todo items.
+
+We can do it just running the `rails generate scaffold` command:
+
+<pre>bin/rails g scaffold todo title isCompleted:boolean</pre>
+
+Since we're now using a new version of the `active-model-serializer` gem, specifically the version 0.10.0.rc2, the scaffold command generates the serializer file for this resource. At the time of writing our previous post, we had to run another command to generate the serializer. It is now changed to be automatically run along the scaffold generator. In fact, this was [an enhancement implemented only a few days ago](https://github.com/rails-api/active_model_serializers/commit/4752e6723a6e0e8c4038ed4f36b87a954ad21097).
+
+Don't forget to run `bin/rake db:migrate` to update the database
+schema.
+
+### Choose the appropriate JSON serialization format
+
+Our Rails API only application is going to respond incoming requests in a given JSON format. The process to convert the data into this format is called serialization and this will be possible in our backend application thanks to Active Model Serializer adapters.
+
+By default, Active Model Serializer uses a format provided by the `flatten_json` adapter which is a very simple format only including the list of attributes without any additional metadata about the data being serialized. For instance, using this adapter, a Todo item would be serialized like:
+
+<pre>
+{
+  "title": "Todo 1",
+  "isCompleted": false
+}
+</pre>
+
+Luckily, we have additional adapters shipped into Active Model Serializer since 0.10.0.rc2, giving us a lot of flexibility. In particular, we need to pick a JSON format matching with our Ember client-side application. We can achieve that selecting a format that works well with the Ember's RESTAdapter. The main requirement specified by the RESTAdapter is the presence of the **object root** as part of the JSON payload, as it is explained in the [Ember RESTAdapter documentation](http://guides.emberjs.com/v1.10.0/models/the-rest-adapter). It means we want to serialize a Todo item like this:
+
+<pre>
+{
+  "todo": {
+    "title": "Todo 1",
+    "isCompleted": false
+  }
+}
+</pre>
+
+This is easy to do with Active Model Serializer if we choose the `json` adapter instead of the `flatten_json`. We can configure it by creating a new initializer file `config/initializers/ams_json_adapter.rb` including the following line:
+
+<pre>ActiveModel::Serializer.config.adapter = :json</pre>
+
+At this point, the backend application should be ready, so it's testing time! Start the web server with `bin/rails s` and let's create our first Todo using `curl`:
+
+<pre>curl -H "Content-Type:application/json; charset=utf-8" -d '{"todo": {"title":"Todo 1","isCompleted":false}}' http://localhost:3000/todos</pre>
+
+The API application should return the created item serialized in JSON format, including the root element:
+
+<pre>{"todo": {"id":1,"title":"Todo 1","isCompleted":false}}</pre>
+
+Now, let's get the Todo items list:
+
+<pre>curl http://localhost:3000/todos</pre>
+
+and the response should look like this (note the root element in plural):
+
+<pre>{"todos": [{"id":1,"title":"Todo 1","isCompleted":false}]}</pre>
 	
