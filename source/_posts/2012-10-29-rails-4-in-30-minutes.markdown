@@ -22,4 +22,4 @@ I still have to post the links I've collected of Rails 4 blog posts and commits 
 
 <script async class="speakerdeck-embed"
 data-id="508ecd4a06b6f70002001fb8" data-ratio="1.299492385786802"
-src="//speakerdeck.com/assets/embed.js"></script>
+src="//speakerdeck.com/assets/embed.js"\></script\>
