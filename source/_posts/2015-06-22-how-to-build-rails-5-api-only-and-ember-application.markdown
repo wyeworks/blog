@@ -66,7 +66,7 @@ By default, Active Model Serializer uses a format provided by the `flatten_json`
 }
 </pre>
 
-Luckily, we have some adapters shipped with Active Model Serializer in 0.10.0.rc2, giving us a lot of flexibility. In particular, we need to pick a JSON format matching our Ember application. We can achieve that selecting a format that works well with the Ember's RESTAdapter. The main requirement specified by the RESTAdapter is the presence of the **root object's key** as part of the JSON payload, as it is explained in the [Ember RESTAdapter documentation](http://guides.emberjs.com/v1.10.0/models/the-rest-adapter). It means we want to serialize a Todo item like this:
+Luckily, we have some adapters shipped with Active Model Serializer in 0.10.0.rc2, giving us a lot of flexibility. In particular, we need to pick a JSON format matching our Ember application. We can achieve that by selecting a format that works well with the Ember's RESTAdapter. The main requirement specified by the RESTAdapter is the presence of the **root object's key** as part of the JSON payload, as it is explained in the [Ember RESTAdapter documentation](http://guides.emberjs.com/v1.10.0/models/the-rest-adapter). It means we want to serialize a Todo item like this:
 
 <pre>
 {
@@ -105,7 +105,7 @@ We want to have both components working together, integrating our Rails API only
 The [original implementation from TodoMVC](https://github.com/tastejs/todomvc/tree/gh-pages/examples/emberjs) is our starting point, but we must do a few changes to have it working properly with our backend. In fact, the TodoMVC Ember example uses the browser local storage to persist Todo items, but we want to have our Rails API application doing this job.
 
 After downloading the Ember application code from TodoMVC, we need to have a newer version of the `ember-data` library to integrate properly this frontend application with Rails API. If you're interested on reading more about this, [we've opened a pull request on the TodoMVC repository](https://github.com/tastejs/todomvc/pull/1343).
-So meanwhile the pull request is not merged or ember-data updated in other way, we need to update this library by hand using curl:
+So whilst the pull request is not merged or ember-data updated in other way, we need to update this library by hand using curl:
 
 <pre>curl http://builds.emberjs.com/release/ember-data.js > node_modules/ember-data/ember-data.js</pre>
 
