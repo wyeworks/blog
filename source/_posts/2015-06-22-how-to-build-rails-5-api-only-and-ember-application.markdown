@@ -19,7 +19,7 @@ Because of that, in our latest post we discussed how to build an API only applic
 
 In this post, we are going to show how a very similar client-side application now built with Ember can be integrated with the same backend application implemented using Rails API. Like in our previous post, we are going to use the [TodoMVC application](http://todomvc.com).
 
-In addition, we are going to comment about some issues that were fixed in Rails and Active Model Serializers in order to make the integration easier. These improvements were the result of testing Rails API with an Ember application, as part of our efforts to try it out using some popular JavaScript frameworks.
+In addition, we are going to comment about some issues that were fixed in Rails and Active Model Serializers in order to make the integration easier. These improvements were the result of testing Rails API with an Ember application, as part of our efforts to make it work properly with some of the most popular JavaScript frameworks.
 
 
 ## Building the Backend
@@ -66,7 +66,7 @@ By default, Active Model Serializer uses a format provided by the `flatten_json`
 }
 </pre>
 
-Luckily, we have an additional adapter shipped with Active Model Serializer in 0.10.0.rc2, which gives us more flexibility. In particular, we need to pick a JSON format matching our Ember application. We can achieve that selecting a format that works well with the Ember's RESTAdapter. The main requirement specified by the RESTAdapter is the presence of the **root object's key** as part of the JSON payload, as it is explained in the [Ember RESTAdapter documentation](http://guides.emberjs.com/v1.10.0/models/the-rest-adapter). It means we want to serialize a Todo item like this:
+Luckily, we have some adapters shipped with Active Model Serializer in 0.10.0.rc2, giving us a lot of flexibility. In particular, we need to pick a JSON format matching our Ember application. We can achieve that selecting a format that works well with the Ember's RESTAdapter. The main requirement specified by the RESTAdapter is the presence of the **root object's key** as part of the JSON payload, as it is explained in the [Ember RESTAdapter documentation](http://guides.emberjs.com/v1.10.0/models/the-rest-adapter). It means we want to serialize a Todo item like this:
 
 <pre>
 {
@@ -104,7 +104,8 @@ We want to have both components working together, integrating our Rails API only
 
 The [original implementation from TodoMVC](https://github.com/tastejs/todomvc/tree/gh-pages/examples/emberjs) is our starting point, but we must do a few changes to have it working properly with our backend. In fact, the TodoMVC Ember example uses the browser local storage to persist Todo items, but we want to have our Rails API application doing this job.
 
-After downloading the Ember application code from TodoMVC, we need to have a newer version of the `ember-data` library to integrate properly this frontend application with Rails API because the provided does an infinite PUTs loop, [more info here](https://github.com/tastejs/todomvc/pull/1343). `npm update` updates all the dependencies but ember and ember-data because they are not distributed with npm yet. So we need to update this library by hand using curl:
+After downloading the Ember application code from TodoMVC, we need to have a newer version of the `ember-data` library to integrate properly this frontend application with Rails API. If you're interested on reading more about this, [we've opened a pull request on the TodoMVC repository](https://github.com/tastejs/todomvc/pull/1343).
+So meanwhile the pull request is not merged or ember-data updated in other way, we need to update this library by hand using curl:
 
 <pre>curl http://builds.emberjs.com/release/ember-data.js > node_modules/ember-data/ember-data.js</pre>
 
