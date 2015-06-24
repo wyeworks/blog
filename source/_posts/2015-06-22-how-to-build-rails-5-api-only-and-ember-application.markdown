@@ -123,7 +123,7 @@ with the RESTAdapter's definition pointing to our backend:
 
 ```js
   Todos.ApplicationAdapter = DS.RESTAdapter.extend({
-    host: 'localhost:3000'
+    host: 'http://localhost:3000'
   });
 ```
 
