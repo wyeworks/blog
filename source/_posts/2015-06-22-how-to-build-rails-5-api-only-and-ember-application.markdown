@@ -93,4 +93,68 @@ Now, let's get the Todo items list:
 and the response should look like this (note the root element in plural):
 
 <pre>{"todos": [{"id":1,"title":"Todo 1","isCompleted":false}]}</pre>
-	
+
+## Integrating with the Ember client-side application
+
+We want to have both component working together, integrating our Rails API only application with the Todo list frontend application implemented with Ember.
+
+The [original implementation from TodoMVC](https://github.com/tastejs/todomvc/tree/gh-pages/examples/emberjs) is our starting point, but we must do a few changes to have it working properly with our backend. In fact, the TodoMVC Ember example uses the browser local storage to persist Todo items, but we want to have our Rails API application doing this job.
+
+After downloading the Ember application code from TodoMVC, we need to have newer versions of Ember and the `ember-data` library to integrate properly this frontend application with Rails API. For this reason, it's mandatory to run `npm update`. However, this is not enough because `ember-data` does not have a npm package, so let's update this library by hand using curl:
+
+<pre>curl http://builds.emberjs.com/release/ember-data.js > node_modules/ember-data/ember-data.js</pre>
+
+We have now all the vendored javascript code updated, so we are prepared to connect the frontend with our Rails backend. We configure that by changing the Ember adapter from LSAdapter (local storage) to RESTAdapter. You can learn more about Ember adapters [in the Ember documentation page](http://emberjs.com/api/data/classes/DS.Adapter.html).
+
+Let's replace the following piece of code in the `js/app.js` file:
+
+```js
+  Todos.ApplicationAdapter = DS.LSAdapter.extend({
+    namespace: 'todos-emberjs'
+  });
+```
+
+with the RESTAdapter's definition pointing to our backend:
+
+```js
+  Todos.ApplicationAdapter = DS.RESTAdapter.extend({
+    host: 'http://localhost:3000'
+  });
+```
+
+Finally, we have to configure CORS in the Rails API only backend because both applications will run in different domains (we will test the backend in `localhost:3000` and the client-side application in `localhost:9000`).
+
+In brief, we need to uncomment the `rack-cors` gem reference in the `Gemfile`, run `bundle install` and finally put the following code in the `config/initializers/cors.rb` file:
+
+```ruby
+# Avoid CORS issues when API is called from the frontend app
+# Handle Cross-Origin Resource Sharing (CORS) in order to accept cross-origin AJAX requests
+
+# Read more: https://github.com/cyu/rack-cors
+
+ Rails.application.config.middleware.insert_before 0, "Rack::Cors" do
+   allow do
+     origins 'localhost:9000'
+
+     resource '*',
+       headers: :any,
+       methods: [:get, :post, :put, :patch, :delete, :options, :head]
+   end
+ end
+```
+
+You can read more about how to setup CORS in our [previous post](http://wyeworks.com/blog/2015/6/11/how-to-build-a-rails-5-api-only-and-backbone-application).
+
+We are now ready to test the whole application! Run the backend server with:
+
+<pre>bin/rails s</pre>
+
+and start a simple web server to test the Ember application:
+
+<pre>ruby -run -e httpd . -p 9000</pre>
+
+You can already try it out and start adding your first Todo items, just browse to [localhost:9000](http://localhost:9000).
+
+## Conclusion
+
+
