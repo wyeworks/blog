@@ -17,7 +17,7 @@ A few days ago, following long discussions, [Rails API was merged into Rails mas
 
 Because of that, in our latest post we discussed how to build an API only application. We've also shown how to integrate it with a client-side application implemented using Backbone. If you've missed this post, check it out and learn more about [how to integrate Rails API with an Backbone application](http://wyeworks.com/blog/2015/6/11/how-to-build-a-rails-5-api-only-and-backbone-application).
 
-In this post, we are going to show how a very similar client-side application now built with Ember can be integrated with the same backend application implemented using Rails API. Like in our previous post, we are going to use the [TodoMVC application](http://todomvc.com).
+In this post, we are going to show how a very similar client-side Ember application can be integrated with the same backend application implemented using Rails API. Like in our previous post, we are going to use the [TodoMVC application](http://todomvc.com).
 
 In addition, we are going to comment about some issues that were fixed in Rails and Active Model Serializers in order to make the integration easier. These improvements were the result of testing Rails API with an Ember application, as part of our efforts to make it work properly with some of the most popular JavaScript frameworks.
 
