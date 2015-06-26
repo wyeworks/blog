@@ -164,6 +164,15 @@ You can already try it out and start adding your first Todo items, just browse t
 
 I hope this example illustrates another possible use of the new Rails API functionality that will be included in Rails 5.
 
-We're aware there still is room to improve the experience, so if you have the chance to try it out, we invite you to comment about your experience with Rails API. We'd love to hear your feedback!
+We're aware there still is room to improve the experience, so if you have the chance to try it out, we invite you to comment about your experience with Rails API.
 
+We'd love to hear your feedback!
 
+## Resources
+
+You can find the backend and frontend applications that we built in this article in Github:
+
+- [Rails API backend](https://github.com/spastorino/todo-rails-api-ember-backend)
+- [Backbone frontend](https://github.com/spastorino/todo-rails-api-ember-frontend)
+
+The Ember application was borrowed from the [TodoMVC project](http://todomvc.com/).
