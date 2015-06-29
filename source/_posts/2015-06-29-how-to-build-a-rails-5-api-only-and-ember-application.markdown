@@ -164,7 +164,7 @@ You can already try it out and start adding your first Todo items, just browse t
 
 I hope this example illustrates another possible use of the new Rails API functionality that will be included in Rails 5.
 
-We're aware there's still room to improve the experience, so if you have the chance to try it out, we invite you to comment about your experience with Rails API.
+We're aware there's still room to improve the experience. If you have the chance to try it out, we invite you to comment about your experience with Rails API.
 
 We'd love to hear your feedback!
 
