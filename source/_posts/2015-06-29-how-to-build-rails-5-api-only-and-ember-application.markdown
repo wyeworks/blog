@@ -164,7 +164,7 @@ You can already try it out and start adding your first Todo items, just browse t
 
 I hope this example illustrates another possible use of the new Rails API functionality that will be included in Rails 5.
 
-We're aware there still is room to improve the experience, so if you have the chance to try it out, we invite you to comment about your experience with Rails API.
+We're aware there's still room to improve the experience, so if you have the chance to try it out, we invite you to comment about your experience with Rails API.
 
 We'd love to hear your feedback!
 
@@ -176,3 +176,6 @@ You can find the backend and frontend applications that we built in this article
 - [Backbone frontend](https://github.com/spastorino/todo-rails-api-ember-frontend)
 
 The Ember application was borrowed from the [TodoMVC project](http://todomvc.com/).
+
+If you're looking for a more modern & idiomatic implementation of the Ember TodoMVC check out [this one](https://github.com/ember-cli/ember-cli-todos).
+A piece of advice: the code in master doesn't fully work when it's integrated with our backend. There is an issue where Todo items are not completed in the Rails API only application when clicking on checkboxes. As far we tested, this [open pull request](https://github.com/ember-cli/ember-cli-todos/pull/6) fixes the problem.
