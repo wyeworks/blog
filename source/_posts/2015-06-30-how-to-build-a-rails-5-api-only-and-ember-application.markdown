@@ -173,7 +173,7 @@ We'd love to hear your feedback!
 You can find the backend and frontend applications that we built in this article in Github:
 
 - [Rails API backend](https://github.com/spastorino/todo-rails-api-ember-backend)
-- [Backbone frontend](https://github.com/spastorino/todo-rails-api-ember-frontend)
+- [Ember frontend](https://github.com/spastorino/todo-rails-api-ember-frontend)
 
 The Ember application was borrowed from the [TodoMVC project](http://todomvc.com/).
 
