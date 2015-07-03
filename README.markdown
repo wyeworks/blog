@@ -64,7 +64,6 @@ title: "title of your post"
 category: 
 date: 2015-01-04 21:51:00 -0200
 comments: true
-hero_image: /images/heros/post-high.jpg
 author:
   name: Diego Acosta
   email: acostami@gmail.com
