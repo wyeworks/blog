@@ -1,7 +1,6 @@
 ---
 layout: post
 title: How to build a Rails 5 API only and Backbone application
-hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
   name: Jorge Bejar

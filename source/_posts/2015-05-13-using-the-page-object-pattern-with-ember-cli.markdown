@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Using the Page Object pattern with Ember CLI
-hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
   name: Santiago Ferreira

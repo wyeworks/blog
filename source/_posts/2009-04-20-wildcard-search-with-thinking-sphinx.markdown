@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Wildcard search with Thinking Sphinx
-hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
   name: José Costa

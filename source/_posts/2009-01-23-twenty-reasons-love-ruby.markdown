@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Twenty Reasons I Love Ruby
-hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
   name: Sebastián Martínez

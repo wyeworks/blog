@@ -1,7 +1,6 @@
 ---
 layout: post
 title: My Emacs for Rails
-hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
   name: Santiago Pastorino

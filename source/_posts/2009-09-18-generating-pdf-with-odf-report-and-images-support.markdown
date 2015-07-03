@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Generating PDF with odf-report and images support
-hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
   name: José Costa

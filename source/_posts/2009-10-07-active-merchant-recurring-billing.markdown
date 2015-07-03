@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Active Merchant Recurring Billing
-hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
   name: Sebastián Martínez

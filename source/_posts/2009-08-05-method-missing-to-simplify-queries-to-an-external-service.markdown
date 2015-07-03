@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Method missing to simplify queries to an external service
-hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
   name: José Costa

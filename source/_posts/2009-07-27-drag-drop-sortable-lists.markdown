@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Drag & Drop Sortable Lists
-hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
   name: Sebastián Martínez

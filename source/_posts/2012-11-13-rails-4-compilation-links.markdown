@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Rails 4 links compilation
-hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
   name: Santiago Pastorino
