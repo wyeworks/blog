@@ -34,18 +34,11 @@ rake new_post['title of your post','diego_acosta']
 The second parameter is the author of the blog post. Values for this are loaded from authors.rb, the current authors you can choose from are:
 
 ```
-diego_acosta
-juan_manuel_azambuja
 jorge_bejar
 jose_ignacio_costa
-marcelo_dominguez
 santiago_ferreira
-sebastian_gonzalez
 sebastian_martinez
-gabriel_montero
-adrian_mugnolo
 santiago_pastorino
-gonzalo_undefined
 ```
 
 You can omit this parameter for blank author data or you can edit authors.rb to add/modify author data.
@@ -61,16 +54,15 @@ If we open this file, we'll find this:
 ---
 layout: post
 title: "title of your post"
-category: 
-date: 2015-01-04 21:51:00 -0200
+category:
 comments: true
 author:
-  name: Diego Acosta
-  email: acostami@gmail.com
-  twitter_handle: acostami
-  github_handle: acostami
-  image: /images/team/diego-acosta.jpg
-  description: 
+  name: Jorge Bejar
+  email: jorge@wyeworks.com
+  twitter_handle: jmbejar
+  github_handle:  jmbejar
+  image:  /images/team/jorge-bejar.jpg
+  description: Software Engineer at Wyeworks. Ruby on Rails developer.
 ---
 
 Initial content and excerpt that will be shown in the posts listing
