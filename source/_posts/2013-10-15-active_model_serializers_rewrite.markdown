@@ -1,7 +1,6 @@
 ---
 layout: post
 title: ActiveModel::Serializers Rewrite (upcoming 0.9.0.pre version)
-hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
   name: Santiago Pastorino

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Ruby 1.9.3 and ruby-debug
-hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
   name: Santiago Pastorino

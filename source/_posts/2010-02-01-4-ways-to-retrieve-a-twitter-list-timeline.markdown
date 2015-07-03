@@ -1,7 +1,6 @@
 ---
 layout: post
 title: 4 Ways to Retrieve a Twitter List Timeline
-hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
   name: Santiago Pastorino

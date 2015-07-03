@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Rails Bugmash an exciting first experience
-hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
   name: Santiago Pastorino

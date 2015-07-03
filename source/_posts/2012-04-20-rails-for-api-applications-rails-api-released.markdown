@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Rails for API applications (rails-api) released
-hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
   name: Santiago Pastorino

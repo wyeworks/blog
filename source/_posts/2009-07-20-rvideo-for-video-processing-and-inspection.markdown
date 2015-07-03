@@ -1,7 +1,6 @@
 ---
 layout: post
 title: RVideo for video processing and inspection
-hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
   name: José Costa

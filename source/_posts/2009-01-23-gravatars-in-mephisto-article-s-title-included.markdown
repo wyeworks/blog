@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Gravatars in Mephisto (article's title included)
-hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
   name: José Costa
