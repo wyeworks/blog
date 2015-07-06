@@ -20,6 +20,7 @@ In this post, we are going to show how a very similar client-side Ember applicat
 
 In addition, we are going to comment about some issues that were fixed in Rails and Active Model Serializers in order to make the integration easier. These improvements were the result of testing Rails API with an Ember application, as part of our efforts to make it work properly with some of the most popular JavaScript frameworks.
 
+<!-- more -->
 
 ## Building the Backend
 
