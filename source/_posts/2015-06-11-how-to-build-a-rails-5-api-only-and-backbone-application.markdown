@@ -20,6 +20,8 @@ Rails API goal is to facilitate the implementation of API only Rails projects, w
 
 For more detailed information about the Rails API project, you can take a look at [this Santiago Pastorino's article](http://wyeworks.com/blog/2012/4/20/rails-for-api-applications-rails-api-released/) about the project.
 
+<!-- more -->
+
 ## How to implement a Rails API backend for a simple Backbone application.
 
 Let's create an API only application! The rest of this article is a step-by-step example of how to build a Rails API backend for a simple TODO list application implemented with Backbone.

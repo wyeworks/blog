@@ -14,6 +14,8 @@ published: true
 
 One of the most appealing features in Ember and Ember CLI is the ability to easily create functional or acceptance tests. But, the everyday interaction between UX and development, can hurt how these tests are maintained. Here, I try to describe an approach that helped us overcome this problem.
 
+<!-- more -->
+
 Let's consider a simple example. Let's assume we have a list of users and, we want to validate that a table with 2 users is rendered, so that we can later validate each user's name.
 
 ```html
