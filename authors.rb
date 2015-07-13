@@ -46,5 +46,13 @@
     github_handle: 'spastorino',
     image: 'santiago-pastorino.jpg',
     description: 'WyeWorks Co-Founder & CTO, Ruby on Rails Core Team Member'
+  },
+  marcelo_dominguez: {
+    name: 'Marcelo Dominugez',
+    email: 'marcelo@wyeworks.com',
+    twitter_handle: 'marpo60',
+    github_handle: 'marpo60',
+    image: 'marcelo-dominguez.jpg',
+    description: 'Software engineer - Curious by nature - Sports lover - Tech guy'
   }
 }
