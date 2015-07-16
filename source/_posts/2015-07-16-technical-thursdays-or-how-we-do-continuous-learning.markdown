@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Technical Thursdays or&#58; how we do continuous learning
-hero_image: /blog/images/heros/post-high.jpg
 comments: true
 author:
   name: Sebastián Martínez
