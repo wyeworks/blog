@@ -4,7 +4,7 @@ title: When is ssh -A insecure?
 date: 2015-07-06 15:27:14 -0300
 comments: true
 author:
-  name: Marcelo Dominugez
+  name: Marcelo Dominguez
   email: marcelo@wyeworks.com
   twitter_handle: marpo60
   github_handle: marpo60

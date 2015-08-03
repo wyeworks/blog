@@ -48,7 +48,7 @@
     description: 'WyeWorks Co-Founder & CTO, Ruby on Rails Core Team Member'
   },
   marcelo_dominguez: {
-    name: 'Marcelo Dominugez',
+    name: 'Marcelo Dominguez',
     email: 'marcelo@wyeworks.com',
     twitter_handle: 'marpo60',
     github_handle: 'marpo60',
