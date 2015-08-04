@@ -1,7 +1,6 @@
 ---
 layout: post
 title: When is ssh -A insecure?
-date: 2015-07-06 15:27:14 -0300
 comments: true
 author:
   name: Marcelo Dominguez
@@ -10,6 +9,7 @@ author:
   github_handle: marpo60
   image: /images/team/marcelo-dominguez.jpg
   description: Software engineer - Curious by nature - Sports lover - Tech guy
+published: true
 ---
 
 ## Introduction
