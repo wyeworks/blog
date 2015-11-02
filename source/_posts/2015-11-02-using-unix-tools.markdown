@@ -2,7 +2,6 @@
 layout: post
 title: "Using UNIX tools"
 category: 
-date: 2015-10-28 16:15:37 -0300
 comments: true
 author:
   name: Santiago Ferreira
