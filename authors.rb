@@ -54,5 +54,13 @@
     github_handle: 'marpo60',
     image: 'marcelo-dominguez.jpg',
     description: 'Software engineer - Curious by nature - Sports lover - Tech guy'
+  },
+  juan_azambuja: {
+    name: 'Juan Azambuja',
+    email: 'juan@wyeworks.com',
+    twitter_handle: 'juanazam',
+    github_handle: 'juanazam',
+    image: 'juan-azambuja.jpg',
+    description: 'Passionate Rails developer now transitioning to Ember'
   }
 }
