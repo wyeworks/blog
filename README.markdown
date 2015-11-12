@@ -11,6 +11,16 @@ you're a part of wyeworks's team (if you're not, you can [contact
 us](http://www.wyeworks.com/), we're always looking)
 
 
+# How do I publish a new post?
+
+1. [Create a new post](#create-a-new-post) and open a PR
+2. If the post is not ready add the `WORK IN PROGRESS` tag
+3. If you want feedback from your peers add the `FEEDBACK` tag
+4. If you think it's ready to merge add the `READY TO MERGE` tag
+
+After it's ready to merge, the blogops team will publish the post to the site as
+soon as posible.
+
 ## Installing
 
 ```
