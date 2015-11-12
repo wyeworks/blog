@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Living with singleton controllers"
-category: 
-date: 2015-11-03 22:40:01 -0300
+category:
 comments: true
 author:
   name: Juan Azambuja
