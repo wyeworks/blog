@@ -62,5 +62,13 @@
     github_handle: 'juanazam',
     image: 'juan-azambuja.jpg',
     description: 'Passionate Rails developer now transitioning to Ember'
+  },
+  alexis_mas: {
+    name: 'Alexis Mas',
+    email: 'alexis@wyeworks.com',
+    twitter_handle: '_axxiss',
+    github_handle: 'axxiss',
+    image: '',
+    description: 'Software Engineer, turning coffee into software since 2008'
   }
 }
