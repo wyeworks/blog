@@ -13,7 +13,7 @@ author:
 ---
 
 String literals immutability is one of the new features you can find in [Ruby 2.3][1].
-But what does this implies?
+But, what does this imply?
 
 * Equality comparison affected
 * Better performance
@@ -61,13 +61,13 @@ strings and your done. Well, not really. Probably you will have some errors to f
 
     # frozen_string_literal: true
 
-But, if today you woken up feeling like a kamikaze enable frozen strings for the
+But, if you woke up today feeling like a kamikaze, enable frozen strings for the
 whole project and prepare yourself for some serious bug hunting. So, to enable
 string immutability for a project add the following flag when running your app.
 
     --enable-frozen-string-literal
 
-One way or another, its quite probable that you will encounter some bugs.
+One way or another, it's quite probable that you will encounter some bugs.
 
 Lets run a quick example, create a file named `replace.rb` with the following lines
 
@@ -85,7 +85,7 @@ Running it with frozen string literal flag enabled, will throw an error like the
 
 Finding were the frozen string was created on a small example is straightforward, but what if we're on a large
 codebase trying to modify a string that has been passed around between several methods distributed
-on multiple files? Finding the original string can be cumbersome. Thats why a debug
+on multiple files? Finding the original string can be cumbersome. That's why a debug
 flag was added, add the debug flag as shown below and lets try again.
 
     ruby --enable-frozen-string-literal --enable-frozen-string-literal-debug replace.rb
