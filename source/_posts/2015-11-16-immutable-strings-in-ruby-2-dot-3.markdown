@@ -12,17 +12,18 @@ author:
   description: Software Engineer. Turning coffee into software since 2008.
 ---
 
-String literals immutability is one of the new features you can find in [Ruby 2.3][1].
-But, what does this imply?
+String literals immutability is one of the new features you can find in
+[Ruby 2.3][1]. But, what does this imply?
 
-* Equality comparison affected
+* Same value literals points to the same object
 * Better performance
 * Thread safety
 
 
-Currently string immutability is included as opt-in, being the first step of a multi
-stage rollout and if it works well it will be [enabled by default on Ruby 3.0][2].
-So it still can end up being just an experiment. Time will tell.
+Currently string immutability is included as opt-in, being the first step of a
+multi stage rollout and if it works well it will be
+[enabled by default on Ruby 3.0][2]. So it still can end up being just an
+experiment. Time will tell.
 
 You can follow frozen string literals feature status in Ruby issue tracker
 [Feature #11473: Immutable String literal in Ruby 3][5]
@@ -33,20 +34,21 @@ You can follow frozen string literals feature status in Ruby issue tracker
 
 Quoting [wikipedia][3]:
 
-> An immutable object is an object whose state cannot be modified after it is created.
+> An immutable object is an object whose state cannot be modified after it is
+> created.
 
 As immutable objects state cannot be changed it doesn't make sense to copy the
-same object over and over. Following that approach it will have three major
-consequences:
+same object over and over. In fact, Ruby 2.3 will hold a unique instance for
+each string literal value used in the program. This means that 'a' and 'a'
+references the same object.
 
-* Data duplication
-* Unnecessary object allocation
-* Thread unsafe
+This approach will help to avoid unnecessary data duplication, therefore
+unnecessary object allocation is prevented and it will imply that the program
+runs faster because it will spend less time in the Garbage Collector.
 
-All of this can be mitigated using references to objects. Allowing the interpreter
-to copy a reference to an object instead copying the object itself. This can have
-certain impact on performance when working with a large codebase.
-
+Furthermore, when we're concurrently accessing a shared literal across several
+threads, there is no need to synchronize it access. This could lead to simpler
+multi-threaded programs.
 
 # Moving towards immutability
 
@@ -68,8 +70,13 @@ string immutability for a project add the following flag when running your app.
     --enable-frozen-string-literal
 
 One way or another, it's quite probable that you will encounter some bugs.
+Mainly because you are relying in 3rd party gems that are not prepared for
+immutable strings. Ruby ecosystem will need some time to adapt to this new
+feature, once most popular gems start to adapt frozen string literals the
+transition will be smoother.
 
-Lets run a quick example, create a file named `replace.rb` with the following lines
+Let's run a quick example, create a file named `replace.rb` with the following
+lines:
 
 {% codeblock lang:ruby %}
   str = "abcde"
@@ -86,7 +93,7 @@ Running it with frozen string literal flag enabled, will throw an error like the
 Finding were the frozen string was created on a small example is straightforward, but what if we're on a large
 codebase trying to modify a string that has been passed around between several methods distributed
 on multiple files? Finding the original string can be cumbersome. That's why a debug
-flag was added, add the debug flag as shown below and lets try again.
+flag was added, add the debug flag as shown below and let's try again.
 
     ruby --enable-frozen-string-literal --enable-frozen-string-literal-debug replace.rb
 
@@ -96,11 +103,11 @@ flag was added, add the debug flag as shown below and lets try again.
 As you can see a subtle change is made to the error output, now we have exact
 information about were the string was created.
 
-### Equality
+### Same value literals points to the same object
 
-When it comes to equality comparison working with immutable strings has one
-particular side effect: ``'a'.equal? 'a'`` returns `true`. This is because `a` is
-the same object. Lets run a small test with and without frozen strings.
+Same value literals points to the same object, i.e. `a` and `a` points to the
+same object. In Ruby we can compare two objects in different ways. Let's run a
+small test with and without frozen strings to see what's changed.
 
 {% codeblock lang:ruby %}
  puts 'a' == 'a'
@@ -108,10 +115,11 @@ the same object. Lets run a small test with and without frozen strings.
  puts String.new('a').equal? String.new('a')
 {% endcodeblock %}
 
-Without frozen strings for `'a'.equal? 'a'` the interpreter creates two objects with the value
-`a`, hence `equal?` will return `false`. With immutable strings this is no longer true, in
-this case the interpreter will use a reference to the same object then as each
-reference points to the same object `equal?` will return `true`.
+Without frozen strings for `'a'.equal? 'a'` the interpreter creates two objects
+with the value `a`, hence `equal?` will return `false`. With immutable strings
+this is no longer true, in this case the interpreter will use a reference to the
+same object, then as each reference points to the same object `equal?` will
+return `true`.
 
 |Operation|Mutable|Immutable|
 |-|-|-|
@@ -125,9 +133,10 @@ in mind and check for existent comparisons.
 
 ### Thread safety
 
-Lets see what wikipedia says about [thread safety][4]:
+Let's see what wikipedia says about [thread safety][4]:
 
-> A piece of code is thread-safe if it only manipulates shared data structures in a manner that guarantees safe execution by multiple threads at the same time.
+> A piece of code is thread-safe if it only manipulates shared data structures
+> in a manner that guarantees safe execution by multiple threads at the same time.
 
 When dealing with objects we have two basic operations: read and write.
 Concurrent reading is inherently thread safe, as we're not changing the state
@@ -165,185 +174,100 @@ us from changing that reference for another literal.
 
 # Benchmarks
 
-Running this benchmark will give us a basic notion about performance changes.
+In this last section we're going to run a series of benchmarks to see how
+strings immutability impacts on object allocation, garbage collection and
+performance. Let's take the following snippet as the starting point for the
+benchmarks.
+
+{% codeblock lang:ruby %}
+require 'objspace'
+
+GC.start
+GC.disable
+
+1_000_000.times {}
+
+puts ObjectSpace.count_objects[:T_STRING]
+{% endcodeblock %}
+
+Running the previous snippet creates 5,328 and 5,329 objects with and without
+frozen strings enabled respectively. Let's change `1_000_000.times {}` for
+`1_000_000.times { 'a' }` and run the script again: it returns 5,329 and
+1,005,330. The frozen string version differs only by one object (the extra `a`)
+meanwhile without frozen strings an extra million objects are being created.
+
+Now let's enable garbage collection, remove object count and see what `GC.stat`
+has to say. `GC.stat` will return a hash with garbage collection stats, the key we are
+interested on are: `:count` and `:total_allocated_objects`.
+
+{% codeblock lang:ruby %}
+GC.start
+1_000_000.times {}
+puts GC.stat
+{% endcodeblock %}
+
+
+This is the formatted output:
+
+
+Version|GC runs|Object allocation
+-|-|-
+mutable|57|1,057,077
+immutable|6|57078
+
+Finally let's measure how this impacts on performance.
+
 
 {% codeblock lang:ruby %}
 require 'benchmark'
 
-def create(bench)
-  bench.report 'create' do
-    1_000_000.times { 'a' }
-  end
-end
-
-def concat(bench)
-  ab = 'ab'
-  bench.report 'concat' do
-    1_000_000.times { 'a' + 'b' }
-  end
-end
-
-def append(bench)
-  result = String.new
-  bench.report 'append' do
-    1_000_000.times { result << 'a' }
-  end
-end
-
-def replace(bench)
-  bench.report 'replace' do
-    1_000_000.times { 'abcd'.gsub('c', 'a') }
-  end
-end
-
-Benchmark.bm do |bench|
-  create bench
-  concat bench
-  append bench
-  replace bench
-end
+puts Benchmark.measure { 1_000_000.times { 'a' } }
 {% endcodeblock %}
 
-On the table below you can find the results obtained from running the benchmark with
-three variants: ruby 2.2 and ruby 2.3 without and with frozen literals respectively.
-Boost column is the speed up obtained comparing current row with the previous one.
+On the table below you can find the results obtained from running the benchmark
+without and with frozen literals respectively.
 
 <table>
   <thead>
     <tr>
-      <th>Operation</th>
       <th>User</th>
       <th>System</th>
       <th>Total</th>
       <th>Real</th>
-      <th>Boost(%)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td rowspan='3'>create</td>
-      <td>0.120000</td>
-      <td>0.000000</td>
-      <td>0.120000</td>
-      <td>0.122728</td>
-      <td></td>
-    </tr>
-    <tr>
       <td>0.080000 </td>
       <td>0.000000</td>
       <td>0.080000</td>
-      <td>0.080323</td>
-      <td>34</td>
+      <td>0.073067</td>
     </tr>
     <tr>
-      <td>0.050000</td>
+      <td>0.040000</td>
       <td>0.000000</td>
-      <td>0.050000</td>
-      <td>0.050843</td>
-      <td>37</td>
-    </tr>
-
-    <tr>
-      <td rowspan='3'>concat</td>
-      <td>0.280000</td>
-      <td>0.000000</td>
-      <td>0.280000</td>
-      <td>0.278669</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>0.170000</td>
-      <td>0.010000</td>
-      <td>0.180000</td>
-      <td>0.175376</td>
-      <td>23</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>0.120000</td>
-      <td>0.010000</td>
-      <td>0.130000</td>
-      <td>0.117729</td>
-      <td>30</td>
-    </tr>
-
-    <tr>
-      <td rowspan='3'>append</td>
-      <td>0.200000</td>
-      <td>0.010000</td>
-      <td>0.210000</td>
-      <td>0.207419</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>0.150000</td>
-      <td>0.000000</td>
-      <td>0.150000</td>
-      <td>0.147434</td>
-      <td>25</td>
-    </tr>
-    <tr>
-      <td>0.120000</td>
-      <td>0.000000</td>
-      <td>0.120000</td>
-      <td>0.126329</td>
-      <td>20</td>
-    </tr>
-    <tr>
-
-    <tr>
-      <td rowspan='3'>replace</td>
-      <td>1.300000</td>
-      <td>0.000000</td>
-      <td>1.300000</td>
-      <td>1.330694</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>1.130000</td>
-      <td>0.000000</td>
-      <td>1.130000</td>
-      <td>1.142455</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <td>0.890000</td>
-      <td>0.020000</td>
-      <td>0.910000</td>
-      <td>0.915174</td>
-      <td>22</td>
+      <td>0.040000</td>
+      <td>0.045621</td>
     </tr>
   </tbody>
 </table>
 
 
-As you can see from 2.2 to 2.3 we already have a performance boost, finally  when
-frozen literals are activated the speed up is even greater.
-
-Lets see what garbage collection stats says:
-
-
-Version|GC runs|Object allocation
--|-|-
-2.2|499|11,046,267
-2.3|584|11,059,587
-2.3*|111|2,059,562
-
-Strangely Ruby 2.3 garbage collection increased by a 17% but in both cases
-allocated object are very similar. When frozen string literals are introduced a
-radical change can be appreciated, garbage collection invocations and object
-allocations are reduced by 80%.
+As you can see running the benchmark with frozen string literal result in a
+speed improvement of 37%. The main responsible for this is what we saw on the
+previous benchmarks: allocated objects.
 
 
 # Conclusion
 
-Equality comparison has a subtle change that can lead to some hard to find bugs.
-
-Ruby 2.3 overall performance seems to be improved out of the box and frozen literals
-adds an extra punch of speed.
+Comparing two string literals with `equal?` has a subtle change that can lead
+to some hard to find bugs.
 
 In some scenarios thread safety comes for free but remember: string literals are
 thread safe, not its references.
+
+Ruby 2.3 overall performance seems to be improved out of the box and frozen
+literals adds an extra punch of speed.
 
 Being the first step into immutable objects in Ruby, this could be seen as a
 small change but it could serve as the foundation of a greater one.
