@@ -2,7 +2,6 @@
 layout: post
 title: "Immutable strings in Ruby 2.3"
 category:
-date: 2015-11-16 08:39:25 -0300
 comments: true
 author:
   name: Alexis Mas
@@ -21,9 +20,12 @@ But what does this implies?
 * Thread safety
 
 
-Currently string immutability is included as opt-in, as the first step of a multi
+Currently string immutability is included as opt-in, being the first step of a multi
 stage rollout and if it works well it will be [enabled by default on Ruby 3.0][2].
 So it still can end up being just an experiment. Time will tell.
+
+You can follow frozen string literals feature status in Ruby issue tracker
+[Feature #11473: Immutable String literal in Ruby 3][5]
 
 <!--more-->
 
@@ -123,14 +125,47 @@ in mind and check for existent comparisons.
 
 ### Thread safety
 
-Another property of immutability is thread safety. As the object state can't change
-after is created there is no need to synchronize, hence accessing the same literal
-from several threads will result in cleaner code
+Lets see what wikipedia says about [thread safety][4]:
+
+> A piece of code is thread-safe if it only manipulates shared data structures in a manner that guarantees safe execution by multiple threads at the same time.
+
+When dealing with objects we have two basic operations: read and write.
+Concurrent reading is inherently thread safe, as we're not changing the state
+of the object we're reading. On the other hand we have write operations, in this
+case the object state change thus it must be synchronized. When an object state
+can change at any moment, we need to synchronize both operations. This happens
+because writing on the wrong moment can lead objects to be on an invalid state
+and reading can get us an invalid state.
+
+With all this in mind, we can say that string literals (and immutable objects in general)
+are thread safe. Its state can't change as we can't change its value and if we try to,
+an error will be thrown. Therefore race conditions are gone.
+
+Certainly forgetting about race conditions in certain scenarios is great. But
+(there's always a but) bear in mind that string literals are thread safe, not
+its references!
+
+{% codeblock lang:ruby %}
+class Foo
+  attr_accesor :literal
+
+  def initialize(literal)
+    @literal = literal
+  end
+end
+{% endcodeblock %}
+
+Picture yourself working with a `Foo` class, what happens when we pass a `Foo`
+object to several threads, some of them reading from `literal` attribute and
+another ones writing to?
+
+In this case despite we are using string literals, we aren't safe when it comes
+to thread safety. Actually we're holding a reference to a literal, nothing stop
+us from changing that reference for another literal.
 
 # Benchmarks
 
-Running this benchmark will give us a basic notion of what degree of improvement
- are we talking about.
+Running this benchmark will give us a basic notion about performance changes.
 
 {% codeblock lang:ruby %}
 require 'benchmark'
@@ -302,18 +337,19 @@ allocations are reduced by 80%.
 
 # Conclusion
 
-Ruby 2.3 comes with some performance improvements out of the box adding an extra
-speed up when frozen string literals are being used.
+Equality comparison has a subtle change that can lead to some hard to find bugs.
 
-This could be seen as a small change but for sure it will serve as the foundation
-of a greater one.
+Ruby 2.3 overall performance seems to be improved out of the box and frozen literals
+adds an extra punch of speed.
 
-This could be a first step into immutable objects in Ruby.
+In some scenarios thread safety comes for free but remember: string literals are
+thread safe, not its references.
 
+Being the first step into immutable objects in Ruby, this could be seen as a
+small change but it could serve as the foundation of a greater one.
 
 [1]: http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/71450
 [2]: https://bugs.ruby-lang.org/issues/8976#note-41
 [3]: https://en.wikipedia.org/wiki/Immutable_object
-
-https://bugs.ruby-lang.org/issues/11473
-https://bugs.ruby-lang.org/issues/8976
+[4]: https://en.wikipedia.org/wiki/Thread_safety
+[5]: https://bugs.ruby-lang.org/issues/11473
