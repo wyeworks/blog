@@ -84,7 +84,11 @@ lines:
   str.gsub!("c", "b")
 {% endcodeblock %}
 
-Running it with frozen string literal flag enabled, will throw an error like the one below.
+
+The "problematic" line is `str.gsub!("c", "b")` as `gsub!` will mutate the
+string 'abcde' to convert it into 'abbde', this will run successfully with
+current Rubies. Then if you opt-in for immutable strings enabling frozen string
+literal flag, will throw an error like the one below.
 
     ruby --enable-frozen-string-literal replace.rb
 
@@ -102,11 +106,12 @@ flag was added, add the debug flag as shown below and let's try again.
       from replace.rb:2:in `<main>'
 
 As you can see a subtle change is made to the error output, now we have exact
-information about were the string was created.
+information about where the string was created, helping you to find where the
+issue is.
 
 ### Same value literals points to the same object
 
-Same value literals points to the same object, i.e. `a` and `a` points to the
+Same value literals points to the same object, i.e. 'a' and  'a' points to the
 same object. In Ruby we can compare two objects in different ways. Let's run a
 small test with and without frozen strings to see what's changed.
 
