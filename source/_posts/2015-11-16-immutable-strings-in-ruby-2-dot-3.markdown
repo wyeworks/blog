@@ -183,7 +183,7 @@ us from changing that reference for another literal.
 # Benchmarks
 
 In this last section we're going to run a series of benchmarks to see how
-strings immutability impacts on object allocation, garbage collection and
+strings immutability impacts on object allocation, garbage c  ollection and
 performance. Let's take the following snippet as the starting point for the
 benchmarks.
 
@@ -292,16 +292,25 @@ can't conclude anything valuable for web applications from this.
 # Conclusion
 
 Comparing two string literals with `equal?` has a subtle change that can lead
-to some hard to find bugs.
+to some hard to find bugs. With immutable strings `'a'.equal? 'a' == true`.
 
 In some scenarios thread safety comes for free but remember: string literals are
 thread safe, not its references.
 
 Ruby 2.3 overall performance seems to be improved out of the box and frozen
-literals adds an extra punch of speed.
+literals adds an extra punch of speed. Ruby ecosystem isn't ready yet to measure
+how string immutability will affect overall performance, currently we can see
+two possible areas where this can have certain impact:
 
-Being the first step into immutable objects in Ruby, this could be seen as a
-small change but it could serve as the foundation of a greater one.
+* Template processing
+* Database queries generation
+
+In those two area, there are many duplicated strings, what would happen when we
+have 100,000 users users using our site, triggering templates rendering and
+database queries?
+
+Being this the first step into immutable objects in Ruby, this could be seen as
+a small change but it could serve as the foundation of a greater one.
 
 [1]: http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/71450
 [2]: https://bugs.ruby-lang.org/issues/8976#note-41
