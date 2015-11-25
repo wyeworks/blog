@@ -38,13 +38,14 @@ Quoting [wikipedia][3]:
 > created.
 
 As immutable objects state cannot be changed it doesn't make sense to copy the
-same object over and over. In fact, Ruby 2.3 will hold a unique instance for
-each string literal value used in the program. This means that 'a' and 'a'
-references the same object.
+same object over and over. In fact, Ruby 2.3 (with frozen strings enabled) will
+hold a unique instance for each string literal value used in the program.
+This means that 'a' and 'a' references the same object.
 
-This approach will help to avoid unnecessary data duplication, therefore
-unnecessary object allocation is prevented and it will imply that the program
-runs faster because it will spend less time in the Garbage Collector.
+This approach will help to avoid unnecessary data duplication and object
+allocation therefore the program runs faster, because it will spend less time
+creating objects and destroying them in garbage collection ergo garbage
+collection itself will take less time to complete.
 
 Furthermore, when we're concurrently accessing a shared literal across several
 threads, there is no need to synchronize it access. This could lead to simpler
@@ -59,7 +60,7 @@ for a more detailed error stack (while debugging) another flag can be enabled.
 If you're working on an existent project and want to introduce this new feature,
 obviously the most appropriate method is to use the pragma approach. Just add the
 following comment at the beginning of each file you want to switch to immutable
-strings and your done. Well, not really. Probably you will have some errors to fix.
+strings and you're done. Well, not really. Probably you will have some errors to fix.
 
     # frozen_string_literal: true
 
