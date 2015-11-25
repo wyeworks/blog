@@ -175,23 +175,23 @@ In this case we could think: `account.type` is a string literal so it can't
 change. But, the problem here is that `@type` is actually a reference to a
 string literal, is not a literal itself as we could expect. So we should take
 usual precautions when working with the Account class. Let's see the following
-snippet.
+snippet. In order to have an example as simple as possible, we are going to use
+the following poorly designed multi-threaded script.
 
 {% codeblock lang:ruby %}
   account = Account.new 'admin'
 
   Thread.new do
     if account.type == 'user'
-      #do something for users
+      puts 'user'
     elsif account.type == 'admin'
-      #do something for admins
+      puts 'admin'
     end
   end
 
-  Thread.new do {
-    #do comething
+  Thread.new do
     account.type = 'user'
-  }
+  end
 {% endcodeblock %}
 
 
@@ -279,7 +279,7 @@ performance.
 
 ## Performance
 
-Finally let's measure how allocating less objects therefore running garbage
+Finally, let's measure how allocating less objects therefore running garbage
 collection less often impacts on performance.
 
 
@@ -325,7 +325,7 @@ two possible areas where this can have certain impact:
 * Template processing
 * Database queries generation
 
-In those two area, there are many duplicated strings, what would happen when we
+In those two areas, there are many duplicated strings, what would happen when we
 have 100,000 users users using our site, triggering templates rendering and
 database queries?
 
