@@ -71,7 +71,7 @@ string immutability for a project add the following flag when running your app.
     --enable-frozen-string-literal
 
 One way or another, it's quite probable that you will encounter some bugs.
-Mainly because you are relying in 3rd party gems that are not prepared for
+Mainly because you're relying in 3rd party gems that are not prepared for
 immutable strings. Ruby ecosystem will need some time to adapt to this new
 feature, once most popular gems start to adapt frozen string literals the
 transition will be smoother.
@@ -80,12 +80,12 @@ Let's run a quick example, create a file named `replace.rb` with the following
 lines:
 
 {% codeblock lang:ruby %}
-  str = "abcde"
-  str.gsub!("c", "b")
+  str = 'abcde'
+  str.gsub!('c', 'b')
 {% endcodeblock %}
 
 
-The "problematic" line is `str.gsub!("c", "b")` as `gsub!` will mutate the
+The "problematic" line is `str.gsub!('c', 'b')` as `gsub!` will mutate the
 string 'abcde' to convert it into 'abbde', this will run successfully with
 current Rubies. Then if you opt-in for immutable strings enabling frozen string
 literal flag, will throw an error like the one below.
@@ -95,10 +95,11 @@ literal flag, will throw an error like the one below.
     replace.rb:2:in `gsub!': can't modify frozen String (RuntimeError)
             from replace.rb:2:in `<main>'
 
-Finding were the frozen string was created on a small example is straightforward, but what if we're on a large
-codebase trying to modify a string that has been passed around between several methods distributed
-on multiple files? Finding the original string can be cumbersome. That's why a debug
-flag was added, add the debug flag as shown below and let's try again.
+Finding where the frozen string was created on a small example is
+straightforward, but what if we're on a large codebase trying to modify a string
+that has been passed around between several methods distributed on multiple
+files? Finding the original string can be cumbersome. That's why a debug flag
+was added, add the debug flag as shown below and let's try again.
 
     ruby --enable-frozen-string-literal --enable-frozen-string-literal-debug replace.rb
 
@@ -109,7 +110,7 @@ As you can see a subtle change is made to the error output, now we have exact
 information about where the string was created, helping you to find where the
 issue is.
 
-### Same value literals points to the same object
+## Same value literals points to the same object
 
 Same value literals points to the same object, i.e. 'a' and  'a' points to the
 same object. In Ruby we can compare two objects in different ways. Let's run a
@@ -122,7 +123,7 @@ small test with and without frozen strings to see what's changed.
 {% endcodeblock %}
 
 Without frozen strings for `'a'.equal? 'a'` the interpreter creates two objects
-with the value `a`, hence `equal?` will return `false`. With immutable strings
+with the value 'a', hence `equal?` will return `false`. With immutable strings
 this is no longer true, in this case the interpreter will use a reference to the
 same object, then as each reference points to the same object `equal?` will
 return `true`.
@@ -133,11 +134,11 @@ return `true`.
 |'a'.equal? 'a'|false|true|
 |String.new('a').equal? String.new('a')|false|false|
 
-So if you are planning to upgrade your project to frozen strings keep this behavior
+So if you're planning to upgrade your project to frozen strings keep this behavior
 in mind and check for existent comparisons.
 
 
-### Thread safety
+## Thread safety
 
 Let's see what wikipedia says about [thread safety][4]:
 
@@ -162,7 +163,7 @@ its references!
 
 {% codeblock lang:ruby %}
 class Foo
-  attr_accesor :literal
+  attr_accessor :literal
 
   def initialize(literal)
     @literal = literal
@@ -174,9 +175,10 @@ Picture yourself working with a `Foo` class, what happens when we pass a `Foo`
 object to several threads, some of them reading from `literal` attribute and
 another ones writing to?
 
-In this case despite we are using string literals, we aren't safe when it comes
+In this case despite we're using string literals, we aren't safe when it comes
 to thread safety. Actually we're holding a reference to a literal, nothing stop
 us from changing that reference for another literal.
+
 
 # Benchmarks
 
@@ -184,6 +186,21 @@ In this last section we're going to run a series of benchmarks to see how
 strings immutability impacts on object allocation, garbage collection and
 performance. Let's take the following snippet as the starting point for the
 benchmarks.
+
+{% codeblock lang:ruby %}
+1_000_000.times { 'a' }
+{% endcodeblock %}
+
+It's a simple loop, that creates a million 'a'. In theory without immutable
+strings it will create a million objects, one for each 'a' and when we switch to
+immutable strings it should create only one. We can't expect to have exactly
+one or one million objects created, as when we measure we're changing the
+subject under observation. The loop and benchmark classes will create they own
+objects impacting on the total object count, but as we're introducing this
+deviation in all scenarios the analysis will be stable.
+
+
+## Allocated objects
 
 {% codeblock lang:ruby %}
 require 'objspace'
@@ -199,21 +216,36 @@ puts ObjectSpace.count_objects[:T_STRING]
 Running the previous snippet creates 5,328 and 5,329 objects with and without
 frozen strings enabled respectively. Let's change `1_000_000.times {}` for
 `1_000_000.times { 'a' }` and run the script again: it returns 5,329 and
-1,005,330. The frozen string version differs only by one object (the extra `a`)
+1,005,330. Let's put the output on a table to see it clearly.
+
+Operation|Immutable|Mutable
+-|-|-
+`1_000_000.times {}`|5,328|5,329
+`1_000_000.times {'a'}`|5,329|1,005,330
+
+The frozen string version differs only by one object (the extra 'a')
 meanwhile without frozen strings an extra million objects are being created.
 
-Now let's enable garbage collection, remove object count and see what `GC.stat`
-has to say. `GC.stat` will return a hash with garbage collection stats, the key we are
-interested on are: `:count` and `:total_allocated_objects`.
+## Garbage collection
+
+Now let's enable garbage collection, remove object count and see what
+[GC.stat][6] has to say. `GC.stat` will return a hash with garbage collection
+stats, the key we're interested on are:
+
+* count
+* total_allocated_objects
+
+Triggering garbage collection before running the loop will create a stable and
+clean scenario as garbage amount will me minimum.
 
 {% codeblock lang:ruby %}
 GC.start
-1_000_000.times {}
+1_000_000.times { 'a'}
 puts GC.stat
 {% endcodeblock %}
 
 
-This is the formatted output:
+After running the script with both mutability variants, this is the formatted output:
 
 
 Version|GC runs|Object allocation
@@ -221,7 +253,14 @@ Version|GC runs|Object allocation
 mutable|57|1,057,077
 immutable|6|57078
 
-Finally let's measure how this impacts on performance.
+Numbers speaks for themselves, creating less objects takes out a lot of stress
+from the GC. In the next section let's take a look how this impacts on
+performance.
+
+## Performance
+
+Finally let's measure how allocating less objects therefore running garbage
+collection less often impacts on performance.
 
 
 {% codeblock lang:ruby %}
@@ -233,35 +272,21 @@ puts Benchmark.measure { 1_000_000.times { 'a' } }
 On the table below you can find the results obtained from running the benchmark
 without and with frozen literals respectively.
 
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>System</th>
-      <th>Total</th>
-      <th>Real</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0.080000 </td>
-      <td>0.000000</td>
-      <td>0.080000</td>
-      <td>0.073067</td>
-    </tr>
-    <tr>
-      <td>0.040000</td>
-      <td>0.000000</td>
-      <td>0.040000</td>
-      <td>0.045621</td>
-    </tr>
-  </tbody>
-</table>
+
+User|System|Total|Real
+-|-|-|
+0.080000|0.000000|0.080000|0.073067
+0.040000|0.000000|0.040000|0.045621
 
 
 As you can see running the benchmark with frozen string literal result in a
 speed improvement of 37%. The main responsible for this is what we saw on the
-previous benchmarks: allocated objects.
+previous benchmarks: allocated objects. When we allocate less objects, a smaller
+amount of objects will be deallocated by the GC resulting in fewer GC runs.
+
+This only demonstrates that when the interpreter works with repetitive immutable
+strings it will create less objects thus the GC will have less work to do. We
+can't conclude anything valuable for web applications from this.
 
 
 # Conclusion
@@ -283,3 +308,4 @@ small change but it could serve as the foundation of a greater one.
 [3]: https://en.wikipedia.org/wiki/Immutable_object
 [4]: https://en.wikipedia.org/wiki/Thread_safety
 [5]: https://bugs.ruby-lang.org/issues/11473
+[6]: http://ruby-doc.org/core-2.2.2/GC.html#method-c-stat
