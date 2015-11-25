@@ -151,39 +151,59 @@ of the object we're reading. On the other hand we have write operations, in this
 case the object state change thus it must be synchronized. When an object state
 can change at any moment, we need to synchronize both operations. This happens
 because writing on the wrong moment can lead objects to be on an invalid state
-and reading can get us an invalid state.
+and reading can get us an invalid state. You can read more on the subject on
+[Readers-writer lock][7].
 
 With all this in mind, we can say that string literals (and immutable objects in general)
 are thread safe. Its state can't change as we can't change its value and if we try to,
-an error will be thrown. Therefore race conditions are gone.
+an error will be thrown.
 
-Certainly forgetting about race conditions in certain scenarios is great. But
-(there's always a but) bear in mind that string literals are thread safe, not
-its references!
+But (there's always a but) bear in mind that string literals are thread safe,
+not its references!
 
 {% codeblock lang:ruby %}
-class Foo
-  attr_accessor :literal
+class Account
+  attr_accessor :type
 
   def initialize(literal)
-    @literal = literal
+    @type = literal
   end
 end
 {% endcodeblock %}
 
-Picture yourself working with a `Foo` class, what happens when we pass a `Foo`
-object to several threads, some of them reading from `literal` attribute and
-another ones writing to?
+In this case we could think: `account.type` is a string literal so it can't
+change. But, the problem here is that `@type` is actually a reference to a
+string literal, is not a literal itself as we could expect. So we should take
+usual precautions when working with the Account class. Let's see the following
+snippet.
 
-In this case despite we're using string literals, we aren't safe when it comes
-to thread safety. Actually we're holding a reference to a literal, nothing stop
-us from changing that reference for another literal.
+{% codeblock lang:ruby %}
+  account = Account.new 'user'
+
+  Thread.new do
+    if account.type == 'user'
+      #do something for users
+    elsif account.type == 'admin'
+      #do something for admins
+    end
+  end
+
+  Thread.new do {
+    #do comething
+    account.type = 'user'
+  }
+{% endcodeblock %}
+
+
+Despite it's highly unlike that could happen, it could happen. Nothing blocks
+the second thread from changing `account.type` between the comparisons made on
+the first one, resulting in an erroneous behavior, as no block in the `if` is run.
 
 
 # Benchmarks
 
 In this last section we're going to run a series of benchmarks to see how
-strings immutability impacts on object allocation, garbage c  ollection and
+strings immutability impacts on object allocation, garbage collection and
 performance. Let's take the following snippet as the starting point for the
 benchmarks.
 
@@ -318,3 +338,4 @@ a small change but it could serve as the foundation of a greater one.
 [4]: https://en.wikipedia.org/wiki/Thread_safety
 [5]: https://bugs.ruby-lang.org/issues/11473
 [6]: http://ruby-doc.org/core-2.2.2/GC.html#method-c-stat
+[7]: https://en.wikipedia.org/wiki/Readers%E2%80%93writer_lock
