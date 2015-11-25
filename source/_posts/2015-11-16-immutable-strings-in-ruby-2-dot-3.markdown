@@ -130,9 +130,9 @@ return `true`.
 
 |Operation|Mutable|Immutable|
 |-|-|-|
-|'a' == 'a'|true|true|
-|'a'.equal? 'a'|false|true|
-|String.new('a').equal? String.new('a')|false|false|
+|`'a' == 'a'`|true|true|
+|`'a'.equal? 'a'`|false|true|
+|`String.new('a').equal? String.new('a')`|false|false|
 
 So if you're planning to upgrade your project to frozen strings keep this behavior
 in mind and check for existent comparisons.
@@ -178,7 +178,7 @@ usual precautions when working with the Account class. Let's see the following
 snippet.
 
 {% codeblock lang:ruby %}
-  account = Account.new 'user'
+  account = Account.new 'admin'
 
   Thread.new do
     if account.type == 'user'
@@ -248,7 +248,7 @@ meanwhile without frozen strings an extra million objects are being created.
 
 ## Garbage collection
 
-Now let's enable garbage collection, remove object count and see what
+Now let's remove object count and enable garbage collection and see what
 [GC.stat][6] has to say. `GC.stat` will return a hash with garbage collection
 stats, the key we're interested on are:
 
