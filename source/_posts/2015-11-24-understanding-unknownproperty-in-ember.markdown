@@ -175,11 +175,11 @@ value in `localStorage`
 Then, once we’ve written in the text box, it will update the value in
 `localStorage` thanks to the computed property `Ember.computed.alias`.
 
-![input bind](/images/posts/unknownProperty-ember-01.png)
+![input bind](/images/posts/unknownProperty-ember-02.png)
 
 Finally, if we press the button, it will write directly in the configuration.
 
-![button](/images/posts/unknownProperty-ember-01.png)
+![button](/images/posts/unknownProperty-ember-03.png)
 
 If you look closely at the last screenshot, you’ll see that after pressing the
 button, the text box was not updated. This is due to the fact that after
