@@ -8,7 +8,7 @@ author:
   email: alexis@wyeworks.com
   twitter_handle: _axxiss
   github_handle: axxiss
-  image: /images/team/
+  image: /images/team/alexis-mas.jpg
   description: Software Engineer. Turning coffee into software since 2008.
 ---
 
