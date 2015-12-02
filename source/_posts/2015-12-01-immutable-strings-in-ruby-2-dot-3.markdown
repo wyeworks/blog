@@ -92,23 +92,27 @@ literal flag, will throw an error like the one below.
 
     ruby --enable-frozen-string-literal replace.rb
 
-    replace.rb:2:in `gsub!': can't modify frozen String (RuntimeError)
-            from replace.rb:2:in `<main>'
+    replace.rb:2:in `gsub!': can't modify frozen String, created at replace.rb:1 (RuntimeError)
+      from replace.rb:2:in `<main>'
 
 Finding where the frozen string was created on a small example is
 straightforward, but what if we're on a large codebase trying to modify a string
 that has been passed around between several methods distributed on multiple
-files? Finding the original string can be cumbersome. That's why a debug flag
-was added, add the debug flag as shown below and let's try again.
+files? Finding the original string can be cumbersome. That's why the location of
+the string literal creation is added to the error message, helping you to find
+where the issue is.
 
-    ruby --enable-frozen-string-literal --enable-frozen-string-literal-debug replace.rb
+Since we wrote this post `--enable-frozen-string-literal-debug` has been renamed
+and its behavior has changed. First, we had to enabled it to know where string
+literals were being created. On [Feature #11725][8] implementation, the original
+flag was renamed to `--debug-frozen-string-literal`. Furthermore, if we try to
+mutate a statically created string literal, the error message will show by
+default where the string was created. Finally, the renamed flag is only required
+to trace dynamic (interpolated) string literals.
 
-    replace.rb:2:in `gsub!': can't modify frozen String, created at replace.rb:1 (RuntimeError)
-      from replace.rb:2:in `<main>'
+As this feature is currently under development, it may suffer some changes prior
+to Ruby 2.3 release.
 
-As you can see a subtle change is made to the error output, now we have exact
-information about where the string was created, helping you to find where the
-issue is.
 
 ## Same value literals points to the same object
 
@@ -332,6 +336,10 @@ database queries?
 Being this the first step into immutable objects in Ruby, this could be seen as
 a small change but it could serve as the foundation of a greater one.
 
+UPDATE #1: Tahnks Brandon Zylstra for pointing out that
+`--enable-frozen-string-literal-debug` is now enabled by default. We updated the
+ article to reflect that.
+
 [1]: http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/71450
 [2]: https://bugs.ruby-lang.org/issues/8976#note-41
 [3]: https://en.wikipedia.org/wiki/Immutable_object
@@ -339,3 +347,4 @@ a small change but it could serve as the foundation of a greater one.
 [5]: https://bugs.ruby-lang.org/issues/11473
 [6]: http://ruby-doc.org/core-2.2.2/GC.html#method-c-stat
 [7]: https://en.wikipedia.org/wiki/Readers%E2%80%93writer_lock
+[8]: https://bugs.ruby-lang.org/issues/11725
