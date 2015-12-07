@@ -12,7 +12,7 @@ author:
   description: WyeWorks Co-Founder & CTO, Ruby on Rails Core Team Member
 ---
 
-This new weekly blog issue containing a list of interesting articles and
+This new weekly blog issue contains a list of interesting articles and
 news related to Ruby, Rails, JavaScript and web development related
 stuff in general that we found during the week.
 
