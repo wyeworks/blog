@@ -12,13 +12,8 @@ author:
   description: WyeWorks Co-Founder & CTO, Ruby on Rails Core Team Member
 ---
 
-We're experimenting with this new weekly blog issue, which will contain
-a list of interesting articles and news that we found during  the week.
-The idea is, if it's interesting to our readers, to continue providing
-this issue on a weekly basis.
-
-Please we wait for comments telling us if you find it useful.
-
+This new weekly blog issue containing a list of interesting articles and news that we found during the week, is currently on a trial phase.
+If our readers find it interesting and useful, we will continue delivering them on a weekly basis. So please tell us your thoughts if you want us to keep making them!
 
 **OpenSSL Security Advisory [3 Dec 2015] - Updated [4 Dec 2015]**<br/>
 https://www.openssl.org/news/secadv/20151203.txt<br/>
