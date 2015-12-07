@@ -13,8 +13,8 @@ author:
 ---
 
 This new weekly blog issue containing a list of interesting articles and
-news related to Ruby, Rails, JavaScript and web development in general
-that we found during the week.
+news related to Ruby, Rails, JavaScript and web development related
+stuff in general that we found during the week.
 
 If our readers find it interesting and useful, we will continue
 delivering them on a weekly basis. So please tell us your thoughts if
