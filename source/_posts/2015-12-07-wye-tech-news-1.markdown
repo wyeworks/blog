@@ -39,8 +39,9 @@ The infrastructure needed to support the migration of rake tasks to the rails co
 https://github.com/rack/rack/pull/980<br/>
 Pull Request merged to Rack to add support for First Party Cookies
 
-**The Definitive Guide to Ruby Heap Dumps, Part I**<br/>
+**The Definitive Guide to Ruby Heap Dumps, Parts I and II**<br/>
 https://blog.codeship.com/the-definitive-guide-to-ruby-heap-dumps-part-i
+https://blog.codeship.com/the-definitive-guide-to-ruby-heap-dumps-part-ii
 
 **Building Cross Model Search with Ember, Rails, and
 Elasticsearch**<br/>
