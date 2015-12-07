@@ -70,5 +70,12 @@
     github_handle: 'axxiss',
     image: 'alexis-mas.jpg',
     description: 'Software Engineer, turning coffee into software since 2008'
+  },
+  gabriel_ledesma: {
+    name: 'Gabriel Ledesma',
+    email: 'cholo@wyeworks.com',
+    twitter_handle: 'gafaled',
+    image: 'gabriel-ledesma.jpg',
+    description: 'Agile Coach'
   }
 }
