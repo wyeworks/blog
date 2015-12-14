@@ -52,7 +52,7 @@ constitutes a daunting task, which may lead to unexpected and hard to find
 bugs.
 
 This is why keeping your code *DRY* can help tremendously in creating flexible
-systems. When a shift in requirements ocurrs, or a bug is reported in
+systems. When a shift in requirements occurs, or a bug is reported in
 production, you'll know exactly *where* to make the change.
 
 *DRY* up in face of the inevitable. As Sam Cook said, [a change is gonna come.](https://en.wikipedia.org/wiki/A_Change_Is_Gonna_Come)
@@ -134,7 +134,7 @@ style rule for designing object-oriented systems. It was named "*[The Law of Dem
 What this rule defines, is a set of guidelines which restrict the amount
 of objects to which you may send messages to.
 
-I like [Brad Appleton's](http://www.bradapp.com/docs/demeter-intro.html) frasing of the [style guideline](http://c2.com/cgi/wiki?LawOfDemeter):
+I like [Brad Appleton's](http://www.bradapp.com/docs/demeter-intro.html) phrasing of the [style guideline](http://c2.com/cgi/wiki?LawOfDemeter):
 
 > A method "M" of an object "O" should invoke only the methods of the following kinds of objects:
 
@@ -180,7 +180,7 @@ In contrast to our `PizzaBoy` solution, we're not being shy here. In fact, we're
 not being shy **_at all_**.
 
 Picture this: Mr. gardener knocks on your door, you open it and
-he kindly salutes you. Immediately afterwars, as a result of wanting to
+he kindly salutes you. Immediately afterwards, as a result of wanting to
 make your garden prettier, you proceed to ask the gardener to hand you
 his set of tools, from which you grab a pair of scissors, and top it off
 by cutting your own grass. You might be asking yourself... Why did we call the
@@ -201,9 +201,9 @@ affecting us.
 
 On to the latter. Did you notice that we are now *telling* the
 gardener what we want him to do, and not making him questions about his
-responabilities? We are now adhering to the *"Tell, don't ask"* principle,
+responsibilities? We are now adhering to the *"Tell, don't ask"* principle,
 creating a shield around us, isolating ourselves from the outside world,
-not revealing much about our business, only dependeng upon abstractions we
+not revealing much about our business, only dependent upon abstractions we
 actually care about. As a result, we're also obeying Demeter, by limiting the
 different kind of objects our method interacts with.
 
@@ -219,18 +219,18 @@ Let's remember the [two basic characteristics all Pragmatic Programmers share](h
 When crafting our solutions, we should be constantly thinking about the
 decisions we make, weighing the possible consequences of each change we
 apply, and how different techniques or approaches might affect the
-future course of our proyect.
+future course of our project.
 
 If we consider ourselves Pragmatic Programmers, then we shouldn't
 embrace something as the ultimate law, and obey it invariably in our
 development journey. We should assemble a fat and diverse toolbox from
-which to grab the most adecuate tool for the problem we're facing at any
+which to grab the most adequate tool for the problem we're facing at any
 given moment.
 
 All systems are different, and deserve special treatment according
 to their reality, user requirements and present design. A balance has to be made--that's what
 being pragmatic means. However, incorporating this style of coding to
-your toolbox might give you the means to ease your maintainance
+your toolbox might give you the means to ease your maintenance
 nightmares and develop more flexible systems, narrowing the gap to meet
 our ultimate goal: writing flexible enough code which smoothlessly adapts to change.
 
