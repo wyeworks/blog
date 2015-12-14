@@ -20,6 +20,7 @@ If our readers find it interesting and useful, we will continue
 delivering them on a weekly basis. So please tell us your thoughts if
 you want us to keep making them!
 
+<!--more-->
 
 **OpenSSL Security Advisory [3 Dec 2015] - Updated [4 Dec 2015]**<br/>
 https://www.openssl.org/news/secadv/20151203.txt<br/>
