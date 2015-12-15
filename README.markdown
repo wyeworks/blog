@@ -138,7 +138,7 @@ Make sure to preview your blog post by typing `rake preview` and checking
 ### Building
 
 ```
-rake generate
+bundle exec rake generate
 ```
 
 
