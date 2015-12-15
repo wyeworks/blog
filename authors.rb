@@ -70,5 +70,13 @@
     github_handle: 'axxiss',
     image: 'alexis-mas.jpg',
     description: 'Software Engineer, turning coffee into software since 2008'
+  },
+  rodrigo_ponce_de_leon: {
+    name: 'Rodrigo Ponce de León',
+    email: 'rodrigo@wyeworks.com',
+    twitter_handle: 'rponce_89',
+    github_handle: 'rodrigopdl',
+    image: 'rodrigo-pdl.jpg',
+    description: 'Ruby on Rails developer at WyeWorks. Beatlemaniac. Guitar freak.'
   }
 }
