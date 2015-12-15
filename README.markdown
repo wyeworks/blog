@@ -135,15 +135,31 @@ Make sure to preview your blog post by typing `rake preview` and checking
 `http://localhost:4000/blog`
 
 
-## Deploying
-
-
-To generate the static site, type:
+### Building
 
 ```
 rake generate
 ```
 
-And to upload:
 
-TODO: Update readme to add upload steps
+### Uploading to server
+
+```
+tar cjf blog.tar.bz2 public
+scp blog.tar.bz2 wye@wyeworks.com:.
+```
+
+
+### Deploy
+
+The deployment process assumes the existance of a tar.bz2 file with the public/ content in ~wye/blog.tar.bz2
+This is what was done in `Uploading to server` section.
+
+```
+ssh wye@wyeworks.com
+sudo su -
+cd /usr/local/www/wyeworks.com
+./deploy-blog.sh
+```
+
+And you're done!
