@@ -22,7 +22,7 @@ author:
 
 This quote, taken from the highly regarded *"[The Pragmatic Programmer](https://pragprog.com/book/tpp/the-pragmatic-programmer)"* book,
 depicts beautifully an ongoing, everyday challenge software developers
-face: writing flexible enough code which smoothlessly adapts to change.
+face: writing flexible enough code which smoothly adapts to change.
 
 What [Andy Hunt](https://twitter.com/PragmaticAndy) and [Dave Thomas](https://twitter.com/pragdave) are telling us is that
 software we develop, just as much as the world we live in, resides in a
@@ -174,7 +174,7 @@ work, and start using a lawn mower, because he determines that is the most
 effective way to make your garden shine. A change in his set of tools
 has developed. Scissors no longer exist in the gardener's toolbox.
 
-Knowing too much about how to make your garden look pretty lead to you
+Knowing too much about how to make your garden look pretty led to you
 breaking in response to a change in the `Gardener`'s implementation.
 In contrast to our `PizzaBoy` solution, we're not being shy here. In fact, we're
 not being shy **_at all_**.
@@ -232,7 +232,7 @@ to their reality, user requirements and present design. A balance has to be made
 being pragmatic means. However, incorporating this style of coding to
 your toolbox might give you the means to ease your maintenance
 nightmares and develop more flexible systems, narrowing the gap to meet
-our ultimate goal: writing flexible enough code which smoothlessly adapts to change.
+our ultimate goal: writing flexible enough code which smoothly adapts to change.
 
 And remember: **_Sometimes, it's good to be shy._**
 
