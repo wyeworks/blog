@@ -53,7 +53,7 @@ bugs.
 
 This is why keeping your code *DRY* can help tremendously in creating flexible
 systems. When a shift in requirements occurs, or a bug is reported in
-production, you'll know exactly *where* to make the change.
+production, there will only be *one place* where to make the change.
 
 *DRY* up in face of the inevitable. As Sam Cook said, [a change is gonna come.](https://en.wikipedia.org/wiki/A_Change_Is_Gonna_Come)
 
@@ -108,7 +108,7 @@ unnecessary details.
 
 Following this same rule, we can build software modules which depend upon
 interfaces that abstract nasty implementation details from the outside world.
-This means that--from a modules point of view--changes which might occur in other
+This means that -- from a modules point of view -- changes which might occur in other
 modules will be less likely to break something in this one, as well as
 changes to this module not propagating bugs to the whole system.
 
