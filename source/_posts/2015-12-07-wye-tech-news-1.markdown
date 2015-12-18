@@ -62,7 +62,7 @@ Look at Netflix's Linux Performance Analysis in 60s, shows the commands used in 
 
 **Flexbox Froggy**<br/>
 http://flexboxfroggy.com/<br/>
-Learn or excercise your flexbox knowledge playing a little game.
+Learn or exercise your flexbox knowledge playing a little game.
 
 **CSS font-display property is now available in Chrome Canary!**<br/>
 https://plus.google.com/+IlyaGrigorik/posts/a3Yn3jB4wjA
