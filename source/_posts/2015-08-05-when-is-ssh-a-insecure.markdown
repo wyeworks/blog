@@ -163,7 +163,7 @@ Eve now becomes root and impersonate into Alice.
   alice@secret:~$
 {% endcodeblock %}
 
-So, with this simple stepts now Eve is connected to secret
+So, with this simple steps now Eve is connected to secret
 machine as Alice.
 
 ## Conclusions
