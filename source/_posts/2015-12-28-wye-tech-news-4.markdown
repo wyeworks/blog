@@ -32,6 +32,9 @@ https://evilmartians.com/chronicles/ruby-2_2-oom
 **A Retrospective on Ruby in 2015**<br/>
 http://www.sitepoint.com/a-retrospective-on-ruby-in-2015/
 
+**Upgrading to Ruby on Rails 5.0 from Rails 4.2 – application use case**<br/>
+http://dev.mensfeld.pl/2015/12/upgrading-to-ruby-on-rails-5-0-from-rails-4-2-application-use-case/
+
 **ApplicationRecord in Rails 5**<br/>
 http://blog.bigbinary.com//2015/12/28/application-record-in-rails-5.html
 
