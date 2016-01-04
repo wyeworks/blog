@@ -78,5 +78,13 @@
     github_handle: '',
     image: '',
     description: ''
+  },
+  wyeworks: {
+    name: 'WyeWorks',
+    email: 'webmaster@wyeworks.com',
+    twitter_handle: 'wyeworks',
+    github_handle: 'wyeworks',
+    image: 'wyeworks.jpg',
+    description: ''
   }
 }
