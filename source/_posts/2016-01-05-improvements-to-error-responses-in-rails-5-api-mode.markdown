@@ -110,7 +110,7 @@ In Rails 4.2.x, error responses are returned in the format that would be used fo
 Probably there are just a few cases where the error happens executing Rails middleware before reaching the router, but it is still an issue that can happen. In fact, the router code is executed after the entire middleware chain, right before executing the corresponding controller code. For example, consider the following request to create a Post based on our `PostController`:
 
 ```
-
+curl -H "Content-Type:application/json; charset=utf-8" -d '{"post": {"title":"My Post", "invalid value"}}' http://localhost:3000/post.json
 ```
  
 Note that we are using the `Content-Type` header to indicate the format of the values sent among the request.  Rails will attempt to parse the provided JSON value, but it will raise an `ActionDispatch::ParamsParser::ParseError` exception because the JSON is not well-formed (did you noticed the invalid part in the example?). However, it fails to return an error response in JSON format because the code that parses the `.json` part of the request path is never executed. Instead, it just returns a `400 Bad Request` response but with empty body.
