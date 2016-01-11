@@ -8,7 +8,7 @@ author:
   email: webmaster@wyeworks.com
   twitter_handle: wyeworks
   github_handle: wyeworks
-  image: wyeworks.jpg
+  image: /images/team/wyeworks.jpg
   description:
 ---
 
