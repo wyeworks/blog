@@ -41,8 +41,14 @@ https://www.nateberkopec.com/2016/01/07/what-http2-means-for-ruby-developers.htm
 **Passages Rails Engine**<br/>
 http://jakeyesbeck.com/2016/01/03/passages/
 
+**Announcing Scenic - Versioned Database Views for Rails**
+https://robots.thoughtbot.com/announcing-scenic--versioned-database-views-for-rails
+
 **ActiveRecord stole my data and now I want it back!**<br/>
 https://medium.com/@yammereng/activerecord-stole-my-data-and-now-i-want-it-back-3041ac4eb163
+
+**Understanding Mutable Objects & Frozen Strings**
+http://www.blackbytes.info/2016/01/ruby-mutability/
 
 **Git 2.7 Released**<br/>
 https://www.phoronix.com/scan.php?page=news_item&px=Git-2.7-Released<br/>
