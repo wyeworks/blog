@@ -157,7 +157,13 @@ irb(main):001:0> Category.create!(name: 'Groceries', kind: 'expense')
 
 That’s where the error comes from, the value for kind won’t save.
 
-In our case, kind is an enum in the Category model and is represented as a PostgreSQL enum. In order for this combination to work correctly, we need to “hack” the mapping that Active Record creates by default for the enums since, by default, it maps to integers and we would need strings for PostgreSQL. Hence, the enums declaration must be something like `enum kind: { expense: 'expense', income: 'income', any: 'any' }`. With that declaration, the enums stop using the default mapping to integers and each declared key is mapped to the String that we put in the Hash. This syntax functions correctly in Rails 4.2 but, for some reason, not in Rails 5.
+In our case, kind is an enum in the Category model and is represented as a PostgreSQL enum. In order for this combination to work correctly, we need to “hack” the mapping that Active Record creates by default for the enums since, by default, it maps to integers and we would need strings for PostgreSQL. Hence, the enums declaration must be something like:
+
+```
+enum kind: { expense: 'expense', income: 'income', any: 'any' }
+```
+
+With that declaration, the enums stop using the default mapping to integers and each declared key is mapped to the String that we put in the Hash. This syntax functions correctly in Rails 4.2 but, for some reason, not in Rails 5.
 
 Debugging, I find out that in Rails 5 the deserialization method of the enums (the one that, given a value, returns the enum key), defines `mapping.key(value.to_i)`. This is valid when we don’t customize the mapping. In our case, value is a String and there’s no reason to include `to_i`. Why, then, don't we leave the original value? And [that was precisely what we did](https://github.com/rails/rails/commit/e991c7b8cd69d7ba5e221a19e5f386e3ba02eb9d).
 
@@ -206,7 +212,7 @@ For this, one of the first things that can be done is to run `bin/rails rails:up
 
 Like usual, a few initializers are added, there are a few changes in config/environments/, an app/models/application_record.rb is added and the models now inherit from ApplicationRecord. We can apply these changes.
 
-Within the new initializers, `config/initializers/active_record_belongs_to_required_by_default.rb` is added, which makes it so that the belongs_to cannot be nil. In our case, we need some to be nil, so we have to add the option `optional: true` to the relations. For example, `belongs_to :category, optional: true`.
+Within the new initializers, config/initializers/active_record_belongs_to_required_by_default.rb is added, which makes it so that the belongs_to cannot be nil. In our case, we need some to be nil, so we have to add the option `optional: true` to the relations. For example, `belongs_to :category, optional: true`.
 
 Also, config/initializers/callback_terminator.rb is added, which makes it so that the callbacks do not halt more when a false is returned. The way to halt now is with `throw(:abort)`. In our application, this was irrelevant and had no effect.
 
