@@ -16,6 +16,8 @@ In this post, we’re going to upgrade a Rails 4.2.5 application to Rails 5.0.0.
 
 What's the first thing one does when upgrading a Rails application? Personally, the first thing I try to do is become well-informed regarding the changes the new application includes. To do this, I generally look at the Rails upgrade guide - in our case [Upgrading from Rails 4.2 to Rails 5.0](http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html#upgrading-from-rails-4-2-to-rails-5-0) - and I take a look at the CHANGELOG.md file for each one of Rails’ different frameworks. In my case, given that I form part of the Rails core team, I follow its development rather closely, which makes it a bit easier for me to stay on top of everything. At any rate, following the upgrade guide and taking a look at the CHANGELOGs should be sufficient, although if you’re interested in seeing what’s currently happening, you can follow the [day-to-day changes](https://github.com/rails/rails/commits) that are introduced in Rails.
 
+<!-- more -->
+
 From the upgrade guide (still somewhat incomplete), we learn that some of the changes in Rails 5 are:
 
 - Requiring that we use at least Ruby 2.2.2 or newer
