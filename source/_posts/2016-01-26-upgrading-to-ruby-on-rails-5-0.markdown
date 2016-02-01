@@ -12,7 +12,7 @@ author:
   description:
 ---
 
-**Edit: In this post we're upgrading an application to Rails 5.0.0.beta1.1 and [Rails 5.0.0.beta2 is now already released](http://weblog.rubyonrails.org/).
+**Edit: In this post we're upgrading an application to Rails 5.0.0.beta1.1 and [Rails 5.0.0.beta2 is now already released](https://rubygems.org/gems/rails/versions/5.0.0.beta2).
 Throughout this post we show some patches we needed to apply to Rails to get our application working. Those patches are now included as part of Rails 5.0.0.beta2.
 We still consider this post worth reading to get an interesting view of how to upgrade your applications to newer versions of Rails and betas in particular.**
 
