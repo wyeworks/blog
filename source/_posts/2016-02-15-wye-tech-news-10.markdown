@@ -35,6 +35,9 @@ http://www.mikeperham.com/2016/02/09/kill-your-dependencies/
 **Caching result sets and collection in Rails 5**<br/>
 http://blog.bigbinary.com/2016/02/02/activerecord-relation-cache-key.html
 
+**Rails 5 does not halt callback chain when false is returned**<br/>
+http://blog.bigbinary.com/2016/02/13/rails-5-does-not-halt-callback-chain-when-false-is-returned.html
+
 **Rails 5 only supports PostgreSQL 9.1+**<br/>
 https://github.com/rails/rails/pull/23434
 
@@ -43,9 +46,6 @@ http://blog.bigbinary.com/2016/02/09/configuring-bundler-using-bundle-config.htm
 
 **Action Cable and WebSockets: An in-Depth Tutorial**<br/>
 http://www.sitepoint.com/action-cable-and-websockets-an-in-depth-tutorial/
-
-**Stateless vs stateful web apps**<br/>
-http://blog.plataformatec.com.br/2016/02/stateless-vs-stateful-web-apps/
 
 **RSpec 3.5.0.beta1 has been released!**<br/>
 http://rspec.info/blog/2016/02/rspec-3-5-0-beta1-has-been-released/
@@ -72,5 +72,14 @@ https://hacks.mozilla.org/2016/02/developer-edition-46-more-memory-tooling-impro
 **Microsoft Security Bulletin Summary for December 2015**<br/>
 https://technet.microsoft.com/library/security/ms16-feb
 
+**The future of loading CSS**<br/>
+https://jakearchibald.com/2016/link-in-body/
+
+**HTTP/2 Implementation Status**<br/>
+https://www.mnot.net/blog/2015/06/15/http2_implementation_status
+
 **Creating a Document-Store Hybrid in Postgres 9.5**<br/>
 https://blog.andyet.com/2016/02/04/postgres-9.5-document-store-hybrid/
+
+**Performance Tuning Queries in PostgreSQL**<br/>
+http://www.geekytidbits.com/performance-tuning-postgres/
