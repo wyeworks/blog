@@ -49,3 +49,6 @@ http://zellwk.com/blog/rem-vs-em/
 
 **Chrome 49 Stable Channel Update**<br/>
 http://googlechromereleases.blogspot.com.uy/2016/03/stable-channel-update.html
+
+**How to deploy software**<br/>
+https://zachholman.com/posts/deploying-software
