@@ -13,3 +13,4 @@ source/images/overlays/
 vendor
 node_modules
 Gemfile.lock
+blog.tar.bz2

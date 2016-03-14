@@ -47,7 +47,7 @@ https://shopifyengineering.myshopify.com/blogs/engineering/112738884-adventures-
 **PostgreSQL and Rails, sitting in a tree**<br/>
 https://evilmartians.com/chronicles/postgresql-and-rails-sitting-in-a-tree
 
-**Ember v2.4.2, Ember-CLI v2.4.2 and Ember Data v2.5.0 Released**<br/>
+**Ember v2.4.2, Ember-CLI v2.4.2 and Ember Data v2.5.0 beta1 Released**<br/>
 https://github.com/emberjs/ember.js/releases/tag/v2.4.2<br/>
 https://github.com/ember-cli/ember-cli/releases/tag/v2.4.2<br/>
 https://github.com/emberjs/data/releases/tag/v2.5.0-beta.1
