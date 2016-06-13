@@ -10,7 +10,7 @@ author:
   twitter_handle: san650
   github_handle: san650
   image: /images/team/santiago-ferreira.jpg
-  description: 
+  description: Developer working with Ruby, JavaScript and Ember. Love working with Free Software in general. Ember and Angular meetup organizer in Montevideo
 ---
 
 TC39 has a [proposal](https://tc39.github.io/ecmascript-asyncawait/) for adding async functions to ECMAScript. This new language feature is very useful for working with the promise pattern that is heavily used in Ember's acceptance tests.

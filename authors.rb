@@ -53,7 +53,7 @@
     twitter_handle: 'san650',
     github_handle: 'san650',
     image: 'santiago-ferreira.jpg',
-    description: ''
+    description: 'Developer working with Ruby, JavaScript and Ember. Love working with Free Software in general. Ember and Angular meetup organizer in Montevideo'
   },
   santiago_pastorino: {
     name: 'Santiago Pastorino',

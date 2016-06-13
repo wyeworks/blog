@@ -9,7 +9,7 @@ author:
   twitter_handle: san650
   github_handle: san650
   image: /images/team/santiago-ferreira.jpg
-  description: 
+  description: Developer working with Ruby, JavaScript and Ember. Love working with Free Software in general. Ember and Angular meetup organizer in Montevideo
 ---
 
 When I began studying Ruby, one of the things that most caught my attention was
