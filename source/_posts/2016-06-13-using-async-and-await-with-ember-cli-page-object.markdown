@@ -105,16 +105,22 @@ test('validates invalid credentials', async function(assert) {
 });
 {% endcodeblock %}
 
-As you can see [ember-cli-page-object](https://github.com/san650/ember-cli-page-object)'s actions support the `await` keyword, even if you chain multiple actions. Also note that you have to mark the test function as asynchronous `async function(assert)`.
+As you can see, [ember-cli-page-object](https://github.com/san650/ember-cli-page-object)'s actions support the `await` keyword, even if you chain multiple actions. Also note that you have to mark the test function as asynchronous `async function(assert)`.
 
 Take a look at [this commit](https://github.com/san650/tajpado/commit/6638a26564e41f3503886dbe36bf860b2f6d7ac1) of the [tajpado](https://github.com/san650/tajpado) project to see how we upgraded the project to start using `async` and `await` in the test suite.
 
 ## A note about JSHint
 
-JSHint doesn't like the new _async_ and _await_ keywords so it returns a handfull of errors. To disable JSHint on a particular file you can add a comment directive on top of the file.
+JSHint doesn't like the new _async_ and _await_ keywords so it returns a handful of errors. To disable JSHint on a particular file you can add a comment directive on top of the file.
 
 ```js
 /* jshint ignore:start */
 ```
 
 Note that JSHint will process all files of the project except the ones that contains this comment.
+
+## The future
+
+There's a proposal in Ember.js by [Robert Jackson](https://github.com/rwjblue) (see the [RFC](https://github.com/emberjs/rfcs/pull/119)) to use async functions as the default way to write acceptance test. Although this proposal is in an early stage it seems to have a good reception by the community.
+
+See https://github.com/rwjblue/rfcs/blob/42/text/0000-grand-testing-unification.md#async--await
