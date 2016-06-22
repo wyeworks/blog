@@ -84,7 +84,7 @@ irb(main):> "ángela".capitalize
 
 Ángela can now provide her name and she will see her name capitalized in a banner or title section of their favorite web application... only if it is run with Ruby 2.4!
 
-This change can also affect existing code because it is actually altering behavior in the language. However, it does not seem a problematic change and it will be likely to fix existing issues rather than break things. Nevertheless, the changed methods in Ruby 2.4 accept the `:ascii` symbol as a parameter to force the previous behavior:
+This change can also affect existing code because it is actually altering behavior in the language. However, there should not be a lot of cases where things could be broken. In fact, I feel this change can fix existing errors. Nevertheless, if you are in a situation where this change is somehow problematic, all the affected methods in Ruby 2.4 accept the `:ascii` symbol as a parameter to force the previous behavior:
 
 ```ruby
 irb(main):> "ángela".upcase :ascii
@@ -125,7 +125,7 @@ As in the previous changes, it may break some existing code so please check and 
 
 ## Final thoughts
 
-Only part of the behavior changes that are bundled in the recently released Ruby 2.4.0-preview1 were discussed in this post. It is worth to mention that many other features and fixes were implemented for this new version of the language. A more extensive list of additions and changes can be found [here](https://github.com/ruby/ruby/blob/v2_4_0_preview1/NEWS).
+Only part of the behavior changes that are bundled in the recently released Ruby 2.4.0-preview1 were discussed in this post. It is worth to mention that many other features and fixes were implemented for this new version of the language. A more extensive list of additions and changes can be found [in the Ruby NEWS file of this version](https://github.com/ruby/ruby/blob/v2_4_0_preview1/NEWS).
 
 We've looked at some relevant changes that are part of this first preview for Ruby 2.4. Those modifications are improvements to the language without any doubt, but at the same time those behaviors changes could not be fully compatible with existing code that runs in Ruby 2.3 or earlier versions. In the other hand, we can expect to have a very little chance to hit one of the compatibility issues in custom applications code. Some extra work might be needed for gems or third party libraries to avoid problems with Ruby 2.4. We mentioned a few tracks of work in Rails as a preparation for the new version of Ruby, because the Rails team wants to make sure the next major version of the framework, Rails 5, is fully compatible with the latest version of the language.
 
@@ -134,15 +134,15 @@ It's your turn now! I hope you have the opportunity to try this preview version 
 ## References
 
 __Integer class unification__<br/>
-Ruby issues tracker: https://bugs.ruby-lang.org/issues/12005<br/>
+Ruby issue: https://bugs.ruby-lang.org/issues/12005<br/>
 Rails fix: https://github.com/rails/rails/pull/25056<br/>
 
 __Unicode changes__<br/>
-Ruby issues tracker: https://bugs.ruby-lang.org/issues/10085
+Ruby issue: https://bugs.ruby-lang.org/issues/10085
 
 __Timezone handling__<br/>
-Ruby issues tracker: https://bugs.ruby-lang.org/issues/12189 and https://bugs.ruby-lang.org/issues/12271<br/>
-Pull Request in Rails: https://github.com/rails/rails/issues/24617
+Ruby issues: https://bugs.ruby-lang.org/issues/12189 and https://bugs.ruby-lang.org/issues/12271<br/>
+Rails fix: https://github.com/rails/rails/issues/24617
 
 __Other resources__<br/>
 https://www.ruby-lang.org/en/news/2016/06/20/ruby-2-4-0-preview1-released/<br/>
