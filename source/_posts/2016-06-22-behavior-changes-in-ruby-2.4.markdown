@@ -12,9 +12,9 @@ author:
   description: Software Engineer at Wyeworks. Ruby on Rails developer.
 ---
 
-A few days ago, [the first previous version of Ruby 2.4 was released](https://www.ruby-lang.org/en/news/2016/06/20/ruby-2-4-0-preview1-released/). This particular release includes a bunch of new features; moreover, it brings some fixes and changes that are not fully backward compatible. For this reason, we need to pay extra attention to those things that are not working exactly the same in this new Ruby version.
+A few days ago, [the first preview version of Ruby 2.4 was released](https://www.ruby-lang.org/en/news/2016/06/20/ruby-2-4-0-preview1-released/). This particular release includes a bunch of new features; moreover, it brings some fixes and changes that are not fully backward compatible. For this reason, we need to pay extra attention to those things that are not working exactly the same in this new Ruby version.
 
-In this post, we will focus on some remarkable behavior changes, so we can better understand what could be affected or improved in our programs once we upgrade to Ruby 2.4.
+In this post, we will focus on some remarkable behavior changes, so we can better understand what could be affected or improved in our applications once we upgrade to Ruby 2.4.
 
 <!--more-->
 
@@ -54,7 +54,7 @@ irb(main):> 3.is_a? Bignum
 => true
 ```
 
-It's a funny to know that, in Ruby 2.4, even little numbers as the integer `3` are "big numbers" as well 😏 . Joking apart, remember that `Integer` is equal to `Fixnum` and `Bignum` and, as a result, `Fixnum` and `Bignum` are also aliases.
+It's funny to know that, in Ruby 2.4, even little numbers as the integer `3` are "big numbers" as well 😏 . Joking apart, remember that `Integer` is equal to `Fixnum` and `Bignum` and, as a result, `Fixnum` and `Bignum` are also aliases.
 
 The `Integer` classes unification was motivated by opinions arguing that `Fixnum` and `Bignum` are just an implementation detail to deal with integer numbers in Ruby internals. In particular, new people learning the language will find easier to deal with a unique `Integer` class.
 
@@ -64,7 +64,7 @@ However, this change may break existing code, so be warned! If you have code tha
 
 The following case conversion methods were improved to work better with Unicode characters: `upcase`, `downcase`, `swapcase`, `capitalize`. These four methods included in the classes `String` and `Symbol` were affected by this change. The similar methods in `String` that makes changes in place (the ones that ends with exclamation mark, such as `upcase!`) were also covered.
 
-Before Ruby 2.4, the case conversion only worked with ASCII characters, having no effect in other characters. See this example in Ruby 2.3, using an Spanish name with an accent in the first letter:
+Before Ruby 2.4, the case conversion only worked with ASCII characters, having no effect in other characters. See this example in Ruby 2.3, using a Spanish name with an accent in the first letter:
 
 ```ruby
 irb(main):> "ángela".upcase
@@ -73,7 +73,7 @@ irb(main):> "ángela".capitalize
 "ángela"
 ```
 
-The `á` character is not part of the ASCII charset, so case conversions are not applied to this particular item of the word even though the rest of the ASCII characters are actually converted. Fortunately, this is working great in the new ruby version. See how is goes in Ruby 2.4.0-preview1:
+The `á` character is not part of the ASCII charset, so case conversions are not applied to this particular letter of the word even though the rest of the ASCII characters are actually converted. Fortunately, this is working great in the new ruby version. See how is goes in Ruby 2.4.0-preview1:
 
 ```ruby
 irb(main):> "ángela".upcase
@@ -84,7 +84,7 @@ irb(main):> "ángela".capitalize
 
 Ángela can now provide her name and she will see her name capitalized in a banner or title section of their favorite web application... only if it is run with Ruby 2.4!
 
-This change can also affect existing code because it is actually altering behavior in the language. However, it does not seem a problematic change and it will be likely to fix existing issues rather than break things. Nevertheless, the changed methods in Ruby 2.4 accepts the `:ascii` symbol as a parameter to force the previous behavior:
+This change can also affect existing code because it is actually altering behavior in the language. However, it does not seem a problematic change and it will be likely to fix existing issues rather than break things. Nevertheless, the changed methods in Ruby 2.4 accept the `:ascii` symbol as a parameter to force the previous behavior:
 
 ```ruby
 irb(main):> "ángela".upcase :ascii
@@ -93,7 +93,7 @@ irb(main):> "ángela".upcase :ascii
 
 ## Time and DateTime `to_time` method preserves timezone 
 
-This is actually considered a bug fix, because early Ruby versions did not preserve the timezone of the callee when invoking the `to_time` method. The following is a demonstration of the issue present in Ruby 2.3:
+This is actually considered a bug fix, because early Ruby versions did not preserve the timezone of the receiver object when invoking the `to_time` method. The following is a demonstration of the issue present in Ruby 2.3:
 
 ```ruby
 irb(main):> require 'date'
@@ -121,13 +121,13 @@ irb(main):> time.to_time
 => 2016-06-21 00:00:00 -0800
 ```
 
-As in the previous changes, it may break some existing code so please check and test when upgrading the Ruby version. As a consequence of this change in Ruby, the Rails framework had to make some changes because some related methods are part of their API, such as `String#to_date`. Rails 5 will support Ruby 2.2 and later, so the `ActiveSupport.to_time_preserves_timezone` config option was added to control how all `to_date` methods behave, ensuring backward compatibility with previous ruby versions if this option is set to `false`.  New Rails 5 apps will include an initializer file including`ActiveSupport.to_time_preserves_timezone = true` encouraging the new timezone handling brought by Ruby 2.4.
+As in the previous changes, it may break some existing code so please check and test when upgrading the Ruby version. As a consequence of this change in Ruby, the Rails framework had to make [some changes because some related methods are part of their API, such as `String#to_date`](https://github.com/rails/rails/commit/c9c5788a527b70d7f983e2b4b47e3afd863d9f48). Rails 5 will support Ruby 2.2 and later, so the `ActiveSupport.to_time_preserves_timezone` config option was added to control how all `to_date` methods behave, ensuring backward compatibility with previous ruby versions if this option is set to `false`.  New Rails 5 apps will include an initializer file including`ActiveSupport.to_time_preserves_timezone = true` encouraging the use of the new timezone handling brought by Ruby 2.4.
 
 ## Final thoughts
 
-Only part of the behavior changes that are bundled in the recently released Ruby 2.4.0-preview1 were discussed in this post. It is worth to mention that many other features and fixed were implemented for this version of Ruby. A more extensive list of additions and changes can be found [here](https://github.com/ruby/ruby/blob/v2_4_0_preview1/NEWS).
+Only part of the behavior changes that are bundled in the recently released Ruby 2.4.0-preview1 were discussed in this post. It is worth to mention that many other features and fixes were implemented for this new version of the language. A more extensive list of additions and changes can be found [here](https://github.com/ruby/ruby/blob/v2_4_0_preview1/NEWS).
 
-We've looked at some important changes that are part of this first preview for Ruby 2.4. Those modifications are improvements to the language without any doubt, but at the same time those behaviors changes could not be fully compatible with existing code that runs in Ruby 2.3 or earlier versions. In the other hand, we can expect to have a very little chance to hit one of the compatibility issues in custom applications code. Some extra work might be needed for gems or third party libraries to avoid problems with Ruby 2.4. We mentioned a few tracks of work in Rails as a preparation for the new version of Ruby, because the Rails team wants to make sure the next major version of the framework, Rails 5, is fully compatible with the latest version of the language.
+We've looked at some relevant changes that are part of this first preview for Ruby 2.4. Those modifications are improvements to the language without any doubt, but at the same time those behaviors changes could not be fully compatible with existing code that runs in Ruby 2.3 or earlier versions. In the other hand, we can expect to have a very little chance to hit one of the compatibility issues in custom applications code. Some extra work might be needed for gems or third party libraries to avoid problems with Ruby 2.4. We mentioned a few tracks of work in Rails as a preparation for the new version of Ruby, because the Rails team wants to make sure the next major version of the framework, Rails 5, is fully compatible with the latest version of the language.
 
 It's your turn now! I hope you have the opportunity to try this preview version of Ruby 2.4 and take advantage of the changes included in it. After all, this is open source and the Ruby team is waiting for feedback from the developers using the language 😎.
 
