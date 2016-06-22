@@ -12,7 +12,7 @@ author:
   description: Software Engineer at Wyeworks. Ruby on Rails developer.
 ---
 
-A few days ago, the first previous version of Ruby 2.4 was released. This particular version includes a bunch of new features; moreover, it brings some fixes and changes that are not fully backward compatible. For this reason, we need to pay extra attention to those things that are not working as in early Ruby versions.
+A few days ago, [the first previous version of Ruby 2.4 was released](https://www.ruby-lang.org/en/news/2016/06/20/ruby-2-4-0-preview1-released/). This particular release includes a bunch of new features; moreover, it brings some fixes and changes that are not fully backward compatible. For this reason, we need to pay extra attention to those things that are not working exactly the same in this new Ruby version.
 
 In this post, we will focus on some remarkable behavior changes, so we can better understand what could be affected or improved in our programs once we upgrade to Ruby 2.4.
 
@@ -37,7 +37,7 @@ irb(main):> 3.is_a? Bignum
 false
 ```
 
-Be warned! Ruby 2.4.0-preview1 changed a bit this behavior. The `Integer` class is now the only concrete one. All integer objects are now instances of `Integer`. However, the constants `Fixnum` and `Bignum` remains available but these are just aliases for `Integer`.
+Ruby 2.4.0-preview1 changed a bit this behavior. The `Integer` class is now the only concrete one. All integer objects are now instances of `Integer`. However, the constants `Fixnum` and `Bignum` remains available but these are just aliases for `Integer`.
 
 Let's see how that affects the code from the previous example:
 
@@ -54,11 +54,11 @@ irb(main):> 3.is_a? Bignum
 => true
 ```
 
-It's a funny to know that, in Ruby 2.4, even little numbers as the integer `3` are "big numbers" 😏 . It sounds awkward, but just remember that `Integer` is now equal to `Fixnum` and `Bignum`.
+It's a funny to know that, in Ruby 2.4, even little numbers as the integer `3` are "big numbers" as well 😏 . Joking apart, remember that `Integer` is equal to `Fixnum` and `Bignum` and, as a result, `Fixnum` and `Bignum` are also aliases.
 
-The `Integer` classes unification was motivated by opinions arguing that `Fixnum` and `Bignum` are just an implementation detail to deal with integer numbers in Ruby internals. New people learning the language will find easier to deal only with an `Integer` class.
+The `Integer` classes unification was motivated by opinions arguing that `Fixnum` and `Bignum` are just an implementation detail to deal with integer numbers in Ruby internals. In particular, new people learning the language will find easier to deal with a unique `Integer` class.
 
-However, this change may break existing code, so be warned! If you have code that directly relies on the `Fixnum` or `Bignum` classes, you may need to double check the compatibility of your code and gems in use with Ruby 2.4.  Just as an example, Rails maintainers have done their due diligence and [internal references to `Fixnum` and `Bignum` have been already removed](https://github.com/rails/rails/pull/25056). Therefore, Rails 5 will be prepared for the new `Integer` behavior in Ruby 2.4.
+However, this change may break existing code, so be warned! If you have code that directly relies on the `Fixnum` or `Bignum` classes, you may need to double check the compatibility of your code. As usual, you might need to check if the gems in your bundle do not break because of this change. Just as an example, Rails maintainers have done their due diligence and [internal references to `Fixnum` and `Bignum` have been already removed](https://github.com/rails/rails/pull/25056). Therefore, Rails 5 will be prepared for the new `Integer` behavior in Ruby 2.4.
 
 ## Case conversion methods work with Unicode
 
