@@ -121,7 +121,7 @@ irb(main):> time.to_time
 => 2016-06-21 00:00:00 -0800
 ```
 
-As with the other changes previously mentioned, some existing code may break, so always test thoroughly when upgrading your version of Ruby. As a consequence of this latter change in Ruby, the Rails framework had to [be changed as some related methods are part of their API, including `String#to_date`](https://github.com/rails/rails/commit/c9c5788a527b70d7f983e2b4b47e3afd863d9f48). Rails 5 will support Ruby 2.2 and later, so the `ActiveSupport.to_time_preserves_timezone` config option was added to control how all `to_date` methods behave, ensuring backward compatibility with previous Ruby versions if said option is set to `false`.  New Rails 5 apps will contain an initializer file including `ActiveSupport.to_time_preserves_timezone = true`, encouraging the use of the new time zone handling introduced by Ruby 2.4.
+As with the other changes previously mentioned, some existing code may break, so always test thoroughly when upgrading your version of Ruby. As a consequence of this latter change in Ruby, the Rails framework had to [be adapted as some related methods are part of their API, including `String#to_date`](https://github.com/rails/rails/commit/c9c5788a527b70d7f983e2b4b47e3afd863d9f48). Rails 5 will support Ruby 2.2 and later, so the `ActiveSupport.to_time_preserves_timezone` config option was added to control how all `to_date` methods behave, ensuring backward compatibility with previous Ruby versions if said option is set to `false`.  New Rails 5 apps will contain an initializer file including `ActiveSupport.to_time_preserves_timezone = true`, encouraging the use of the new time zone handling introduced by Ruby 2.4.
 
 ## Final thoughts
 
