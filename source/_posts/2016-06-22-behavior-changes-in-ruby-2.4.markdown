@@ -54,7 +54,7 @@ irb(main):> 3.is_a? Bignum
 => true
 ```
 
-It’s funny to note that in Ruby 2.4, even little numbers such as the integer `3` are "big numbers" as well 😏. Jokes aside, remember that `Integer` is equivalent to `Fixnum` and `Bignum` and, as a result, `Fixnum` and `Bignum` are also aliases.
+It’s funny to note that in Ruby 2.4, even little numbers such as the integer `3` are "big numbers" as well 😏. Jokes aside, remember that `Integer` is equal to `Fixnum` and `Bignum` and, as a result, `Fixnum` and `Bignum` are also aliases.
 
 The unification of the `Integer` classes was motivated by the argument that `Fixnum` and `Bignum` simply constitute an implementation detail to handle integer numbers in Ruby internals. In particular, new people learning the language will find it easier to deal with a unique `Integer` class.
 
