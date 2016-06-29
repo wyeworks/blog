@@ -3,6 +3,7 @@ layout: post
 title: "Wye Tech News #3"
 category:
 comments: true
+hidden: true
 author:
   name: Jorge Bejar
   email: jorge@wyeworks.com
