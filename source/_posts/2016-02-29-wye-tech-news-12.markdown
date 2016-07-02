@@ -3,6 +3,7 @@ layout: post
 title: "Wye Tech News #12"
 category:
 comments: true
+hidden: true
 author:
   name: WyeWorks
   email: webmaster@wyeworks.com

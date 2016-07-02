@@ -3,6 +3,7 @@ layout: post
 title: "Wye Tech News #1"
 category:
 comments: true
+hidden: true
 author:
   name: Santiago Pastorino
   email: santiago@wyeworks.com
