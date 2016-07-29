@@ -8,17 +8,18 @@ author:
   email: samanta@wyeworks.com
   twitter_handle: sami_dbc
   github_handle: sdebarros
-  image: /images/team/samanta-de-barros.jpg
+  image: /images/team/samanta-de-barros.png
   description: Software Engineer, currently working with Ruby and Javascript. Tea Lover.
 ---
 
 As any Ember developer probably knows by now, the error messages shown by failing asserts are far from ideal. Getting a **failed, expected argument to be truthy, was: false** followed by a stack trace that points to lines on the generated test file (one file with **all** your compiled tests), can be pretty disappointing when you want to be able to get quick feedback from your tests.
 
-One of the best practices when using QUnit is to always include an error message that explains what's the purpose of the assertion. This is a good practice but in reality it falls short, developers tend to be lazy and not include all messages, or sometimes the error message and the assertion are one to one equivalent (e.g. `assert.equal(page.title, 'hello world', "Page title is hello world");`). Having better errors by default can help in those cases.
+One of the best practices when using QUnit is to always include an error message that explains what's the purpose of the assertion. This is a good practice but in reality it falls short, developers tend to be lazy and not include all messages, or sometimes the error message and the assertion are one to one equivalent, e.g.: `assert.equal(page.title, 'hello world', "Page title is hello world");`
+Having better errors by default can help in those cases.
 
 As part of our [Technical Thursdays'](https://wyeworks.com/blog/2015/7/16/technical-thursdays-or-how-we-do-continuous-learning/) last cycle, we set out to improve this, looking to both enhance our tests and learn more about ember-cli and its addons.
 
-The result was [**ember-qunit-nice-errors**](https://github.com/wyeworks/ember-qunit-nice-errors), a "just add water and mix" kinda addon ;)
+The result was [**ember-qunit-nice-errors**](https://github.com/wyeworks/ember-qunit-nice-errors), a _just add water and mix_ kinda addon.
 
 <!--more-->
 
