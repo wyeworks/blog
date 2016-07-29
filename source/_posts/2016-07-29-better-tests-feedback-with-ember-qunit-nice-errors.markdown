@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ember-qunit-nice-errors"
+title: "Better tests feedback with ember-qunit-nice-errors"
 category: ember
 comments: true
 author:
