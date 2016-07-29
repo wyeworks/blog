@@ -46,3 +46,4 @@ to:
 The addon basically hooks up on your app's build process, and for all the asserts on the test files that don't have a custom message (since we don't want to override your work), it will add a message that tells you the assert method you're using and the params you're calling it with.
 
 We hope this improves your quality of life! Or at least makes it easier to find those errors.
+So try it out! We're always looking for feedback and ways to improve the project.
