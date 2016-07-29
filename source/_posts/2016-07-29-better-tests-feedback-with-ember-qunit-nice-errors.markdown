@@ -14,11 +14,11 @@ author:
 
 As any Ember developer probably knows by now, the error messages shown by failing asserts are far from ideal. Getting a **failed, expected argument to be truthy, was: false** followed by a stack trace that points to lines on the generated test file (one file with **all** your compiled tests), can be pretty disappointing when you want to be able to get quick feedback from your tests.
 
-One of the best practices when using QUnit is to always include an error message that explains what's the purpose of the assertion. This is a good practice but in reality it falls short, developers tend to be lazy and not include all messages, or sometimes the error message and the assertion are one to one equivalent (e.g. `assert.equal(page.title, 'hello world', "Page title is hello workd");`). Having better errors by default can help in those cases.
+One of the best practices when using QUnit is to always include an error message that explains what's the purpose of the assertion. This is a good practice but in reality it falls short, developers tend to be lazy and not include all messages, or sometimes the error message and the assertion are one to one equivalent (e.g. `assert.equal(page.title, 'hello world', "Page title is hello world");`). Having better errors by default can help in those cases.
 
-As part of our [Technical Thursdays'](https://wyeworks.com/blog/2015/7/16/technical-thursdays-or-how-we-do-continuous-learning/) last cycle, we set out to improve this, looking to both enhance our tests and learn more about ember-cli and it's addons.
+As part of our [Technical Thursdays'](https://wyeworks.com/blog/2015/7/16/technical-thursdays-or-how-we-do-continuous-learning/) last cycle, we set out to improve this, looking to both enhance our tests and learn more about ember-cli and its addons.
 
-The result was [**ember-qunit-nice-errors**](https://github.com/wyeworks/ember-qunit-nice-errors), a "just add water and mix" kindda addon ;)
+The result was [**ember-qunit-nice-errors**](https://github.com/wyeworks/ember-qunit-nice-errors), a "just add water and mix" kinda addon ;)
 
 <!--more-->
 
@@ -43,6 +43,6 @@ to:
 
 ![after](/images/posts/output-after.png)
 
-The addon basically hooks up on your app's build process, and takes all the asserts on the test files that don't have a custom message (since we don't want to override your work), for those, it will add a message that tells you the assert method you're using and the params your calling it with.
+The addon basically hooks up on your app's build process, and for all the asserts on the test files that don't have a custom message (since we don't want to override your work), it will add a message that tells you the assert method you're using and the params you're calling it with.
 
-We hope this improves you quality of life! Or at least makes it easier to find those errors.
+We hope this improves your quality of life! Or at least makes it easier to find those errors.
