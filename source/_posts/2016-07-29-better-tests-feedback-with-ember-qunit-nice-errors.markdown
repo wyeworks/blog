@@ -9,7 +9,7 @@ author:
   twitter_handle: sami_dbc
   github_handle: sdebarros
   image: /images/team/samanta-de-barros.jpg
-  description: Software Engineer
+  description: Software Engineer, currently working with Ruby and Javascript. Tea Lover.
 ---
 
 As any Ember developer probably knows by now, the error messages shown by failing asserts are far from ideal. Getting a **failed, expected argument to be truthy, was: false** followed by a stack trace that points to lines on the generated test file (one file with **all** your compiled tests), can be pretty disappointing when you want to be able to get quick feedback from your tests.

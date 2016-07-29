@@ -52,8 +52,8 @@
     email: 'samanta@wyeworks.com',
     twitter_handle: 'sami_dbc',
     github_handle: 'sdebarros',
-    image: 'samanta-de-barros.jpg',
-    description: 'Software Engineer'
+    image: 'samanta-de-barros.png',
+    description: 'Software Engineer, currently working with Ruby and Javascript. Tea Lover.'
   },
   santiago_ferreira: {
     name: 'Santiago Ferreira',
