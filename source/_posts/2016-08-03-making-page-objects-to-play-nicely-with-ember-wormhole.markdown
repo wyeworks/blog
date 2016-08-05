@@ -34,7 +34,7 @@ Lets see an example of how to use this.
   <button onclick={{action "clickMe"}}>Click me!</button>
 {{/ember-wormhole}}
 
-<div class=".message">
+<div class="message">
   {{message}}
 </div>
 {% endraw %}
