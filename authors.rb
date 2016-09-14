@@ -79,6 +79,14 @@
     image: 'sebastian-martinez.jpg',
     description: 'VP of Engineering at WyeWorks. Ruby on Rails hacker. ExceptionNotification maintainer. Coffee & bacon lover.'
   },
+  federico_kauffman: {
+    name: 'Federico Kauffman',
+    email: 'federico@wyeworks.com',
+    twitter_handle: 'fedekauffman',
+    github_handle: 'fedekau',
+    image: 'federico-kauffman.jpg',
+    description: 'Developer working with Ruby and Ember, passionate about technology, robotics and crossfit (Yes, I\'m crazy).'
+  },
   undefined_author: {
     name: '',
     email: '',
