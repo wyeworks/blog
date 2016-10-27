@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 group :development do
+  gem 'capistrano', '~> 3.6'
   gem 'compass', '~> 0.12.2'
   gem 'haml', '~> 4.0'
   gem 'jekyll', '~> 2.0'
