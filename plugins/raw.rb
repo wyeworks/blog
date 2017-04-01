@@ -26,10 +26,7 @@ module Jekyll
 
       while token = tokens.shift
         if token =~ FullToken
-          if block_delimiter == $1
-            end_tag
-            return
-          end
+          return if block_delimiter == $1
         end
         @nodelist << token if not token.empty?
       end

@@ -30,7 +30,7 @@ root: /blog
 permalink: "/:year/:i_month/:i_day/:title/"
 source: source
 destination: public/blog
-plugins: plugins
+plugins_dir: plugins
 code_dir: downloads/code
 category_dir: categories
 markdown: rdiscount
@@ -40,6 +40,8 @@ rdiscount:
     - footnotes
     - smart
 highlighter: pygments # default python pygments have been replaced by pygments.rb
+
+gems: [jekyll-paginate]
 
 paginate: 10          # Posts per page on the blog index
 paginate_path: "posts/:num"  # Directory base for pagination URLs eg. /posts/2/
