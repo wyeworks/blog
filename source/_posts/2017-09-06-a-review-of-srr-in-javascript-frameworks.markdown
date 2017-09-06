@@ -9,7 +9,7 @@ author:
   twitter_handle: jmbejar
   github_handle: jmbejar
   image: /images/team/jorge-bejar.jpg
-  description: Software Engineer at Wyeworks. Ruby on Rails developer.
+  description: Software Engineer at WyeWorks. Javascript and Ruby developer.
 ---
 
 The Javascript ecosystem is always moving fast, so it’s important to keep track of how everything is progressing, especially when it comes to tools and frameworks. The people at [This.Dot](https://www.thisdot.co/) produces an amazing series of webinars, called [This.Javascript](https://www.thisdot.co/javascript/09-07-2017), that discuss the latest on major Javascript frameworks and tools. This post is the first in a series of articles about topics that caught my attention after watching the latest episode.
