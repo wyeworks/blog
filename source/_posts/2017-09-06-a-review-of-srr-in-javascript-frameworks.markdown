@@ -18,7 +18,7 @@ Let's now discuss the current state of **Server Side Rendering (SSR)** in Javasc
 
 <!--more-->
 
-When we speak about SSR in the context of client-side frameworks like **Ember**, **React**, **VueJS** or **Angular**, we are refering to the ability to produce a server response with the initial HTML instead of rendering the entire UI from scracth once the javascript code is loaded in the browser.
+When we speak about SSR in the context of client-side frameworks like **Ember**, **React**, **VueJS** or **Angular**, we are refering to the ability to produce a server response with the initial HTML payload instead of rendering it from scracth once the javascript code is executed in the browser.
 
 Server Side Rendering is important for applications relying on such frameworks when you need SEO or want to improve the performance of the initial render, among other things.
 
