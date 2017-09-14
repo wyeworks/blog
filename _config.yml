@@ -3,11 +3,11 @@
 # ----------------------- #
 
 url: http://wyeworks.com/blog
-title: WyeWorks’ Blog
+title: WyeWorks’ Blog &#183; Ember.JS &amp; Ruby on Rails development shop
 subtitle: The Team’s Voice
 author: WyeWorks
 simple_search: https://www.google.com/search
-description:
+description: We&#8217;re software artisans, our solutions are carefully crafted by a team of development experts.
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
