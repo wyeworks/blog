@@ -2,10 +2,12 @@ source "https://rubygems.org"
 
 group :development do
   gem 'rake', '~> 10.0'
-  gem 'jekyll', '~> 2.0'
-  gem 'octopress-hooks', '~> 2.2'
-  gem 'octopress-date-format', '~> 2.0'
+  gem 'jekyll', '~> 3.0'
+  gem 'octopress-hooks'
+  gem 'octopress-date-format'
+  gem 'pygments.rb'
   gem 'jekyll-sitemap'
+  gem 'jekyll-paginate'
   gem 'rdiscount', '~> 2.0'
   gem 'RedCloth', '~> 4.2.9'
   gem 'haml', '~> 4.0'
