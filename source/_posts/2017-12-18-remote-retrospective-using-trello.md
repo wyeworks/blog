@@ -44,13 +44,13 @@ Next, we will demonstrate the structure of the Trello board and, at the same tim
 
 ### 1) Check-in (5')
 
-![Check-in](https://user-images.githubusercontent.com/12706207/33497567-1a62d8c4-d6ad-11e7-97e2-28bbad863a59.png)
+![Check-in](/images/posts/remote-retrospectives-using-trello/check-in.png)
 
 The first list, "Level of Motivation", is for each team member to write-in a number indicating their level of motivation in the sprint. Over time, several lists appear, one for each of the team members.
 
 We begin the retrospective once all team members are connected, then we review the action plan from the previous retrospective, focusing on determining if it was effective. Immediately following this, each member takes a turn writing a card in Trello indicating their level of motivation in the sprint.
 
-![Motivation](https://user-images.githubusercontent.com/12706207/33497787-dfa73b02-d6ad-11e7-8d4d-4d52922bfdc9.png)
+![Motivation](/images/posts/remote-retrospectives-using-trello/motivation.png)
 
 This data is available to the team so that they can be the ones to decide if they want more information about the motivation of each member. A team’s best performance is achieved when all of a team’s members are motivated.
 
@@ -58,27 +58,27 @@ This data is available to the team so that they can be the ones to decide if the
 
 This is probably one of the most important stages for a retrospective to fulfill its objective and respect the parameters that we previously mentioned. It is here that our Trello design has been very effective for us. For six minutes, each member of the team, simultaneously with the rest, writes their items on their named list. Everyone concentrates on their own cards. Once that time is up, each member has to explain their cards to the rest.
 
-![Individual posts](https://user-images.githubusercontent.com/12706207/33497916-5bcabede-d6ae-11e7-92d9-1a4de01b459c.png)
+![Individual posts](/images/posts/remote-retrospectives-using-trello/individual-posts.png)
 
 The Trello labels are used by each member to write-in their feelings regarding the subject. It is important that the team is aware of the importance of listening to all colleagues when they explain each card. Do not focus on what is written, since the text of each card is a very brief description. Good communication is achieved by taking into account gestures and tones of voice. Hence, it is important to not write too much, as the cards are simply meant to trigger conversation.
 
 At the center of the board, we have three general lists: "Good", "To Improve", and "Idea". After each member has explained each one of the items written in their lists, they will drag it over to one of these lists depending on how they feel about it.
 
-![Grouping in categories](https://user-images.githubusercontent.com/12706207/33497706-83cdc63e-d6ad-11e7-82be-a7337a3fa067.png)
+![Grouping in categories](/images/posts/remote-retrospectives-using-trello/grouping-in-categories.png)
 
 ### 3) Grouping and prioritization (10')
 
 By this stage, the whole team has already listened to everyone and they will now define which topics are priorities to analyze and determine actions that allow us to improve the next sprint. The grouping of topics and their prioritization is done together by the team itself, searching for ways to organize topics into the "Good", "To improve", and "Ideas" lists.
 
-![Organizing topics](https://user-images.githubusercontent.com/12706207/33498047-ccfd4d38-d6ae-11e7-9d9c-8b778b06134b.png)
+![Organizing topics](/images/posts/remote-retrospectives-using-trello/organizing-topics.png)
 
 In the example shown in the previous image, the team identified that the priority was to talk about a group of cards related to the theme, "Backlog refinement", and marked this by utilizing another Trello label. In this example, ideas have still not emerged. In this phase, we can utilize the filters by labels that Trello allows for. This filter can be applied if you have many groups but only want to concentrate on one. Here is an example of its use:
 
-![Backlog refinement example](https://user-images.githubusercontent.com/12706207/33498103-fb6f8a64-d6ae-11e7-907d-b67d46664275.png)
+![Backlog refinement example](/images/posts/remote-retrospectives-using-trello/backlog-refinement-example.png)
 
 In this example, the vote was taken outside the board, but it is interesting to know that Trello can incorporate [Power-Ups](https://trello.com/power-ups), and a specific one for voting exists:
 
-![Voting powerup](https://user-images.githubusercontent.com/12706207/33498184-33ada104-d6af-11e7-8c8d-f2bc77e2799c.png)
+![Voting powerup](/images/posts/remote-retrospectives-using-trello/voting-powerup.png)
 
 Returning to the retrospective’s flow of execution, after identifying at least one group, the team can decide whether they want to begin a discussion regarding the group that they identified or continue grouping and prioritizing others.
 
@@ -86,7 +86,7 @@ Returning to the retrospective’s flow of execution, after identifying at least
 
 Once the previous stage is over, the conversation turns to identifying what caused problems, in hopes of finding actions that permit us to improve in the next sprint. As ideas emerge, they are written-in on the list and are associated with the corresponding group, as in the case of "Backlog refinement".
 
-![Discussion](https://user-images.githubusercontent.com/12706207/33498255-6f8ceff4-d6af-11e7-9417-e85e1d224c58.png)
+![Discussion](/images/posts/remote-retrospectives-using-trello/discussion.png)
 
 ### 5) Action plan (7')
 
@@ -102,11 +102,11 @@ The final stage of the retrospective involves reviewing the ideas and generating
 
 At the end of the retrospective, it’s a good idea to assign each item of the action plan to a member of the team. They will be responsible for making sure that each action is executed during the next sprint.
 
-![Action plans](https://user-images.githubusercontent.com/12706207/33498337-b3d7a992-d6af-11e7-825a-9af77ec9572b.png)
+![Action plans](/images/posts/remote-retrospectives-using-trello/action-plans.png)
 
 Apart from the action plan, it is also possible to identify teamwork patterns at this stage, which is why we created the "Team Agreement" list. Generally-speaking, It’s comprised of items from the "Good" list. This answers the question that many teams ask themselves: "Why identify what was good about the sprint?" The reason is to capitalize on learning in work-related agreements.
 
-![Team agreement](https://user-images.githubusercontent.com/12706207/33498479-39420db6-d6b0-11e7-93c4-f62ed4036daa.png)
+![Team agreement](/images/posts/remote-retrospectives-using-trello/team-agreement.png)
 
 Before beginning each retrospective, the last list on the "History" board is automatically loaded following the execution of a Ruby program. This clears the digital board and all the information from the previous retrospective is added as a "History" card.
 
