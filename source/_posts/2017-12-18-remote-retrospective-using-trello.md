@@ -118,7 +118,7 @@ The primary advantages we observed after using Trello for remote retrospectives 
 - The implementation cost is low and the usability is high, so the return on investment is very good
 - The team members in different parts of the world are subject to similar conditions throughout the entire activity and the parameters are complied with
 - For those who have the desire, they can leave a historical record of previous retrospectives, just as we do
-- It provides a free API that allows you to automate the interaction. Here is [the Ruby script]() that we using to interact with Trello through the specific API for Ruby. However, you can use this API for almost all the manual actions that can be performed on a Trello board.
+- It provides a free API that allows you to automate the interaction. Here is [the Ruby script](https://gist.github.com/jmbejar/fbe6ac8cd6c9c1b06af4045101c82d98) that we using to interact with Trello through the specific API for Ruby. However, you can use this API for almost all the manual actions that can be performed on a Trello board.
 
 Something that can be seen as a disadvantage is that each member sees the whole board during all stages, and thus those in the data-gathering stage could be influenced by what others are writing. However, another characteristic of Trello should be noted, one that allows each member to mitigate this if they write their items in a separate text file and separate each paragraph by hitting Enter. Then, you can copy and paste your list and Trello will ask if you want to create all the cards automatically, one card for each line of text it finds separated by an Enter.
 
