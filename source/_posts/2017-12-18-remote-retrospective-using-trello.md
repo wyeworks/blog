@@ -46,9 +46,9 @@ Next, we will demonstrate the structure of the Trello board and, at the same tim
 
 ![Check-in](/images/posts/remote-retrospectives-using-trello/check-in.png)
 
-The first list, "Level of Motivation", is for each team member to write-in a number indicating their level of motivation in the sprint. Over time, several lists appear, one for each of the team members.
+The first list, "Level of Motivation", is for each team member to write-in a number indicating their level of motivation in the sprint. Additional lists are created with the names of team members.
 
-We begin the retrospective once all team members are connected, then we review the action plan from the previous retrospective, focusing on determining if it was effective. Immediately following this, each member takes a turn writing a card in Trello indicating their level of motivation in the sprint.
+We begin the retrospective once all team members are online, then we review the action plan from the previous retrospective, focusing on determining if it was effective. Immediately following this, each member takes a turn writing a card in Trello indicating their level of motivation in the sprint.
 
 ![Motivation](/images/posts/remote-retrospectives-using-trello/motivation.png)
 
@@ -120,6 +120,6 @@ The primary advantages we observed after using Trello for remote retrospectives 
 - For those who have the desire, they can leave a historical record of previous retrospectives, just as we do
 - It provides a free API that allows you to automate the interaction. Here is [the Ruby script](https://gist.github.com/jmbejar/fbe6ac8cd6c9c1b06af4045101c82d98) that we using to interact with Trello through the specific API for Ruby. However, you can use this API for almost all the manual actions that can be performed on a Trello board.
 
-Something that can be seen as a disadvantage is that each member sees the whole board during all stages, and thus those in the data-gathering stage could be influenced by what others are writing. However, another characteristic of Trello should be noted, one that allows each member to mitigate this if they write their items in a separate text file and separate each paragraph by hitting Enter. Then, you can copy and paste your list and Trello will ask if you want to create all the cards automatically, one card for each line of text it finds separated by an Enter.
+Something that can be seen as a disadvantage is that each member sees the whole board during all stages, and thus those in the data-gathering stage could be influenced by what others are writing. However, there is a characteristic of Trello that can alleviate this issue. Team members can write the list of items separated by new lines in any external application. Then, they can copy and paste the list into Trello in order to create all the cards automatically, one card for each line.
 
 Having stated the above and to summarize, Trello is a very flexible tool. This flexibility allows us to shape the retrospective to our liking; if we change the dynamic  and execution, it is very easy to adapt the structure of the board to one’s needs. After having utilized other techniques, we would like to really emphasize that using Trello in the way in which we have described it here can result in a Lean solution for conducting retrospectives for teams whose members are remote.
