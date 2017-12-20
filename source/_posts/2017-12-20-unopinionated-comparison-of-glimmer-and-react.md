@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A review of Server Side Rendering in Javascript frameworks"
+title: "Unopinionated comparison of Glimmer and React"
 category: javascript
 comments: true
 author:
@@ -24,69 +24,14 @@ Let's start by comparing some basic stuff. Let's say we have a component contain
 
 This is how we could implement it with React:
 
-```jsx
-import React, { Fragment } from "react";
-
-const animals = ["Cat", "Dog", "Rabbit"];
-
-class RandomAnimal extends React.Component {
-  constructor() {
-    super();
-    this.state = { animal: null };
-    this.setRandomAnimal = this.setRandomAnimal.bind(this);
-  }
-
-  setRandomAnimal() {
-    const animal = animals[Math.floor(Math.random() * 3)];
-    this.setState({ animal });
-  }
-
-  render() {
-    let renderAnimal;
-
-    if (this.state.animal) {
-      renderAnimal = <h1>Hello, {this.state.animal}</h1>
-    }
-
-    return (
-      <Fragment>
-        <button onClick={this.setRandomAnimal}>Set Random Animal</button>
-        { renderAnimal }
-      </Fragment>
-    );
-  }
-}
-```
-
-> Try this code [here](https://jsfiddle.net/69z2wepo/94872/)
+<script src="https://gist.github.com/jmbejar/80f03eaea5bf8ec3b55935ddf64d7a90.js?file=RandomAnimal.jsx"></script>
+<small>Try this code [here](https://jsfiddle.net/69z2wepo/94872/)</small>
 
 What would be the translation for Glimmer? Well, the following does the same (please note, we need two files):
 
-_template.hbs_
-```hbs
-<button onclick={{action setRandomAnimal}}>Set Random Animal</button>
-{{#if randomAnimal}}
-  Hello, {{randomAnimal}}!
-{{/if}}
-```
-
-_component.ts_
-```ts
-import Component, { tracked } from '@glimmer/component';
-
-const animals = ["Cat", "Dog", "Rabbit"];
-
-export default class extends Component {
-  @tracked randomAnimal = null;
-  
-  setRandomAnimal() {
-    const animal = animals[Math.floor(Math.random() * 3)];
-    this.randomAnimal = animal;
-  }
-}
-```
-
-> Try this code [here](http://tinyurl.com/ychd4suv)
+<script src="https://gist.github.com/jmbejar/80f03eaea5bf8ec3b55935ddf64d7a90.js?file=template.hbs"></script>
+<script src="https://gist.github.com/jmbejar/80f03eaea5bf8ec3b55935ddf64d7a90.js?file=component.ts"></script>
+<small>Try this code [here](http://tinyurl.com/ychd4suv)</small>
 
 Obviously, the HTML code is handled differently in each case: React relies on JSX to embed the HTML into the Javascript code whereas Glimmer requires a specific file for the template into which it is written using [Handlebars](http://handlebarsjs.com/).
 
@@ -104,42 +49,8 @@ We can see that Glimmer follows a more declarative approach while React’s mode
 
 Let's rewrite our React component to show a list of animals:
 
-```jsx
-import React, { Fragment } from "react";
-
-const animals = ["Cat", "Dog", "Rabbit"];
-
-class RandomAnimal extends React.Component {
-  constructor() {
-    super();
-    this.state = { animals: [] };
-    this.setRandomAnimal = this.setRandomAnimal.bind(this);
-  }
-
-  setRandomAnimal() {
-    const animal = animals[Math.floor(Math.random() * 3)];
-
-    this.setState((prevState) => (
-      { animals: prevState.animals.concat(animal) }
-    ));
-  }
-
-  render() {
-    const renderedAnimals = this.state.animals.map((animal, index) =>
-      <li key={index}>{animal}</li>
-    );
-
-    return (
-      <Fragment>
-        <button onClick={this.setRandomAnimal}>Set Random Animal</button>
-        <ul>{ renderedAnimals }</ul>
-      </Fragment>
-    );
-  }
-}
-```
-
-> Try this code [here](https://jsfiddle.net/69z2wepo/94874/)
+<script src="https://gist.github.com/jmbejar/d5f73c0fa0873b00db7d51b7f51d993e.js?file=RandomAnimal.jsx"></script>
+<small>Try this code [here](https://jsfiddle.net/69z2wepo/94874/)</small>
 
 Here we changed the code in order to show a list of animals. The click event of the button will invoke a function which adds new animals to the list. The React documentation states that [`this.state` must not be mutated directly](https://reactjs.org/docs/react-component.html#state) because React is designed around the idea that the component's state must be updated only through `setState`. To avoid that, we are using `concat` to generate a new instance of our list of animals, including the added item.
 
@@ -149,34 +60,9 @@ All the above are fundamental _React's gotchas_ to be aware of. In effect, our c
 
 Let's now explore how it might look in Glimmer:
 
-_template.hbs_
-```hbs
-<button onclick={{action setRandomAnimal}}>Set Random Animal</button>
-<ul>
-  {{#each randomAnimals key="@index" as |animal| }}
-    <li>{{animal}}</li>
-  {{/each}}
-</ul>
-```
-
-_component.ts_
-```ts
-import Component, { tracked } from '@glimmer/component';
-
-const animals = ["Cat", "Dog", "Rabbit"];
-
-export default class extends Component {
-  @tracked randomAnimals = [];
-  
-  setRandomAnimal() {
-    const animal = animals[Math.floor(Math.random() * 3)];
-
-    this.randomAnimals = this.randomAnimals.concat(animal);
-  }
-}
-```
-
-> Try this code [here](http://tinyurl.com/y9jsdubp)
+<script src="https://gist.github.com/jmbejar/d5f73c0fa0873b00db7d51b7f51d993e.js?file=template.hbs"></script>
+<script src="https://gist.github.com/jmbejar/d5f73c0fa0873b00db7d51b7f51d993e.js?file=component.ts"></script>
+<small>Try this code [here](http://tinyurl.com/y9jsdubp)</small>
 
 Here we have something that is actually very similar between Glimmer and React: we need to mutate the array in order to update the UI. Glimmer does not refresh the component if we mutate the array value directly, as it does not detect a value change in the tracked property. When tracked properties are arrays or objects, a new instance with the modified values must be provided. This is explained in the section, "The Immutable Pattern", [here](https://glimmerjs.com/guides/tracked-properties). However, if we ignore this recommendation and mutate the array of animals anyway, the component is not updated at all when we click the button. Since changes in the list of animals are not reflected on the web page, we know that something is not working as expected and, as a consequence, it is unlikely that a race condition problem would appear as in the React case.
 
@@ -188,102 +74,18 @@ In React, you will end up forming the HTML output in a more programmatic (and im
 
 With the excuse of exploring the interaction between components, let's rewrite our React example to contain only one specific component for the button:
 
-```jsx
-import React, { Fragment } from "react";
-
-const animals = ["Cat", "Dog", "Rabbit"];
- 
-function AnimalButton(props) {
-
-  function setRandomAnimal() {
-    const animal = animals[Math.floor(Math.random() * 3)];
-    props.onAnimalPicked(animal);
-  }
-  
-  return (
-    <button onClick={setRandomAnimal}>{props.caption}</button>
-  );
-}
- 
-class RandomAnimal extends React.Component {
-  constructor() {
-    super();
-    this.state = { animals: [] };
-    this.addAnimalToList = this.addAnimalToList.bind(this);
-  }
-
-  addAnimalToList(animal) {
-    this.setState((prevState) => (
-      { animals: prevState.animals.concat(animal) }
-    ));
-  }
-
-  render() {
-    const renderedAnimals = this.state.animals.map((animal, index) =>
-      <li key={index}>{animal}</li>
-    );
-
-    return (
-      <Fragment>
-        <AnimalButton caption="Set Random Animal" onAnimalPicked={this.addAnimalToList}/>
-        <ul>{ renderedAnimals }</ul>
-      </Fragment>
-    );
-  }
-}
-```
-
-> Try this code [here](https://jsfiddle.net/69z2wepo/94873/)
+<script src="https://gist.github.com/jmbejar/243e446f46fcc30b9f961df9b382bb4f.js?file=RandomAnimal.jsx"></script>
+<small>Try this code [here](https://jsfiddle.net/69z2wepo/94873/)</small>
 
 Note that we added the stateless component `AnimalButton`, and we are determining the next animal in the list for this component. Then, we are passing a callback function which is invoked by the new animal. Adding the value to the list is the job of our main component. The caption text and the callback function are both values passed as properties.
 
 Similarly, we can do the analogous refactor in Glimmer:
 
-AnimalButton/template.hbs
-```hbs
-<button onclick={{action setRandomAnimal}}>{{@caption}}</button>
-```
-
-AnimalButton/component.ts
-```ts
-import Component, { tracked } from "@glimmer/component";
-
-const animals = ["Cat", "Dog", "Rabbit"];
-
-export default class extends Component {
-  setRandomAnimal() {
-    const animal = animals[Math.floor(Math.random() * 3)];
-
-    this.args.onAnimalPicked(animal);
-  }
-};
-```
-
-RandomAnimal/template.hbs
-```hbs
-<AnimalButton @caption="Set Random Animal" @onAnimalPicked={{action addAnimalToList}} />
-
-<ul>
-  {{#each randomAnimals key="@index" as |animal| }}
-    <li>{{animal}}</li>
-  {{/each}}
-</ul>
-```
-
-RandomAnimal/component.ts
-```ts
-import Component, { tracked } from '@glimmer/component';
-
-export default class extends Component {
-  @tracked randomAnimals = [];
-  
-  addAnimalToList(animal) {
-    this.randomAnimals = this.randomAnimals.concat(animal);
-  }
-}
-```
-
-> Try this code [here](http://tinyurl.com/y9j3lunu)
+<script src="https://gist.github.com/jmbejar/243e446f46fcc30b9f961df9b382bb4f.js?file=AnimalButton-template.hbs"></script>
+<script src="https://gist.github.com/jmbejar/243e446f46fcc30b9f961df9b382bb4f.js?file=AnimalButton-component.ts"></script>
+<script src="https://gist.github.com/jmbejar/243e446f46fcc30b9f961df9b382bb4f.js?file=RandomAnimal-template.hbs"></script>
+<script src="https://gist.github.com/jmbejar/243e446f46fcc30b9f961df9b382bb4f.js?file=RandomAnimal-component.ts"></script>
+<small>Try this code [here](http://tinyurl.com/y9j3lunu)</small>
 
 Looking at the Glimmer solution, we notice that it is very similar in how values are passed to the `AnimalButton` component (note that in Glimmer, arguments begin with the character `@`). In both cases, we are passing a string for the button element to the `AnimalButton` component, as well as a function which adds the animal to the list.
 
@@ -301,46 +103,16 @@ Looking beyond the code examples above, there are other similarities between bot
 
 For example, both include support for defining inline content for components. Take a look at the alternative implementation below for the render function of the `AnimalButton` component:
 
-```jsx
-function AnimalButton(props) {
-
-  ...
-  
-  return (
-    <button onClick={setRandomAnimal}>
-      {props.children}
-    </button>
-  );
-}
-```
+<script src="https://gist.github.com/jmbejar/157278a02e80ad9f382dc72168651de6.js?file=AnimalButton.jsx"></script>
 
 The `props.children` will be replaced by any content nested under the tag `<AnimalButton>`. Here is an example of how it would be invoked by the parent component:
 
-```jsx
-function RandomAnimal() {
-  return (
-    <AnimalButton onAnimalPicked={this.addAnimalToList}>
-      Set Random Animal
-    </AnimalButton>
-  );
-}
-```
+<script src="https://gist.github.com/jmbejar/157278a02e80ad9f382dc72168651de6.js?file=RandomAnimal.jsx"></script>
 
 In Glimmer, it’s possible to do the same using the `yield` keyword. Although it is not officially mentioned in the Glimmer documentation, it works as expected. Well, something that you might expect if you have experience with Ember 😌.
 
-AnimalButton/template.hbs
-```hbs
-<button onclick={{action setRandomAnimal}}>
-  {{yield}}
-</button>
-```
-
-RandomAnimal/template.hbs
-```hbs
-<AnimalButton @onAnimalPicked={{action addAnimalToList}}>
-  Set Random Animal
-</AnimalButton>
-```
+<script src="https://gist.github.com/jmbejar/157278a02e80ad9f382dc72168651de6.js?file=RandomAnimal-component.ts"></script>
+<script src="https://gist.github.com/jmbejar/157278a02e80ad9f382dc72168651de6.js?file=RandomAnimal-template.ts"></script>
 
 Both libraries have additional similar features, such as the ability to render outside of the DOM hierarchy of components (see [Portals](https://reactjs.org/docs/portals.html) in React and the `{{in-element}}` helper in Glimmer mentioned [here](https://www.emberjs.com/blog/2017/10/10/glimmer-progress-report.html)).
 
