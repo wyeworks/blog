@@ -4,7 +4,7 @@ title: "Remote Retrospectives using Trello"
 comments: true
 author:
   name: Gabriel Ledesma
-  email: gabriel@wyeworks.com
+  email: gabriel.ledesma@wyeworks.com
   twitter_handle: gafaled
   github_handle: gafaled
   image: /images/team/gabriel-ledesma.jpg
