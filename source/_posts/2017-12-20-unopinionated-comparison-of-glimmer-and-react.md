@@ -114,7 +114,7 @@ In Glimmer, it’s possible to do the same using the `yield` keyword. Although i
 <script src="https://gist.github.com/jmbejar/157278a02e80ad9f382dc72168651de6.js?file=AnimalButton-template.hbs"></script>
 <script src="https://gist.github.com/jmbejar/157278a02e80ad9f382dc72168651de6.js?file=RandomAnimal-template.hbs"></script>
 
-Both libraries have additional similar features, such as the ability to render outside of the DOM hierarchy of components (see [Portals](https://reactjs.org/docs/portals.html) in React and the `{{in-element}}` helper in Glimmer mentioned [here](https://www.emberjs.com/blog/2017/10/10/glimmer-progress-report.html)).
+Both libraries have additional similar features, such as the ability to render outside of the DOM hierarchy of components (see [Portals](https://reactjs.org/docs/portals.html) in React and the <code>&#123;&#123;in-element&#125;&#125;</code> helper in Glimmer mentioned [here](https://www.emberjs.com/blog/2017/10/10/glimmer-progress-report.html)).
 
 Another important aspect is the availability of lifecycle hooks in the components API. In fact, Glimmer doesn’t  include a lot of them; only `didInsertElement` , `didUpdate`, and `willDestroy` are present in the public API. React has a few more hooks, but I would expect to see similar capabilities in Glimmer in the near future (for instance, something similar to React’s `componentWillReceiveProps` would be a nice-to-have).
 
