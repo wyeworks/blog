@@ -111,8 +111,8 @@ The `props.children` will be replaced by any content nested under the tag `<Anim
 
 In Glimmer, it’s possible to do the same using the `yield` keyword. Although it is not officially mentioned in the Glimmer documentation, it works as expected. Well, something that you might expect if you have experience with Ember 😌.
 
-<script src="https://gist.github.com/jmbejar/157278a02e80ad9f382dc72168651de6.js?file=RandomAnimal-component.ts"></script>
-<script src="https://gist.github.com/jmbejar/157278a02e80ad9f382dc72168651de6.js?file=RandomAnimal-template.ts"></script>
+<script src="https://gist.github.com/jmbejar/157278a02e80ad9f382dc72168651de6.js?file=AnimalButton-template.hbs"></script>
+<script src="https://gist.github.com/jmbejar/157278a02e80ad9f382dc72168651de6.js?file=RandomAnimal-template.hbs"></script>
 
 Both libraries have additional similar features, such as the ability to render outside of the DOM hierarchy of components (see [Portals](https://reactjs.org/docs/portals.html) in React and the `{{in-element}}` helper in Glimmer mentioned [here](https://www.emberjs.com/blog/2017/10/10/glimmer-progress-report.html)).
 
