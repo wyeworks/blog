@@ -32,7 +32,7 @@ arrays. The *Rails* library, *ActiveSupport*, took this one step further,
 and [extended slicing to hashes](https://github.com/rails/rails/blob/v5.1.4/activesupport/lib/active_support/core_ext/hash/slice.rb#L21-L24).
 
 On that same note, *Ruby 2.5.0* is now providing a way for the
-programmer to *choose* the keys of a hash he or she is interested in (*in
+programmers to *choose* the keys of a hash they're interested in (*in
 fact, the [proposed name](https://bugs.ruby-lang.org/issues/13563) for the method was `choice` to start with*).
 
 Given a hash, `slice` allows you to return a new hash
