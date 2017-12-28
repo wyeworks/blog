@@ -45,16 +45,7 @@ rake new_post['title of your post','diego_acosta']
 ```
 
 The second parameter is the author of the blog post. Values for this are loaded
-from authors.rb, the current authors you can choose from are:
-
-```
-jorge_bejar
-jose_ignacio_costa
-santiago_ferreira
-sebastian_martinez
-santiago_pastorino
-```
-
+from authors.rb.
 You can omit this parameter for blank author data or you can edit authors.rb to
 add/modify author data.
 
