@@ -35,8 +35,8 @@ On that same note, *Ruby 2.5.0* is now providing a way for the
 programmers to *choose* the keys of a hash they're interested in (*in
 fact, the [proposed name](https://bugs.ruby-lang.org/issues/13563) for the method was `choice` to start with*).
 
-Given a hash, `slice` allows you to return a new hash
-which only contains the keys and values you're interested in.
+Given a hash, `slice` will generate a new hash
+containing only the keys which were specified in the arguments section.
 
 *On Ruby 2.4.3*:
 
