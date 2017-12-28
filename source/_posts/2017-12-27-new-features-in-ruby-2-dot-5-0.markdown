@@ -231,7 +231,7 @@ irb(main):> pp cart
 ## Bottom line
 
 In this rundown, we did a quick tour of some of the new features in
-*Ruby 2.5.0*. There's a lot more to discover though.
+*Ruby 2.5.0*.
 
 In particular, I'm a fan of the little method additions
 and enchancements, such as `slice` and pattern matching on `Enumerable`
