@@ -18,12 +18,12 @@ toward *Ruby 2.5.0*. Just a couple of months later, on *Christmas* day
 (*a [popular release date](https://www.ruby-lang.org/en/downloads/releases/) on
 the Ruby releases calendar*), the first stable version of the series was born.
 
-<!--more-->
-
 Reflected on the [release notes](https://www.ruby-lang.org/en/news/2017/12/25/ruby-2-5-0-released/),
 we can find a whole bunch of features,
 changes and performance improvements which found their way to the final release.
 On this post, I'd like to do a quick rundown of the features that I've found most interesting.
+
+<!--more-->
 
 ## Hash#slice
 
