@@ -234,7 +234,7 @@ In this rundown, we did a quick tour of some of the new features in
 *Ruby 2.5.0*.
 
 In particular, I'm a fan of the little method additions
-and enchancements, such as `slice` and pattern matching on `Enumerable`
+and enhancements, such as `slice` and pattern matching on `Enumerable`
 sequence predicates. Also, the reverse backtrace printing looks promising. I hope
 it doesn't end up being just an experimental and temporary thing.
 
