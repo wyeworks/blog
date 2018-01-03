@@ -85,7 +85,7 @@
     twitter_handle: 'fedekauffman',
     github_handle: 'fedekau',
     image: 'federico-kauffman.jpg',
-    description: 'Developer working with Ruby and Ember, passionate about technology, robotics and crossfit (Yes, I\'m crazy).'
+    description: 'Software Engineer at WyeWorks. Currently working with Javascript and Ruby. Learnaholic.'
   },
   undefined_author: {
     name: '',
