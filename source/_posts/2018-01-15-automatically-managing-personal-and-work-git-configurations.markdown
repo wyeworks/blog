@@ -44,6 +44,10 @@ Host github.com-work
 
 Replace `personal` with your personal Git username and `work` with your work-related one, and we’re done with this step.
 
+*Edit*
+
+When cloning your repo you should use you custom Host configuration, if you normally clone `git clone git@github.com:personal/repo.git` now you should use `git clone git@github.com-personal:personal/repo.git`. If you want to use this in existing repositories just update the remotes.
+
 ## Step 2: Add user details to work and personal folders
 
 For this step, I am assuming you have all of your work stuff contained in a `~/work` folder and all of your personal stuff contained in a `~/personal` folder. If not, then you will either have to move some things around on your computer or adapt this step to your individual needs.
