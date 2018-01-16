@@ -39,6 +39,14 @@
     image: 'juan-azambuja.jpg',
     description: 'Passionate Rails developer now transitioning to Ember'
   },
+  mario_saul: {
+    name: 'Mario Saul',
+    email: 'mario@wyeworks.com',
+    twitter_handle: 'mario_saul',
+    github_handle: 'mariiio',
+    image: 'mario-saul.jpg',
+    description: 'Software developer at WyeWorks.'
+  },
   rodrigo_ponce_de_leon: {
     name: 'Rodrigo Ponce de León',
     email: 'rodrigo@wyeworks.com',
