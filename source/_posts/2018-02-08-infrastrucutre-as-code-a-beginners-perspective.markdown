@@ -58,7 +58,7 @@ Then, you need to move some of the workload off the main servers, which means yo
 
 Some months go by and you get to a point where you need to add more queues and workers, but since you forgot to update the document the last time around, it’s not so easy to do it in the same way. You get it done, and it works, but now the queues and workers have slightly different configurations. This is known as *configuration drift*.
 
-Later, you decide to add some caching levels to your app, and since you require Redis/Memcached, you’ll have to add more servers for those services. You’ll also need to configure S3 for your static files, a CDN to serve those worldwide, and Route53 for your routes.
+Later, you decide to add some caching levels to your app, and since you require Redis/Memcached, you’ll have to add more servers for those services. You’ll also need to configure S3 for your static files, a CDN to serve those worldwide, and Route53 for your DNS.
 
 By this time, the company has grown and it’s time to create IAM roles and users for the new developers, then give them the correct access rights.
 
