@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Automatically managing personal and work git configurations"
-category:
+category: git
 comments: true
 author:
   name: Federico Kauffman
