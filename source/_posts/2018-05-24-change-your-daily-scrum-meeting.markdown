@@ -67,9 +67,9 @@ As coach, my viewpoint is that this disadvantage can be turned into an opportuni
 
 We have gathered some numbers and indicators through a survey about this practice in line with the following participants:
 
-Company A: Team A1 with 3 team members, Team A2 with 4 team members, a scrum master for both teams
-Company B: Team B1 with 7 team members and a scrum master
-Company C: Team C1 with 4 team members and a scrum master
+* Company A: Team A1 with 3 team members, Team A2 with 4 team members, a scrum master for both teams
+* Company B: Team B1 with 7 team members and a scrum master
+* Company C: Team C1 with 4 team members and a scrum master
 
 (Some of the companies involved preferred to remain anonymous, so I have decided to not include actual names.)
 
@@ -79,8 +79,6 @@ According to the above data, we can analyze the numbers in terms of how many peo
 The results of the survey are illustrated in the proceeding graphs:
 
 ![daily chart](/images/posts/daily-chart.png)
-
-(*) [Scrum Values](https://www.scrumalliance.org/learn-about-scrum/scrum-values), Scrum Alliance reference
 
 ## My reflection
 
