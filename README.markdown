@@ -33,6 +33,8 @@ rake generate
 rake preview
 ```
 
+**Warning** *Make sure you have Python 2.x.x, the blog does not work with version 3.x.x*
+
 Now you can preview the blog at `http://localhost:4000/blog`
 
 
