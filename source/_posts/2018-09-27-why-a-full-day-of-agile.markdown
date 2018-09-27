@@ -11,7 +11,7 @@ author:
   description: Training & coaching in Agile methodologies and Lean Development.
 ---
 
-Our company was a pioneer in the use of Agile methods, especially Scrum and for the past 10 years, we have been practicing the principles behind the [Agile Manifesto](http://agilemanifesto.org/). We have always been convinced that it is the best way to add value to the customer and at the same time respect our own mindset. So we organized an internal trainning session to level out all WyeWorks employees' knowledge of Agile/Scrum.
+Our company was a pioneer in the use of Agile methods, especially Scrum and for the past 10 years, we have been practicing the principles behind the [Agile Manifesto](http://agilemanifesto.org/). We have always been convinced that it is the best way to add value to the customer and at the same time respect our own mindset. So we organized an internal training session to level out all WyeWorks employees' knowledge of Agile/Scrum.
 
 <!--more-->
 
