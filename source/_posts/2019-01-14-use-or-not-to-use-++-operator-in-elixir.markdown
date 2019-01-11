@@ -12,7 +12,7 @@ author:
   description: Love to explore and write about Elixir, Ruby, Javascript, full-stack development and technology in general.
 ---
 
-If you're familiar with Elixir you may have been warned about the risks of using `++` operator to concatenate lists. In fact, a piece of advice is found directly on the [official documentation for this method](https://hexdocs.pm/elixir/Kernel.html#++/2):
+If you're familiar with *Elixir* you may have been warned about the risks of using `++` operator to concatenate lists. In fact, a piece of advice is found directly on the [official documentation for this method](https://hexdocs.pm/elixir/Kernel.html#++/2):
 
 > The complexity of `a ++ b` is proportional to `length(a)`, so avoid repeatedly appending to lists of arbitrary length, e.g. `list ++ [item]`. Instead, consider prepending via `[item | rest]` and then reversing.
 
@@ -32,7 +32,7 @@ The idea is to generate a list including each number *n times* where *n* is the 
 
 ## Our first naive implementation
 
-We could say that a very simple solution to this problem could be an approach where we use `Enum.reduce` and repeat each number, concatenating the list of repeated values to the accumulated list.
+We could say that a very simple solution to this problem could be an approach where we use `Enum.reduce/3` and repeat each number, concatenating the list of repeated values to the accumulated list.
 
 ```ex
 def number_dups_list(numbers) do
@@ -45,7 +45,7 @@ end
 Let's see how it performs by running this function with a quite large list of integers. Here is our first test (using `:timer.tc` to quickly measure the time elapsed to run the code):
 
 ```ex
-iex> fn -> number_dups_list(List.duplicate(1,100_000)) end |> :timer.tc
+iex> :timer.tc(fn -> number_dups_list(List.duplicate(1,100_000)) end)
 {30785140, .... }
 ```
 
@@ -69,7 +69,7 @@ end
 Let's run again and see if we gain some performance:
 
 ```ex
-iex> fn -> number_dups_list(List.duplicate(1,100_000)) end |> :timer.tc
+iex> :timer.tc(fn -> number_dups_list(List.duplicate(1,100_000)) end)
 {11570, .... }
 ```
 
@@ -78,7 +78,7 @@ In my machine this is running **in approximately 11ms**! It is a huge difference
 All good so far, but... are we sure that this is going to perform better in all cases? Well, we're not in a safe place yet. Let's run again our function using a different input.
 
 ```ex
-iex()> fn -> number_dups_list([10_000_000, 20_000_000]) end |> :timer.tc
+iex()> :timer.tc(fn -> number_dups_list([10_000_000, 20_000_000]) end)
 {2638101, .... }
 ```
 
@@ -138,7 +138,7 @@ You can find more information [here](http://erlang.org/doc/efficiency_guide/list
 
 ## Attempt to reimplement without using `++`
 
-The official docs suggests to refactor our code relying on `++` to use  `[item|rest]` . Why don't give it a try? One thing that is not explicitly stated here is the need to use, probably, `Enum.reduce` to iterate over the elements of the list at the left of the `++` operator, in order to achieve the same result.
+The official docs suggests to refactor our code relying on `++` to use  `[item|rest]` . Why don't give it a try? One thing that is not explicitly stated here is the need to use, probably, `Enum.reduce/3` to iterate over the elements of the list at the left of the `++` operator, in order to achieve the same result.
 
 ```ex
 def number_dups_list3(numbers) do
@@ -194,7 +194,7 @@ We were not able to beat our former implementations relying on `++` for any of o
 
 We can think more and come up with more ideas to implement a solution to our problem. If we stop thinking a little bit about the performance, we can just try to find additional ways to reimplement the code, maybe ending up with a more elegant solution in code.
 
-For example, if we combine `Enum.map`  and `Enum.flatten` we have the following implementation.
+For example, if we combine `Enum.map/2`  and `Enum.flatten/1` we have the following implementation.
 
 ```ex
 def  number_dups_list4(numbers) do
@@ -249,7 +249,7 @@ Here is my list of thoughts to share about working with the `++` operation in El
 * It is important to know the risks of using `++` to append lists, specially when the list of the left of the operation can have a large number of elements.
 
 * If you're in the situation described above, you may consider using `Enum.reduce` and `[item | rest]` but you should validate if this refactor actually improved the situation. Although I think the advice in the documentation is a good _rule of thumb_, you shouldn't blindly follow it. In fact, I would try to use `++` but inverting the order of the appended lists (and reverting the result later).
-Moreover, you can also test different implementations using different language tools, as we did when we tried `map` and `flatten` and see how it compares with the previous attempts.
+Moreover, you can also test different implementations using different language tools, as we did when we tried `Enum.map` and `Enum.flatten` and see how it compares with the previous attempts.
 
 * Reflect on the shape and the size of your expected inputs. Think also in the number of created lists and their length in the intermediate steps of the calculation. What it is the best performant implementation will depend on the usage patterns.
 
