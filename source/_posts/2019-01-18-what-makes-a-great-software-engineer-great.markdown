@@ -8,7 +8,7 @@ author:
   twitter_handle: smartinez87
   github_handle:  smartinez87
   image:  /images/team/sebastian-martinez.jpg
-  description: VP of Engineering at WyeWorks. Ruby on Rails hacker. ExceptionNotification maintainer. Coffee & bacon lover.
+  description: VP of Engineering at WyeWorks. Love to travel the world and experience all the different foods and spices in it. Lifestyle medicine advocate.
 published: true
 ---
 
