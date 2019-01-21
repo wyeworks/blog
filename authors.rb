@@ -1,20 +1,4 @@
 @authors = {
-  alexis_mas: {
-    name: 'Alexis Mas',
-    email: 'alexis@wyeworks.com',
-    twitter_handle: '_axxiss',
-    github_handle: 'axxiss',
-    image: 'alexis-mas.jpg',
-    description: 'Software Engineer, turning coffee into software since 2008'
-  },
-  marcelo_dominguez: {
-    name: 'Marcelo Dominguez',
-    email: 'marcelo@wyeworks.com',
-    twitter_handle: 'marpo60',
-    github_handle: 'marpo60',
-    image: 'marcelo-dominguez.jpg',
-    description: 'Software engineer - Curious by nature - Sports lover - Tech guy'
-  },
   jorge_bejar: {
     name: 'Jorge Bejar',
     email: 'jorge@wyeworks.com ',
@@ -31,14 +15,6 @@
     image: 'jose-ignacio-costa.jpg',
     description: 'Cofounder & CEO at WyeWorks. Fitness aficionado. Home Barista wannabe.'
   },
-  juan_azambuja: {
-    name: 'Juan Azambuja',
-    email: 'juan@wyeworks.com',
-    twitter_handle: 'juanazam',
-    github_handle: 'juanazam',
-    image: 'juan-azambuja.jpg',
-    description: 'Passionate Rails developer now transitioning to Ember'
-  },
   mario_saul: {
     name: 'Mario Saul',
     email: 'mario@wyeworks.com',
@@ -54,22 +30,6 @@
     github_handle: 'rodrigopdl',
     image: 'rodrigo-pdl.jpg',
     description: 'Ruby on Rails developer at WyeWorks. Beatlemaniac. Guitar freak.'
-  },
-  samanta_de_barros: {
-    name: 'Samanta de Barros',
-    email: 'samanta@wyeworks.com',
-    twitter_handle: 'sami_dbc',
-    github_handle: 'sdebarros',
-    image: 'samanta-de-barros.png',
-    description: 'Software Engineer, currently working with Ruby and Javascript. Tea Lover.'
-  },
-  santiago_ferreira: {
-    name: 'Santiago Ferreira',
-    email: 'santiago.ferreira@wyeworks.com',
-    twitter_handle: 'san650',
-    github_handle: 'san650',
-    image: 'santiago-ferreira.jpg',
-    description: 'Developer working with Ruby, JavaScript and Ember. Love working with Free Software in general. Ember and Angular meetup organizer in Montevideo'
   },
   santiago_pastorino: {
     name: 'Santiago Pastorino',
