@@ -12,7 +12,7 @@ author:
   description: Love to explore and write about Elixir, Ruby, Javascript, full-stack development and technology in general.
 ---
 
-If you're familiar with *Elixir* you may have been warned about the risks of using `++` operator to concatenate lists. In fact, a piece of advice is found directly on the [official documentation for this method](https://hexdocs.pm/elixir/Kernel.html#++/2):
+You may have been warned about the risks of using `++` operator to concatenate lists in *Elixir*. In fact, a piece of advice is found directly on the [official documentation for this method](https://hexdocs.pm/elixir/Kernel.html#++/2):
 
 > The complexity of `a ++ b` is proportional to `length(a)`, so avoid repeatedly appending to lists of arbitrary length, e.g. `list ++ [item]`. Instead, consider prepending via `[item | rest]` and then reversing.
 
@@ -22,17 +22,15 @@ In the rest of this article we are going to discuss an example and try to explai
 
 ## The problem
 
-Let's say we need to implement a function that receives a list of integers and returns a list including those numbers repeated several times, as it is showed in the following examples:
+Let's say we need to implement a function that receives a list of integers and returns a new list including each number *n times*, where *n* is the actual value. We also expect that the original ordering of these numbers is preserved in the resulting list. Check it out the following examples:
 
 `my_func([1]) # it returns [1]`
 `my_func([1,2]) # it returns [1,2,2]`
 `my_func([1,3,2]) # it returns [1,3,3,3,2,2]`
 
-The idea is to generate a list including each number *n times* where *n* is the actual value. We also expect that the original ordering of these numbers is preserved in the resulting list.
-
 ## Our first naive implementation
 
-We could say that a very simple solution to this problem could be an approach where we use `Enum.reduce/3` and repeat each number, concatenating the list of repeated values to the accumulated list.
+A very simple solution to this problem could rely on using `Enum.reduce/3`, duplicating each number and concatenating the list of repeated values to the accumulated list.
 
 ```ex
 def number_dups_list(numbers) do
